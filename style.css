@@ -142,3 +142,36 @@ center{
 
 }
 
+
+/*INDIVIDUAL POSTS*/
+.post-content{
+background-color: rgb(124, 69, 69);
+padding: 5px;
+border-radius: 5px;
+margin: 4px;
+}
+
+.post-title{
+    background-color: gray;
+    padding: 5px;
+    border-radius:5px;
+    margin: 4px;
+}
+
+.post-author{
+    margin-top: -10px;
+}
+
+.post-content a{
+    color: #fefefe;
+    text-align: left;
+}
+/*Comment Button*/
+textarea{
+    height: 50px;
+    border: none;
+    border-bottom: 1px solid #aaa;
+    background-color: white;
+    resize: none;
+    transition: .5s;
+}
