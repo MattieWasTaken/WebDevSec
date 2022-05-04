@@ -118,3 +118,27 @@ center{
     margin-top: 0px;
 }
 
+/*Search Box*/
+
+.searchbar{
+    margin-top: 20px;
+    display: flex;
+    justify-content: right;
+    box-shadow: 1px 2px 3px #52075b;
+
+}
+
+.searchbar select{
+    padding: 9px;
+    margin-top: 4px
+}
+.searchbar input{
+    padding:10px
+}
+
+.searchbar button{
+    padding: 10px;
+    background-color: #fff;
+
+}
+
