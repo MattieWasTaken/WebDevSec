@@ -1,13 +1,13 @@
 
 <!DOCTYPE html>
 <html>
-    
+
 <head>
 <title>Potato Forum </title>
 <link rel="stylesheet" ref="stylesheet" href="style.css"/>
 <header>
 
-div>
+<div>
 	<img src="https://i.ibb.co/894Xm19/278471543-727015038329277-2731362503377802712-n.png" alt="Site Logo" border="0" style="width:75px; height:75px;" img align="left">
     
     <div class="row">
@@ -41,6 +41,7 @@ div>
 </div>
     
 </header> 
+
 <body>
 
 <form action="submitpost.php" method="POST">
