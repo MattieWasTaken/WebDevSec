@@ -175,3 +175,7 @@ textarea{
     resize: none;
     transition: .5s;
 }
+
+ul{
+    color: #fefefe;
+}
