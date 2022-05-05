@@ -174,4 +174,43 @@ textarea{
     background-color: white;
     resize: none;
     transition: .5s;
+
+/*formatting for header*/
+.column {
+  float: left;
+  width: 50%;
+}
+
+.row: {
+  float: right;
+  width: 50%;
+}
+
+.mainheading{
+    font-size: 30px;
+    margin: 10px;
+    text-align: left;
+    color: darkorange;
+}
+
+/* login/create account */
+.smallbutton{
+    font-size: 15px;
+    margin: 10px;
+    padding-right: 5px;
+    text-align: right;
+    color: black;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    Height: 70px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+    top: 0;
+    font-size: 30px;
+}
+    
 }
