@@ -27,7 +27,6 @@ h1{
 .topnav{
     overflow: hidden;
     background-color: gray;
-    border-radius: 10px;
 }
 
 .topnav a{
@@ -56,33 +55,7 @@ h1{
   font-size: 13px;
 }
 
-/*Search Box*/
-
-.searchbar{
-    margin-bottom: -5px;
-     display: flex;
-     justify-content: right;
-     box-shadow: 1px 2px 3px #52075b;
- 
- }
-
- .searchbar select{
-     padding: 10px;
-     margin-right: 300px;
- }
- 
- .searchbar input{
-     padding:10px
- }
- 
- .searchbar button{
-     padding: 10px;
-     background-color: #fff;
- 
- }
- 
-
-.topnav .searchbar button{
+.topnav .search-container button{
     float:right;
     padding: 8px;
     margin-top: 5px;
@@ -145,6 +118,31 @@ center{
     margin-top: 0px;
 }
 
+/*Search Box*/
+
+.searchbar{
+    margin-top: 20px;
+    display: flex;
+    justify-content: right;
+    box-shadow: 1px 2px 3px #52075b;
+
+}
+
+.searchbar select{
+    padding: 9px;
+    margin-top: 4px
+}
+.searchbar input{
+    padding:10px
+}
+
+.searchbar button{
+    padding: 10px;
+    background-color: #fff;
+
+}
+
+
 /*INDIVIDUAL POSTS*/
 .post-content{
 background-color: rgb(124, 69, 69);
@@ -178,6 +176,102 @@ textarea{
     transition: .5s;
 }
 
-ul{
-    color: #fefefe;
+
+/*Footer*/
+.footerarea {
+background-color: rgb(124, 69, 69);
+padding: 5px;
+border-radius: 5px;
+margin: 4px;
+}
+
+.footerarea{
+    overflow: hidden;
+    background-color: gray;
+}
+
+.footerarea f{
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.footerarea f:hover{
+    background-color: white;
+    color: black;
+    padding: 15px
+}
+
+/*Image*/
+img{
+    padding: 5px;
+}
+
+.mainheading{
+    font-size: 30px;
+    margin: 10px;
+    text-align: left;
+    color: darkorange;
+}
+
+.smallbutton{
+    font-size: 15px;
+    margin: 10px;
+    padding-right: 5px;
+    text-align: right;
+    color: black;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    Height: 175px;
+    text-align: center;
+    background: gray;
+    border-color: red;
+    border-style: solid;
+    border-width: 2px;
+    color: white;
+    top: 0;
+    font-size: 30px;
+}
+
+{
+    box-sizing: border-box;
+}
+    /* Set additional styling options for the columns */
+.column {
+    float: left;
+}
+
+    /* Set width length for the left, right and middle columns */
+.left {
+    float: left;
+    width: 30%;
+}
+
+.middle {
+    float: center;
+    width: 30%;
+}
+    
+.right {
+    float: right;
+    width: 30%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+trending{
+    border-color: red;
+    border-style: solid;
+    border-width: 2px;
 }
