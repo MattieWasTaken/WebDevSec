@@ -24,6 +24,48 @@ h1{
 
 /* Homepage.html*/
 
+.topnav{
+    overflow: hidden;
+    background-color: gray;
+}
+
+.topnav a{
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover{
+    background-color: white;
+    color: black;
+    padding: 15px
+}
+
+.topnav input[type=text]{
+  float: right;
+  padding: 10px;
+  border: none;
+  margin-top: 5px;
+  margin-right: 100px;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.topnav .search-container button{
+    float:right;
+    padding: 8px;
+    margin-top: 5px;
+    margin-right: -247px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
 .container{
     margin: 20px;
     padding: 20px;
@@ -39,6 +81,14 @@ h1{
     padding: 5px;
     border-radius:5px;
     margin: 4px;
+}
+
+.subforum-description *{
+    margin-block: 0;
+}
+
+p{
+    font-size: 15px ;
 }
 
 .subforum-row{
@@ -66,4 +116,62 @@ center{
 .subforum-info{
     padding: 10px;
     margin-top: 0px;
+}
+
+/*Search Box*/
+
+.searchbar{
+    margin-top: 20px;
+    display: flex;
+    justify-content: right;
+    box-shadow: 1px 2px 3px #52075b;
+
+}
+
+.searchbar select{
+    padding: 9px;
+    margin-top: 4px
+}
+.searchbar input{
+    padding:10px
+}
+
+.searchbar button{
+    padding: 10px;
+    background-color: #fff;
+
+}
+
+
+/*INDIVIDUAL POSTS*/
+.post-content{
+background-color: rgb(124, 69, 69);
+padding: 5px;
+border-radius: 5px;
+margin: 4px;
+}
+
+.post-title{
+    background-color: gray;
+    padding: 5px;
+    border-radius:5px;
+    margin: 4px;
+}
+
+.post-author{
+    margin-top: -10px;
+}
+
+.post-content a{
+    color: #fefefe;
+    text-align: left;
+}
+/*Comment Button*/
+textarea{
+    height: 50px;
+    border: none;
+    border-bottom: 1px solid #aaa;
+    background-color: white;
+    resize: none;
+    transition: .5s;
 }
