@@ -228,7 +228,7 @@ img{
 }
 
 header{
-    position: fixed;
+    position: variable;
     width: 100%;
     text-align: center;
     background: gray;
