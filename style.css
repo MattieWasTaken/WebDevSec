@@ -122,8 +122,6 @@ center{
 
 .searchbar{
     margin-top: 20px;
-    display: flex;
-    justify-content: right;
     box-shadow: 1px 2px 3px #52075b;
 
 }
@@ -133,7 +131,10 @@ center{
     margin-top: 4px
 }
 .searchbar input{
-    padding:10px
+    padding:10px;
+    float: left;
+    clear: both;
+   direction:ltr;
 }
 
 .searchbar button{
@@ -229,7 +230,6 @@ img{
 header{
     position: fixed;
     width: 100%;
-    Height: 175px;
     text-align: center;
     background: gray;
     border-color: red;
