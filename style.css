@@ -27,6 +27,7 @@ h1{
 .topnav{
     overflow: hidden;
     background-color: gray;
+    border-radius: 10px;
 }
 
 .topnav a{
@@ -55,7 +56,33 @@ h1{
   font-size: 13px;
 }
 
-.topnav .search-container button{
+/*Search Box*/
+
+.searchbar{
+    margin-bottom: -5px;
+     display: flex;
+     justify-content: right;
+     box-shadow: 1px 2px 3px #52075b;
+ 
+ }
+
+ .searchbar select{
+     padding: 10px;
+     margin-right: 300px;
+ }
+ 
+ .searchbar input{
+     padding:10px
+ }
+ 
+ .searchbar button{
+     padding: 10px;
+     background-color: #fff;
+ 
+ }
+ 
+
+.topnav .searchbar button{
     float:right;
     padding: 8px;
     margin-top: 5px;
@@ -117,31 +144,6 @@ center{
     padding: 10px;
     margin-top: 0px;
 }
-
-/*Search Box*/
-
-.searchbar{
-    margin-top: 20px;
-    display: flex;
-    justify-content: right;
-    box-shadow: 1px 2px 3px #52075b;
-
-}
-
-.searchbar select{
-    padding: 9px;
-    margin-top: 4px
-}
-.searchbar input{
-    padding:10px
-}
-
-.searchbar button{
-    padding: 10px;
-    background-color: #fff;
-
-}
-
 
 /*INDIVIDUAL POSTS*/
 .post-content{
