@@ -166,17 +166,38 @@ margin: 4px;
 .post-content a{
     color: #fefefe;
     text-align: left;
+} 
+/*New Post Page*/
+
+.make-post{
+    background-color: rgb(104, 75, 89);
+    padding: 5px;
+    border-radius:5px;
+    margin: 4px;
 }
-/*Comment Button*/
-textarea{
-    height: 50px;
-    border: none;
-    border-bottom: 1px solid #aaa;
-    background-color: white;
-    resize: none;
-    transition: .5s;
+.create-post{
+    text-align: center;
 }
 
+#title{
+height: 40px;
+width: 250px;
+vertical-align: top;
+}
+
+#content{
+    border: 10px solid #aaa;
+    border-radius: 10px;
+    background-color: white;
+    width: 750px;
+    height: 500px;
+    padding: 10px;
+}
+
+.make-post{
+    margin-left: 10px;
+    text-align: left;
+}
 
 /*Footer*/
 .footerarea {

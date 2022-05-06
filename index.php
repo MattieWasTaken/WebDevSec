@@ -43,7 +43,30 @@
 </header> 
 
 <body>
+<div class="create-post">
+        <div class="post-title">
+            <h1>Create Post</h1>
+        </div>
+</div>
+<div class="make-post">
+<form action="submitpost.php" method="POST">
 
+    <span> Author Name:</span>
+    <input type="text" name="user_id" placeholder="Enter your Display Name">
+    <br>
+    <br>
+    <span>Title:</span>
+    <textarea id="title" type="text" name="title" placeholder="Title"></textarea>
+    <br>
+    <br>
+    <p>Post Content</p>
+    <textarea type="text" name="content" id="content" placeholder="Speak Your Mind..."></textarea>
+    <br>    
+    <button type="submit" name="submit">Post</button>
+</div>
+</form>
+
+<!--
 <form action="submitpost.php" method="POST">
     <input type="int" name="user_id" placeholder="UID">
     <br>
@@ -54,7 +77,7 @@
     <button type="submit" name="submit">Post</button>
 </form>
 
-
+-->
 
 
 </body>
