@@ -25,13 +25,10 @@
         </div>
         
         <div class="column middle">
-            <button class="active" href="#Contact Us" style = "border:red; border-width:2px; border-style:solid;">Home</button>
-            <button href="#F.A.Q." style = "border:red; border-width:2px; border-style:solid;">My Account</button>
-            <button href="#Support" style = "border:red; border-width:2px; border-style:solid;">Create Post</button>
-            <br></br>
-            
-            
-            
+            <a href="createpost.php"><button>Contact Us</button></a>
+            <a href="createpost.php"><button>F.A.Q</button></a>
+            <a href="createpost.php"><button>Submit Post</button></a>
+            <br>  
         </div>
             
         <div class="column right">
@@ -50,9 +47,20 @@
     <div class="container">
         <div class="subforum">
 			<?php
-            $query = SELECT * FROM forum_posts WHERE subtopic='potato'ORDER BY `topic_id` DESC LIMIT 3;";
+            $query = "SELECT * FROM forum_posts WHERE subtopic='potato'ORDER BY `topic_id` DESC LIMIT 3;";
             $result = mysqli_query($conn, $query);
             $resultCheck = mysqli_num_rows($result);
+
+            while($rows[]=mysqli_fetch_array($result));
+            $potatoTitle1= $rows[0]['title'];
+            $potatoUserID1 = $rows[0]['user_id'];
+            $potatoContent1 = $rows[0]['content'];
+            $potatoTitle2= $rows[1]['title'];
+            $potatoUserID2 = $rows[1]['user_id'];
+            $potatoContent2 = $rows[1]['content'];
+            $potatoTitle3= $rows[2]['title'];
+            $potatoUserID3 = $rows[2]['user_id'];
+            $potatoContent3 = $rows[2]['content'];
             ?>
 			<br>
 			<br>
@@ -64,14 +72,12 @@
 
             <div class="subforum-row">
                 <div class="subforum-icon subform-column center">
-                    <i class="fa fa-car"></i>
                     <p>upvote counters</p>
                 </div>
 
                 <div class="subforum-description subforum-column">
-                <h1><a href="GenericPost.html">My Favourite Types of Potato</a></h1>
-                <p>Potato's will rise
-                </p>
+                <h1><a href="GenericPost.html"><?php echo $potatoTitle1 ?></a></h1>
+                <p><?php echo $potatoContent1 ?> </p>
                 </div>
 
             <div class="subforum-statistics subform-column center">
@@ -79,7 +85,7 @@
             </div>
 
             <div class="subforum-info subforum-column">
-              <b> <a href="">Last Post</a> </b> By <a href="">Username XX</a>
+              <b> <a href="">Last Post</a> </b> By <a href=""><?php echo $potatoUserID1 ?></a>
                 <br>
                 On <small>22 Apr 2022</small>
             </div>
@@ -92,9 +98,8 @@
                 </div>
 
                 <div class="subforum-description subforum-column">
-                <h1><a href="">Post Description2</a></h1>
-                <p>This is the description of a post
-                </p>
+                <h1><a href=""><?php echo $potatoContent2?></a></h1>
+                <?php echo $potatoContent2 ?>
                 </div>
 
             <div class="subforum-statistics subform-column center">
@@ -102,7 +107,7 @@
             </div>
 
             <div class="subforum-info subforum-column">
-              <b> <a href="">Last Post</a> </b> By <a href="">Username XX</a>
+              <b> <a href="">Last Post</a> </b> By <a href=""><?php echo $potatoUserID2 ?></a>
                 <br>
                 On <small>22 Apr 2022</small>
             </div>
@@ -114,9 +119,8 @@
                 </div>
 
                 <div class="subforum-description subforum-column">
-                <h1><a href="">Post Description3</a></h1>
-                <p>This is the description of a post
-                </p>
+                <h1><a href=""><?php echo $potatoTitle3 ?></a></h1>
+                <?php echo $potatoContent3 ?>
                 </div>
 
             <div class="subforum-statistics subform-column center">
@@ -124,28 +128,46 @@
             </div>
 
             <div class="subforum-info subforum-column">
-              <b> <a href="">Last Post</a> </b> By <a href="">Username XX</a>
+              <b> <a href="">Last Post</a> </b> By <a href=""><?php echo $potatoUserID3 ?></a>
                 <br>
                 On <small>22 Apr 2022</small>
             </div>
-
             </div>
         </div>
         <!-- LIFESTYLE FORUM-->
+
+        <?php
+            $query1 = "SELECT * FROM forum_posts WHERE subtopic='lifestyle' ORDER BY `topic_id` DESC LIMIT 3;";
+            $lifestyleResult = mysqli_query($conn, $query1);
+            $resultCheck = mysqli_num_rows($lifestyleResult);
+
+            while($rows[]=mysqli_fetch_array($result));
+            $lifestyleTitle1= $rows[0]['title'];
+            $lifestyleUserID1 = $rows[0]['user_id'];
+            $lifestyleContent1 = $rows[0]['content'];
+            $lifestyleTitle2= $rows[1]['title'];
+            $lifestyleUserID2 = $rows[1]['user_id'];
+            $lifestyleContent2 = $rows[1]['content'];
+            $lifestyleTitle3= $rows[2]['title'];
+            $lifestyleUserID3 = $rows[2]['user_id'];
+            $lifestyleContent3 = $rows[2]['content'];
+            $lifeStyleGenre = $rows[2]['subtopic'];
+            echo $lifeStyleGenre;
+        ?>
+            
         <div class="subforum">
             <div class="subforum-title">
                 <h1>Recent Lifestyle Posts</h1>
             </div>
 
             <div class="subforum-row">
-                <div class="subforum-icon subform-column center">
-                    <i class="fa fa-car"></i>
+            <div class="subforum-icon subform-column center">
+                    <p>upvote counters</p>
                 </div>
 
                 <div class="subforum-description subforum-column">
-                <h1><a href="">Post Description1</a></h1>
-                <p>This is the description of a post
-                </p>
+                <h1><a href=""><?php echo $lifestyleTitle1 ?></a></h1>
+               <?php echo $lifestyleContent1?>
                 </div>
 
 
@@ -154,7 +176,7 @@
             </div>
 
             <div class="subforum-info subforum-column">
-              <b> <a href="">Last Post</a> </b> By <a href="">Username XX</a>
+              <b> <a href="">Last Post</a> </b> By <a href=""><?php echo $lifestyleUserID1 ?></a>
                 <br>
                 On <small>22 Apr 2022</small>
             </div>
@@ -166,9 +188,8 @@
                 </div>
 
                 <div class="subforum-description subforum-column">
-                <h1><a href="">Post Description2</a></h1>
-                <p>This is the description of a post
-                </p>
+                <h1> <a href=""><?php echo $lifestyleTitle2 ?></a></h1>
+                <?php echo $lifestyleContent2?>
                 </div>
 
 
@@ -177,7 +198,7 @@
             </div>
 
             <div class="subforum-info subforum-column">
-              <b> <a href="">Last Post</a> </b> By <a href="">Username XX</a>
+              <b> <a href="">Last Post</a> </b> By <a href=""><?php echo $lifestyleUserID2 ?></a>
                 <br>
                 On <small>22 Apr 2022</small>
             </div>
@@ -189,9 +210,8 @@
                 </div>
 
                 <div class="subforum-description subforum-column">
-                <h1><a href="">Post Description3</a></h1>
-                <p>This is the description of a post
-                </p>
+                <h1><a href=""><?php echo $lifestyleTitle2 ?></a></h1>
+               <?php echo $lifestyleContent2?>
                 </div>
 
 
