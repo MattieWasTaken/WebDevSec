@@ -2,10 +2,26 @@
     include_once 'databaseConnection.php';
 ?>
 
+<?php
+$query = "SELECT * FROM forum_posts WHERE user_id='Yea Boy';";
+$result = mysqli_query($conn, $query);
+$resultCheck = mysqli_num_rows($result);
+
+if($resultCheck>0){
+    while($row = mysqli_fetch_assoc($result)){
+        echo "<br>";
+        $content = $row['content']. "<br>";
+        $content = nl2br($content);
+        $title = $row['title'];
+        $user_id= $row['user_id'];
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Forum Post 1 </title>
+        <title><?php echo $title?></title>
         <link rel="stylesheet" ref="stylesheet" href="style.css"/>
       
         </head>
@@ -51,18 +67,14 @@
     
      <div class="subforum">
         <div class="post-title">
-            <h2>My Favourite Types of Potato</h2>
+            <h2><?php echo $title?></h2>
             <div class="post-author">
-                By MIDN Castles
+               <?php echo $user_id?>
             </div>
         </div>
         <div class="post-content">
             <a>
-                sdgnsdafjignasdgnadhg bdaklgnadujhgbsdhjbgjhsudfbgdashbfghasdbfghjgasdbgfhadbfgdhju
-                <br>
-                sfagfd
-                <br>
-                fadsfaga
+                <?php echo $content?>
             </a>
         </div>
 
@@ -83,10 +95,6 @@
 
 -->
 
-<input type="text" id="comment-box" placeholder="Enter comment">
-<button id="post">Post</button>
-<ul id="unordered"> 
-</ul>
        
         <script src="plugin.js"></script>
 </body>
