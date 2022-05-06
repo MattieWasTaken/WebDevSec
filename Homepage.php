@@ -1,6 +1,3 @@
-<?php
-    include_once 'databaseConnection.php';
-?>
 
 <!DOCTYPE html>
 <html>
@@ -47,20 +44,25 @@
     <div class="container">
         <div class="subforum">
 			<?php
+            include 'databaseConnection.php';
             $query = "SELECT * FROM forum_posts WHERE subtopic='potato'ORDER BY `topic_id` DESC LIMIT 3;";
             $result = mysqli_query($conn, $query);
             $resultCheck = mysqli_num_rows($result);
 
-            while($rows[]=mysqli_fetch_array($result));
-            $potatoTitle1= $rows[0]['title'];
-            $potatoUserID1 = $rows[0]['user_id'];
-            $potatoContent1 = $rows[0]['content'];
+            while($rows[]=mysqli_fetch_array($result)){
+                $potatoTitle1= $rows[0]['title'];
+                $potatoTopicID = $rows[0]['topic_id'];
+                $potatoUserID1 = $rows[0]['user_id'];
+                $potatoContent1 = $rows[0]['content'];
+                
+            }
             $potatoTitle2= $rows[1]['title'];
             $potatoUserID2 = $rows[1]['user_id'];
             $potatoContent2 = $rows[1]['content'];
             $potatoTitle3= $rows[2]['title'];
             $potatoUserID3 = $rows[2]['user_id'];
             $potatoContent3 = $rows[2]['content'];
+            $conn->close();
             ?>
 			<br>
 			<br>
@@ -76,7 +78,7 @@
                 </div>
 
                 <div class="subforum-description subforum-column">
-                <h1><a href="GenericPost.html"><?php echo $potatoTitle1 ?></a></h1>
+                <h1><a href="GenericPost.php?topic_id=><?php echo $potatoTitle1 ?></a></h1>
                 <p><?php echo $potatoContent1 ?> </p>
                 </div>
 
@@ -98,7 +100,7 @@
                 </div>
 
                 <div class="subforum-description subforum-column">
-                <h1><a href=""><?php echo $potatoContent2?></a></h1>
+                <h1><a href=""><?php echo $potatoTitle2?></a></h1>
                 <?php echo $potatoContent2 ?>
                 </div>
 
@@ -137,22 +139,25 @@
         <!-- LIFESTYLE FORUM-->
 
         <?php
+        include 'databaseConnection.php';
+    
             $query1 = "SELECT * FROM forum_posts WHERE subtopic='lifestyle' ORDER BY `topic_id` DESC LIMIT 3;";
+            echo $query1;
             $lifestyleResult = mysqli_query($conn, $query1);
             $resultCheck = mysqli_num_rows($lifestyleResult);
 
-            while($rows[]=mysqli_fetch_array($result));
-            $lifestyleTitle1= $rows[0]['title'];
-            $lifestyleUserID1 = $rows[0]['user_id'];
-            $lifestyleContent1 = $rows[0]['content'];
-            $lifestyleTitle2= $rows[1]['title'];
-            $lifestyleUserID2 = $rows[1]['user_id'];
-            $lifestyleContent2 = $rows[1]['content'];
-            $lifestyleTitle3= $rows[2]['title'];
-            $lifestyleUserID3 = $rows[2]['user_id'];
-            $lifestyleContent3 = $rows[2]['content'];
-            $lifeStyleGenre = $rows[2]['subtopic'];
-            echo $lifeStyleGenre;
+            while($lifestyleRows[]=mysqli_fetch_assoc($lifestyleResult));
+            $lifestyleTitle1= $lifestyleRows[0]['title'];
+            $lifestyleUserID1 = $lifestyleRows[0]['user_id'];
+            $lifestyleContent1 = $lifestyleRows[0]['content'];
+            $lifestyleTitle2= $lifestyleRows[1]['title'];
+            $lifestyleUserID2 = $lifestyleRows[1]['user_id'];
+            $lifestyleContent2 = $lifestyleRows[1]['content'];
+            $lifestyleTitle3= $lifestyleRows[2]['title'];
+            $lifestyleUserID3 = $lifestyleRows[2]['user_id'];
+            $lifestyleContent3 = $lifestyleRows[2]['content'];
+            $lifeStyleGenre = $lifestyleRows[2]['subtopic'];
+            $conn->close();
         ?>
             
         <div class="subforum">
@@ -210,8 +215,8 @@
                 </div>
 
                 <div class="subforum-description subforum-column">
-                <h1><a href=""><?php echo $lifestyleTitle2 ?></a></h1>
-               <?php echo $lifestyleContent2?>
+                <h1><a href=""><?php echo $lifestyleTitle3 ?></a></h1>
+               <?php echo $lifestyleContent3?>
                 </div>
 
 
@@ -220,7 +225,7 @@
             </div>
 
             <div class="subforum-info subforum-column">
-              <b> <a href="">Last Post</a> </b> By <a href="">Username XX</a>
+              <b> <a href="">Last Post</a> </b> By <a href=""><?php echo $lifestyleUserID3 ?></a>
                 <br>
                 On <small>22 Apr 2022</small>
             </div>
@@ -228,6 +233,30 @@
             </div>
         </div>
         <!-- GAMING FORUM-->
+
+        
+         <?php
+         include 'databaseConnection.php';
+     
+             $query2 = "SELECT * FROM forum_posts WHERE subtopic='gaming' ORDER BY `topic_id` DESC LIMIT 3;";
+             echo $query2;
+             $gamingResult = mysqli_query($conn, $query2);
+             $resultCheck = mysqli_num_rows($gamingResult);
+ 
+             while($gamingRows[]=mysqli_fetch_assoc($gamingResult));
+             $gamingTitle1= $gamingRows[0]['title'];
+             $gamingUserID1 = $gamingRows[0]['user_id'];
+             $gamingContent1 = $gamingRows[0]['content'];
+             $gamingTopicID1 = $gamingRows[0]['topic_id'];
+             $gamingTitle2= $gamingRows[1]['title'];
+             $gamingUserID2 = $gamingRows[1]['user_id'];
+             $gamingContent2 = $gamingRows[1]['content'];
+             $gamingTitle3= $gamingRows[2]['title'];
+             $gamingUserID3 = $gamingRows[2]['user_id'];
+             $gamingContent3 = $gamingRows[2]['content'];
+             $conn->close();
+         ?>
+        
         <div class="subforum">
             <div class="subforum-title">
                 <h1>Recent Gaming Posts</h1>
@@ -239,18 +268,20 @@
                 </div>
 
                 <div class="subforum-description subforum-column">
-                <h1><a href="">Post Description1</a></h1>
-                <p>This is the description of a post
-                </p>
+                <h1> <a href=""><?php echo $gamingTitle1 ?></a></h1>
+                <?php echo $gamingContent1?>
                 </div>
+
                 <div class="subforum-statistics subform-column center">
                 <span>24 Posts | 15 Topics Available</span>
                 </div>
-                 <div class="subforum-info subforum-column">
-              <b> <a href="">Last Post</a> </b> By <a href="">Username XX</a>
+
+                <div class="subforum-info subforum-column">
+              <b> <a href="">Last Post</a> </b> By <a href=""><?php echo $gamingUserID1 ?></a>
                 <br>
                 On <small>22 Apr 2022</small>
             </div>
+        
         </div>
     </div>
     <div class="subforum-row">
@@ -259,10 +290,9 @@
         </div>
 
         <div class="subforum-description subforum-column">
-        <h1><a href="">Post Description2</a></h1>
-        <p>This is the description of a post
-        </p>
-        </div>
+                <h1> <a href=""><?php echo $gamingTitle2 ?></a></h1>
+                <?php echo $gamingContent2?>
+                </div>
 
 
     <div class="subforum-statistics subform-column center">
@@ -270,10 +300,10 @@
     </div>
 
     <div class="subforum-info subforum-column">
-      <b> <a href="">Last Post</a> </b> By <a href="">Username XX</a>
-        <br>
-        On <small>22 Apr 2022</small>
-    </div>
+              <b> <a href="">Last Post</a> </b> By <a href=""><?php echo $gamingUserID2 ?></a>
+                <br>
+                On <small>22 Apr 2022</small>
+            </div>
 
     </div>
     <div class="subforum-row">
@@ -282,10 +312,10 @@
         </div>
 
         <div class="subforum-description subforum-column">
-        <h1><a href="">Post Description3</a></h1>
-        <p>This is the description of a post
-        </p>
-        </div>
+                <h1> <a href=""><?php echo $gamingTitle3 ?></a></h1>
+                <?php echo $gamingContent3?>
+                </div>
+
 
 
     <div class="subforum-statistics subform-column center">
@@ -293,10 +323,10 @@
     </div>
 
     <div class="subforum-info subforum-column">
-      <b> <a href="">Last Post</a> </b> By <a href="">Username XX</a>
-        <br>
-        On <small>22 Apr 2022</small>
-    </div>
+              <b> <a href="">Last Post</a> </b> By <a href=""><?php echo $gamingUserID3 ?></a>
+                <br>
+                On <small>22 Apr 2022</small>
+            </div>
 
     </div>
 
