@@ -59,6 +59,14 @@
     <textarea id="title" type="text" name="title" placeholder="Title"></textarea>
     <br>
     <br>
+    <label for="subtopic">Choose a Subtopic</label>
+    <select name="subtopic" id="subtopic">Subtopics
+    <option value="potato">Potato</option>
+    <option value="gaming">Gaming</option>
+    <option value="lifestyle">Lifestyle</option>
+    </select>
+    <br>
+    <br>
     <p>Post Content</p>
     <textarea type="text" name="content" id="content" placeholder="Speak Your Mind..."></textarea>
     <br>    
