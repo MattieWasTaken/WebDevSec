@@ -71,6 +71,7 @@ if($resultCheck>0){
         <div class="post-title">
             <h2><?php echo $title?></h2>
             <div class="post-author">
+                <span>By:</span>
                <?php echo $user_id?>
             </div>
         </div>

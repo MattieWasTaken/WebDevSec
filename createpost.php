@@ -73,20 +73,5 @@
     <button type="submit" name="submit">Post</button>
 </div>
 </form>
-
-<!--
-<form action="submitpost.php" method="POST">
-    <input type="int" name="user_id" placeholder="UID">
-    <br>
-    <input type="text" name="title" placeholder="Title">
-    <br>
-    <input type="text" name="content" placeholder="content">
-    <br>
-    <button type="submit" name="submit">Post</button>
-</form>
-
--->
-
-
 </body>
 </html>

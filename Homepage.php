@@ -59,9 +59,11 @@
             $potatoTitle2= $rows[1]['title'];
             $potatoUserID2 = $rows[1]['user_id'];
             $potatoContent2 = $rows[1]['content'];
+            $potatoTopicID2 = $rows[1]['topic_id'];
             $potatoTitle3= $rows[2]['title'];
             $potatoUserID3 = $rows[2]['user_id'];
             $potatoContent3 = $rows[2]['content'];
+            $potatoTopicID3 = $rows[2]['topic_id'];
             $conn->close();
             ?>
 			<br>
@@ -102,7 +104,7 @@
                 </div>
 
                 <div class="subforum-description subforum-column">
-                <h1><a href=""><?php echo $potatoTitle2?></a></h1>
+                <h1><a href="Post.php?topic_id=<?php echo $potatoTopicID2?>"><?php echo $potatoTitle2?></a></h1>
                 <?php echo $potatoContent2 ?>
                 </div>
 
@@ -123,7 +125,7 @@
                 </div>
 
                 <div class="subforum-description subforum-column">
-                <h1><a href=""><?php echo $potatoTitle3 ?></a></h1>
+                <h1><a href="Post.php?topic_id=<?php echo $potatoTopicID3?>"><?php echo $potatoTitle3 ?></a></h1>
                 <?php echo $potatoContent3 ?>
                 </div>
 
@@ -151,13 +153,15 @@
             $lifestyleTitle1= $lifestyleRows[0]['title'];
             $lifestyleUserID1 = $lifestyleRows[0]['user_id'];
             $lifestyleContent1 = $lifestyleRows[0]['content'];
+            $lifestyleTopicID1= $lifestyleRows[0]['topic_id'];
             $lifestyleTitle2= $lifestyleRows[1]['title'];
             $lifestyleUserID2 = $lifestyleRows[1]['user_id'];
             $lifestyleContent2 = $lifestyleRows[1]['content'];
+            $lifestyleTopicID2= $lifestyleRows[1]['topic_id'];
             $lifestyleTitle3= $lifestyleRows[2]['title'];
             $lifestyleUserID3 = $lifestyleRows[2]['user_id'];
             $lifestyleContent3 = $lifestyleRows[2]['content'];
-            $lifeStyleGenre = $lifestyleRows[2]['subtopic'];
+            $lifestyleTopicID3= $lifestyleRows[2]['topic_id'];
             $conn->close();
         ?>
             
@@ -172,7 +176,7 @@
                 </div>
 
                 <div class="subforum-description subforum-column">
-                <h1><a href=""><?php echo $lifestyleTitle1 ?></a></h1>
+                <h1><a href="Post.php?topic_id=<?php echo $lifestyleTopicID1?>"><?php echo $lifestyleTitle1 ?></a></h1>
                <?php echo $lifestyleContent1?>
                 </div>
 
@@ -194,7 +198,7 @@
                 </div>
 
                 <div class="subforum-description subforum-column">
-                <h1> <a href=""><?php echo $lifestyleTitle2 ?></a></h1>
+                <h1><a href="Post.php?topic_id=<?php echo $lifestyleTopicID2?>"><?php echo $lifestyleTitle2 ?></a></h1>
                 <?php echo $lifestyleContent2?>
                 </div>
 
@@ -216,7 +220,7 @@
                 </div>
 
                 <div class="subforum-description subforum-column">
-                <h1><a href=""><?php echo $lifestyleTitle3 ?></a></h1>
+                <h1><a href="Post.php?topic_id=<?php echo $lifestyleTopicID3?>"><?php echo $lifestyleTitle3 ?></a></h1>
                <?php echo $lifestyleContent3?>
                 </div>
 
@@ -251,9 +255,11 @@
              $gamingTitle2= $gamingRows[1]['title'];
              $gamingUserID2 = $gamingRows[1]['user_id'];
              $gamingContent2 = $gamingRows[1]['content'];
+             $gamingTopicID2 = $gamingRows[1]['topic_id'];
              $gamingTitle3= $gamingRows[2]['title'];
              $gamingUserID3 = $gamingRows[2]['user_id'];
              $gamingContent3 = $gamingRows[2]['content'];
+             $gamingTopicID3 = $gamingRows[2]['topic_id'];
              $conn->close();
          ?>
         
@@ -268,7 +274,7 @@
                 </div>
 
                 <div class="subforum-description subforum-column">
-                <h1> <a href=""><?php echo $gamingTitle1 ?></a></h1>
+                <h1> <a href="Post.php?topic_id=<?php echo $gamingTopicID1?>"><?php echo $gamingTitle1 ?></a></h1>
                 <?php echo $gamingContent1?>
                 </div>
 
@@ -290,7 +296,7 @@
         </div>
 
         <div class="subforum-description subforum-column">
-                <h1> <a href=""><?php echo $gamingTitle2 ?></a></h1>
+                <h1> <a href="Post.php?topic_id=<?php echo $gamingTopicID2?>"><?php echo $gamingTitle2 ?></a></h1>
                 <?php echo $gamingContent2?>
                 </div>
 
@@ -312,7 +318,7 @@
         </div>
 
         <div class="subforum-description subforum-column">
-                <h1> <a href=""><?php echo $gamingTitle3 ?></a></h1>
+                <h1> <a href="Post.php?topic_id=<?php echo $gamingTopicID3?>"><?php echo $gamingTitle3 ?></a></h1>
                 <?php echo $gamingContent3?>
                 </div>
 
