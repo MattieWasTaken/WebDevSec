@@ -125,7 +125,7 @@
             </div>
 			
 			//Lifestyle forum
-			div class="subforum">
+			<div class="subforum">
                 <h2 class="subforum-title">Want to change yourself?</h2>
 				<h1>Have a good read about these cool things. . .</h1>
             </div>
