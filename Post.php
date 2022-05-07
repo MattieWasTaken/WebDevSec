@@ -3,7 +3,12 @@
 ?>
 
 <?php
-$query = "SELECT * FROM forum_posts WHERE user_id='Yea Boy';";
+
+if(isset($_REQUEST['topic_id'])){
+    $topic_id = $_REQUEST['topic_id'];
+}
+
+$query = "SELECT * FROM forum_posts WHERE topic_id= $topic_id;";
 $result = mysqli_query($conn, $query);
 $resultCheck = mysqli_num_rows($result);
 
@@ -28,7 +33,7 @@ if($resultCheck>0){
 
         <header>
 
-<div>
+        <div>
 	<img src="https://i.ibb.co/894Xm19/278471543-727015038329277-2731362503377802712-n.png" alt="Site Logo" border="0" style="width:75px; height:75px;" img align="left">
     
     <div class="row">
@@ -43,13 +48,10 @@ if($resultCheck>0){
         </div>
         
         <div class="column middle">
-            <button class="active" href="#Contact Us" style = "border:red; border-width:2px; border-style:solid;">Home</button>
-            <button href="#F.A.Q." style = "border:red; border-width:2px; border-style:solid;">My Account</button>
-            <button href="#Support" style = "border:red; border-width:2px; border-style:solid;">Create Post</button>
-            <br></br>
-            
-            
-            
+            <a href="createpost.php"><button>Contact Us</button></a>
+            <a href="createpost.php"><button>F.A.Q</button></a>
+            <a href="createpost.php"><button>Submit Post</button></a>
+            <br>  
         </div>
             
         <div class="column right">

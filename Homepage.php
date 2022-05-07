@@ -51,7 +51,7 @@
 
             while($rows[]=mysqli_fetch_array($result)){
                 $potatoTitle1= $rows[0]['title'];
-                $potatoTopicID = $rows[0]['topic_id'];
+                $potatoTopicID1 = $rows[0]['topic_id'];
                 $potatoUserID1 = $rows[0]['user_id'];
                 $potatoContent1 = $rows[0]['content'];
                 
@@ -76,11 +76,13 @@
                 <div class="subforum-icon subform-column center">
                     <p>upvote counters</p>
                 </div>
-
+                <form method='GET'>
                 <div class="subforum-description subforum-column">
-                <h1><a href="GenericPost.php?topic_id=><?php echo $potatoTitle1 ?></a></h1>
+                    <input type="hidden" name="<?php echo $potatoTopicID1 ?>"<?php echo $potatoTopicID1?>":>
+                    <h1><a href="Post.php?topic_id=<?php echo $potatoTopicID1?>"><?php echo $potatoTitle1 ?></a></h1>
                 <p><?php echo $potatoContent1 ?> </p>
                 </div>
+                </form>
 
             <div class="subforum-statistics subform-column center">
                 <span>24 Comments | 3 Users Viewing</span>
@@ -142,7 +144,6 @@
         include 'databaseConnection.php';
     
             $query1 = "SELECT * FROM forum_posts WHERE subtopic='lifestyle' ORDER BY `topic_id` DESC LIMIT 3;";
-            echo $query1;
             $lifestyleResult = mysqli_query($conn, $query1);
             $resultCheck = mysqli_num_rows($lifestyleResult);
 
@@ -239,7 +240,6 @@
          include 'databaseConnection.php';
      
              $query2 = "SELECT * FROM forum_posts WHERE subtopic='gaming' ORDER BY `topic_id` DESC LIMIT 3;";
-             echo $query2;
              $gamingResult = mysqli_query($conn, $query2);
              $resultCheck = mysqli_num_rows($gamingResult);
  
