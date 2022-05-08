@@ -22,8 +22,8 @@
         </div>
         
         <div class="column middle">
-            <a href="createpost.php"><button>Contact Us</button></a>
-            <a href="createpost.php"><button>F.A.Q</button></a>
+            <a href="aboutus.php"><button>Contact Us</button></a>
+            <a href="FAQ.php"><button>F.A.Q</button></a>
             <a href="createpost.php"><button>Submit Post</button></a>
             <br>  
         </div>
