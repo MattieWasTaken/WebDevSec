@@ -5,6 +5,7 @@
 <head>
 <title>Potato Forum </title>
 <link rel="stylesheet" ref="stylesheet" href="style.css"/>
+</head>
 <header>
 
 <div>
@@ -71,7 +72,7 @@
 			<br>
 			<br>
             <div class="subforum-title">
-                <h1>Recent Potato Posts</h1>
+                <h1><a href="potato.php">Recent Potato Posts</a></h1>
             </div>
 
             <div class="subforum-row">
@@ -80,7 +81,7 @@
                 </div>
                 <form method='GET'>
                 <div class="subforum-description subforum-column">
-                    <input type="hidden" name="<?php echo $potatoTopicID1 ?>"<?php echo $potatoTopicID1?>":>
+                    <input type="hidden" name="<?php echo $potatoTopicID1 ?>"<?php echo $potatoTopicID1?>>
                     <h1><a href="Post.php?topic_id=<?php echo $potatoTopicID1?>"><?php echo $potatoTitle1 ?></a></h1>
                 <p><?php echo $potatoContent1 ?> </p>
                 </div>
@@ -167,7 +168,7 @@
             
         <div class="subforum">
             <div class="subforum-title">
-                <h1>Recent Lifestyle Posts</h1>
+            <h1><a href="lifestyle.php">Recent Lifestyle Posts</a></h1>
             </div>
 
             <div class="subforum-row">
@@ -265,7 +266,7 @@
         
         <div class="subforum">
             <div class="subforum-title">
-                <h1>Recent Gaming Posts</h1>
+            <h1><a href="gaming.php">Recent Gaming Posts</a></h1>
             </div>
 
             <div class="subforum-row">
@@ -341,11 +342,11 @@
 
 	<footer>
 	<div class="footerarea">
-		<f class="active" href="#Contact Us" style = "border:red; border-width:2px; border-style:solid;">Contact US</f>
-        <f href="#F.A.Q." style = "border:red; border-width:2px; border-style:solid;">F.A.Q.</f>
+		<a href="ContactUs.php"> <f style = "border:red; border-width:2px; border-style:solid;">Contact US</f></a>
+        <a href="FAQ.php"><f  style = "border:red; border-width:2px; border-style:solid;">F.A.Q.</f></a>
         <a href="support.php"><f style = "border:red; border-width:2px; border-style:solid;">Support</f></a>
-		<f href="#About Us" style = "border:red; border-width:2px; border-style:solid;">About Us</f>
-        <f href="#Content Policy" style = "border:red; border-width:2px; border-style:solid;">Content Policy</f>
+		<a href="aboutus.php"> <f style = "border:red; border-width:2px; border-style:solid;">About Us</f></a>
+        <a href="contentpolicy.php"><f href="#Content Policy" style = "border:red; border-width:2px; border-style:solid;">Content Policy</f></a>
 	</div>
 	
 	

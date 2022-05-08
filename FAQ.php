@@ -47,14 +47,14 @@
                 <h1>We are here to help.</h1>
             </div>
 
-            <div class="subforum-row">
-                <div class="subforum-icon subform-column center">
+            <div>
+                <div>
                     <i class="fa fa-car"></i>
                     <p>Report problem</p>
                 </div>
 				
-				 <div class="subforum-description subforum-column">
-					<textarea type="text" name="content" id="content" placeholder="Tell us what happened. . ."></textarea>
+				 <div class="FAQ-Text">
+					<textarea type="text" name="faq-content" id="faq-box" placeholder="Tell us what happened. . ."></textarea>
 					<button type="submit" name="submit">Submit</button>
                 </div>
             </div>
@@ -106,11 +106,11 @@
 
 	<footer>
 	<div class="footerarea">
-		<f class="active" href="#Contact Us" style = "border:red; border-width:2px; border-style:solid;">Contact US</f>
-        <f href="#F.A.Q." style = "border:red; border-width:2px; border-style:solid;">F.A.Q.</f>
-        <f href="support.php" style = "border:red; border-width:2px; border-style:solid;">Support</f>
-		<f href="#About Us" style = "border:red; border-width:2px; border-style:solid;">About Us</f>
-        <f href="#Content Policy" style = "border:red; border-width:2px; border-style:solid;">Content Policy</f>
+		<a href="ContactUs.php"> <f style = "border:red; border-width:2px; border-style:solid;">Contact US</f></a>
+        <a href="FAQ.php"><f  style = "border:red; border-width:2px; border-style:solid;">F.A.Q.</f></a>
+        <a href="support.php"><f style = "border:red; border-width:2px; border-style:solid;">Support</f></a>
+		<a href="aboutus.php"> <f style = "border:red; border-width:2px; border-style:solid;">About Us</f></a>
+        <a href="contentpolicy.php"><f href="#Content Policy" style = "border:red; border-width:2px; border-style:solid;">Content Policy</f></a>
 	</div>
 	
 	
