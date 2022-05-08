@@ -209,6 +209,7 @@ vertical-align: top;
     width: 750px;
     height: 500px;
     padding: 10px;
+    color: white;
 }
 
 .make-post{
@@ -250,6 +251,11 @@ color: #fff;
     color: black;
     padding: 15px;
     color: #fff;
+}
+
+.copyright{
+    text-align: right;
+    size: 15px;
 }
 
 /*Image*/
