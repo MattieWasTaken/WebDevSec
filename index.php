@@ -13,7 +13,7 @@
     <div class="row">
         
         <div class="column left">
-            <p class="mainheading" > OnlineTopia.com </p>
+           <a href="index.php"> <p class="mainheading" > OnlineTopia.com </p></a>
 
             <form action="/action_page.php">
                 <input type="text" name="q" id="" placeholder="Search...">
