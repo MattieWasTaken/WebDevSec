@@ -13,7 +13,7 @@
     <div class="row">
         
         <div class="column left">
-            <p class="mainheading" > OnlineTopia.com </p>
+        <a href="index.php"> <p class="mainheading" > OnlineTopia.com </p></a>
 
             <form action="/action_page.php">
                 <input type="text" name="q" id="" placeholder="Search...">
@@ -108,7 +108,7 @@
 	<div class="footerarea">
 		<f class="active" href="#Contact Us" style = "border:red; border-width:2px; border-style:solid;">Contact US</f>
         <f href="#F.A.Q." style = "border:red; border-width:2px; border-style:solid;">F.A.Q.</f>
-        <f href="#Support" style = "border:red; border-width:2px; border-style:solid;">Support</f>
+        <f href="support.php" style = "border:red; border-width:2px; border-style:solid;">Support</f>
 		<f href="#About Us" style = "border:red; border-width:2px; border-style:solid;">About Us</f>
         <f href="#Content Policy" style = "border:red; border-width:2px; border-style:solid;">Content Policy</f>
 	</div>

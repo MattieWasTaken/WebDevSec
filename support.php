@@ -158,7 +158,7 @@
 	<div class="footerarea">
 		<f class="active" href="#Contact Us" style = "border:red; border-width:2px; border-style:solid;">Contact US</f>
         <f href="#F.A.Q." style = "border:red; border-width:2px; border-style:solid;">F.A.Q.</f>
-        <f href="#Support" style = "border:red; border-width:2px; border-style:solid;">Support</f>
+        <f href="support.php" style = "border:red; border-width:2px; border-style:solid;">Support</f>
 		<f href="#About Us" style = "border:red; border-width:2px; border-style:solid;">About Us</f>
         <f href="#Content Policy" style = "border:red; border-width:2px; border-style:solid;">Content Policy</f>
 	</div>
