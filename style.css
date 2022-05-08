@@ -89,6 +89,7 @@ h1{
 
 .subforum-description *{
     margin-block: 0;
+    text-overflow: ellipsis;
 }
 
 p{
@@ -158,10 +159,11 @@ center{
 /*INDIVIDUAL POSTS*/
 .post-content{
 background-color: rgb(124, 69, 69);
-background: rgba(0,0,0,0.3);
+background: rgba(0,0,0,1);
 padding: 5px;
 border-radius: 5px;
 margin: 4px;
+overflow-wrap:break-word;
 }
 
 .post-title{
