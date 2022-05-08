@@ -99,7 +99,10 @@
         <a href="support.php"><f style = "border:red; border-width:2px; border-style:solid;">Support</f></a>
 		<a href="aboutus.php"> <f style = "border:red; border-width:2px; border-style:solid;">About Us</f></a>
         <a href="contentpolicy.php"><f href="#Content Policy" style = "border:red; border-width:2px; border-style:solid;">Content Policy</f></a>
-	</div>
+        <div class="copyright">
+        <small>&copy; Copyright 2018, IMD Internet Solutions Inc</small>
+        </div>
+    </div>
 	
 	
 	</footer>
