@@ -8,17 +8,35 @@
 </head>
     
 <header> 
-    <img src="https://i.ibb.co/894Xm19/278471543-727015038329277-2731362503377802712-n.png" alt="Site Logo" border="0" style="width:75px; height:75px;" img align="left">
+<div>
+	<img src="https://i.ibb.co/894Xm19/278471543-727015038329277-2731362503377802712-n.png" alt="Site Logo" border="0" style="width:75px; height:75px;" img align="left">
     
     <div class="row">
-        <div class="column">
-            <p class="mainheading"> OnlineTopia.com </p>
+        
+        <div class="column left">
+            <p class="mainheading" > OnlineTopia.com </p>
+
+            <form action="/action_page.php">
+                <input type="text" name="q" id="" placeholder="Search...">
+                <button type="submit">Submit</button> 
+            </form>
         </div>
-        <div class="row">
-            <p class="smallbutton"> Create Account </p>
-            <p class="smallbutton"> Log In </p>
+        
+        <div class="column middle">
+            <a href="index.php"><button>Home</button></a>
+            <a href="FAQ.php"><button>F.A.Q</button></a>
+            <a href="createpost.php"><button>Submit Post</button></a>
+            <br>  
         </div>
+            
+        <div class="column right">
+            <button class="smallbutton" href="#CreateAcc"> Create Account </button>
+            <button class="smallbutton" href="#LOGINPAGE"> Log In </button>
+        </div>
+        
     </div>
+
+</div>
     
 </header>
 

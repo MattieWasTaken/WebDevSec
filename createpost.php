@@ -22,13 +22,10 @@
         </div>
         
         <div class="column middle">
-            <button class="active" href="#Contact Us" style = "border:red; border-width:2px; border-style:solid;">Home</button>
-            <button href="#F.A.Q." style = "border:red; border-width:2px; border-style:solid;">My Account</button>
-            <button href="#Support" style = "border:red; border-width:2px; border-style:solid;">Create Post</button>
-            <br></br>
-            
-            
-            
+            <a href="aboutus.php"><button>Contact Us</button></a>
+            <a href="index.php"><button>Home</button></a>
+            <a href="FAQ.php"><button>F.A.Q</button></a>
+            <br>  
         </div>
             
         <div class="column right">
