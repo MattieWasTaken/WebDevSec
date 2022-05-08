@@ -74,11 +74,11 @@
                 <div class="subforum-icon subform-column center">
                     <i class="fa fa-car"></i>
 					<br><br><br><br><br>
-                    <p>Prostitute</p>
+                    <p>Website Designer</p>
                 </div>
 
                 <div class="subforum-description subforum-column">
-					<h1 style="color:purple" text align="center">Dawgniel Irwin</h1><br>
+					<h1 style="color:purple" text align="center">Daniel Irwin</h1><br>
 					<p text align="center">Email: Daniel.irwin1@gmail.com</p>
 					<p text align="center">Mobile: +61 41 349 4949</p>
                 </div>           
@@ -95,11 +95,11 @@
                 <div class="subforum-icon subform-column center">
                     <i class="fa fa-car"></i>
 					<br><br><br><br><br>
-                    <p>God loves me</p>
+                    <p>Website Manager</p>
                 </div>
 
                 <div class="subforum-description subforum-column">
-					<h1 style="color:lightyellow" text align="center">Gilly Inbus</h1><br>
+					<h1 style="color:lightyellow" text align="center">Kritsanapong Inbua</h1><br>
 					<p text align="center">Email: Kritsanakiwx@gmail.com</p>
 					<p text align="center">Mobile: +61 41 385 7090</p>
                 </div>           

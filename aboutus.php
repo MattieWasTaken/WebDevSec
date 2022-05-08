@@ -65,7 +65,9 @@
 				
 				<div class="subforum-description subforum-column">
 					<h1 style="color:lightgreen" text align="center">Personal details</h1><br>
-					<p text align="center">A NOOB in DOTA2</p>
+					<p text align="center">A Web Developer1</p>
+					<p text align="center">Original from Australia</p>
+
                 </div> 
 				
                 <div class="subforum-description subforum-column">
@@ -81,7 +83,7 @@
                 <div class="subforum-icon subform-column center">
                     <i class="fa fa-car"></i>
 					<br><br><br>
-					<h1 style="color:purple" text align="center">Dawgniel Irwin</h1><br>
+					<h1 style="color:purple" text align="center">Daniel Irwin</h1><br>
                     
                 </div>
 
@@ -93,8 +95,8 @@
 				
 				<div class="subforum-description subforum-column">
 					<h1 style="color:lightgreen" text align="center">Personal details</h1><br>
-					<p text align="center">The most important dude in our team</p>
-					<p style="color:red" text align="center">A Prostitute</p>
+					<p text align="center">A Designer</p>
+					<p style="color:red" text align="center">Original from Singapore</p>
                 </div> 
 
                 <div class="subforum-description subforum-column">
@@ -111,7 +113,7 @@
                 <div class="subforum-icon subform-column center">
                     <i class="fa fa-car"></i>
 					<br><br><br>
-                    <h1 style="color:lightyellow" text align="center">Gilly Inbus</h1><br>
+                    <h1 style="color:lightyellow" text align="center">Kritsanapong Inbua</h1><br>
                 </div>
 
 				<div>
@@ -122,8 +124,8 @@
 				
 				<div class="subforum-description subforum-column">
 					<h1 style="color:lightgreen" text align="center">Personal details</h1><br>
-					<p text align="center">A good, freindly guy</p>
-					<p style="color:red" text align="center">Inbus Man</p>
+					<p text align="center">A Web developer2</p>
+					<p style="color:red" text align="center">Original from Thailand</p>
                 </div> 
 				
                 <div class="subforum-description subforum-column">
