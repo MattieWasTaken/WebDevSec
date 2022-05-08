@@ -51,13 +51,16 @@
             <div>
                 <div>
                     <i class="fa fa-car"></i>
-                    <p>Report problem</p>
+                    <h2>Report problem</h2>
                 </div>
-				
+                <form action="submitquestion.php" method="POST">
+                    <span>Username:</span>
+                    <input type="text" name="user_id" placeholder="Enter your Display Name">
 				 <div class="FAQ-Text">
 					<textarea type="text" name="faq-content" id="faq-box" placeholder="Tell us what happened. . ."></textarea>
 					<button type="submit" name="submit">Submit</button>
                 </div>
+                </form>
             </div>
 			
 			<div class="subforum-title">
