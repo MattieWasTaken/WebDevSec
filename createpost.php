@@ -23,8 +23,8 @@
         
         <div class="column middle">
             <a href="aboutus.php"><button>Contact Us</button></a>
-            <a href="index.php"><button>Home</button></a>
             <a href="FAQ.php"><button>F.A.Q</button></a>
+            <a href="index.php"><button>Home</button></a>
             <br>  
         </div>
             
