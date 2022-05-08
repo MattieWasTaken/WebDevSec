@@ -3,7 +3,9 @@
 
 <head>
 <title>Potato Forum </title>
+<link rel="stylesheet" ref="stylesheet2" href="lifestyle.css"/>
 <link rel="stylesheet" ref="stylesheet" href="style.css"/>
+
 
 </head>
 <header>
