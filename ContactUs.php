@@ -2,7 +2,7 @@
 <html>
 
 <head>
-<title>Potato Forum </title>
+<title>Contact Us</title>
 <link rel="stylesheet" ref="stylesheet2" href="index.css"/>
 <link rel="stylesheet" ref="stylesheet" href="style.css"/>
 </head>

@@ -3,7 +3,7 @@
 <html>
 
 <head>
-<title>Potato Forum </title>
+<title>IMD Forum </title>
 <link rel="stylesheet" ref="stylesheet2" href="index.css"/>
 <link rel="stylesheet" ref="stylesheet" href="style.css"/>
 </head>

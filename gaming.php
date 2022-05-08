@@ -2,7 +2,7 @@
 <html>
 
 <head>
-<title>Potato Forum </title>
+<title>Gaming Forum </title>
 <link rel="stylesheet" ref="stylesheet2" href="gaming.css"/>
 <link rel="stylesheet" ref="stylesheet" href="style.css"/>
 
