@@ -78,7 +78,10 @@
 
             <div class="subforum-row">
                 <div class="subforum-icon subform-column center">
-                    <p>upvote counters</p>
+                    <div class="forum-picture1">
+                        <img src="pictures/potato1.png">
+                         <!-- <p>upvote counters</p> -->
+                    </div>
                 </div>
                 <form method='GET'>
                 <div class="subforum-description subforum-column">
@@ -89,20 +92,20 @@
                 </form>
 
             <div class="subforum-statistics subform-column center">
-                <span>24 Comments | 3 Users Viewing</span>
+                <span>0 Comments | 0 Users Viewing</span>
             </div>
 
             <div class="subforum-info subforum-column">
-              <b> <a href="">Last Post</a> </b> By <a href=""><?php echo $potatoUserID1 ?></a>
-                <br>
-                On <small>22 Apr 2022</small>
+              <b> <a href="">Post</a> </b> By <a href=""><?php echo $potatoUserID1 ?></a>
+                
             </div>
 
             </div>
             <div class="subforum-row">
                 <div class="subforum-icon subform-column center">
-                    <i class="fa fa-car"></i>
-
+                    <div class="forum-picture2">
+                <img src="pictures/potato2.png">
+                     </div>
                 </div>
 
                 <div class="subforum-description subforum-column">
@@ -111,19 +114,20 @@
                 </div>
 
             <div class="subforum-statistics subform-column center">
-                <span>24 Posts | 15 Topics Available</span>
+            <span>0 Comments | 0 Users Viewing</span>
             </div>
 
             <div class="subforum-info subforum-column">
-              <b> <a href="">Last Post</a> </b> By <a href=""><?php echo $potatoUserID2 ?></a>
-                <br>
-                On <small>22 Apr 2022</small>
+              <b> <a href="">Post</a> </b> By <a href=""><?php echo $potatoUserID2 ?></a>
+              
             </div>
 
             </div>
             <div class="subforum-row">
                 <div class="subforum-icon subform-column center">
-                    <i class="fa fa-car"></i>
+                <div class="forum-picture3">
+                        <img src="pictures/potato3.jpg">
+                    </div>
                 </div>
 
                 <div class="subforum-description subforum-column">
@@ -132,13 +136,12 @@
                 </div>
 
             <div class="subforum-statistics subform-column center">
-                <span>24 Posts | 15 Topics Available</span>
+            <span>0 Comments | 0 Users Viewing</span>
             </div>
 
             <div class="subforum-info subforum-column">
-              <b> <a href="">Last Post</a> </b> By <a href=""><?php echo $potatoUserID3 ?></a>
-                <br>
-                On <small>22 Apr 2022</small>
+              <b> <a href="">Post</a> </b> By <a href=""><?php echo $potatoUserID3 ?></a>
+              
             </div>
             </div>
         </div>
@@ -174,7 +177,9 @@
 
             <div class="subforum-row">
             <div class="subforum-icon subform-column center">
-                    <p>upvote counters</p>
+            <div class="forum-picture4">
+                        <img src="pictures/lifestyle1.png">
+                    </div>
                 </div>
 
                 <div class="subforum-description subforum-column">
@@ -184,19 +189,21 @@
 
 
             <div class="subforum-statistics subform-column center">
-                <span>24 Posts | 15 Topics Available</span>
+            <span>0 Comments | 0 Users Viewing</span>
             </div>
 
             <div class="subforum-info subforum-column">
-              <b> <a href="">Last Post</a> </b> By <a href=""><?php echo $lifestyleUserID1 ?></a>
-                <br>
-                On <small>22 Apr 2022</small>
+              <b> <a href=""> Post</a> </b> By <a href=""><?php echo $lifestyleUserID1 ?></a>
+        
             </div>
 
             </div>
             <div class="subforum-row">
                 <div class="subforum-icon subform-column center">
-                    <i class="fa fa-car"></i>
+                <div class="forum-picture4">
+                        <img src="pictures/lifestyle2.png">
+                         <!-- <p>upvote counters</p> -->
+                    </div>
                 </div>
 
                 <div class="subforum-description subforum-column">
@@ -206,19 +213,20 @@
 
 
             <div class="subforum-statistics subform-column center">
-                <span>24 Posts | 15 Topics Available</span>
+            <span>0 Comments | 0 Users Viewing</span>
             </div>
 
             <div class="subforum-info subforum-column">
-              <b> <a href="">Last Post</a> </b> By <a href=""><?php echo $lifestyleUserID2 ?></a>
-                <br>
-                On <small>22 Apr 2022</small>
+              <b> <a href="">Post</a> </b> By <a href=""><?php echo $lifestyleUserID2 ?></a>
             </div>
 
             </div>
             <div class="subforum-row">
                 <div class="subforum-icon subform-column center">
-                    <i class="fa fa-car"></i>
+                <div class="forum-picture4">
+                        <img src="pictures/lifestyle3.png">
+                         <!-- <p>upvote counters</p> -->
+                    </div>
                 </div>
 
                 <div class="subforum-description subforum-column">
@@ -228,13 +236,11 @@
 
 
             <div class="subforum-statistics subform-column center">
-                <span>24 Posts | 15 Topics Available</span>
+            <span>0 Comments | 0 Users Viewing</span>
             </div>
 
             <div class="subforum-info subforum-column">
-              <b> <a href="">Last Post</a> </b> By <a href=""><?php echo $lifestyleUserID3 ?></a>
-                <br>
-                On <small>22 Apr 2022</small>
+              <b> <a href="">Post</a> </b> By <a href=""><?php echo $lifestyleUserID3 ?></a>
             </div>
 
             </div>
@@ -272,8 +278,10 @@
 
             <div class="subforum-row">
                 <div class="subforum-icon subform-column center">
-                    <i class="fa fa-car"></i>
+                    <div class="forum-picture5">
+                <img src="pictures/gaming1.png">
                 </div>
+        </div>
 
                 <div class="subforum-description subforum-column">
                 <h1> <a href="Post.php?topic_id=<?php echo $gamingTopicID1?>"><?php echo $gamingTitle1 ?></a></h1>
@@ -281,20 +289,20 @@
                 </div>
 
                 <div class="subforum-statistics subform-column center">
-                <span>24 Posts | 15 Topics Available</span>
+                <span>0 Comments | 0 Users Viewing</span>
                 </div>
 
                 <div class="subforum-info subforum-column">
-              <b> <a href="">Last Post</a> </b> By <a href=""><?php echo $gamingUserID1 ?></a>
-                <br>
-                On <small>22 Apr 2022</small>
+              <b> <a href="">Post</a> </b> By <a href=""><?php echo $gamingUserID1 ?></a>
             </div>
         
         </div>
     </div>
     <div class="subforum-row">
         <div class="subforum-icon subform-column center">
-            <i class="fa fa-car"></i>
+        <div class="forum-picture2">
+                <img src="pictures/gaming2.png">
+                </div>
         </div>
 
         <div class="subforum-description subforum-column">
@@ -304,19 +312,20 @@
 
 
     <div class="subforum-statistics subform-column center">
-        <span>24 Posts | 15 Topics Available</span>
+    <span>0 Comments | 0 Users Viewing</span>
     </div>
 
     <div class="subforum-info subforum-column">
-              <b> <a href="">Last Post</a> </b> By <a href=""><?php echo $gamingUserID2 ?></a>
-                <br>
-                On <small>22 Apr 2022</small>
+              <b> <a href="">Post</a> </b> By <a href=""><?php echo $gamingUserID2 ?></a>
+           
             </div>
 
     </div>
     <div class="subforum-row">
         <div class="subforum-icon subform-column center">
-            <i class="fa fa-car"></i>
+        <div class="forum-picture4">
+                <img src="pictures/gaming3.png">
+                </div>
         </div>
 
         <div class="subforum-description subforum-column">
@@ -327,13 +336,11 @@
 
 
     <div class="subforum-statistics subform-column center">
-        <span>24 Posts | 15 Topics Available</span>
+    <span>0 Comments | 0 Users Viewing</span>
     </div>
 
     <div class="subforum-info subforum-column">
-              <b> <a href="">Last Post</a> </b> By <a href=""><?php echo $gamingUserID3 ?></a>
-                <br>
-                On <small>22 Apr 2022</small>
+              <b> <a href="">Post</a> </b> By <a href=""><?php echo $gamingUserID3 ?></a>
             </div>
 
     </div>

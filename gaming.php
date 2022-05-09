@@ -53,6 +53,7 @@
             $result = mysqli_query($conn, $query);
             $resultCheck = mysqli_num_rows($result);
             $counter=0;
+            $postNumber=1;
             while($rows[]=mysqli_fetch_array($result)){
                 $potatoTitle1= $rows[$counter]['title'];
                 $potatoTopicID1 = $rows[$counter]['topic_id'];
@@ -61,7 +62,7 @@
                 echo "
                 <div class='subforum-row'>
         <div class='subforum-icon subform-column center'>
-                 <p>upvote counters</p>
+                 <h3>$postNumber.</h3>
             </div>
                 
                 <form method='GET'>
@@ -83,6 +84,7 @@
                     </div>
                         ";
                 $counter++;
+                $postNumber++;
 
                 
             }

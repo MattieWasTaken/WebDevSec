@@ -4,3 +4,41 @@ html{
     background-size:cover;
 }
 
+.forum-picture1 img{
+    object-fit: cover;
+    height: 60px;
+    width: 80px;
+    justify-content: center;
+    margin-left: 25px;
+}
+.forum-picture2 img{
+    object-fit: cover;
+    height: 55px;
+    width: 60px;
+    justify-content: center;
+    margin-left: 35px;
+}
+
+.forum-picture3 img{
+    object-fit: cover;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    margin-left: 35px;
+}
+
+.forum-picture4 img{
+    object-fit: cover;
+    height: 50px;
+    width: 60px;
+    justify-content: center;
+    margin-left: 35px;
+}
+
+.forum-picture5 img{
+    object-fit: cover;
+    height: 50px;
+    width: 60px;
+    justify-content: center;
+    margin-left: 25px;
+}
