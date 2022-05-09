@@ -77,27 +77,27 @@
                 <h1>Here is what we were asked lately. . .</h1>
             </div>
 			
-			<button type="button" class="collapsible" style="color:white" >How to create an account?</button>
+			<button type="button" class="collapsible" style="color:white" ><h3>How to create an account?</h3></button>
 			<div class="content">
 				<p>link</p>
 			</div>
 			
-			<button type="button" class="collapsible" style="color:white" >Cannot find a certain page? Here is how to!</button>
+			<button type="button" class="collapsible" style="color:white" ><h3>Cannot find a certain page? Here is how to!</h3></button>
 			<div class="content">
 				<p>link</p>
 			</div>
 			
-			<button type="button" class="collapsible" style="color:white" >Found something not right? Here is how to Report an unappropriate post!</button>
+			<button type="button" class="collapsible" style="color:white" ><h3>Found something not right? Here is how to Report an unappropriate post!</h3></button>
 			<div class="content">
 				<p>link</p>
 			</div>
 			
-			<button type="button" class="collapsible" style="color:white" >What can we do?</button>
+			<button type="button" class="collapsible" style="color:white" ><h3>What can we do?</h3></button>
 			<div class="content">
 				<p>link</p>
 			</div>
-			
-			<button type="button" class="collapsible" style="color:white" >Want to learn how to learn to do these stuffs? You better not!</button>
+		
+			<button type="button" class="collapsible" style="color:white" ><h3>Want to learn how to learn to do these stuffs? You better not!</h3></button>
 			<div class="content">
 				<p>link</p>
 			</div>
