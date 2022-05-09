@@ -73,34 +73,35 @@
 			
 			
 			
-			<button type="button" class="collapsible" style="color:white" ><h2>Here is what we were asked lately. . .</h2></button>
-   
-            <div class="content">
-				<<div class="subforum-icon subform-column center">
-                    <i class="fa fa-car"></i>
-                    <p>How to create an account?</p>
-                </div>
-				
-				<div class="subforum-icon subform-column center">
-                    <i class="fa fa-car"></i>
-                    <p>Cannot find a certain page? Here is how to!</p>
-                </div>
-				
-				<div class="subforum-icon subform-column center">
-                    <i class="fa fa-car"></i>
-                    <p>Found something not right? Here is how to Report an unappropriate post!</p>
-                </div>
-				
-				<div class="subforum-icon subform-column center">
-                    <i class="fa fa-car"></i>
-                    <p>What can we do?</p>
-                </div>
-
-				<div class="subforum-icon subform-column center">
-                    <i class="fa fa-car"></i>
-                    <p>Want to learn how to learn to do these stuffs? You better not!</p>
-                </div>
+			<div class="subforum-title">
+                <h1>Here is what we were asked lately. . .</h1>
+            </div>
+			
+			<button type="button" class="collapsible" style="color:white" >How to create an account?</button>
+			<div class="content">
+				<p>link</p>
 			</div>
+			
+			<button type="button" class="collapsible" style="color:white" >Cannot find a certain page? Here is how to!</button>
+			<div class="content">
+				<p>link</p>
+			</div>
+			
+			<button type="button" class="collapsible" style="color:white" >Found something not right? Here is how to Report an unappropriate post!</button>
+			<div class="content">
+				<p>link</p>
+			</div>
+			
+			<button type="button" class="collapsible" style="color:white" >What can we do?</button>
+			<div class="content">
+				<p>link</p>
+			</div>
+			
+			<button type="button" class="collapsible" style="color:white" >Want to learn how to learn to do these stuffs? You better not!</button>
+			<div class="content">
+				<p>link</p>
+			</div>
+			
 		</div>
      
 
