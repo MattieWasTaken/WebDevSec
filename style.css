@@ -336,3 +336,31 @@ trending{
     height: 500px;
     padding: 10px;
 }
+
+.collapsible {
+	background-color: gray;
+    background: rgba(0,0,0,0.3);
+	  color: gray;
+	  cursor: pointer;
+	  padding: 18px;
+	  width: 100%;
+	  border: none;
+	  text-align: left;
+	  outline: none;
+
+}
+
+.active, .collapsible:hover {
+	background-color: gray;
+    background: rgba(0,0,0,0.3);
+}
+
+.content {
+	background-color: gray;
+    background: rgba(0,0,0,0.3);
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  border: none;
+}

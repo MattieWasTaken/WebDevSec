@@ -71,37 +71,36 @@
             </form>
             </div>
 			
-			<div class="subforum-title">
-                <h1>Here is what we were asked lately. . .</h1>
-            </div>
-				<div class="subforum-icon subform-column center">
+			
+			
+			<button type="button" class="collapsible" style="color:white" ><h2>Here is what we were asked lately. . .</h2></button>
+   
+            <div class="content">
+				<<div class="subforum-icon subform-column center">
                     <i class="fa fa-car"></i>
                     <p>How to create an account?</p>
                 </div>
-				
 				
 				<div class="subforum-icon subform-column center">
                     <i class="fa fa-car"></i>
                     <p>Cannot find a certain page? Here is how to!</p>
                 </div>
 				
-				
 				<div class="subforum-icon subform-column center">
                     <i class="fa fa-car"></i>
                     <p>Found something not right? Here is how to Report an unappropriate post!</p>
                 </div>
-			
 				
 				<div class="subforum-icon subform-column center">
                     <i class="fa fa-car"></i>
                     <p>What can we do?</p>
                 </div>
-				
-				
+
 				<div class="subforum-icon subform-column center">
                     <i class="fa fa-car"></i>
                     <p>Want to learn how to learn to do these stuffs? You better not!</p>
                 </div>
+			</div>
 		</div>
      
 
@@ -123,7 +122,24 @@
 	
 	</footer>
 
-    <script src="main.js>"> </script>
+    <script>
+	var coll = document.getElementsByClassName("collapsible");
+	var i;
+
+	for (i = 0; i < coll.length; i++) {
+	  coll[i].addEventListener("click", function() {
+		this.classList.toggle("active");
+		var content = this.nextElementSibling;
+		if (content.style.display === "block") {
+		  content.style.display = "none";
+		} else {
+		  content.style.display = "block";
+		}
+	  });
+	}
+	</script>
+	
+	
 
     </body>
 
