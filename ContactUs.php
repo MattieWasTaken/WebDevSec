@@ -63,8 +63,7 @@
                 </div>           
 
 				<div>
-					<img src="https://scontent.fcbr1-1.fna.fbcdn.net/v/t1.18169-9/14938111_1792494424356337_5538561885880499841_n.jpg?_
-					nc_cat=110&ccb=1-6&_nc_sid=ad2b24&_nc_ohc=oeEuuyebJ6AAX_b49pp&_nc_ht=scontent.fcbr1-1.fna&oh=00_AT-Zfjg2548UYcWUtqOC2DRcjt3z6whtjunvC8opwl1Vag&oe=629B4802" 
+					<img src="https://scontent.fcbr1-1.fna.fbcdn.net/v/t39.30808-6/191470451_3054251104811627_7121431261997920084_n.jpg?_nc_cat=100&ccb=1-6&_nc_sid=09cbfe&_nc_ohc=4Whh1SWMx1EAX8VFqxw&_nc_ht=scontent.fcbr1-1.fna&oh=00_AT9N1_tPVM7Br2sSfb0hwayKbd2j0_rzgBejivAEVFb4nw&oe=627D5E1E" 
 					alt="Site Logo" border="0" style="width:200px; height:220px;" img align="center">
 				</div>
 
@@ -84,8 +83,7 @@
                 </div>           
 
 				<div>
-					<img src="https://scontent.fcbr1-1.fna.fbcdn.net/v/t1.18169-9/10313688_10153341849509518_8757356735382996534_n.jpg?_
-					nc_cat=111&ccb=1-6&_nc_sid=ba80b0&_nc_ohc=3FHVgegkrrkAX9DGZNl&_nc_ht=scontent.fcbr1-1.fna&oh=00_AT-rgkaSZX5licwJnvLQD1ezxSLB5Dwmuu3BaYUbvYUApQ&oe=6298E785" 
+					<img src="https://scontent.fcbr1-1.fna.fbcdn.net/v/t1.6435-9/185807729_2980028272323115_6626187831202326855_n.jpg?_nc_cat=109&ccb=1-6&_nc_sid=09cbfe&_nc_ohc=mNsX13W01msAX_q5c0U&tn=xen7aKHzGN0eTBPD&_nc_ht=scontent.fcbr1-1.fna&oh=00_AT83J8I8L-eCIZ0PHP5G4S5S1ZyAVeFwkAx3aD4gRSUfxw&oe=629F08FA" 
 					alt="Site Logo" border="0" style="width:200px; height:220px;" img align="center">
 				</div>
 
@@ -105,8 +103,7 @@
                 </div>           
 
 				<div>
-					<img src="https://scontent.fcbr1-1.fna.fbcdn.net/v/t1.18169-9/10339755_810396052357167_8417301922164292094_n.jpg?_
-					nc_cat=108&ccb=1-6&_nc_sid=cdbe9c&_nc_ohc=KZy1KH9a59cAX-Mg21f&_nc_ht=scontent.fcbr1-1.fna&oh=00_AT8y4OoCM2jepBWAVMvrsKF4XUWtqlBkvBclyOD6XYom4A&oe=629A1BB6" 
+					<img src="https://scontent.fcbr1-1.fna.fbcdn.net/v/t39.30808-6/279037108_2255841767889356_5830882824835107499_n.jpg?_nc_cat=104&ccb=1-6&_nc_sid=09cbfe&_nc_ohc=beUPvTQkswUAX93KwXI&_nc_ht=scontent.fcbr1-1.fna&oh=00_AT8wUwzMVBr31FyzNIfCSq52loz54wsf2i3FpQmvXMMbJg&oe=627E9875" 
 					alt="Site Logo" border="0" style="width:200px; height:220px;" img align="center">
 				</div>
 
