@@ -16,7 +16,7 @@
         <div class="column left">
         <a href="index.php"> <p class="mainheading" > OnlineTopia.com </p></a>
 
-            <form action="/action_page.php">
+            <form action="underconstruction.php">
                 <input type="text" name="q" id="" placeholder="Search...">
                 <button type="submit">Submit</button> 
             </form>
@@ -30,9 +30,9 @@
         </div>
             
         <div class="column right">
-            <button class="smallbutton" href="#CreateAcc"> Create Account </button>
-            <button class="smallbutton" href="#LOGINPAGE"> Log In </button>
-        </div>
+        <a href="underconstruction.php"> <button class="smallbutton" > Create Account </button></a>
+        <a href="underconstruction.php"> <button class="smallbutton" > Login </button></a>    
+    </div>
         
     </div>
 

@@ -16,7 +16,7 @@
         <div class="column left">
            <a href="index.php"> <p class="mainheading" > OnlineTopia.com </p></a>
 
-            <form action="/action_page.php">
+            <form action="underconstruction.php">
                 <input type="text" name="q" id="" placeholder="Search...">
                 <button type="submit">Submit</button> 
             </form>
@@ -30,8 +30,8 @@
         </div>
             
         <div class="column right">
-            <button class="smallbutton" href="#CreateAcc"> Create Account </button>
-            <button class="smallbutton" href="#LOGINPAGE"> Log In </button>
+        <a href="underconstruction.php"> <button class="smallbutton" > Create Account </button></a>
+        <a href="underconstruction.php"> <button class="smallbutton" > Login </button></a>    
         </div>
         
     </div>
@@ -58,12 +58,12 @@
 
                 <div class="subforum-description subforum-column">
 					<h1 style="color:lightgreen" text align="center">Matthew Castles</h1><br>
-					<p text align="center">Email: Matthewcastles@hotmail.com</p>
+					<p text align="center">Email: owner@matthewcastles.com</p>
 					<p text align="center">Mobile: +61 41 349 6969</p>
                 </div>           
 
 				<div>
-					<img src="https://scontent.fcbr1-1.fna.fbcdn.net/v/t39.30808-6/191470451_3054251104811627_7121431261997920084_n.jpg?_nc_cat=100&ccb=1-6&_nc_sid=09cbfe&_nc_ohc=4Whh1SWMx1EAX8VFqxw&_nc_ht=scontent.fcbr1-1.fna&oh=00_AT9N1_tPVM7Br2sSfb0hwayKbd2j0_rzgBejivAEVFb4nw&oe=627D5E1E" 
+					<img src="https://scontent-syd2-1.xx.fbcdn.net/v/t39.30808-6/191470451_3054251104811627_7121431261997920084_n.jpg?_nc_cat=100&ccb=1-6&_nc_sid=09cbfe&_nc_ohc=4Whh1SWMx1EAX_Nn0qA&_nc_ht=scontent-syd2-1.xx&oh=00_AT-CMmZl858M6Uew1Ghlctrucp2usWxh5Oy_TmlHeUR0_A&oe=627D5E1E" 
 					alt="Site Logo" border="0" style="width:200px; height:220px;" img align="center">
 				</div>
 
@@ -103,7 +103,8 @@
                 </div>           
 
 				<div>
-					<img src="https://scontent.fcbr1-1.fna.fbcdn.net/v/t39.30808-6/279037108_2255841767889356_5830882824835107499_n.jpg?_nc_cat=104&ccb=1-6&_nc_sid=09cbfe&_nc_ohc=beUPvTQkswUAX93KwXI&_nc_ht=scontent.fcbr1-1.fna&oh=00_AT8wUwzMVBr31FyzNIfCSq52loz54wsf2i3FpQmvXMMbJg&oe=627E9875" 
+					<img src="https://scontent.fcbr1-1.fna.fbcdn.net/v/t39.30808-6/279037108_2255841767889356_5830882824835107499_n.jpg?_
+                    nc_cat=104&ccb=1-6&_nc_sid=09cbfe&_nc_ohc=beUPvTQkswUAX93KwXI&_nc_ht=scontent.fcbr1-1.fna&oh=00_AT8wUwzMVBr31FyzNIfCSq52loz54wsf2i3FpQmvXMMbJg&oe=627E9875" 
 					alt="Site Logo" border="0" style="width:200px; height:220px;" img align="center">
 				</div>
 

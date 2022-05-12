@@ -15,22 +15,22 @@
         
         <div class="column left">
            <a href="index.php"> <p class="mainheading" > OnlineTopia.com </p></a>
-            <form action="/action_page.php">
+            <form action="underconstruction.php">
                 <input type="text" name="q" id="" placeholder="Search...">
                 <button type="submit">Submit</button> 
             </form>
         </div>
         
         <div class="column middle">
-            <a href="createpost.php"><button>Contact Us</button></a>
-            <a href="createpost.php"><button>F.A.Q</button></a>
+            <a href="ContactUs.php"><button>Contact Us</button></a>
+            <a href="FAQ.php"><button>F.A.Q</button></a>
             <a href="createpost.php"><button>Submit Post</button></a>
             <br>  
         </div>
             
         <div class="column right">
-            <button class="smallbutton" href="#CreateAcc"> Create Account </button>
-            <button class="smallbutton" href="#LOGINPAGE"> Log In </button>
+        <a href="underconstruction.php"> <button class="smallbutton" > Create Account </button></a>
+        <a href="underconstruction.php"> <button class="smallbutton" > Login </button></a>    
         </div>
         
     </div>
@@ -42,125 +42,93 @@
 <body>
 	<br><br><br><br>
     <div class="container">
+
         <div class="subforum">
 		<h1>Support</h1>
-			<div class="subforum-title">
-                <h2>We are here to help.</h2>
+        <div class="subforum">
+                <h2 class="subforum-title">Please Try These Resources Before Submitting a Help Ticket. (Click text to travel)</h2>
             </div>
-
-            <div class="subforum-row">
-                <div class="left">
-                    <i class="fa fa-car"></i>
-                    <p>Frequently Asked /link to FAQ page</p>
+			<div class="subforum-row">
+                <div>
+                    
+                    <p><a href="FAQ.php">Frequently Asked Questions</a></p>
                 </div>
-				
-				 <div class="center">
-					<i class="fa fa-car"></i>
-                    <p>Using policy /link to XXXX</p>
+            </div>
+			
+			<div class="subforum-row">
+                <div>
+                    
+                    <p><a href="ContactUs.php">Send Us A Message</a></p>
                 </div>
-				
-				<div class="right">
-					<i class="fa fa-car"></i>
-                    <p>Talk to us personally /link to XXXX</p>
+            </div>
+			
+			<div class="subforum-row">
+                <div>
+                    <p><a href="contentpolicy.php">User Policy</a></p>
                 </div>
             </div>
 			
 			
-			<button type="button" class="collapsible" style="color:white" ><h2 class="subforum-title">Gaming?.</h2>
-				<h3>BORE? Wanna play some new cool game?</h3></button>
-			<div class="content">
-				<div class="subforum-row">
+			
+			
+			<div class="subforum">
+                <h2 class="subforum-title">Gaming?</h2>
+				<h3>Some Gaming Suggestions For People Looking To Try New Games.</h3>
+            </div>
+			<div class="subforum-row">
                 <div>
-                    <i class="fa fa-car"></i>
-                    <p>MMORPG /link to FAQ page</p>
+                    
+                    <p>MMORPG: Runescape</p>
                 </div>
-				</div>
-				
-				<div class="subforum-row">
-					<div>
-						<i class="fa fa-car"></i>
-						<p>RPG /link to FAQ page</p>
-					</div>
-				</div>
-				
-				<div class="subforum-row">
-					<div>
-						<i class="fa fa-car"></i>
-						<p>Turn-based /link to FAQ page</p>
-					</div>
-				</div>
-				
-				<div class="subforum-row">
-					<div>
-						<i class="fa fa-car"></i>
-						<p>Indie /link to FAQ page</p>
-					</div>
-				</div>
-			</div>
-		
-			<button type="button" class="collapsible" style="color:white" ><h2 class="subforum-title">Have too much time too use?</h2>
-				<h4>Read these then!?</h4></button>
-			<div class="content">
-				<div class="subforum-row">
+            </div>
+			
+			<div class="subforum-row">
                 <div>
-                    <i class="fa fa-car"></i>
-                    <p>How to beat Irwin into a pup /link to FAQ page</p>
+                    
+                    <p>RPG: Elden Ring</p>
                 </div>
-				</div>
-				
-				<div class="subforum-row">
-					<div>
-						<i class="fa fa-car"></i>
-						<p>How to beat Irwin into a pup /link to FAQ page</p>
-					</div>
-				</div>
-				
-				<div class="subforum-row">
-					<div>
-						<i class="fa fa-car"></i>
-						<p>How make our Matty wear a bikini /link to FAQ page</p>
-					</div>
-				</div>
-				
-				<div class="subforum-row">
-					<div>
-						<i class="fa fa-car"></i>
-						<p>Wanna be cool like Inbus? Hah, you wont /link to FAQ page</p>
-					</div>
-				</div>
-			</div>
-
-			<button type="button" class="collapsible" style="color:white" ><h2 class="subforum-title">Want to change yourself?</h2>
-				<h4>Have a good read about these cool things. . .</h4></button>
-			<div class="content">
-				<div class="subforum-row">
+            </div>
+			
+			<div class="subforum-row">
                 <div>
-                    <i class="fa fa-car"></i>
-                    <p>How to dress good like John Cena? /link to FAQ page</p>
+                   
+                    <p>Turn-based: Age Of Mythology</p>
                 </div>
-				</div>
-				
-				<div class="subforum-row">
-					<div>
-						<i class="fa fa-car"></i>
-						<p>How to build like John Cena? /link to FAQ page</p>
-					</div>
-				</div>
-				
-				<div class="subforum-row">
-					<div>
-						<i class="fa fa-car"></i>
-						<p>How to build like John Cena? /link to FAQ page</p>
-					</div>
-				</div>
-				
-				<div class="subforum-row">
-					<div>
-						<i class="fa fa-car"></i>
-						<p>How to paint your house wall a John Cena cool pose? /link to FAQ page</p>
-					</div>
-				</div>
-			</div>
+            </div>
+			
+			<div class="subforum-row">
+                <div>
+                    
+                    <p>Indie: Life is Strange</p>
+                </div>
+            </div>
+			
+			
+			<div class="subforum">
+                <h2 class="subforum-title">Have too much time too use?</h2>
+				<h4>Read these then!?</h4>
+            </div>
+			<div class="subforum-row">
+                <div>
+                    
+                    <p>Check out the home page for the most recent posts by clicking on OnlineTopia.com</p>
+                </div>
+            </div>
+			
+			<div class="subforum-row">
+                <div>
+                   
+                    <p>Watch Youtube videos to learn how to make a website like this one.</p>
+                </div>
+            </div>
+			
+			<div class="subforum-row">
+                <div>
+                   
+                    <p>Wanna be cool like Inbus? He's not cool either, dont worry.</p>
+                </div>
+            </div>
+			
 		</div>
      
 
@@ -182,22 +150,7 @@
 	
 	</footer>
 
-    <script>
-	var coll = document.getElementsByClassName("collapsible");
-	var i;
-
-	for (i = 0; i < coll.length; i++) {
-	  coll[i].addEventListener("click", function() {
-		this.classList.toggle("active");
-		var content = this.nextElementSibling;
-		if (content.style.display === "block") {
-		  content.style.display = "none";
-		} else {
-		  content.style.display = "block";
-		}
-	  });
-	}
-	</script>
+    <script src="main.js>"> </script>
 
     </body>
 

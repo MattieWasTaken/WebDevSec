@@ -16,7 +16,7 @@
         <div class="column left">
         <a href="index.php"> <p class="mainheading" > OnlineTopia.com </p></a>
 
-            <form action="/action_page.php">
+            <form action="underconstruction.php">
                 <input type="text" name="q" id="" placeholder="Search...">
                 <button type="submit">Submit</button> 
             </form>
@@ -30,8 +30,8 @@
         </div>
             
         <div class="column right">
-            <button class="smallbutton" href="#CreateAcc"> Create Account </button>
-            <button class="smallbutton" href="#LOGINPAGE"> Log In </button>
+        <a href="underconstruction.php"> <button class="smallbutton" > Create Account </button></a>
+        <a href="underconstruction.php"> <button class="smallbutton" > Login </button></a>    
         </div>
         
     </div>
@@ -53,11 +53,13 @@
                     <i class="fa fa-car"></i>
                     <h2>Report problem</h2>
                 </div>
-                <form action="submitquestion.php" method="POST">
+				
+				   <form action="submitquestion.php" method="POST">
                     <span>Username:</span>
                     <input type="text" name="user_id" placeholder="Enter your Display Name">
 				 <div class="FAQ-Text">
 					<textarea type="text" name="faq-content" id="faq-box" placeholder="Tell us what happened. . ."></textarea>
+                     <br>
 					<button type="submit" name="submit">Submit</button>
                 </div>
                 </form>
@@ -71,35 +73,33 @@
             </form>
             </div>
 			
-			
-			
 			<div class="subforum-title">
                 <h1>Here is what we were asked lately. . .</h1>
             </div>
 			
-			<button type="button" class="collapsible" style="color:white" ><h3>How to create an account?</h3></button>
+			<button type="button" class="collapsible" style="color:white" ><h3>Q:How to create an account?</h3></button>
 			<div class="content">
-				<p>link</p>
+				<p>A:This feature is not yet available. Stay tuned for further updates!</p>
 			</div>
 			
-			<button type="button" class="collapsible" style="color:white" ><h3>Cannot find a certain page? Here is how to!</h3></button>
+			<button type="button" class="collapsible" style="color:white" ><h3>Q:Cannot find a certain page? Here is how to!</h3></button>
 			<div class="content">
-				<p>link</p>
+				<p>A:The search feature has not yet been completed.</p>
 			</div>
 			
-			<button type="button" class="collapsible" style="color:white" ><h3>Found something not right? Here is how to Report an unappropriate post!</h3></button>
+			<button type="button" class="collapsible" style="color:white" ><h3>Q:Found something not right? Here is how to Report an unappropriate post!</h3></button>
 			<div class="content">
-				<p>link</p>
+				<p>A:Please submit a report in the above text box provided!</p>
 			</div>
 			
-			<button type="button" class="collapsible" style="color:white" ><h3>What can we do?</h3></button>
+			<button type="button" class="collapsible" style="color:white" ><h3>Q:What can we do?</h3></button>
 			<div class="content">
-				<p>link</p>
+				<p>A:We can do whatever you would like us to!</p>
 			</div>
 		
-			<button type="button" class="collapsible" style="color:white" ><h3>Want to learn how to learn to do these stuffs? You better not!</h3></button>
+			<button type="button" class="collapsible" style="color:white" ><h3>Q:Want to learn how to learn to do these stuffs?</h3></button>
 			<div class="content">
-				<p>link</p>
+				<p>A:Youtube tutorials help a lot...</p>
 			</div>
 			
 		</div>
@@ -139,8 +139,6 @@
 	  });
 	}
 	</script>
-	
-	
 
     </body>
 

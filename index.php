@@ -31,8 +31,8 @@
         </div>
             
         <div class="column right">
-           <a href="underconstruction.php"> <button class="smallbutton" > Create Account </button></a>
-           <a href="underconstruction.php"> <button class="smallbutton" >Login</button></a>
+        <a href="underconstruction.php"> <button class="smallbutton" > Create Account </button></a>
+        <a href="underconstruction.php"> <button class="smallbutton" > Login </button></a>    
         </div>
         
     </div>
@@ -78,16 +78,15 @@
 
             <div class="subforum-row">
                 <div class="subforum-icon subform-column center">
-                    <div class="forum-picture1">
+                <div class="forum-picture1">
                         <img src="pictures/potato1.png">
-                         <!-- <p>upvote counters</p> -->
                     </div>
                 </div>
                 <form method='GET'>
                 <div class="subforum-description subforum-column">
                     <input type="hidden" name="<?php echo $potatoTopicID1 ?>"<?php echo $potatoTopicID1?>>
                     <h1><a href="Post.php?topic_id=<?php echo $potatoTopicID1?>"><?php echo $potatoTitle1 ?></a></h1>
-                <p><?php echo $potatoContent1 ?> </p>
+                <p>Click to view more! </p>
                 </div>
                 </form>
 
@@ -97,20 +96,21 @@
 
             <div class="subforum-info subforum-column">
               <b> <a href="">Post</a> </b> By <a href=""><?php echo $potatoUserID1 ?></a>
-                
+               
             </div>
 
             </div>
             <div class="subforum-row">
                 <div class="subforum-icon subform-column center">
-                    <div class="forum-picture2">
+                <div class="forum-picture2">
                 <img src="pictures/potato2.png">
                      </div>
+
                 </div>
 
                 <div class="subforum-description subforum-column">
                 <h1><a href="Post.php?topic_id=<?php echo $potatoTopicID2?>"><?php echo $potatoTitle2?></a></h1>
-                <?php echo $potatoContent2 ?>
+                  <p>Click to view more! </p>
                 </div>
 
             <div class="subforum-statistics subform-column center">
@@ -119,7 +119,7 @@
 
             <div class="subforum-info subforum-column">
               <b> <a href="">Post</a> </b> By <a href=""><?php echo $potatoUserID2 ?></a>
-              
+               
             </div>
 
             </div>
@@ -132,7 +132,7 @@
 
                 <div class="subforum-description subforum-column">
                 <h1><a href="Post.php?topic_id=<?php echo $potatoTopicID3?>"><?php echo $potatoTitle3 ?></a></h1>
-                <?php echo $potatoContent3 ?>
+                  <p>Click to view more! </p>
                 </div>
 
             <div class="subforum-statistics subform-column center">
@@ -141,7 +141,7 @@
 
             <div class="subforum-info subforum-column">
               <b> <a href="">Post</a> </b> By <a href=""><?php echo $potatoUserID3 ?></a>
-              
+    
             </div>
             </div>
         </div>
@@ -184,7 +184,7 @@
 
                 <div class="subforum-description subforum-column">
                 <h1><a href="Post.php?topic_id=<?php echo $lifestyleTopicID1?>"><?php echo $lifestyleTitle1 ?></a></h1>
-               <?php echo $lifestyleContent1?>
+                <p>Click to view more! </p>
                 </div>
 
 
@@ -193,22 +193,21 @@
             </div>
 
             <div class="subforum-info subforum-column">
-              <b> <a href=""> Post</a> </b> By <a href=""><?php echo $lifestyleUserID1 ?></a>
-        
+              <b> <a href="">Post</a> </b> By <a href=""><?php echo $lifestyleUserID1 ?></a>
+              
             </div>
 
             </div>
             <div class="subforum-row">
                 <div class="subforum-icon subform-column center">
-                <div class="forum-picture4">
-                        <img src="pictures/lifestyle2.png">
-                         <!-- <p>upvote counters</p> -->
+                    <div class="forum-picture4">
+                <img src="pictures/lifestyle2.png">
+                      </div>
                     </div>
-                </div>
 
                 <div class="subforum-description subforum-column">
                 <h1><a href="Post.php?topic_id=<?php echo $lifestyleTopicID2?>"><?php echo $lifestyleTitle2 ?></a></h1>
-                <?php echo $lifestyleContent2?>
+                 <p>Click to view more! </p>
                 </div>
 
 
@@ -218,6 +217,7 @@
 
             <div class="subforum-info subforum-column">
               <b> <a href="">Post</a> </b> By <a href=""><?php echo $lifestyleUserID2 ?></a>
+            
             </div>
 
             </div>
@@ -225,13 +225,12 @@
                 <div class="subforum-icon subform-column center">
                 <div class="forum-picture4">
                         <img src="pictures/lifestyle3.png">
-                         <!-- <p>upvote counters</p> -->
                     </div>
                 </div>
 
                 <div class="subforum-description subforum-column">
                 <h1><a href="Post.php?topic_id=<?php echo $lifestyleTopicID3?>"><?php echo $lifestyleTitle3 ?></a></h1>
-               <?php echo $lifestyleContent3?>
+                <p>Click to view more! </p>
                 </div>
 
 
@@ -242,8 +241,7 @@
             <div class="subforum-info subforum-column">
               <b> <a href="">Post</a> </b> By <a href=""><?php echo $lifestyleUserID3 ?></a>
             </div>
-
-            </div>
+         </div>
         </div>
         <!-- GAMING FORUM-->
 
@@ -285,7 +283,7 @@
 
                 <div class="subforum-description subforum-column">
                 <h1> <a href="Post.php?topic_id=<?php echo $gamingTopicID1?>"><?php echo $gamingTitle1 ?></a></h1>
-                <?php echo $gamingContent1?>
+                  <p>Click to view more! </p>
                 </div>
 
                 <div class="subforum-statistics subform-column center">
@@ -294,6 +292,7 @@
 
                 <div class="subforum-info subforum-column">
               <b> <a href="">Post</a> </b> By <a href=""><?php echo $gamingUserID1 ?></a>
+               
             </div>
         
         </div>
@@ -307,7 +306,7 @@
 
         <div class="subforum-description subforum-column">
                 <h1> <a href="Post.php?topic_id=<?php echo $gamingTopicID2?>"><?php echo $gamingTitle2 ?></a></h1>
-                <?php echo $gamingContent2?>
+                  <p>Click to view more! </p>
                 </div>
 
 
@@ -317,7 +316,7 @@
 
     <div class="subforum-info subforum-column">
               <b> <a href="">Post</a> </b> By <a href=""><?php echo $gamingUserID2 ?></a>
-           
+         
             </div>
 
     </div>
@@ -330,7 +329,7 @@
 
         <div class="subforum-description subforum-column">
                 <h1> <a href="Post.php?topic_id=<?php echo $gamingTopicID3?>"><?php echo $gamingTitle3 ?></a></h1>
-                <?php echo $gamingContent3?>
+                  <p>Click to view more! </p>
                 </div>
 
 
@@ -341,6 +340,7 @@
 
     <div class="subforum-info subforum-column">
               <b> <a href="">Post</a> </b> By <a href=""><?php echo $gamingUserID3 ?></a>
+         
             </div>
 
     </div>

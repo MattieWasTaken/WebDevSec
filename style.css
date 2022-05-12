@@ -8,17 +8,14 @@ html{
     font-size:14px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
-    color: #fefefe;
+    color: white;
 }
 
-
-
 a{
-    color: #77B2FF;
+    color: whitesmoke;
     font-weight: bolder;
     text-decoration: none;
 }
-
 
 h1{ 
     
@@ -28,48 +25,6 @@ h1{
 
 /* Homepage.html*/
 
-.topnav{
-    overflow: hidden;
-    background-color: gray;
-    opacity: 0.0;
-}
-
-.topnav a{
-    float: left;
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-.topnav a:hover{
-    background-color: white;
-    color: black;
-    padding: 15px
-}
-
-.topnav input[type=text]{
-  float: right;
-  padding: 10px;
-  border: none;
-  margin-top: 5px;
-  margin-right: 100px;
-  margin-bottom: 10px;
-  font-size: 13px;
-}
-
-.topnav .search-container button{
-    float:right;
-    padding: 8px;
-    margin-top: 5px;
-    margin-right: -247px;
-    background: #ddd;
-    font-size: 17px;
-    border: none;
-    cursor: pointer;
-}
 
 .container{
     margin: 20px;
@@ -91,7 +46,10 @@ h1{
 
 .subforum-description *{
     margin-block: 0;
-    text-overflow: ellipsis;
+}
+
+.subforum-description p{
+    color: #77B2FF;
 }
 
 p{
@@ -118,9 +76,8 @@ center{
     align-items: center;
 }
 
-.subforum-icon{
-    background: rgba(0,0,0,0.3);
-    padding: 0px;
+.subfourm-icon i{
+    font-size: 45px;
 }
 
 .subforum-info{
@@ -162,7 +119,7 @@ center{
 /*INDIVIDUAL POSTS*/
 .post-content{
 background-color: rgb(124, 69, 69);
-background: rgba(0,0,0,1);
+background: rgba(0,0,0,0.3);
 padding: 5px;
 border-radius: 5px;
 margin: 4px;
@@ -339,6 +296,7 @@ trending{
     height: 500px;
     padding: 10px;
 }
+
 
 .collapsible {
 	background-color: gray;

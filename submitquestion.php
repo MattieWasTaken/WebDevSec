@@ -12,6 +12,6 @@ if($user_id=="" || $faqQuestion==""){
     $stmt->execute();
 }
 
-
+header("Location: index.php?submission=success");
 
 ?>

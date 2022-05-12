@@ -16,7 +16,7 @@
         <div class="column left">
            <a href="index.php"> <p class="mainheading" > OnlineTopia.com </p></a>
 
-            <form action="/action_page.php">
+            <form action="underconstruction.php">
                 <input type="text" name="q" id="" placeholder="Search...">
                 <button type="submit">Submit</button> 
             </form>
@@ -30,8 +30,8 @@
         </div>
             
         <div class="column right">
-            <button class="smallbutton" href="#CreateAcc"> Create Account </button>
-            <button class="smallbutton" href="#LOGINPAGE"> Log In </button>
+        <a href="underconstruction.php"> <button class="smallbutton" > Create Account </button></a>
+        <a href="underconstruction.php"> <button class="smallbutton" > Login </button></a>    
         </div>
         
     </div>
@@ -53,6 +53,7 @@
             $result = mysqli_query($conn, $query);
             $resultCheck = mysqli_num_rows($result);
             $counter=0;
+            $postCounter=1;
             while($rows[]=mysqli_fetch_array($result)){
                 $potatoTitle1= $rows[$counter]['title'];
                 $potatoTopicID1 = $rows[$counter]['topic_id'];
@@ -61,7 +62,7 @@
                 echo "
                 <div class='subforum-row'>
         <div class='subforum-icon subform-column center'>
-                 <p>upvote counters</p>
+                <h3>$postCounter.</h3>
             </div>
                 
                 <form method='GET'>
@@ -71,11 +72,11 @@
                         <p>Click To View Post!</p></div></form>
                     
                         <div class='subforum-statistics subform-column center'>
-                        <span>24 Comments | 3 Users Viewing</span>
+                        <span>0 Comments | 0 Users Viewing</span>
                     </div>
         
                     <div class='subforum-info subforum-column'>
-                      <b> <a href=''>Last Post</a> </b> By <a href=''>$potatoUserID1</a>
+                      <b> <a href=''>Post</a> </b> By <a href=''>$potatoUserID1</a>
                         <br>
                         On <small>22 Apr 2022</small>
                     </div>
@@ -83,6 +84,7 @@
                     </div>
                         ";
                 $counter++;
+                $postCounter++;
 
                 
             }
