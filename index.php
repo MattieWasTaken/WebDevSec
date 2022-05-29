@@ -9,6 +9,11 @@
 </head>
 <header>
 
+<!--
+<input type='hidden' name='$potatoTopicID1'$potatoTopicID1>
+<h1> <a href='Post.php?topic_id=$potatoTopicID1'>$potatoTitle1</a></h1>
+-->
+
 <div>
 	<img src="https://i.ibb.co/894Xm19/278471543-727015038329277-2731362503377802712-n.png" alt="Site Logo" border="0" style="width:75px; height:75px;" img align="left">
     
@@ -17,9 +22,9 @@
         <div class="column left">
            <a href="index.php"> <p class="mainheading" > OnlineTopia.com </p></a>
 
-            <form action="underconstruction.php">
-                <input type="text" name="q" id="" placeholder="Search...">
-                <button type="submit">Submit</button> 
+            <form action="search.php">
+                <input type="text" name="search" id="" placeholder="Search...">
+               <a href='search.php?search='id> <button type="submit">Submit</button> </a>
             </form>
         </div>
         
