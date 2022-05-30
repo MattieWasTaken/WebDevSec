@@ -1,6 +1,16 @@
 <?php
     include_once 'databaseConnection.php';
 ?>
+<!DOCTYPE html>
+<html>
+<title> Search </title>
+<link rel="stylesheet" ref="stylesheet2" href="lifestyle.css"/>
+<link rel="stylesheet" ref="stylesheet" href="style.css"/>
+
+<header>
+    <?php include_once 'header.php'?>
+</header>
+
 
 <?php
 
@@ -47,12 +57,6 @@ if($resultCheck>0){
 }
 ?>
 
-<!DOCTYPE html>
-<html>
-<title> Search </title>
-<link rel="stylesheet" ref="stylesheet2" href="lifestyle.css"/>
-<link rel="stylesheet" ref="stylesheet" href="style.css"/>
-
-
+<?php include_once 'footer.php';?>
 
 </html>
