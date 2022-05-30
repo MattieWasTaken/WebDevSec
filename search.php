@@ -8,7 +8,7 @@ if(isset($_REQUEST['search'])){
     $search = $_REQUEST['search'];
 }
 
-$query = "SELECT * FROM forum_posts WHERE topic_id LIKE '{$search}%' OR user_id LIKE '{$search}%' OR title LIKE '{$search}%' OR content LIKE '{$search}%';";
+$query = "SELECT * FROM forum_posts WHERE topic_id LIKE '{$search}%' OR user_id LIKE '{$search}%' OR title LIKE '{$search}%' OR content LIKE '{$search}%' OR subtopic LIKE '{$search}%';";
 $result = mysqli_query($conn, $query);
 $resultCheck = mysqli_num_rows($result);
 
