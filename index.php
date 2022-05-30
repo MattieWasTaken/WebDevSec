@@ -15,7 +15,6 @@
 <?php include_once 'header.php'; ?>
 </header>
 
-
 <body>
 
     <div class="container">
@@ -331,7 +330,12 @@
 
 
 
-
+    <?php
+if(isset($_REQUEST['createAccount'])){
+  echo "<script type='text/javascript'>
+  alert('Account Created') </script>";
+}
+?>
 
 
 </html>

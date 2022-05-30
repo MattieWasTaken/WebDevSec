@@ -26,7 +26,7 @@
         </div>
             
         <div class="column right">
-        <a href="underconstruction.php"> <button class="smallbutton" > Create Account </button></a>
+        <a href="registration.php"> <button class="smallbutton" > Create Account </button></a>
         <a href="underconstruction.php"> <button class="smallbutton" > Login </button></a>    
         </div>
         
