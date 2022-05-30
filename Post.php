@@ -32,39 +32,11 @@ if($resultCheck>0){
       
         </head>
 
+
         <header>
+<?php include_once 'header.php'; ?>
+</header>
 
-        <div>
-	<img src="https://i.ibb.co/894Xm19/278471543-727015038329277-2731362503377802712-n.png" alt="Site Logo" border="0" style="width:75px; height:75px;" img align="left">
-    
-    <div class="row">
-        
-        <div class="column left">
-        <a href="index.php"> <p class="mainheading" > OnlineTopia.com </p></a>
-
-            <form action="underconstruction.php">
-                <input type="text" name="q" id="" placeholder="Search...">
-                <button type="submit">Submit</button> 
-            </form>
-        </div>
-        
-        <div class="column middle">
-            <a href="ContactUs.php"><button>Contact Us</button></a>
-            <a href="FAQ.php"><button>F.A.Q</button></a>
-            <a href="createpost.php"><button>Submit Post</button></a>
-            <br>  
-        </div>
-            
-        <div class="column right">
-        <a href="underconstruction.php"> <button class="smallbutton" > Create Account </button></a>
-        <a href="underconstruction.php"> <button class="smallbutton" > Login </button></a>    
-        </div>
-        
-    </div>
-
-</div>
-    
-</header> 
 
 <body>
     
