@@ -17,14 +17,6 @@
 <body>
 
 <div>
-    <?php if(isset($_POST['create']))
-
-    
-    ?>
-</div>
-
-
-<div>
 <form action="registration.php" method=POST>
     <div class="container bg-transparent">
         <div class="row">
@@ -55,6 +47,35 @@
         <input type="submit" name="create" value="Create Account!">
     </div></form>
 </div>
+
+<div>
+    <?php if(isset($_POST['create'])){
+            $username = $_POST['username'];
+            $password = $_POST['password'];
+            $email = $_POST['email'];
+
+            $validUsername = "SELECT * FROM users WHERE username ='$username';";
+            $uCheck = mysqli_query($conn, $validUsername);
+            $validEmail = "SELECT * FROM users WHERE email ='$email';";
+            $eCheck = mysqli_query($conn, $validEmail);
+            if(mysqli_num_rows($uCheck)> 0) {
+                echo "<script type='text/javascript'>
+                alert('Username is Already In Use') </script>";
+            }else if(mysqli_num_rows($eCheck)>0){
+                echo "<script type='text/javascript'>
+                alert('Email is Already In Use') </script>";
+            }else{
+                $stmt = $conn->prepare("INSERT INTO users (username, password, email) VALUES (?,?,?);");
+                $stmt -> bind_param("sss", $username, $password, $email);
+                $result = $stmt->execute();
+                if($result){
+                    echo "Account Created!";
+            }
+    }
+}
+    ?>
+</div>
+
 
 </body>
 
