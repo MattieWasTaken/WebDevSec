@@ -1,4 +1,5 @@
-<?php include_once 'databaseConnection.php'?>
+<?php include_once 'databaseConnection.php';
+error_reporting(1);?>
 
 <!DOCTYPE html>
 
@@ -79,7 +80,8 @@
                 echo "<script type='text/javascript'>
                 alert('Passwords do not match') </script>";
             }else{
-                $stmt = $conn->prepare("INSERT INTO users (username, password, email) VALUES (?,?,?);");
+                $adminStatus = 0;
+                $stmt = $conn->prepare("INSERT INTO users (username, password, email) VALUES (?,?,?,?);");
                 $stmt -> bind_param("sss", $username, $hashed, $email);
                 $result = $stmt->execute();
                 if($result){

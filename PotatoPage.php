@@ -1,3 +1,8 @@
+<?php if(isset($_REQUEST['value'])){
+       $topicNumber = $_GET['value'];
+}
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -22,7 +27,7 @@ include_once 'header.php'; ?>
             
 <div class="subforum">
 			<?php
-            $query = "SELECT * FROM forum_posts WHERE subtopic='potato'ORDER BY `topic_id` DESC LIMIT 10;";
+            $query = "SELECT * FROM forum_posts WHERE subtopic='potato' AND topic_id < $topicNumber ORDER BY `topic_id` DESC LIMIT 10;";
             $result = mysqli_query($conn, $query);
             $resultCheck = mysqli_num_rows($result);
             $counter=0;
@@ -64,7 +69,7 @@ include_once 'header.php'; ?>
             
             
 <?php
-            echo "<a href='PotatoPage.php?value=$topicIDCounter'> <button class='smallbutton' >Next Page</button></a>"
+            echo "<a href='PotatoPage.php?value=$topicIDCounter'> <button class='smallbutton' >New Page</button></a>"
             ?>
 </body>
 
