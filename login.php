@@ -61,6 +61,7 @@
                    $_SESSION["userid"] = $userExists['user_id'];
                    $_SESSION['username'] = $userExists['username'];
                    header("Location: index.php?Login=success");
+                   exit();
                }else{
                    echo "Wrong Username/Password Combination";
                }
