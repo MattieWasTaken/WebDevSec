@@ -32,7 +32,7 @@ error_reporting(0);
         </div>
             
         <div class="column right">
-        
+        <h5>Welcome <?php echo $_SESSION['username'] ?></h5>
         <?php 
         if(isset($_SESSION['userid'])){
             echo "<a href='registration.php'> <button class='smallbutton' > My Profile </button></a>";
