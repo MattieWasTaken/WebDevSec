@@ -19,7 +19,7 @@
 <body>
 
 <div class="container bg-info text-dark">
-<form action="registration.php" method=POST>
+<form action="login.php" method=POST>
    
         <div class="row">
         <h1>Login</h1>
@@ -47,35 +47,19 @@
 <?php if(isset($_POST['login'])){
             $username = $_POST['username'];
             $password = $_POST['password'];
-            $email = $_POST['email'];
-            $confirmPassword = $_POST['cpassword'];
-            $hashed= hash('sha512', $password);
-            $validUsername = "SELECT * FROM users WHERE username ='$username';";
-            $uCheck = mysqli_query($conn, $validUsername);
-            $validEmail = "SELECT * FROM users WHERE email ='$email';";
-            $eCheck = mysqli_query($conn, $validEmail);
-            if(mysqli_num_rows($uCheck)> 0 || $username="") {
-                echo "<script type='text/javascript'>
-                alert('Username is Already In Use') </script>";
-            }else if(mysqli_num_rows($eCheck)>0 || $email ==""){
-                echo "<script type='text/javascript'>
-                alert('Email is Already In Use') </script>";
-            }else if($password==""){
-                echo "<script type='text/javascript'>
-                alert('Password does not meet requirements') </script>";
-            }else if($password!=$confirmPassword){
-                echo "<script type='text/javascript'>
-                alert('Passwords do not match') </script>";
-            }else{
-                $stmt = $conn->prepare("INSERT INTO users (username, password, email) VALUES (?,?,?);");
-                $stmt -> bind_param("sss", $username, $hashed, $email);
+                $password = password_verify($password, $username);
+                $stmt = $conn->prepare("SELECT * FROM users WHERE username=? AND password=?;");
+                $stmt -> bind_param("ss", $username, $password);
                 $result = $stmt->execute();
-                if($result){
-                    header("Location: index.php?createAccount=true");
-                    
+            if($result->rowCount()>0){
+                echo "Thanks for logging in";
+                header("Location: index.php?login=success");
+            }else{
+                echo "Username/Password is not valid";
             }
-    }
-}
+            }
+    
+
 ?>
 </div>
 </div>

@@ -66,7 +66,7 @@
             $uCheck = mysqli_query($conn, $validUsername);
             $validEmail = "SELECT * FROM users WHERE email ='$email';";
             $eCheck = mysqli_query($conn, $validEmail);
-            if(mysqli_num_rows($uCheck)> 0 || $username="") {
+            if(mysqli_num_rows($uCheck)> 0 || $username=="") {
                 echo "<script type='text/javascript'>
                 alert('Username is Already In Use') </script>";
             }else if(mysqli_num_rows($eCheck)>0 || $email ==""){
