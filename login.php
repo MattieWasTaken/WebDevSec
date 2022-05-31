@@ -47,17 +47,14 @@
 <?php if(isset($_POST['login'])){
             $username = $_POST['username'];
             $password = $_POST['password'];
-                $password = password_verify($password, $username);
-                $stmt = $conn->prepare("SELECT * FROM users WHERE username=? AND password=?;");
-                $stmt -> bind_param("ss", $username, $password);
-                $result = $stmt->execute();
-            if($result->rowCount()>0){
-                echo "Thanks for logging in";
-                header("Location: index.php?login=success");
-            }else{
-                echo "Username/Password is not valid";
+
+            if($username=="" || $pwd == ""){
+                echo "<br> You must type a username and password";
             }
-            }
+                }
+            
+
+            
     
 
 ?>

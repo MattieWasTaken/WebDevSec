@@ -332,8 +332,11 @@
 
     <?php
 if(isset($_REQUEST['createAccount'])){
-  echo "<script type='text/javascript'>
-  alert('Account Created') </script>";
+  if($_GET['createAccount']== "success"){
+    echo "<script type='text/javascript'>
+    alert('Account Created, Please Sign In To Continue') </script>";
+  }
+  
 }
 ?>
 
