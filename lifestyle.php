@@ -59,12 +59,14 @@
                         ";
                 $counter++;
                 $postCounter++;
-
+                $topicIDCounter = $potatoTopicID1;
                 
             }
 
             ?>
-            
+           <?php
+            echo "<a href='LifeStylePage.php?value=$topicIDCounter'> <button class='smallbutton' >Next Page</button></a>"
+            ?>
             
 
 

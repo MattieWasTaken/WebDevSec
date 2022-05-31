@@ -1,28 +1,33 @@
+<?php if(isset($_REQUEST['value'])){
+       $topicNumber = $_GET['value'];
+}
+?>
+
 <!DOCTYPE html>
 <html>
 
 <head>
-<title>Gaming Forum </title>
+<title>Potato Forum </title>
 <link rel="stylesheet" ref="stylesheet2" href="gaming.css"/>
 <link rel="stylesheet" ref="stylesheet" href="style.css"/>
 
 </head>
 
 <header>
-<?php include_once 'header.php'; ?>
+<?php 
+ include 'databaseConnection.php';
+include_once 'header.php'; ?>
 </header>
 
 
 <body>
 <div class="subforum-title">
-                <h1>Recent Potato Posts</h1>
+                <h1>Gaming Posts</h1>
             </div>
             
 <div class="subforum">
-    
 			<?php
-            include 'databaseConnection.php';
-            $query = "SELECT * FROM forum_posts WHERE subtopic='gaming'ORDER BY `topic_id` DESC LIMIT 10;";
+            $query = "SELECT * FROM forum_posts WHERE subtopic='gaming' AND topic_id < $topicNumber ORDER BY `topic_id` DESC LIMIT 10;";
             $result = mysqli_query($conn, $query);
             $resultCheck = mysqli_num_rows($result);
             $counter=0;
@@ -35,7 +40,7 @@
                 echo "
                 <div class='subforum-row'>
         <div class='subforum-icon subform-column center'>
-            <h3>$postCounter.</h3>
+                 <h3>$postCounter.</h3>
             </div>
                 
                 <form method='GET'>
@@ -58,19 +63,15 @@
                         ";
                 $topicIDCounter = $potatoTopicID1;
                 $counter++;
-                $postCounter++;
-
-                
+                $postCounter++;  
             }
-
             ?>
             
             
-            <?php
-            echo "<a href='GamingPage.php?value=$topicIDCounter'> <button class='smallbutton' >Next Page</button></a>"
+<?php
+            echo "<a href='GamingPage.php?value=$topicIDCounter'> <button class='smallbutton' >New Page</button></a>"
             ?>
-
 </body>
-<?php include_once 'footer.php';?>
 
+<?php include_once 'footer.php';?>
 </html>
