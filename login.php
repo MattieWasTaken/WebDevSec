@@ -48,16 +48,37 @@
             $username = $_POST['username'];
             $password = $_POST['password'];
 
-            if($username=="" || $pwd == ""){
+            if($username=="" || $password == ""){
                 echo "<br> You must type a username and password";
+            }else{
+               $userExists = userExists($conn, $username, $password);
+               if($userExists==false){
+                   echo "You Dun Fucked Up";
+               } 
             }
-                }
+        }
+                
             
 
             
-    
+function userExists($conn, $username, $password){
+    $sql ="SELECT * FROM users WHERE username = ?;";
+    $stmt = mysqli_stmt_init($conn);
+    mysqli_stmt_prepare($stmt, $sql);
+    mysqli_stmt_bind_param($stmt, "s", $username);
+    mysqli_stmt_execute($stmt);
+    $resultData = mysqli_stmt_get_result($stmt);
+    if($row = mysqli_fetch_assoc($resultData)){
+        return $row;
+    } else {
+        $result = false;
+        return $result;
+    }
+}    
 
 ?>
+
+
 </div>
 </div>
 </body>
