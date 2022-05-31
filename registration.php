@@ -81,8 +81,8 @@ error_reporting(1);?>
                 alert('Passwords do not match') </script>";
             }else{
                 $adminStatus = 0;
-                $stmt = $conn->prepare("INSERT INTO users (username, password, email) VALUES (?,?,?,?);");
-                $stmt -> bind_param("sss", $username, $hashed, $email);
+                $stmt = $conn->prepare("INSERT INTO users (username, password, email, admin) VALUES (?,?,?,?);");
+                $stmt -> bind_param("sssi", $username, $hashed, $email, $adminStatus);
                 $result = $stmt->execute();
                 if($result){
                     header("Location: index.php?createAccount=success");

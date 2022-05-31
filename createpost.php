@@ -16,6 +16,15 @@
 <div class="create-post">
         <div class="post-title">
             <h1>Create Post</h1>
+            <?php 
+    if(isset($_REQUEST['post'])){
+        if($_GET['post']=='failedtooLong'){
+            echo "<h3>Error! Title Must Not Exceed 100 Characters</h3>";
+        }else if($_GET['post']=='failed'){
+            echo "You must complete all the fields";
+        }
+    } 
+        ?>
         </div>
 </div>
 <div class="make-post">
