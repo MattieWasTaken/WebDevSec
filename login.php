@@ -53,8 +53,14 @@
             }else{
                $userExists = userExists($conn, $username, $password);
                if($userExists==false){
-                   echo "You Dun Fucked Up";
+                   echo "Username does not exist";
                } 
+               $hashedPassword = $userExists['password'];
+               if(password_verify($password, $hashedPassword)){
+                   echo "Login Successful";
+               }else{
+                   echo "Wrong Username/Password Combination";
+               }
             }
         }
                 

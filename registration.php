@@ -83,7 +83,7 @@
                 $stmt -> bind_param("sss", $username, $hashed, $email);
                 $result = $stmt->execute();
                 if($result){
-                    header("Location: index.php?createAccount=true");
+                    header("Location: index.php?createAccount=success");
                     
             }
     }
