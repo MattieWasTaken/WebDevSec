@@ -57,7 +57,10 @@
                } 
                $hashedPassword = $userExists['password'];
                if(password_verify($password, $hashedPassword)){
-                   echo "Login Successful";
+                   session_start();
+                   $_SESSION["userid"] = $userExists['user_id'];
+                   $_SESSION['username'] = $userExists['username'];
+                   header("Location: index.php?Login=success");
                }else{
                    echo "Wrong Username/Password Combination";
                }
