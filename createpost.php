@@ -16,12 +16,14 @@
 <div class="create-post">
         <div class="post-title">
             <h1>Create Post</h1>
-            <?php 
+<?php 
     if(isset($_REQUEST['post'])){
         if($_GET['post']=='failedtooLong'){
             echo "<h3>Error! Title Must Not Exceed 100 Characters</h3>";
         }else if($_GET['post']=='failed'){
-            echo "You must complete all the fields";
+            echo "<h3>Error! You must complete all the fields</h3>";
+        }else if($_GET['post']=='failedNoLogin'){
+            echo "<h3>Error! You must be logged in to post</h3>";
         }
     } 
         ?>
