@@ -44,7 +44,16 @@
 
 
 <div>
-<?php if(isset($_POST['login'])){
+<?php
+if(isset($_REQUEST['Loginfailed'])){
+    if($_GET['Loginfailed']=="invalidPass"){
+        echo "<br> Invalid Username/Password Combination";
+    }else if($_GET['Loginfailed']=="wrongUID"){
+        echo "<br> This Username does not exist";
+    }
+}
+
+ if(isset($_POST['login'])){
             $username = $_POST['username'];
             $password = $_POST['password'];
 
@@ -53,7 +62,8 @@
             }else{
                $userExists = userExists($conn, $username, $password);
                if($userExists==false){
-                   echo "Username does not exist";
+                   echo "Username does not exist <br>";
+                   header("Location: login.php?LoginFailed=wrongUID");
                } 
                $hashedPassword = $userExists['password'];
                if(password_verify($password, $hashedPassword)){
@@ -64,6 +74,7 @@
                    exit();
                }else{
                    echo "Wrong Username/Password Combination";
+                   header("Location: login.php?Loginfailed=invalidPass");
                }
             }
         }

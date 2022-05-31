@@ -20,11 +20,6 @@
 </div>
 <div class="make-post">
 <form action="submitpost.php" method="POST">
-
-    <span> Author Name:</span>
-    <input type="text" name="user_id" placeholder="Enter your Display Name">
-    <br>
-    <br>
     <span>Title:</span>
     <textarea id="title" type="text" name="title" placeholder="Title"></textarea>
     <br>

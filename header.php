@@ -1,7 +1,7 @@
 <?php 
 
 session_start();
-
+error_reporting(0);
 ?>
 
 <!DOCTYPE html>
@@ -36,10 +36,11 @@ session_start();
         <?php 
         if(isset($_SESSION['userid'])){
             echo "<a href='registration.php'> <button class='smallbutton' > My Profile </button></a>";
-            echo "<a href='login.php'> <button class='smallbutton' > Logout </button></a>";
+            echo "<a href='logout.php'> <button class='smallbutton' >Logout</button></a>";
+            
         }else {
-           echo "<a href='registration.php'> <button class='smallbutton' > My Profile </button></a>";
-           echo "<a href='login.php'> <button class='smallbutton' > Logout </button></a>";
+           echo "<a href='registration.php'> <button class='smallbutton' > Create Account</button></a>";
+           echo "<a href='login.php'> <button class='smallbutton' > Login </button></a>";
         }
 
         ?>

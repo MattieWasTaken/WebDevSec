@@ -1,7 +1,8 @@
 
 <?php
+session_start();
 include_once 'databaseConnection.php';
-$user_id = $_POST['user_id'];
+$user_id = $_SESSION['username'];
 $title = $_POST['title'];
 $content = $_POST['content'];
 $subtopic = $_POST['subtopic'];
@@ -13,10 +14,11 @@ $stmt = $conn->prepare("INSERT INTO forum_posts (subtopic,user_id, title, conten
 $stmt ->bind_param("ssss",$subtopic, $user_id, $title, $content);
 
 if($title=="" || $user_id=="" || $content=="" || $subtopic==""){
-    echo "<h3>You must fill out all boxes...bitch</h3>";
+    header("Location: createpost.php?post=failed");
 }else{
     $stmt->execute();
+    header("Location: index.php?post=success");
 }
 
-header("Location: index.php?post=success");
+
 ?>
