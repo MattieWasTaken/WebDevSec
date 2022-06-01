@@ -24,7 +24,7 @@ include_once('databaseConnection.php');
 </div>
 <?php 
 
-$query = "SELECT * FROM forum_posts ORDER BY `topic_id` DESC LIMIT 8;";
+$query = "SELECT * FROM forum_posts ORDER BY `topic_id` DESC LIMIT 10;";
 $result = mysqli_query($conn, $query);
 $resultCheck = mysqli_num_rows($result);
 $counter=0;

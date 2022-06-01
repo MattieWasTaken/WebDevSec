@@ -47,8 +47,9 @@
     <textarea type="text" name="content" id="content" placeholder="Speak Your Mind..."></textarea>
     <br>    
     <button type="submit" name="submit">Post</button>
+    </form>
 </div>
-</form>
+
 </body>
 
 <?php include_once 'footer.php';?>
