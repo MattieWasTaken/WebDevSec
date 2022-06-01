@@ -1,57 +1,61 @@
 <?php include_once 'databaseConnection.php'?>
 
 <!DOCTYPE html>
-
 <head>
-<title>IMD Forum - Login </title>
-<link rel="stylesheet" ref="stylesheet2" href="index.css"/>
-<link rel="stylesheet" ref="stylesheet3" href="style.css"/>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <title>IMD Forum</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<header>
-    <?php include_once 'header.php'?>
-</header>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
 
-</head>
+<?php 
+include_once('header.php');
+include_once('databaseConnection.php');
+?>
 
 
 <body>
 
-<div class="container bg-info text-dark">
+<div class="container-fluid bg-dark text-white pt-3">
 <form action="login.php" method=POST>
    
-        <div class="row">
+        <div class="row bg-secondary rounded">
         <h1>Login</h1>
-        <p> Please Enter Your Details</p>
         </div>
-        <div class="row">
+        <div class="row bg-secondary rounded">
+        <p>Please Enter Your Details</p>
+        </div>
+       <?php if(isset($_REQUEST['Loginfailed'])){
+    if($_GET['Loginfailed']=="invalidPass"){
+        echo "<div class='row bg-secondary rounded'> Error: Invalid Username/Password Combination</div>";
+    }else if($_GET['Loginfailed']=="wrongUID"){
+        echo "<div class='row bg-secondary rounded'> Error: Invalid Username/Password Combination</div>";
+    }
+}       ?>
+        <div class="row bg-secondary rounded">
         <div class="input-group mb-3 shadow-sm">
         <span class="input-group-text" id="basic-addon1">Username:</span>
         <input type="text" name="username" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" required>
         </div>  
         </div>
-        <div class="row">
+        <div class="row bg-secondary rounded">
         <div class="input-group mb-3 shadow-sm">
         <span class="input-group-text" id="basic-addon1">Set Password:</span>
         <input type="password" name="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" required>
         </div>  
         </div>
+        <div class="row bg-secondary pb-3 rounded">
         <input type="submit" name="login" value="Login!">
-    
+</div>
    </form> 
 
 
 
 <div>
 <?php
-if(isset($_REQUEST['Loginfailed'])){
-    if($_GET['Loginfailed']=="invalidPass"){
-        echo "<br> Invalid Username/Password Combination";
-    }else if($_GET['Loginfailed']=="wrongUID"){
-        echo "<br> This Username does not exist";
-    }
-}
 
  if(isset($_POST['login'])){
             $username = $_POST['username'];
