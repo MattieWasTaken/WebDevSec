@@ -5,7 +5,7 @@ error_reporting(0);
 ?>
 
 <!DOCTYPE html>
-<html>
+
 
 <header>
 
