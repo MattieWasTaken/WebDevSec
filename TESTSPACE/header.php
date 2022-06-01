@@ -2,7 +2,7 @@
 
 <header>
 <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
-  <a class="navbar-brand" href="#">IMD Forums</a>
+  <a class="navbar-brand" href="index.php">IMD Forums</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -27,10 +27,9 @@
         </div>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-        <a href='search.php?search='id>
-      <input class="form-control mr-sm-2" type="search" id="" placeholder="Search..." aria-label="Search">
-      <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button></a>
+    <form class="form-inline my-2 my-lg-0" action="search.php">
+      <input class="form-control mr-sm-2" type="text" name="search" id="" placeholder="Search..." aria-label="Search">
+      <a href='search.php?search='id><button class="btn btn-light my-2 my-sm-0" type="submit">Search</button></a>
     </form>
   </div>
 </nav>

@@ -15,12 +15,9 @@ include_once('header.php');
 include_once('databaseConnection.php');
 
 
-if(isset($_REQUEST['subtopic'])){
-    if(!empty($_GET['subtopic'])){
-        $subtopic = $_GET['subtopic'];
-    }else if(empty($_GET['subtopic'])){
-        header("Location: 404page.php?error=notopic");
-    } 
+if(isset($_REQUEST['search'])){
+    $search = $_GET['search'];
+    echo $search;
     } else {
     header("Location: 404page.php?error=undefinedrequest");
     }   
@@ -31,12 +28,12 @@ if(isset($_REQUEST['subtopic'])){
 <div class="container-fluid p-1 bg-dark">
 <div class="container-fluid">
     <div class="row p-3 mb-2 mt-2 bg-secondary text-white rounded">
-        <h3 class="text-left"><?php echo $subtopic?> Posts</h3>
+        <h3 class="text-left">Search Results For '<?php echo $search?>' </h3>
     </div>
 </div>
 <?php 
 
-$query = "SELECT * FROM forum_posts WHERE subtopic='$subtopic' ORDER BY `topic_id` DESC LIMIT 8;";
+$query = "SELECT * FROM forum_posts WHERE topic_id LIKE '{$search}%' OR user_id LIKE '{$search}%' OR title LIKE '{$search}%' OR content LIKE '{$search}%' OR subtopic LIKE '{$search}%' ORDER BY `topic_id` DESC;";
 $result = mysqli_query($conn, $query);
 $resultCheck = mysqli_num_rows($result);
 $counter=0;
