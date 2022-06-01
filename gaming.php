@@ -15,7 +15,7 @@
 
 <body>
 <div class="subforum-title">
-                <h1>Recent Potato Posts</h1>
+                <h1>Recent Gaming Posts</h1>
             </div>
             
 <div class="subforum">
