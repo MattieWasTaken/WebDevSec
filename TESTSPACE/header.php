@@ -28,8 +28,9 @@
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <a href='search.php?search='id>
+      <input class="form-control mr-sm-2" type="search" id="" placeholder="Search..." aria-label="Search">
+      <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button></a>
     </form>
   </div>
 </nav>

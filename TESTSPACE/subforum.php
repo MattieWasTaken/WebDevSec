@@ -14,8 +14,15 @@
 include_once('header.php');
 include_once('databaseConnection.php');
 
+
 if(isset($_REQUEST['subtopic'])){
-    $subtopic = $_GET['subtopic'];
+    if(!empty($_GET['subtopic'])){
+        $subtopic = $_GET['subtopic'];
+    }else if(empty($_GET['subtopic'])){
+        header("Location: 404page.php?error=notopic");
+    } 
+} else {
+    header("Location: 404page.php?error=undefinedrequest");
 }
 
 ?>
