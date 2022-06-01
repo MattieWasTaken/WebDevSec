@@ -48,7 +48,8 @@ while($rows[]=mysqli_fetch_array($result)){
     <div class='container-fluid'>
     <div class='row'>
     <div class='col-sm-1 p-3 mb-2 bg-secondary text-center text-white rounded ml-2 mr-1'>
-    <span>$postCounter.</span>
+    <span>$postCounter.</span><br>
+    <span>Topic:  <a class='text-light' href='subforum.php?subtopic=$subtopic'>$subtopic</a></span>
     </div>
     <div class='col-lg p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
     <form method='GET'>
