@@ -16,10 +16,10 @@ include_once('databaseConnection.php');
 ?>
   
 <body>
-<div class="container-fluid p-1 bg-light">
+<div class="container-fluid p-1 bg-dark">
 <div class="container-fluid">
-    <div class="row p-3 mb-1 mt-2 bg-secondary text-white rounded">
-        <h3 class="text-left">Recent Posts</h3>
+    <div class="row p-3 mb-2 mt-2 bg-secondary text-white rounded">
+        <h3 class="text-left">Most Recent Posts</h3>
     </div>
 </div>
 <?php 
@@ -38,7 +38,7 @@ while($rows[]=mysqli_fetch_array($result)){
     echo "   
     <div class='container-fluid'>
     <div class='row'>
-    <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
+    <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-2 mr-1'>
     <span>$postCounter.</span><br>
     <a class='text-white' href='../lifestyle.php'><span>Topic: xxx</span></a>
     </div>
@@ -49,9 +49,11 @@ while($rows[]=mysqli_fetch_array($result)){
    <small class='overflow-hidden'>CONTENT PREVIEW</small>
    </form>
     </div>
-    <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-3'>
+    <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2'>
+    <form method='GET' name'$userID' $userID>
     <p class='text-left'>Posted On: Date</p>
-    <a class='text-white' href=''> <small>By: $userID</small></a>
+    <a class='text-white' href='userprofile.php?user_id=$userID'> <small>By:$userID</small></a>
+    </form>
     </div>      
     </div>
 </div>";
