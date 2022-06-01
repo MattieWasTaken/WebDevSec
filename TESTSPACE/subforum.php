@@ -13,18 +13,23 @@
 <?php 
 include_once('header.php');
 include_once('databaseConnection.php');
+
+if(isset($_REQUEST['subtopic'])){
+    $subtopic = $_GET['subtopic'];
+}
+
 ?>
   
 <body>
 <div class="container-fluid p-1 bg-dark">
 <div class="container-fluid">
     <div class="row p-3 mb-2 mt-2 bg-secondary text-white rounded">
-        <h3 class="text-left">Most Recent Posts</h3>
+        <h3 class="text-left"><?php echo $subtopic?> Posts</h3>
     </div>
 </div>
 <?php 
 
-$query = "SELECT * FROM forum_posts ORDER BY `topic_id` DESC LIMIT 8;";
+$query = "SELECT * FROM forum_posts WHERE subtopic='$subtopic' ORDER BY `topic_id` DESC LIMIT 8;";
 $result = mysqli_query($conn, $query);
 $resultCheck = mysqli_num_rows($result);
 $counter=0;
@@ -38,12 +43,8 @@ while($rows[]=mysqli_fetch_array($result)){
     echo "   
     <div class='container-fluid'>
     <div class='row'>
-    <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-2 mr-1'>
-    <form method='GET'>
-    <input type='hidden' name='$subtopic' $subtopic>
-    <span>$postCounter.</span><br>
-    <span>Topic:  <a class='text-light' href='subforum.php?subtopic=$subtopic'>$subtopic</a></span>
-    </form>
+    <div class='col-sm-1 p-3 mb-2 bg-secondary text-center text-white rounded ml-2 mr-1'>
+    <span>$postCounter.</span>
     </div>
     <div class='col-lg p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
     <form method='GET'>
