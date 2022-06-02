@@ -33,17 +33,14 @@ if(isset($_GET['page'])){
     }else{
         $page=$_GET['page'];
     }  }
-
-
 $start = ($page-1) * $limit;
-
 ?>
   
 <body>
 <div class="container-fluid p-1 bg-dark">
 <div class="container-fluid">
     <div class="row p-3 mb-2 mt-2 bg-secondary text-white rounded">
-        <h3 class="text-left"><?php echo $subtopic?> Posts</h3>
+        <h3 class="text-left"><a class='text-white'href="subforum.php?subtopic=<?php echo $subtopic?>&page=1"><?php echo $subtopic?> Posts</a></h3>
     </div>
 </div>
 <?php 
@@ -83,23 +80,39 @@ while($rows[]=mysqli_fetch_array($result)){
 $counter++;
 $postCounter++;
 }
+
+$query1 = "SELECT count(topic_id) AS topic_id FROM forum_posts WHERE subtopic='$subtopic';";
+$result1 = $conn->query($query1);
+$topicReturn = $result1->fetch_all(MYSQLI_ASSOC);
+$totalPostCount= $topicReturn[0]['topic_id'];
+$totalPages = ceil($totalPostCount/$limit);
+echo $totalPages;
 ?>
 
 <nav aria-label="Page navigation example">
   <ul class="pagination justify-content-start mt-2 ml-2">
-    <li class="page-item">
-      <a class="page-link" href="subforum.php?subtopic=<?php echo $subtopic ?>&page=<?php echo $page-1?>" tabindex="-1" aria-disabled="true">Previous</a>
-    </li>
+   
     <?php 
     if($_GET['page']>1){
         $prevPage = $page-1;
+        echo " <li class='page-item'>
+        <a class='page-link' href='subforum.php?subtopic=$subtopic&page=$prevPage' tabindex='-1' aria-disabled='true'>Previous</a>
+      </li>";
         echo "<li class='page-item'><a class='page-link' href='subforum.php?subtopic=$subtopic&page=$prevPage'>$prevPage</a></li>";}
     ?>
     <li class="page-item active"><a class="page-link" href="subforum.php?subtopic=<?php echo $subtopic ?>&page=<?php echo $page?>"><?php echo $page?></a></li>
-    <li class="page-item"><a class="page-link" href="subforum.php?subtopic=<?php echo $subtopic ?>&page=<?php echo $page+1?>"><?php echo $page+1?></a></li>
-    <li class="page-item">
-      <a class="page-link" href="subforum.php?subtopic=<?php echo $subtopic ?>&page=<?php echo $page+1?>">Next</a>
-    </li>
+    <?php 
+    if($_GET['page']!=$totalPages){
+        $nextPage = $page+1;
+      echo "<li class='page-item'><a class='page-link' href='subforum.php?subtopic=$subtopic&page=$nextPage'>$nextPage</a></li>";
+      echo " <li class='page-item'>
+      <a class='page-link' href='subforum.php?subtopic=$subtopic&page=$nextPage'>Next</a>
+    </li>";
+       
+    }
+
+    ?>
+   
   </ul>
 </nav>
 
