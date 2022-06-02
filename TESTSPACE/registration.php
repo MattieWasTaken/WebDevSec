@@ -1,50 +1,70 @@
 <?php include_once 'databaseConnection.php';
-error_reporting(1);?>
-
+?>
 <!DOCTYPE html>
+<html>
 
-<head>
-<title>IMD Forum - Create Account </title>
-<link rel="stylesheet" ref="stylesheet2" href="index.css"/>
-<link rel="stylesheet" ref="stylesheet3" href="style.css"/>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<title>IMD Forum</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
 
 <header>
-    <?php include_once 'header.php'?>
+<?php include_once 'header.php'; ?>
 </header>
+
+
+<body>
+<div class="container-flex">
+        <div class="post-title bg-dark text-white">
+            <h1 class="ml-3">Create Post</h1>
+<?php 
+    if(isset($_REQUEST['post'])){
+        if($_GET['post']=='failedtooLong'){
+            echo "<h3>Error! Title Must Not Exceed 100 Characters</h3>";
+        }else if($_GET['post']=='failed'){
+            echo "<h3>Error! You must complete all the fields</h3>";
+        }else if($_GET['post']=='failedNoLogin'){
+            echo "<h3>Error! You must be logged in to post</h3>";
+        }
+    } 
+        ?>
 
 </head>
 
 
 <body>
 
-<div class="container bg-info text-dark">
+<div class="container bg-secondary text-white rounded">
 <form action="registration.php" method=POST>
-   
         <div class="row">
-        <h1> Register Now!</h1>
-        <p> Please Enter Your Details</p>
+        <h1 class="ml-2"> Register Now!</h1>
         </div>
         <div class="row">
+        <p> Please Enter Your Details</p>
+        </div>
+        <div class="row pl-2">
         <div class="input-group mb-3 shadow-sm">
         <span class="input-group-text" id="basic-addon1">Set Username:</span>
         <input type="text" name="username" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" required>
         </div>  
         </div>
-        <div class="row">
+        <div class="row pl-2">
         <div class="input-group mb-3 shadow-sm">
         <span class="input-group-text" id="basic-addon1">Set Password:</span>
         <input type="password" name="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" required>
         </div>  
         </div>
-        <div class="row">
+        <div class="row pl-2">
         <div class="input-group mb-3 shadow-sm">
         <span class="input-group-text" id="basic-addon1">Confirm Password:</span>
         <input type="password" name="cpassword" class="form-control" placeholder="Password" aria-label="ConfirmPass" aria-describedby="basic-addon1" required>
         </div>  
         </div>
-        <div class="row">
+        <div class="row pl-2">
         <div class="input-group mb-3 shadow-sm">
         <span class="input-group-text" id="basic-addon1">Set Email:</span>
         <input type="text" name="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" required>

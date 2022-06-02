@@ -18,26 +18,12 @@ include_once('databaseConnection.php');
 <body>
 <div class="container-fluid p-1 bg-dark">
 <div class="container-fluid">
-    <div class="row p-3 mb-2 mt-2 bg-secondary text-white rounded">
+    <div class="row p-3 mt-2 bg-secondary text-white rounded-top">
         <h3 class="text-left">Write Your Post!</h3>
     </div>
-    <div class="row p-3 mb-2 mt-2 bg-secondary text-white rounded">
-    <div class="col">
-    <form class="bg-secondary" action="submitpost.php" method="POST">
-  <div class="form-group">
-    <label for="title">Title:</label>
-    <input type="text" class="form-control" id="title" placeholder="Post Title...">
-  </div>
-  <div class="form-group">
-    <label for="postcontent">Example textarea</label>
-    <textarea class="form-control" id="postcontent" rows='10'></textarea>
-</div>
-  </div>
-</form>
-</div>
-</div>
-<?php 
-    if(isset($_REQUEST['post'])){
+    <div class="row p-3 mb-2 bg-secondary text-white rounded-bottom">
+    <?php 
+        if(isset($_REQUEST['post'])){
         if($_GET['post']=='failedtooLong'){
             echo "<h3>Error! Title Must Not Exceed 100 Characters</h3>";
         }else if($_GET['post']=='failed'){
@@ -47,5 +33,34 @@ include_once('databaseConnection.php');
         }
     } 
         ?>
+    </div>
+    <div class="row p-3 mt-2 bg-secondary text-white rounded">
+    <div class="col">
+    <form class="bg-secondary" action="submitpost.php" method="POST">
+      <div class="form-group">
+        <label for="title">Title:</label>
+        <input type="text" class="form-control" id="title" placeholder="Post Title...">
+      </div>
+      <div class="form-group">
+        <label for="postcontent">Example textarea</label>
+        <textarea class="form-control" id="postcontent" rows='10'></textarea>
+        <button type="submit" name="submit" class="mt-3">Post</button>
+      </div>
+      </div>
+      <div class="col text-center">
+        <h1>Subforum Posting Rules</h1>
+        <ul class="list-group">
+        <li class="list-group-item bg-transparent">sdjfbhsajdbghsbdg</li>
+        <li class="list-group-item bg-transparent">sdjfbhsfhsdfhfsdsajdsdfhghsbdg</li>
+      </ul>
+      </div>
+      </div>
+      <div class="row p-3 mb-2 bg-secondary text-white rounded">
+
+      </div>
+    </form>
+</div>
+</div>
+
 
         <?php include_once("footer.php")?>

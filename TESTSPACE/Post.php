@@ -40,13 +40,17 @@ if($resultCheck>0){
 <body>
 <div class="container-fluid p-4 bg-dark">
 <div class="container-fluid">
-    <div class="row p-3 mb-2 mt-2 bg-secondary text-white rounded">
+    <div class="row p-3 mt-2 bg-secondary text-white rounded-top">
         <h3 class="text-left"><?php echo $title?> Posts </h3>
-        <br>
-        <span>By: <?php echo $user_id?> </span>
-        <span class='text-left'>Posted On: Date</span>
-    </div>
+        </div>
+        <div class="row bg-secondary text-white">
+        <span>By: <?php echo $user_id?></span>
+        </div>
+        <div class="row bg-secondary mb-3 rounded-bottom text-white">
+        <span class='text-left'>Posted On: <?php echo $date ?></span>
 </div>
+</div>
+    
     <div class='container-fluid'>
     <div class='row'>
     <div class='col-lg p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
@@ -54,6 +58,7 @@ if($resultCheck>0){
     </div>
     </div>      
     </div>
+</div>
 </div>
 
     <!-- Optional JavaScript -->
