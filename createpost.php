@@ -30,7 +30,7 @@
         </div>
 </div>
 <div class="make-post">
-<form action="submitpost.php" method="POST">
+<form action="submitpost.php" method="post">
     <span>Title:</span>
     <textarea id="title" type="text" name="title" placeholder="Title"></textarea>
     <br>

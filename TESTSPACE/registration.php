@@ -43,7 +43,7 @@
         <div class="row">
         <h1 class="ml-2"> Register Now!</h1>
         </div>
-        <div class="row">
+        <div class="row ml-1">
         <p> Please Enter Your Details</p>
         </div>
         <div class="row pl-2">

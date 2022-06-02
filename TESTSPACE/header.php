@@ -1,5 +1,8 @@
 <!DOCTYPE html>
+<?php
+session_start();
 
+?>
 <header>
 <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
   <a class="navbar-brand" href="index.php">IMD Forums</a>
