@@ -76,7 +76,20 @@ $postCounter++;
 }
 ?>
 
-<a class='text-white' href='subforum.php?subtopic=<?php echo $subtopic?>&page=<?php $page = $page+1; echo $page?>;'
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-start mt-2 ml-2">
+    <li class="page-item">
+      <a class="page-link" href="subforum.php?subtopic=<?php echo $subtopic ?>&page=<?php echo $page-1?>" tabindex="-1" aria-disabled="true">Previous</a>
+    </li>
+    <li class="page-item-active"><a class="page-link" href="subforum.php?subtopic=<?php echo $subtopic ?>&page=<?php echo $page?>"><?php echo $page?></a></li>
+    <li class="page-item"><a class="page-link" href="subforum.php?subtopic=<?php echo $subtopic ?>&page=<?php echo $page+1?>"><?php echo $page+1?></a></li>
+    <li class="page-item"><a class="page-link" href="subforum.php?subtopic=<?php echo $subtopic ?>&page=<?php echo $page+2?>"><?php echo $page+2?></a></li>
+    <li class="page-item">
+      <a class="page-link" href="subforum.php?subtopic=<?php echo $subtopic ?>&page=<?php echo $page+1?>">Next</a>
+    </li>
+  </ul>
+</nav>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
