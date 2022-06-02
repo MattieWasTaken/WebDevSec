@@ -6,12 +6,13 @@ $user_id = $_SESSION['username'];
 $title = $_POST['title'];
 $content = $_POST['content'];
 $subtopic = $_POST['subtopic'];
+$date = date("d-m-y");
 
 
+echo "$date <br> $subtopic <br> $content <br> $title <br> $user_id";
 
-
-$stmt = $conn->prepare("INSERT INTO forum_posts (subtopic,user_id, title, content) VALUES (?,?,?,?)");
-$stmt ->bind_param("ssss",$subtopic, $user_id, $title, $content);
+$stmt = $conn->prepare("INSERT INTO forum_posts (subtopic,user_id, title, content, date_submitted) VALUES (?,?,?,?,?)");
+$stmt ->bind_param("sssss",$subtopic, $user_id, $title, $content, $date);
 
 if($title=="" || $content=="" || $subtopic==""){
     header("Location: createpost.php?post=failed");

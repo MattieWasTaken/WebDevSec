@@ -34,33 +34,34 @@ include_once('databaseConnection.php');
     } 
         ?>
     </div>
-    <div class="row p-3 mt-2 bg-secondary text-white rounded">
+    </div>
+
+    <div class="container-fluid">
+    <div class="row p-3 mt-2 bg-secondary text-white rounded-top">
     <div class="col">
     <form class="bg-secondary" action="submitpost.php" method="POST">
-      <div class="form-group">
-        <label for="title">Title:</label>
-        <input type="text" class="form-control" id="title" placeholder="Post Title...">
-      </div>
-      <div class="form-group">
-        <label for="postcontent">Example textarea</label>
-        <textarea class="form-control" id="postcontent" rows='10'></textarea>
-        <button type="submit" name="submit" class="mt-3">Post</button>
-      </div>
-      </div>
-      <div class="col text-center">
-        <h1>Subforum Posting Rules</h1>
-        <ul class="list-group">
-        <li class="list-group-item bg-transparent">sdjfbhsajdbghsbdg</li>
-        <li class="list-group-item bg-transparent">sdjfbhsfhsdfhfsdsajdsdfhghsbdg</li>
-      </ul>
-      </div>
-      </div>
-      <div class="row p-3 mb-2 bg-secondary text-white rounded">
-
-      </div>
+    <div class="form-group">
+      <label for='title'>Title:</label>
+      <input type="text" id="title" name="title" class="form-control" placeholder="Title...">
+    </div>
+    <div class="form-group">
+      <label for="subtopic">Choose a Subtopic</label>
+      <select name="subtopic" id="subtopic" class='form-control'>Subtopics
+      <option value="Potato">Potato</option>
+      <option value="Gaming">Gaming</option>
+      <option value="Lifestyle">Lifestyle</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="content">Post Content</label>
+      <textarea class="form-control" id='content' name='content' rows='10'></textarea>
+    </div>
+     <button type="submit" name="submit">Post</button>
     </form>
+    </div>
+    </div>
+    </div>
 </div>
-</div>
-
+</body>
 
         <?php include_once("footer.php")?>

@@ -1,5 +1,8 @@
 <!DOCTYPE html>
+<?php
+session_start();
 
+?>
 <header>
 <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
   <a class="navbar-brand" href="index.php">IMD Forums</a>
@@ -12,20 +15,21 @@
       <li class="nav-item active">
         <a class="nav-link" href="index.php">Home </a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="createpost.php">Create A Post</a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
+      <?php 
+      if(isset($_SESSION['username'])){
+        $userid = $_SESSION['userid'];
+        $username = $_SESSION['username'];
+        echo "<a class='nav-link active' href='user.php?uid=$userid'>User: $username</a>";
+        echo "<a class='nav-link active' href='logout.php'>Logout</a>";
+    }else if(!isset($_SESSION['username'])){
+      echo "<a class='nav-link active' href='login.php'>Login!</a>";
+        echo "<a class='nav-link active' href='registration.php'>Register</a>";
+    }
+      
+      ?>
     </ul>
     <form class="form-inline my-2 my-lg-0" action="search.php">
       <input class="form-control mr-sm-2" type="text" name="search" id="" placeholder="Search..." aria-label="Search">
@@ -33,6 +37,7 @@
     </form>
   </div>
 </nav>
+
 
 </header>
 </html>

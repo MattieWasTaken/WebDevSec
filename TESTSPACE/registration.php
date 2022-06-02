@@ -18,32 +18,13 @@
 
 
 <body>
-<div class="container-flex">
-        <div class="post-title bg-dark text-white">
-            <h1 class="ml-3">Create Post</h1>
-<?php 
-    if(isset($_REQUEST['post'])){
-        if($_GET['post']=='failedtooLong'){
-            echo "<h3>Error! Title Must Not Exceed 100 Characters</h3>";
-        }else if($_GET['post']=='failed'){
-            echo "<h3>Error! You must complete all the fields</h3>";
-        }else if($_GET['post']=='failedNoLogin'){
-            echo "<h3>Error! You must be logged in to post</h3>";
-        }
-    } 
-        ?>
-
-</head>
-
-
-<body>
-
-<div class="container bg-secondary text-white rounded">
+<div class="container-fluid bg-dark text-white pt-3">
+<div class="container-fluid mt-2 bg-secondary text-white rounded">
 <form action="registration.php" method=POST>
         <div class="row">
         <h1 class="ml-2"> Register Now!</h1>
         </div>
-        <div class="row">
+        <div class="row ml-1">
         <p> Please Enter Your Details</p>
         </div>
         <div class="row pl-2">
@@ -111,6 +92,7 @@
     }
 }
 ?>
+</div>
 </div>
 </div>
 </body>

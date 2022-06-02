@@ -35,6 +35,7 @@ while($rows[]=mysqli_fetch_array($result)){
     $userID = $rows[$counter]['user_id'];
     $content = nl2br($rows[$counter]['content']);
     $subtopic = $rows[$counter]['subtopic'];
+    $date = $rows[$counter]['date_submitted'];
     echo "   
     <div class='container-fluid'>
     <div class='row'>
@@ -42,7 +43,7 @@ while($rows[]=mysqli_fetch_array($result)){
     <form method='GET'>
     <input type='hidden' name='$subtopic' $subtopic>
     <span>$postCounter.</span><br>
-    <span>Topic:  <a class='text-light' href='subforum.php?subtopic=$subtopic'>$subtopic</a></span>
+    <span>Topic:  <a class='text-light' href='subforum.php?subtopic=$subtopic&page=1'>$subtopic</a></span>
     </form>
     </div>
     <div class='col-lg p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
@@ -54,7 +55,7 @@ while($rows[]=mysqli_fetch_array($result)){
     </div>
     <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2'>
     <form method='GET' name'$userID' $userID>
-    <p class='text-left'>Posted On: Date</p>
+    <p class='text-left text-wrap'>Date: $date </p>
     <a class='text-white' href='userprofile.php?user_id=$userID'> <small>By: $userID</small></a>
     </form>
     </div>      
