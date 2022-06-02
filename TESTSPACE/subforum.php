@@ -14,6 +14,9 @@
 include_once('header.php');
 include_once('databaseConnection.php');
 
+$limit = 8;
+$page = $_GET['page'];
+$start = ($page-1) * $limit;
 
 if(isset($_REQUEST['subtopic'])){
     if(!empty($_GET['subtopic'])){
@@ -36,7 +39,7 @@ if(isset($_REQUEST['subtopic'])){
 </div>
 <?php 
 
-$query = "SELECT * FROM forum_posts WHERE subtopic='$subtopic' ORDER BY `topic_id` DESC LIMIT 8;";
+$query = "SELECT * FROM forum_posts WHERE subtopic='$subtopic' ORDER BY `topic_id` DESC LIMIT $start,8;";
 $result = mysqli_query($conn, $query);
 $resultCheck = mysqli_num_rows($result);
 $counter=0;
@@ -72,6 +75,9 @@ $counter++;
 $postCounter++;
 }
 ?>
+
+<a class='text-white' href='subforum.php?subtopic=<?php echo $subtopic?>&page=<?php $page = $page+1; echo $page?>;'
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

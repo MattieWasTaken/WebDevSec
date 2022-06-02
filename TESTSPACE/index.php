@@ -43,7 +43,7 @@ while($rows[]=mysqli_fetch_array($result)){
     <form method='GET'>
     <input type='hidden' name='$subtopic' $subtopic>
     <span>$postCounter.</span><br>
-    <span>Topic:  <a class='text-light' href='subforum.php?subtopic=$subtopic'>$subtopic</a></span>
+    <span>Topic:  <a class='text-light' href='subforum.php?subtopic=$subtopic&page=1'>$subtopic</a></span>
     </form>
     </div>
     <div class='col-lg p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
