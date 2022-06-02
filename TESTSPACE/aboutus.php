@@ -24,8 +24,55 @@ include_once('databaseConnection.php');
 </div>
 <?php 
 
-    echo "  
+    echo "
+	//1st
     <div class='container-fluid'>
+    <div class='row'>
+    <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-2 mr-1'>
+    
+    <span><a class='text-light' href='personal link'>Code Developer</a></span>
+    
+    </div>
+    <div class='col-lg p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
+    <a class='text-white' href='personal link'><h5 class='text-left'>Matthew Castles</h3></a>
+   <small class='overflow-hidden'>Details</small>
+   
+    </div>
+    <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2'>
+	<img src='' 
+	alt="Site Logo" border="0" style="width:40px; height:45px;" img align="center">>
+    
+    </div>      
+    </div>
+</div>
+<div class="container-fluid p-1 bg-dark">
+<div class="container-fluid">
+    
+</div>
+
+
+    //2nd   
+    <div class='container-fluid'>
+    <div class='row'>
+    <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-2 mr-1'>
+    
+    <span><a class='text-light' href='personal link'>Web-Designer</a></span>
+    </form>
+    </div>
+    <div class='col-lg p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
+    <a class='text-white' href='personal link'><h5 class='text-left'>Danial Irwin</h3></a>
+   <small class='overflow-hidden'>Details</small>
+   </form>
+    </div>
+    <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2'>
+	<img src='' 
+	alt="Site Logo" border="0" style="width:40px; height:45px;" img align="center">>
+    </form>
+    </div>      
+    </div>
+</div>
+	//3rd pp
+	<div class='container-fluid'>
     <div class='row'>
     <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-2 mr-1'>
     
@@ -33,16 +80,18 @@ include_once('databaseConnection.php');
     </form>
     </div>
     <div class='col-lg p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
-    <a class='text-white' href='personal link'><h5 class='text-left'>Matthew Castles</h3></a>
+    <a class='text-white' href='personal link'><h5 class='text-left'>Kritsanapong Inbua</h3></a>
    <small class='overflow-hidden'>Details</small>
    </form>
     </div>
     <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2'>
+	<img src='' 
+	alt="Site Logo" border="0" style="width:40px; height:45px;" img align="center">>
     </form>
     </div>      
     </div>
 </div>"
-?>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
