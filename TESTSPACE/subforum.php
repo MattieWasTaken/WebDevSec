@@ -90,9 +90,13 @@ $postCounter++;
     <li class="page-item">
       <a class="page-link" href="subforum.php?subtopic=<?php echo $subtopic ?>&page=<?php echo $page-1?>" tabindex="-1" aria-disabled="true">Previous</a>
     </li>
-    <li class="page-item-active"><a class="page-link" href="subforum.php?subtopic=<?php echo $subtopic ?>&page=<?php echo $page?>"><?php echo $page?></a></li>
+    <?php 
+    if($_GET['page']>1){
+        $prevPage = $page-1;
+        echo "<li class='page-item'><a class='page-link' href='subforum.php?subtopic=$subtopic&page=$prevPage'>$prevPage</a></li>";}
+    ?>
+    <li class="page-item active"><a class="page-link" href="subforum.php?subtopic=<?php echo $subtopic ?>&page=<?php echo $page?>"><?php echo $page?></a></li>
     <li class="page-item"><a class="page-link" href="subforum.php?subtopic=<?php echo $subtopic ?>&page=<?php echo $page+1?>"><?php echo $page+1?></a></li>
-    <li class="page-item"><a class="page-link" href="subforum.php?subtopic=<?php echo $subtopic ?>&page=<?php echo $page+2?>"><?php echo $page+2?></a></li>
     <li class="page-item">
       <a class="page-link" href="subforum.php?subtopic=<?php echo $subtopic ?>&page=<?php echo $page+1?>">Next</a>
     </li>
