@@ -14,9 +14,7 @@
 include_once('header.php');
 include_once('databaseConnection.php');
 
-$limit = 8;
-$page = $_GET['page'];
-$start = ($page-1) * $limit;
+
 
 if(isset($_REQUEST['subtopic'])){
     if(!empty($_GET['subtopic'])){
@@ -27,6 +25,17 @@ if(isset($_REQUEST['subtopic'])){
     } else {
     header("Location: 404page.php?error=undefinedrequest");
     }   
+
+    $limit = 8;
+if(isset($_GET['page'])){
+    if($_GET['page']<1){
+        header("Location: subforum.php?subtopic=$subtopic&page=1");
+    }else{
+        $page=$_GET['page'];
+    }  }
+
+
+$start = ($page-1) * $limit;
 
 ?>
   
