@@ -47,12 +47,12 @@ include_once('databaseConnection.php');
             </div>
 
             <p>
-                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse" aria-expanded="false" aria-controls="collapse">
                     Some Gaming Suggestions For People Looking To Try New Games.
                 </button>
             </p>
           
-            <div class="collapse collapse-horizontal" id="collapseWidthExample">
+            <div class="collapse" id="collapse">
                 <div class="card card-body col-sm-5 p- mb-2 bg-secondary rounded ml-2 mr-1">
                         <a href=" ">MMORPG: Runescape</a>
                         <a href=" ">RPG: Elden Ring</a>
@@ -70,12 +70,12 @@ include_once('databaseConnection.php');
             </div>
 
             <p>
-                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">        
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse" aria-expanded="false" aria-controls="collapse">        
                         Read these then!?
                 </button>
             </p>
 
-            <div class="collapse collapse-horizontal" id="collapseWidthExample">
+            <div class="collapse" id="collapse">
                 <div class="card card-body col-sm-5 p- mb-2 bg-secondary rounded ml-2 mr-1 ">
                         <a href=" ">Check out the home page for the most recent posts by clicking on OnlineTopia.com</a>
                         <a href=" ">Watch Youtube videos to learn how to make a website like this one.</a>
@@ -93,7 +93,8 @@ include_once('databaseConnection.php');
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
- 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </body>
 
   <?php include_once('footer.php')?>
