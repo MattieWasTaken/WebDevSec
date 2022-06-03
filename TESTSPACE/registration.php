@@ -68,15 +68,18 @@
             $uCheck = mysqli_query($conn, $validUsername);
             $validEmail = "SELECT * FROM users WHERE email ='$email';";
             $eCheck = mysqli_query($conn, $validEmail);
+            $uppercaseCheck = preg_match('@[A-Z]@', $password);
+            $lowercaseCheck = preg_match('@[a-z]@', $password);
+            $numbersCheck = preg_match('@[0-9]@', $password);
+            $specialChars = preg_match('@[^/w]@', $password);
             if(mysqli_num_rows($uCheck)> 0 || $username=="") {
                 echo "<script type='text/javascript'>
                 alert('Username is Already In Use') </script>";
             }else if(mysqli_num_rows($eCheck)>0 || $email ==""){
                 echo "<script type='text/javascript'>
                 alert('Email is Already In Use') </script>";
-            }else if($password==""){
-                echo "<script type='text/javascript'>
-                alert('Password does not meet requirements') </script>";
+            }else if(!$uppercaseCheck || !$lowercaseCheck || !$numbersCheck || !$specialChars || strlen($password) < 8){
+                echo 'Password should be at least 8 characters in length and should include at least one upper case letter, one number, and one special character.';
             }else if($password!=$confirmPassword){
                 echo "<script type='text/javascript'>
                 alert('Passwords do not match') </script>";
