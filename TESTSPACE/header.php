@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 session_start();
-
+error_reporting(0);
 ?>
 <header>
 <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
