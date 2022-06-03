@@ -79,6 +79,7 @@ if (isset($_SESSION["loginLocked"])){
  if(isset($_POST['login'])){
             $username = $_POST['username'];
             $password = $_POST['password'];
+            $_SESSION['lastLogin']= time();
             unset($_SESSION['loginFailed']);
             unset($_SESSION['loginLocked']);
             if($username=="" || $password == ""){

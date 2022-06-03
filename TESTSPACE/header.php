@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <?php
 session_start();
+
+if(isset($_SESSION['lastLogin'])){
+  if((time() - $_SESSION['lastLogin']) > 1800){
+    header("Location: logout.php?logout=TimedOut");
+  }else {
+    $_SESSION['lastLogin'] = time();
+  }
+}
+
 error_reporting(0);
 ?>
 <header>

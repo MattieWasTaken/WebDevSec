@@ -13,6 +13,7 @@
 <?php 
 include_once('header.php');
 include_once('databaseConnection.php');
+echo $_SESSION['lastLogin'];
 ?>
   
 <body>
@@ -23,7 +24,6 @@ include_once('databaseConnection.php');
     </div>
 </div>
 <?php 
-
 $query = "SELECT * FROM forum_posts ORDER BY `topic_id` DESC LIMIT 10;";
 $result = mysqli_query($conn, $query);
 $resultCheck = mysqli_num_rows($result);
@@ -66,6 +66,8 @@ $postCounter++;
 }
 ?>
 
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -74,4 +76,25 @@ $postCounter++;
   </body>
 
   <?php include_once('footer.php')?>
+
+  <?php
+if(isset($_REQUEST['createAccount'])){
+  if($_GET['createAccount']== "success"){
+    echo "<script type='text/javascript'>
+    alert('Account Created, Please Sign In To Continue') </script>";
+  }
+}
+  if(isset($_REQUEST['Login'])){
+    if($_GET['Login']== "success"){
+      echo "<script type='text/javascript'>
+      alert('Login Successful') </script>";
+    }
+}
+if(isset($_REQUEST['logout'])){
+  if($_GET['logout']== "SessionTimedOut"){
+    echo "<script type='text/javascript'>
+    alert('Your Session Expired After 30 Minutes of Inactivity') </script>";
+  }
+}
+?>
 </html>
