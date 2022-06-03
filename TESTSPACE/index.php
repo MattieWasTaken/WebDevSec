@@ -193,10 +193,6 @@ include_once('databaseConnection.php');
   </div>
 </div>
 
-<div class="row">
-
-</div>
-
 <div class="row ml-1 mr-1" style="margin-top:20px">
   <div class="col-md-2">
     <a href="subforum.php?subtopic=potato&page=1">
@@ -217,12 +213,16 @@ include_once('databaseConnection.php');
     </a>
   </div>
   <div class="col-md-2">
+    <a href="subforum.php?subtopic=meme&page=1">
     <img src="https://i.imgflip.com/6ifnib.jpg" class="img-thumbnail" alt="Memes" style="height:300px;width:300px">
     <h4 class="carousel-caption" d-flex flex-column justify-content-center h-100 style="top: 0">View Meme Posts</h4>
+        </a>
   </div>
   <div class="col-md-2">
+  <a href="subforum.php?subtopic=sports&page=1">
     <img src="https://media.wired.com/photos/5a3af5179b5b7950644810b9/master/w_2560%2Cc_limit/football-TA.jpg" class="img-thumbnail" alt="Gaming" style="height:300px;width:300px;object-fit: cover">
     <h4 class="carousel-caption" d-flex flex-column justify-content-center h-100 style="top: 0;">View Sports Posts</h4>
+        </a>
   </div>
   <div class="col-md-2" style="margin-bottom:50px">
     <a href="createtopic.php">
@@ -238,7 +238,28 @@ include_once('databaseConnection.php');
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 
-  <?php include_once('footer.php')?>
+  <?php
+if(isset($_REQUEST['createAccount'])){
+  if($_GET['createAccount']== "success"){
+    echo "<script type='text/javascript'>
+    alert('Account Created, Please Sign In To Continue') </script>";
+  }
+}
+  if(isset($_REQUEST['Login'])){
+    if($_GET['Login']== "success"){
+      echo "<script type='text/javascript'>
+      alert('Login Successful') </script>";
+    }
+}
+if(isset($_REQUEST['logout'])){
+  if($_GET['logout']== "SessionTimedOut"){
+    echo "<script type='text/javascript'>
+    alert('Your Session Expired After 30 Minutes of Inactivity') </script>";
+  }
+}
+?>
 
-</div>
+
+
+  <?php include_once('footer.php')?>
 </html>
