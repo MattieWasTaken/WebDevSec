@@ -218,12 +218,6 @@ color: #fff;
     size: 15px;
 }
 
-/*Image*/
-img{
-    padding: 5px;
-    opacity: 1;
-}
-
 .mainheading{
     font-size: 30px;
     margin: 10px;
@@ -278,12 +272,6 @@ header{
     width: 30%;
 }
 
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
 trending{
     border-color: red;
     border-style: solid;
@@ -324,4 +312,8 @@ trending{
   overflow: hidden;
 
   border: none;
+}
+
+table, th, td {
+    border: 1px solid;
 }
