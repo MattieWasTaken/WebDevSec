@@ -17,51 +17,56 @@ include_once('databaseConnection.php');
   
 <body>
 <div class="container-fluid p-1 bg-dark">
-<div class="container-fluid">
-    <div class="row p-3 mb-2 mt-2 bg-secondary text-white rounded">
-        <h3 class="text-left">OnlineTopia Content Policy</h3>
+    <div class="container-fluid">
+        <div class="row p-3 mb-2 mt-2 bg-secondary text-white rounded">
+            <h3 class="text-left">Content Policy</h3>
+        </div>
+
     </div>
 
-</div>
-<?php 
+    <div class='container-fluid'>
+        <div class='row'>
+                <div class='col-lg p- mb-2 bg-secondary text-white rounded ml-2 mr-1'>
+                    <h4>Please have a read, here are what you should be concerned about</h4>
+                </div>
+        </div>
 
-    echo "
-	//1st
-<div class='container-fluid'>
-	<div >
-                <h1>OnlineTopia Content Policy.</h1>
-            </div>
-
-			<div >
-                <h2>Here are rules that you must comply with. . .</h2>
-            </div>
-				<div >
-                    
-					<h3>Rule 1</h3>
+        <div class='row'>
+                <div class='col-1 p- mb-2 bg-secondary text-white rounded ml-2 mr-1'>                    
+                    <h5>Rule 1</h5>
+                </div>
+                <div class='col-lg p- mb-2 bg-secondary text-white rounded ml-2 mr-1'> 
                     <p>OnlineTopia is a place where we are free to create any content that entertains people and help them learn something new. However, unapropriate content will not be tolerated such racist, sexual harass, attacted message etc.</p>
                 </div>
-				
-				
-				<div >
+        </div>
                     
-                    <h3>Rule 2</h3>
+        <div class='row'>	
+                <div class='col-1 p- mb-2 bg-secondary text-white rounded ml-2 mr-1'>                    
+                    <h5>Rule 2</h5>
+                </div>
+                <div class='col-lg p- mb-2 bg-secondary text-white rounded ml-2 mr-1'> 
                     <p>Respect the privacy of the others. Revealing other personal or sensitive information is not allowed.</p>
                 </div>
-				
-				
-				<div >
+        </div>
                     
-                    <h3>Rule 3</h3>
+        <div class='row'>	
+                <div class='col-1 p- mb-2 bg-secondary text-white rounded ml-2 mr-1'>                   
+                    <h5>Rule 3</h5>
+                </div>
+                <div class='col-lg p- mb-2 bg-secondary text-white rounded ml-2 mr-1'> 
                     <p>We do not encourage to use real personal information here, as this should be a free space, we do not want anyone reveal their personal information.</p>
                 </div>
-			
-				
-				<div >
-                    
-                    <h3>Rule 4</h3>
+        </div>		
+        
+        <div class='row'>	
+                <div class='col-1 p- mb-2 bg-secondary text-white rounded ml-2 mr-1'>                   
+                    <h5>Rule 4</h5>
+                </div>    
+                <div class='col-lg p- mb-2 bg-secondary text-white rounded ml-2 mr-1'> 
                     <p>Ensure to report any unapproprite or misconduct post to the developers.</p>
-					</div>
-	</div>
+                </div>
+        </div>
+    </div>
 </div>
 
  

@@ -17,60 +17,56 @@ include_once('databaseConnection.php');
   
 <body>
 <div class="container-fluid p-1 bg-dark">
-<div class="container-fluid">
-    <div class="row p-3 mb-2 mt-2 bg-secondary text-white rounded">
-        <h3 class="text-left">OnlineTopia Content Policy</h3>
+    <div class="container-fluid">
+        <div class="row p-3 mb-2 mt-2 bg-secondary text-white rounded">
+            <h3 class="text-left">Support from us</h3>
+        </div>
     </div>
 
-</div>
-<?php 
-
-    echo "
-	//1st
-<div class='container-fluid'>
-	<div class="subforum-row">
-            <div> 
-                <p><a href="FAQ.php">Frequently Asked Questions</a></p>
+    <div class='container-fluid'>
+        <div class='row'>
+            <div class='col-lg-2 p- mb-2 bg-secondary rounded ml-2 mr-1 '> 
+                <p class="text-center "><a href="FAQ.php">Frequently Asked Questions</a></p>
+            </div>
+			
+            <div class='col-lg-2 p- mb-2 bg-secondary rounded ml-2 mr-1'>                    
+                <p class="text-center"><a href="ContactUs.php">Send Us A Message</a></p>
+            </div>
+            
+            <div class='col-lg-2 p- mb-2 bg-secondary rounded ml-2 mr-1'>
+                <p class="text-center"><a href="contentpolicy.php">User Policy</a></p>
+            </div>
+        </div>
+    </div>
+		
+        <div class="container-fluid">
+            <div class="row">    
+                <div class='col-lg p- mb-2 bg-secondary rounded ml-2 mr-1 '>
+                    <h2>Gaming?</h2>
+                </div>
+                <div class='col-lg p- mb-2 bg-secondary rounded ml-2 mr-1 '>
+                    <h3>Some Gaming Suggestions For People Looking To Try New Games.</h3>
+                </div>
             </div>
 
-			
-			
-                <div>
-                    
-                    <p><a href="ContactUs.php">Send Us A Message</a></p>
-                </div>
-            
-			
-			
-                <div>
-                    <p><a href="contentpolicy.php">User Policy</a></p>
-                </div>
-            
-			
-                <h2>Gaming?</h2>
-				<h3>Some Gaming Suggestions For People Looking To Try New Games.</h3>
-    
                 <div>  
                     <p>MMORPG: Runescape</p>
                 </div>
             
-			
-			
                 <div>
                     
                     <p>RPG: Elden Ring</p>
                 </div>
             
-                <div>
-                   
+                <div> 
                     <p>Turn-based: Age Of Mythology</p>
                 </div>
             
-                <div>
-                    
+                <div>                   
                     <p>Indie: Life is Strange</p>
                 </div>
-            
+        </div>    
+        
                 <h2>Have too much time too use?</h2>
 				<h4>Read these then!?</h4>
             
@@ -89,7 +85,7 @@ include_once('databaseConnection.php');
                     <p>Wanna be cool like Inbus? He's not cool either, dont worry.</p>
                 </div>
            
-</div>
+    </div>
 
  
 
