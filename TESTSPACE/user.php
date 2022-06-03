@@ -16,47 +16,65 @@ include_once('header.php');
 include_once('databaseConnection.php');
 $username = $_SESSION['username'];
 $userID = $_SESSION['userid'];
+
 ?>
+
 
 <body>
 <div class="container-fluid p-1 bg-dark">
 <div class="container-fluid">
-    <div class="row p-3 mb-2 mt-2 bg-secondary text-white rounded">
-        <h3 class="text-left"><?php echo "$username's Posts"?></h3>
-        
-    </div>
+    <?php 
+     if($_GET['display']=='posts'){
+     echo "<div class='row p-3 mb-2 mt-2 bg-secondary text-white rounded'>
+     <h3 class='text-left'>$username's Posts</h3>
+    </div>";
+    }else if($_GET['display']=='comments'){
+        echo "<div class='row p-3 mb-2 mt-2 bg-secondary text-white rounded'>
+        <h3 class='text-left'>$username's Comments</h3>
+       </div>";
+       }
+       else if($_GET['display']=='bio'){
+        echo "<div class='row p-3 mb-2 mt-2 bg-secondary text-white rounded'>
+        <h3 class='text-left'>$username's Bio</h3>
+       </div>";
+       }
+    ?>
+    
     <div class="row p-3 mb-2 mt-2 bg-secondary text-white rounded-top">
         <?php 
         if($_GET['display']=='posts'){
-           echo "<nav>
+            echo "<nav>
             <div class='nav nav-tabs' id='nav-tab' role='tablist'>
-            <a class='nav-item nav-link active text-black' id='nav-home-tab' data-toggle='tab' href='user.php?uid=$userID&display=posts' role='tab' aria-controls='nav-home' aria-selected='true'>Posts</a>
-            <a class='nav-item nav-link text-white' id='nav-profile-tab' data-toggle='tab' href='user.php?uid=$userID&display=comments' role='tab' aria-controls='nav-profile' aria-selected='false'>Comments</a>
-            <a class='nav-item nav-link text-white' id='nav-contact-tab' data-toggle='tab' href='user.php?uid=$userID&display=bio' role='tab' aria-controls='nav-contact' aria-selected='false'>Bio</a>
+            <a class='nav-item nav-link active text-black' id='nav-home-tab' data-toggle='tab' href='user.php?user_id=$userID&display=posts' role='tab' aria-controls='nav-home' aria-selected='true'>Posts</a>
+            <a class='nav-item nav-link text-white' id='nav-profile-tab' data-toggle='tab' href='user.php?user_id=$userID&display=comments' role='tab' aria-controls='nav-profile' aria-selected='false'>Comments</a>
+            <a class='nav-item nav-link text-white' id='nav-contact-tab' data-toggle='tab' href='user.php?user_id=$userID&display=bio' role='tab' aria-controls='nav-contact' aria-selected='false'>Bio</a>
             </div>
         </nav>";
         }else if($_GET['display']=='comments'){
             echo "<nav>
             <div class='nav nav-tabs' id='nav-tab' role='tablist'>
-            <a class='nav-item nav-link text-white' id='nav-home-tab' data-toggle='tab' href='user.php?uid=$userID&display=posts' role='tab' aria-controls='nav-home' aria-selected='true'>Posts</a>
-            <a class='nav-item nav-link active text-black' id='nav-profile-tab' data-toggle='tab' href='user.php?uid=$userID&display=comments' role='tab' aria-controls='nav-profile' aria-selected='false'>Comments</a>
-            <a class='nav-item nav-link text-white' id='nav-contact-tab' data-toggle='tab' href='user.php?uid=$userID&display=bio' role='tab' aria-controls='nav-contact' aria-selected='false'>Bio</a>
+            <a class='nav-item nav-link text-white' id='nav-home-tab' data-toggle='tab' href='user.php?user_id=$userID&display=posts' role='tab' aria-controls='nav-home' aria-selected='true'>Posts</a>
+            <a class='nav-item nav-link active text-black' id='nav-profile-tab' data-toggle='tab' href='user.php?user_id=$userID&display=comments' role='tab' aria-controls='nav-profile' aria-selected='false'>Comments</a>
+            <a class='nav-item nav-link text-white' id='nav-contact-tab' data-toggle='tab' href='user.php?user_id=$userID&display=bio' role='tab' aria-controls='nav-contact' aria-selected='false'>Bio</a>
             </div>
         </nav>";
         }else if($_GET['display']=='bio'){
             echo "<nav>
             <div class='nav nav-tabs' id='nav-tab' role='tablist'>
-            <a class='nav-item nav-link text-white' id='nav-home-tab' data-toggle='tab' href='user.php?uid=$userID&display=posts' role='tab' aria-controls='nav-home' aria-selected='true'>Posts</a>
-            <a class='nav-item nav-link text-white' id='nav-profile-tab' data-toggle='tab' href='user.php?uid=$userID&display=comments' role='tab' aria-controls='nav-profile' aria-selected='false'>Comments</a>
-            <a class='nav-item nav-link active text-black' id='nav-contact-tab' data-toggle='tab' href='user.php?uid=$userID&display=bio' role='tab' aria-controls='nav-contact' aria-selected='false'>Bio</a>
+            <a class='nav-item nav-link text-white' id='nav-home-tab' data-toggle='tab' href='user.php?user_id=$userID&display=posts' role='tab' aria-controls='nav-home' aria-selected='true'>Posts</a>
+            <a class='nav-item nav-link text-white' id='nav-profile-tab' data-toggle='tab' href='user.php?user_id=$userID&display=comments' role='tab' aria-controls='nav-profile' aria-selected='false'>Comments</a>
+            <a class='nav-item nav-link active text-black' id='nav-contact-tab' data-toggle='tab' href='user.php?user_id=$userID&display=bio' role='tab' aria-controls='nav-contact' aria-selected='false'>Bio</a>
             </div>
         </nav>";
+        }else{
+            header("Location: user.php?uid=$userID&display=posts");
         }
         ?>
 
     </div>
 
 </div>
+    </div>
 
 
 </body>
