@@ -16,7 +16,7 @@
     if(isset($_REQUEST['topic_id'])){
     $topic_id = $_REQUEST['topic_id'];
   }
-  
+
 $query = "SELECT * FROM forum_posts WHERE topic_id= $topic_id;";
 $result = mysqli_query($conn, $query);
 $resultCheck = mysqli_num_rows($result);
@@ -37,13 +37,13 @@ if($resultCheck>0){
 <body>
 <div class="container-fluid p-4 bg-dark">
 <div class="container-fluid">
-    <div class="row p-3 mt-2 bg-secondary text-white rounded-top">
-        <h3 class="text-left"><?php echo $title?> Posts </h3>
+    <div class="row p-1 mt-2 bg-secondary text-white rounded-top">
+        <h3 class="text-left"><?php echo $title?></h3>
         </div>
-        <div class="row bg-secondary text-white">
-        <span>By: <?php echo $user_id?></span>
+        <div class="row bg-secondary text-white p-1">
+        <span><a class="text-white" href="user.php?user_id=<?php echo $user_id?>&display=posts">By: <?php echo $user_id?></a></span>
         </div>
-        <div class="row bg-secondary mb-3 rounded-bottom text-white">
+        <div class="row bg-secondary p-1 mb-3 rounded-bottom text-white">
         <span class='text-left'>Posted On: <?php echo $date ?></span>
 </div>
 </div>

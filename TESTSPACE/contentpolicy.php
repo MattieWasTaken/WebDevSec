@@ -23,10 +23,7 @@ include_once('databaseConnection.php');
     </div>
 
 </div>
-<?php 
 
-    echo "
-	//1st
 <div class='container-fluid'>
 	<div >
                 <h1>OnlineTopia Content Policy.</h1>
