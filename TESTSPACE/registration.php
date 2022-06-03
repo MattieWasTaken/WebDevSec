@@ -83,6 +83,8 @@
             }else if($password!=$confirmPassword){
                 echo "<script type='text/javascript'>
                 alert('Passwords do not match') </script>";
+            }else if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+                echo "Please Enter Valid Email";
             }else{
                 $adminStatus = 0;
                 $stmt = $conn->prepare("INSERT INTO users (username, password, email, admin) VALUES (?,?,?,?);");
