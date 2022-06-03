@@ -81,50 +81,50 @@ include_once('databaseConnection.php');
       </div>
       <div class="carousel-item">
         <div class="container-fluid">
-          <div class="row p-3 mb-2 mt-2 bg-secondary text-white rounded">
+          <div class="row p-3 mb-2 mt-2 ml-1 mr-1 bg-secondary text-white rounded">
             <h3 class="text-left">Recent Gaming Posts:</h3>
           </div>
         </div>
         <?php 
-          $query = "SELECT * FROM forum_posts WHERE subtopic = 'Gaming' ORDER BY `topic_id` DESC LIMIT 4;";
-          $result = mysqli_query($conn, $query);
-          $resultCheck = mysqli_num_rows($result);
-          $counter=0;
-          $postCounter=1;
-          while($rows[]=mysqli_fetch_array($result)){
-            $title= $rows[$counter]['title'];
-            $topicID = $rows[$counter]['topic_id'];
-            $userID = $rows[$counter]['user_id'];
-            $content = nl2br($rows[$counter]['content']);
-            $subtopic = $rows[$counter]['subtopic'];
-            $date = $rows[$counter]['date_submitted'];
+          $query1 = "SELECT * FROM forum_posts WHERE subtopic = 'Gaming' ORDER BY `topic_id` DESC LIMIT 4;";
+          $result1 = mysqli_query($conn, $query1);
+          $resultCheck1 = mysqli_num_rows($result1);
+          $counter1=0;
+          $postCounter1=1;
+          while($rows1[]=mysqli_fetch_array($result1)){
+            $title1= $rows1[$counter1]['title'];
+            $topicID1 = $rows1[$counter1]['topic_id'];
+            $userID1 = $rows1[$counter1]['user_id'];
+            $content1 = nl2br($rows1[$counter1]['content']);
+            $subtopic1= $rows1[$counter1]['subtopic'];
+            $date1 = $rows1[$counter1]['date_submitted'];
             echo "   
               <div class='container-fluid'>
                 <div class='row'>
                   <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-2 mr-1'>
                     <form method='GET'>
-                      <input type='hidden' name='$subtopic' $subtopic>
-                      <span>$postCounter.</span><br>
-                      <span>Topic:  <a class='text-light' href='subforum.php?subtopic=$subtopic&page=1'>$subtopic</a></span>
+                      <input type='hidden' name='$subtopic1' $subtopic1>
+                      <span>$postCounter1.</span><br>
+                      <span>Topic:  <a class='text-light' href='subforum.php?subtopic=$subtopic1&page=1'>$subtopic1</a></span>
                     </form>
                   </div>
                   <div class='col-lg p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
                     <form method='GET'>
-                      <input type='hidden' name='$topicID' $topicID> 
-                      <a class='text-white' href='Post.php?topic_id=$topicID'><h5 class='text-left'>$title</h3></a>
+                      <input type='hidden' name='$topicID1' $topicID1> 
+                      <a class='text-white' href='Post.php?topic_id=$topicID1'><h5 class='text-left'>$title1</h3></a>
                       <small class='overflow-hidden'>CONTENT PREVIEW</small>
                     </form>
                   </div>
                   <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2'>
-                    <form method='GET' name'$userID' $userID>
-                      <p class='text-left text-wrap'>Date: $date </p>
-                      <a class='text-white' href='userprofile.php?user_id=$userID'> <small>By: $userID</small></a>
+                    <form method='GET' name'$userID1' $userID1>
+                      <p class='text-left text-wrap'>Date: $date1 </p>
+                      <a class='text-white' href='userprofile.php?user_id=$userID1'> <small>By: $userID1</small></a>
                     </form>
                   </div>      
                 </div>
               </div>";
-            $counter++;
-            $postCounter++;
+            $counter1++;
+            $postCounter1++;
           }
         ?>
 
@@ -136,45 +136,45 @@ include_once('databaseConnection.php');
           </div>
         </div>
         <?php 
-          $query = "SELECT * FROM forum_posts WHERE subtopic = 'Lifestyle' ORDER BY `topic_id` DESC LIMIT 4;";
-          $result = mysqli_query($conn, $query);
-          $resultCheck = mysqli_num_rows($result);
-          $counter=0;
-          $postCounter=1;
-          while($rows[]=mysqli_fetch_array($result)){
-            $title= $rows[$counter]['title'];
-            $topicID = $rows[$counter]['topic_id'];
-            $userID = $rows[$counter]['user_id'];
-            $content = nl2br($rows[$counter]['content']);
-            $subtopic = $rows[$counter]['subtopic'];
-            $date = $rows[$counter]['date_submitted'];
+          $query2 = "SELECT * FROM forum_posts WHERE subtopic = 'Lifestyle' ORDER BY `topic_id` DESC LIMIT 4;";
+          $result2 = mysqli_query($conn, $query2);
+          $resultCheck2 = mysqli_num_rows($result2);
+          $counter2=0;
+          $postCounter2=1;
+          while($rows2[]=mysqli_fetch_array($result2)){
+            $title2= $rows2[$counter2]['title'];
+            $topicID2 = $rows2[$counter2]['topic_id'];
+            $userID2 = $rows2[$counter2]['user_id'];
+            $content2 = nl2br($rows2[$counter2]['content']);
+            $subtopic2 = $rows2[$counter2]['subtopic'];
+            $date2 = $rows2[$counter2]['date_submitted'];
             echo "   
               <div class='container-fluid'>
                 <div class='row'>
                   <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-2 mr-1'>
                     <form method='GET'>
-                      <input type='hidden' name='$subtopic' $subtopic>
-                      <span>$postCounter.</span><br>
-                      <span>Topic:  <a class='text-light' href='subforum.php?subtopic=$subtopic&page=1'>$subtopic</a></span>
+                      <input type='hidden' name='$subtopic2' $subtopic2>
+                      <span>$postCounter2.</span><br>
+                      <span>Topic:  <a class='text-light' href='subforum.php?subtopic=$subtopic2&page=1'>$subtopic2</a></span>
                     </form>
                   </div>
                   <div class='col-lg p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
                     <form method='GET'>
-                      <input type='hidden' name='$topicID' $topicID> 
-                      <a class='text-white' href='Post.php?topic_id=$topicID'><h5 class='text-left'>$title</h3></a>
+                      <input type='hidden' name='$topicID2' $topicID2> 
+                      <a class='text-white' href='Post.php?topic_id=$topicID2'><h5 class='text-left'>$title2</h3></a>
                       <small class='overflow-hidden'>CONTENT PREVIEW</small>
                     </form>
                   </div>
                   <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2'>
-                    <form method='GET' name'$userID' $userID>
-                      <p class='text-left text-wrap'>Date: $date </p>
-                      <a class='text-white' href='userprofile.php?user_id=$userID'> <small>By: $userID</small></a>
+                    <form method='GET' name'$userID2' $userID2>
+                      <p class='text-left text-wrap'>Date: $date2 </p>
+                      <a class='text-white' href='userprofile.php?user_id=$userID2'> <small>By: $userID2</small></a>
                     </form>
                   </div>      
                 </div>
               </div>";
-            $counter++;
-            $postCounter++;
+            $counter2++;
+            $postCounter2++;
           }
         ?>
 
@@ -197,7 +197,7 @@ include_once('databaseConnection.php');
 
 </div>
 
-<div class="row" style="margin-top:20px">
+<div class="row ml-1 mr-1" style="margin-top:20px">
   <div class="col-md-2">
     <a href="subforum.php?subtopic=potato&page=1">
       <img src="https://images.theconversation.com/files/401955/original/file-20210520-23-83r6ds.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=900.0&fit=crop" class="img-thumbnail" alt="Potato" style="height:300px;width:300px;object-fit: cover">
