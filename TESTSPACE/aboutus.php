@@ -22,9 +22,7 @@ include_once('databaseConnection.php');
         <h3 class="text-left">About (WEBNAME) Developers</h3>
     </div>
 </div>
-<?php 
 
-    echo "
     <div class='container-fluid'>
     <div class='row'>
     <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-2 mr-1'>
@@ -87,8 +85,8 @@ include_once('databaseConnection.php');
     </form>
     </div>      
     </div>
-</div>"
-?>
+</div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
