@@ -22,7 +22,7 @@ error_reporting(0);
       if(isset($_SESSION['username'])){
         $userid = $_SESSION['userid'];
         $username = $_SESSION['username'];
-        echo "<a class='nav-link active' href='user.php?uid=$userid'>User: $username</a>";
+        echo "<a class='nav-link active' href='user.php?user_id=$username&display=posts'>User: $username</a>";
         echo "<a class='nav-link active' href='logout.php'>Logout</a>";
     }else if(!isset($_SESSION['username'])){
       echo "<a class='nav-link active' href='login.php'>Login!</a>";
