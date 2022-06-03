@@ -225,8 +225,10 @@ include_once('databaseConnection.php');
     <h4 class="carousel-caption" d-flex flex-column justify-content-center h-100 style="top: 0;">View Sports Posts</h4>
   </div>
   <div class="col-md-2" style="margin-bottom:50px">
-    <img src="https://cdn.pixabay.com/photo/2016/03/21/05/05/plus-1270001_960_720.png" alt="Add New Topic" style="height:275px;width:275px;object-fit: cover">
-    <h4 class="carousel-caption" d-flex flex-column justify-content-center h-100 style="top: 0">Add a New Topic!</h4>
+    <a href="createtopic.php">
+      <img src="https://cdn.pixabay.com/photo/2016/03/21/05/05/plus-1270001_960_720.png" alt="Add New Topic" style="height:275px;width:275px;object-fit: cover">
+      <h4 class="carousel-caption" d-flex flex-column justify-content-center h-100 style="top: 0">Add a New Topic!</h4>
+    </a>
   </div>
 </div>
 
