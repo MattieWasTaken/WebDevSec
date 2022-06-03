@@ -1,4 +1,4 @@
-<footer class="text-center text-lg-start bg-dark text-muted pt-5">
+<footer class="text-center text-lg-start bg-dark text-muted pt-2">
   <!-- Section: Social media -->
   <!-- Section: Social media -->
   <!-- Section: Links  -->
