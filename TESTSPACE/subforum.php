@@ -87,7 +87,6 @@ $result1 = $conn->query($query1);
 $topicReturn = $result1->fetch_all(MYSQLI_ASSOC);
 $totalPostCount= $topicReturn[0]['topic_id'];
 $totalPages = ceil($totalPostCount/$limit);
-echo $totalPages;
 ?>
 
 <nav aria-label="Page navigation example">
