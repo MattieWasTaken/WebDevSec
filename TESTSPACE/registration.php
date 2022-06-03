@@ -52,7 +52,6 @@
         </div>    
         </div>
         <input type="submit" name="create" value="Create Account!">
-    
    </form> 
 
 
