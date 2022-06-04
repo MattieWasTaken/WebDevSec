@@ -61,6 +61,7 @@
             $username = $_POST['username'];
             $password = $_POST['password'];
             $email = $_POST['email'];
+            $bio ="";
             $confirmPassword = $_POST['cpassword'];
             $hashed= password_hash($password, PASSWORD_DEFAULT);
             $validUsername = "SELECT * FROM users WHERE username ='$username';";
@@ -71,24 +72,28 @@
             $lowercaseCheck = preg_match('@[a-z]@', $password);
             $numbersCheck = preg_match('@[0-9]@', $password);
             $specialChars = preg_match('@[^/w]@', $password);
+            echo "potato<br>";
             if(mysqli_num_rows($uCheck)> 0 || $username=="") {
-                echo "<script type='text/javascript'>
-                alert('Username is Already In Use') </script>";
+                echo "username exists";
             }else if(mysqli_num_rows($eCheck)>0 || $email ==""){
-                echo "<script type='text/javascript'>
-                alert('Email is Already In Use') </script>";
+                echo "email exists";
             }else if(!$uppercaseCheck || !$lowercaseCheck || !$numbersCheck || !$specialChars || strlen($password) < 8){
+                echo "password does not meet special characters";
                 echo 'Password should be at least 8 characters in length and should include at least one upper case letter, one number, and one special character.';
             }else if($password!=$confirmPassword){
-                echo "<script type='text/javascript'>
-                alert('Passwords do not match') </script>";
+                echo "passwords do not match";
             }else if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
                 echo "Please Enter Valid Email";
             }else{
+                error_reporting(0);
                 $adminStatus = 0;
-                $stmt = $conn->prepare("INSERT INTO users (username, password, email, admin_status) VALUES (?,?,?,?);");
-                $stmt -> bind_param("sssi", $username, $hashed, $email, $adminStatus);
+                echo "admin status assigned<br>";
+                $stmt = $conn->prepare("INSERT INTO users (username, password, email, bio, admin_status) VALUES (?,?,?,?,?);");
+                echo "statement prepared<br>";
+                $stmt -> bind_param("ssssi", $username, $hashed, $email,$bio, $adminStatus);
+                echo "statement binded";
                 $result = $stmt->execute();
+                echo "statement executed";
                 if($result){
                     header("Location: index.php?createAccount=success");
                     
