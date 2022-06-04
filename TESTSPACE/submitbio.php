@@ -10,6 +10,7 @@ $date = date("d-m-y");
 echo "$content<br> $user_id";
 
 $stmt = $conn->prepare("UPDATE `users` SET `bio` = '$content' WHERE `users`.`user_id` = '$user_id';");
+"UPDATE `users` SET `bio` = '$content' WHERE `users`.`username` = '$user_id';";
 $stmt ->execute();
 
 error_reporting(1);

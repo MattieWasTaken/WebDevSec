@@ -51,7 +51,7 @@
         <input type="text" name="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" required>
         </div>    
         </div>
-        <input type="submit" name="create" value="Create Account!">
+        <input class="mb-2" type="submit" name="create" value="Create Account!">
    </form> 
 
 
