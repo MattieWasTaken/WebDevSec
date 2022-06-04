@@ -14,7 +14,7 @@ $stmt = $conn->prepare("UPDATE `users` SET `bio` = '$content' WHERE `users`.`use
 $stmt ->execute();
 
 error_reporting(1);
-/*
+
 if($user_id==""){
     header("Location: user.php?user_id=$user_id&display=bio");
 }else{
@@ -22,5 +22,4 @@ if($user_id==""){
     header("Location: user.php?post=success");
 }
 
-*/
 ?>
