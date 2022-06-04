@@ -76,7 +76,9 @@ $postCounter++;
 
   <?php include_once('footer.php')?>
 
-  <?php
+
+</html>
+<?php
 if(isset($_REQUEST['createAccount'])){
   if($_GET['createAccount']== "success"){
     echo "<script type='text/javascript'>
@@ -96,4 +98,3 @@ if(isset($_REQUEST['logout'])){
   }
 }
 ?>
-</html>

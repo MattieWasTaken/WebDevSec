@@ -59,57 +59,54 @@
 <div>
 <?php 
  error_reporting(1);
+ $forbiddenCharacter = '\'';
 if(isset($_POST['create'])){
-            $username = $_POST['username'];
-            $password = $_POST['password'];
-            echo $username;
-            if(str_contains($username, $forbiddenCharacter)!==true){
-                echo "No Special Characters Allowed In Username<br>";
-                echo "$username<br>";
-                echo strpos($username, $forbiddenCharacter);
-                /*header('Location: registration.php?registrationFailed=InvalidCharacter');*/
-            }
-            $email = $_POST['email'];
-            $bio ="";
-            $forbiddenCharacter = '\'';
-            $confirmPassword = $_POST['cpassword'];
-            $hashed= password_hash($password, PASSWORD_DEFAULT);
-            $validUsername = "SELECT * FROM users WHERE username ='$username';";
-            $uCheck = mysqli_query($conn, $validUsername);
-            $validEmail = "SELECT * FROM users WHERE email ='$email';";
-            $eCheck = mysqli_query($conn, $validEmail);
-            $uppercaseCheck = preg_match('@[A-Z]@', $password);
-            $lowercaseCheck = preg_match('@[a-z]@', $password);
-            $numbersCheck = preg_match('@[0-9]@', $password);
-            $specialChars = preg_match('@[^/w]@', $password);
-            if(mysqli_num_rows($uCheck)> 0 || $username=="") {
-                echo "username exists";
-            }else if(mysqli_num_rows($eCheck)>0 || $email ==""){
-                echo "email exists";
-            }else if(!$uppercaseCheck || !$lowercaseCheck || !$numbersCheck || !$specialChars || strlen($password) < 8){
-                echo 'Password should be at least 8 characters in length and should include at least one upper case letter, one number, and one special character.';
-            }else if($password!=$confirmPassword){
-                echo "passwords do not match";
-            }else if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-                echo "Please Enter Valid Email";
-            }else if(preg_match('@[^/w]@', $username)){
-                echo "No Special Characters Allowed In Username";
+            $username = ($_POST['username']);
+            $password = ($_POST['password']);
+            if (!preg_match( "/^[A-Za-z0-9_]{3,20}$/", $username )) {
+                $strError="Your Username May Not Contain a Special Character.  Please Try Again.";
+                echo $strError;
             }else{
-                
-                $adminStatus = 0;
-                echo "admin status assigned<br>";
-                $stmt = $conn->prepare("INSERT INTO users (username, password, email, bio, admin_status) VALUES (?,?,?,?,?);");
-                echo "statement prepared<br>";
-                $stmt -> bind_param("ssssi", $username, $hashed, $email,$bio, $adminStatus);
-                echo "statement binded";
-                $result = $stmt->execute();
-                echo "statement executed";
-                if($result){
-                    header("Location: index.php?createAccount=success");
-                    
+                $email = $_POST['email'];
+                $bio ="";
+                $confirmPassword = $_POST['cpassword'];
+                $hashed= password_hash($password, PASSWORD_DEFAULT);
+                $validUsername = "SELECT * FROM users WHERE username ='$username';";
+                $uCheck = mysqli_query($conn, $validUsername);
+                $validEmail = "SELECT * FROM users WHERE email ='$email';";
+                $eCheck = mysqli_query($conn, $validEmail);
+                $uppercaseCheck = preg_match('@[A-Z]@', $password);
+                $lowercaseCheck = preg_match('@[a-z]@', $password);
+                $numbersCheck = preg_match('@[0-9]@', $password);
+                $specialChars = preg_match('@[^/w]@', $password);
+                if(mysqli_num_rows($uCheck)> 0 || $username=="") {
+                    echo "username exists";
+                }else if(mysqli_num_rows($eCheck)>0 || $email ==""){
+                    echo "email exists";
+                }else if(!$uppercaseCheck || !$lowercaseCheck || !$numbersCheck || !$specialChars || strlen($password) < 8){
+                    echo 'Password should be at least 8 characters in length and should include at least one upper case letter, one number, and one special character.';
+                }else if($password!=$confirmPassword){
+                    echo "passwords do not match";
+                }else if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+                    echo "Please Enter Valid Email";
+                }else{
+                    $adminStatus = 0;
+                    echo "admin status assigned<br>";
+                    $stmt = $conn->prepare("INSERT INTO users (username, password, email, bio, admin_status) VALUES (?,?,?,?,?);");
+                    echo "statement prepared<br>";
+                    $stmt -> bind_param("ssssi", $username, $hashed, $email,$bio, $adminStatus);
+                    echo "statement binded";
+                    $result = $stmt->execute();
+                    echo "statement executed";
+                    if($result){
+                        header("Location: index.php?createAccount=success");
+                        
+                }
             }
+       
     }
 }
+
 ?>
 </div>
 </div>
