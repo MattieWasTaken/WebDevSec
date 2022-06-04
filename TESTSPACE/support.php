@@ -26,28 +26,28 @@ include_once('databaseConnection.php');
     <div class='container-fluid'>
         <div class='row'>
             <div class='col-lg-2 p- mb-2 bg-secondary rounded ml-2 mr-1 '> 
-                <p class="text-center "><a href="FAQ.php">Frequently Asked Questions</a></p>
+                <p class="text-center"><a class="text-white"href="FAQ.php">Frequently Asked Questions</a></p>
             </div>
 			
             <div class='col-lg-2 p- mb-2 bg-secondary rounded ml-2 mr-1'>                    
-                <p class="text-center"><a href="ContactUs.php">Send Us A Message</a></p>
+                <p class="text-center"><a class="text-white"href="ContactUs.php">Send Us A Message</a></p>
             </div>
             
             <div class='col-lg-2 p- mb-2 bg-secondary rounded ml-2 mr-1'>
-                <p class="text-center"><a href="contentpolicy.php">User Policy</a></p>
+                <p class="text-center"><a class="text-white" href="contentpolicy.php">User Policy</a></p>
             </div>
         </div>
     </div>
 		
         <div class="container-fluid">
-            <div class="row">    
+           <!-- <div class="row">    
                 <div class='col-sm-5 p- mb-2 bg-secondary rounded ml-2 mr-1 '>
-                    <h2><a href=" ">Gaming?</a></h2>
+                    <h2><a class="text-white" href=" ">Gaming?</a></h2>
                 </div>
             </div>
 
             <p>
-                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse" aria-expanded="false" aria-controls="collapse">
+                <button class="btn btn-primary text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapse" aria-expanded="false" aria-controls="collapse">
                     Some Gaming Suggestions For People Looking To Try New Games.
                 </button>
             </p>
@@ -65,12 +65,12 @@ include_once('databaseConnection.php');
         <div class="container-fluid">
             <div class="row">  
                 <div class='col-sm-5 p- mb-2 bg-secondary rounded ml-2 mr-1 '>
-                        <h2><a href=" ">Have too much time too use?</a></h2>    
+                        <h2><a class="text-white" href=" ">Have too much time too use?</a></h2>    
                 </div>
             </div>
 
             <p>
-                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse" aria-expanded="false" aria-controls="collapse">        
+                <button class="btn btn-primary text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapse" aria-expanded="false" aria-controls="collapse">        
                         Read these then!?
                 </button>
             </p>
@@ -83,7 +83,44 @@ include_once('databaseConnection.php');
                 </div>        
             </div> 
         </div>
+-->
 
+<div class="accordion" id="accordionExample">
+  <div class="card bg-secondary">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-link text-white" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Gaming?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+                        <a class="text-white" href=" ">MMORPG: Runescape</a><br>
+                        <a class="text-white" href=" ">RPG: Elden Ring</a><br>
+                        <a class="text-white" href=" ">Turn-based: Age Of Mythology</a><br>
+                        <a class="text-white" href=" ">Indie: Life is Strange</a>
+      </div>
+    </div>
+  </div>
+  <div class="card bg-secondary">
+    <div class="card-header" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed text-white" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Spare time?
+        </button>
+      </h2>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+                        <a class="text-white" href=" ">Check out the home page for the most recent posts by clicking on OnlineTopia.com</a><br>
+                        <a class="text-white" href=" ">Watch Youtube videos to learn how to make a website like this one.</a><br>
+                        <a class="text-white" href=" ">Wanna be cool like Inbus? He's not cool either, dont worry.</a><br>
+      </div>
+    </div>
+  </div>
+</div>
     </div>
 
  
