@@ -117,7 +117,7 @@ $userID = $_GET['user_id'];
         $resultCheck1 = mysqli_num_rows($result1);
             $rows1 = mysqli_fetch_array($result1);
             $bioInfo = nl2br($rows1[0]);
-            if($bioInfo=="" && $username==$_SESSION['username']){
+            if($bioInfo==""){
                 echo "
                 <div class='container-fluid'>
                 <div class='row'>
@@ -130,7 +130,7 @@ $userID = $_GET['user_id'];
                     echo"
                     <form class='bg-secondary rounded ml-1 mr-1' action='submitbio.php' method='POST'>
                     <div class='form-group'>
-                    <label class='text-white ml-3' for='content'>Create Bio</label>
+                    <label class='text-white ml-3' for='content'>Update Your Bio Now</label>
                     <textarea class='form-control ml-1' id='content' name='content' rows='10'></textarea>
                     </div>
                     <a type='hidden' name='username' id='username' $username>
@@ -139,7 +139,7 @@ $userID = $_GET['user_id'];
                 
                 }
                 
-            }else{
+            }else if($bioInfo!="" && $_SESSION['username']==$username){
                 echo "   
                 <div class='container-fluid'>
                 <div class='row'>
@@ -148,7 +148,15 @@ $userID = $_GET['user_id'];
                <p class='text-left'>$bioInfo</p>
                 </div>
                 </div>
-            </div>";
+            </div>
+            <form class='bg-secondary rounded ml-1 mr-1' action='submitbio.php' method='POST'>
+            <div class='form-group'>
+            <label class='text-white ml-3' for='content'>Edit Bio</label>
+            <textarea class='form-control ml-1' id='content' name='content' rows='10'></textarea>
+            </div>
+            <a type='hidden' name='username' id='username' $username>
+            <button class='rounded ml-1'type='submit' name='submit'>Create Bio</button>
+            </form>;";
             }
       
     }
