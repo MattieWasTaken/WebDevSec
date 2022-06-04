@@ -13,7 +13,6 @@
 <?php 
 include_once('header.php');
 include_once('databaseConnection.php');
-echo $_SESSION['lastLogin'];
 ?>
   
 <body>

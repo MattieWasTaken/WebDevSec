@@ -117,8 +117,27 @@ $userID = $_GET['user_id'];
         $resultCheck1 = mysqli_num_rows($result1);
             $rows1 = mysqli_fetch_array($result1);
             $bioInfo = nl2br($rows1[0]);
-            if($bioInfo==""){
-                 /* ADD CREATE BIO BUTTON*/
+            if($bioInfo=="" && $username==$_SESSION['username']){
+                echo "
+                <div class='container-fluid'>
+                <div class='row'>
+                <div class='col-lg p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
+                This User has not created a bio.
+                </div>
+                </div>
+            </div>";
+                if($username==$_SESSION['username']){
+                    echo"
+                    <form class='bg-secondary rounded ml-1 mr-1' action='submitbio.php' method='POST'>
+                    <div class='form-group'>
+                    <label class='text-white ml-3' for='content'>Create Bio</label>
+                    <textarea class='form-control ml-1' id='content' name='content' rows='10'></textarea>
+                    </div>
+                    <button class='rounded ml-1'type='submit' name='submit'>Create Bio</button>
+                    </form>";
+                
+                }
+                
             }else{
                 echo "   
                 <div class='container-fluid'>
