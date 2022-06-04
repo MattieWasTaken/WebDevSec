@@ -111,6 +111,30 @@ $userID = $_GET['user_id'];
 
     }
 
+    if($_GET['display']=="bio"){
+        $query1 = "SELECT bio FROM `users` WHERE `username`='$username';";
+        $result1 = mysqli_query($conn, $query1);
+        $resultCheck1 = mysqli_num_rows($result1);
+            $rows1 = mysqli_fetch_array($result1);
+            $bioInfo = nl2br($rows1[0]);
+            if($bioInfo==""){
+                 /* ADD CREATE BIO BUTTON*/
+            }else{
+                echo "   
+                <div class='container-fluid'>
+                <div class='row'>
+                <div class='col-lg p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
+                <input type='hidden' name='$topicID' $topicID> 
+               <p class='text-left'>$bioInfo</p>
+                </div>
+                </div>
+            </div>";
+            }
+      
+    }
+
+    
+
     ?>
  
 

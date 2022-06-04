@@ -86,7 +86,7 @@
                 echo "Please Enter Valid Email";
             }else{
                 $adminStatus = 0;
-                $stmt = $conn->prepare("INSERT INTO users (username, password, email, admin) VALUES (?,?,?,?);");
+                $stmt = $conn->prepare("INSERT INTO users (username, password, email, admin_status) VALUES (?,?,?,?);");
                 $stmt -> bind_param("sssi", $username, $hashed, $email, $adminStatus);
                 $result = $stmt->execute();
                 if($result){
