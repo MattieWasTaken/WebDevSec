@@ -133,6 +133,7 @@ $userID = $_GET['user_id'];
                     <label class='text-white ml-3' for='content'>Create Bio</label>
                     <textarea class='form-control ml-1' id='content' name='content' rows='10'></textarea>
                     </div>
+                    <a type='hidden' name='username' id='username' $username>
                     <button class='rounded ml-1'type='submit' name='submit'>Create Bio</button>
                     </form>";
                 
