@@ -25,10 +25,7 @@ include_once('databaseConnection.php');
         <h5 class="text-left">Let us know what you are thinking. . .</h5>
     </div>
 </div>
-<?php 
 
-    echo "
-	//1st
 <div class='container-fluid'>
     <div>
                 <div>
