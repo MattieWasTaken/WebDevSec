@@ -38,9 +38,16 @@ include_once('databaseConnection.php');
             </div>
         </div>
     </div>
+
+    <div>
+			<form action="/action_page.php">
+        <input type="text" name="q" id="" placeholder="Search keywords...">
+        <button type="submit">Dig the words!</button> 
+      </form>
+    </div>
 		
-        <div class="container-fluid">
-           <!-- <div class="row">    
+      <!--<div class="container-fluid">
+            <div class="row">    
                 <div class='col-sm-5 p- mb-2 bg-secondary rounded ml-2 mr-1 '>
                     <h2><a class="text-white" href=" ">Gaming?</a></h2>
                 </div>
@@ -85,43 +92,44 @@ include_once('databaseConnection.php');
         </div>
 -->
 
-<div class="accordion" id="accordionExample">
-  <div class="card bg-secondary">
-    <div class="card-header" id="headingOne">
-      <h2 class="mb-0">
-        <button class="btn btn-link text-white" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Gaming?
-        </button>
-      </h2>
+    <div class="accordion" id="accordionExample">
+      <div class="card bg-secondary">
+        <div class="card-header" id="headingOne">
+          <h2 class="mb-0">
+            <button class="btn btn-link text-white" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Gaming?
+            </button>
+          </h2>
+        </div>
+
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div class="card-body">
+                            <a class="text-white" href=" ">MMORPG: Runescape</a><br>
+                            <a class="text-white" href=" ">RPG: Elden Ring</a><br>
+                            <a class="text-white" href=" ">Turn-based: Age Of Mythology</a><br>
+                            <a class="text-white" href=" ">Indie: Life is Strange</a>
+          </div>
+        </div>
+      </div>
+      <div class="card bg-secondary">
+        <div class="card-header" id="headingTwo">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed text-white" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Spare time?
+            </button>
+          </h2>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+          <div class="card-body">
+                            <a class="text-white" href=" ">Check out the home page for the most recent posts by clicking on OnlineTopia.com</a><br>
+                            <a class="text-white" href=" ">Watch Youtube videos to learn how to make a website like this one.</a><br>
+                            <a class="text-white" href=" ">Wanna be cool like Inbus? He's not cool either, dont worry.</a><br>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-      <div class="card-body">
-                        <a class="text-white" href=" ">MMORPG: Runescape</a><br>
-                        <a class="text-white" href=" ">RPG: Elden Ring</a><br>
-                        <a class="text-white" href=" ">Turn-based: Age Of Mythology</a><br>
-                        <a class="text-white" href=" ">Indie: Life is Strange</a>
-      </div>
-    </div>
   </div>
-  <div class="card bg-secondary">
-    <div class="card-header" id="headingTwo">
-      <h2 class="mb-0">
-        <button class="btn btn-link collapsed text-white" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Spare time?
-        </button>
-      </h2>
-    </div>
-    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-      <div class="card-body">
-                        <a class="text-white" href=" ">Check out the home page for the most recent posts by clicking on OnlineTopia.com</a><br>
-                        <a class="text-white" href=" ">Watch Youtube videos to learn how to make a website like this one.</a><br>
-                        <a class="text-white" href=" ">Wanna be cool like Inbus? He's not cool either, dont worry.</a><br>
-      </div>
-    </div>
-  </div>
-</div>
-    </div>
 
  
 
