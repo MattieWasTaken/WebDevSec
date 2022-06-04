@@ -102,7 +102,7 @@ if($resultCheck>0){
         <span class='align-top'>By: $user_id1</span>
         </div>
         <div class='row bg-secondary rounded-bottom text-white ml-1 mr-1'>
-          <p class='ml-3'>$content1</p>
+          <p class='ml-3 text-break'>$content1</p>
         </div>
       ";
     
