@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 session_start();
-
+date_default_timezone_set('Australia/Sydney');
 if(isset($_SESSION['lastLogin'])){
   if((time() - $_SESSION['lastLogin']) > 1800){
     header("Location: logout.php?logout=TimedOut");

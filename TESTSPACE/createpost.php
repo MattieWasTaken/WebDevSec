@@ -54,7 +54,7 @@ include_once('databaseConnection.php');
     </div>
     <div class="form-group">
       <label for="content">Post Content</label>
-      <textarea class="form-control" id='content' name='content' rows='10'></textarea>
+      <textarea class="form-control overflow-auto" id='content' name='content' rows='10'></textarea>
     </div>
      <button type="submit" name="submit">Post</button>
     </form>

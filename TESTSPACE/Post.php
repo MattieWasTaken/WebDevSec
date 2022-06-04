@@ -20,7 +20,6 @@
 $query = "SELECT * FROM forum_posts WHERE topic_id= $topic_id;";
 $result = mysqli_query($conn, $query);
 $resultCheck = mysqli_num_rows($result);
-
 if($resultCheck>0){
     while($row = mysqli_fetch_assoc($result)){
         echo "<br>";
@@ -33,9 +32,9 @@ if($resultCheck>0){
     }
 }
 ?>
-  
+
 <body>
-<div class="container-fluid p-4 bg-dark">
+<div class="container-fluid p-4 bg-dark text-white">
 <div class="container-fluid">
     <div class="row p-1 mt-2 bg-secondary text-white rounded-top">
         <h3 class="text-left"><?php echo $title?></h3>
@@ -45,18 +44,38 @@ if($resultCheck>0){
         </div>
         <div class="row bg-secondary p-1 mb-3 rounded-bottom text-white">
         <span class='text-left'>Posted On: <?php echo $date ?></span>
-</div>
+        </div>
 </div>
     
     <div class='container-fluid'>
     <div class='row'>
     <div class='col-lg p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
-    <p><?php echo $content?></p>
+    <p class="text-break"><?php echo $content?></p>
     </div>
     </div>      
     </div>
+    <div class='container-fluid'>
+    <div class='row p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
+    <h4 class="text-center">Comments</h4>  
 </div>
+    <div class='row p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
+    <form method='post' action='submitcomment.php'>
+      <input type='hidden' name='username' value='<?php echo $_SESSION['username']?>'>
+      <input type='hidden' name='date' value='<?php echo date('d-m-Y H:i:s')?>'>
+      <input type='hidden' name='threadID' value='<?php echo $_GET['topic_id']?>'>
+      <span>Leave a Comment</span>
+      <div class='row'>
+      <textarea name='comment'></textarea>
+      </div>
+      <div class='row'>
+      <button name='submit' type='submit'>Comment</button>
+      </div>
+    </form>
+    </div>
+         
+    </div>
 </div>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
