@@ -14,10 +14,10 @@ $stmt = $conn->prepare("INSERT INTO comment_section (username, content, parent_t
 $stmt ->bind_param("ssis",$user_id, $comment, $threadID, $date);
 
 if($comment==""){
-    header("Location: Post.php?topic_id=$threadID");
+    header("Location: Post.php?topic_id=$threadID&comment=failed");
 }else{
     $stmt->execute();
-    header("Location: index.php?post=success");
+    header("Location: Post.php?topic_id=$threadID");
 }
 
 

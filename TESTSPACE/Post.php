@@ -15,7 +15,8 @@
 
     if(isset($_REQUEST['topic_id'])){
     $topic_id = $_REQUEST['topic_id'];
-  }
+    }
+    
 
 $query = "SELECT * FROM forum_posts WHERE topic_id= $topic_id;";
 $result = mysqli_query($conn, $query);
@@ -70,8 +71,46 @@ if($resultCheck>0){
       <div class='row'>
       <button name='submit' type='submit'>Comment</button>
       </div>
+      <div class='row'>
+     <?php if(isset($_REQUEST['comment'])){
+     if($_REQUEST['comment']=="failed"){
+       echo "Your comment failed, please try again";
+     }
+  }?>
+      </div>
     </form>
     </div>
+    
+    
+  
+    </div>
+
+    <?php 
+    
+    $query1 = "SELECT * FROM comment_section WHERE parent_thread= $topic_id;";
+    $result1 = mysqli_query($conn, $query1);
+    $resultCheck1 = mysqli_num_rows($result1);
+    if($resultCheck1>0){
+    while($row1 = mysqli_fetch_assoc($result1)){
+        echo "<br>";
+        $content1 = $row1['content']. "<br>";
+        $content1 = nl2br($content1);
+        $user_id1 = $row1['username'];
+        $date1 = $row1['date'];
+
+        echo "<div class='row p-3 bg-secondary text-white rounded-top ml-1 mr-1'>
+        <span class='align-top'>By: $user_id1</span>
+        </div>
+        <div class='row bg-secondary rounded-bottom text-white ml-1 mr-1'>
+          <p class='ml-3'>$content1</p>
+        </div>
+      ";
+    
+    
+      }
+}
+    
+    ?>
          
     </div>
 </div>
