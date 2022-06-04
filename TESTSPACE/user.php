@@ -107,6 +107,8 @@ $userID = $_GET['user_id'];
             </div>      
             </div>
         </div>";
+        $counter++;
+        $postCounter++;
     }
 
     }
