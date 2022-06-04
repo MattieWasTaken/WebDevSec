@@ -57,11 +57,21 @@
 
 
 <div>
-<?php if(isset($_POST['create'])){
+<?php 
+ error_reporting(1);
+if(isset($_POST['create'])){
             $username = $_POST['username'];
             $password = $_POST['password'];
+            echo $username;
+            if(str_contains($username, $forbiddenCharacter)!==true){
+                echo "No Special Characters Allowed In Username<br>";
+                echo "$username<br>";
+                echo strpos($username, $forbiddenCharacter);
+                /*header('Location: registration.php?registrationFailed=InvalidCharacter');*/
+            }
             $email = $_POST['email'];
             $bio ="";
+            $forbiddenCharacter = '\'';
             $confirmPassword = $_POST['cpassword'];
             $hashed= password_hash($password, PASSWORD_DEFAULT);
             $validUsername = "SELECT * FROM users WHERE username ='$username';";
@@ -72,20 +82,20 @@
             $lowercaseCheck = preg_match('@[a-z]@', $password);
             $numbersCheck = preg_match('@[0-9]@', $password);
             $specialChars = preg_match('@[^/w]@', $password);
-            echo "potato<br>";
             if(mysqli_num_rows($uCheck)> 0 || $username=="") {
                 echo "username exists";
             }else if(mysqli_num_rows($eCheck)>0 || $email ==""){
                 echo "email exists";
             }else if(!$uppercaseCheck || !$lowercaseCheck || !$numbersCheck || !$specialChars || strlen($password) < 8){
-                echo "password does not meet special characters";
                 echo 'Password should be at least 8 characters in length and should include at least one upper case letter, one number, and one special character.';
             }else if($password!=$confirmPassword){
                 echo "passwords do not match";
             }else if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
                 echo "Please Enter Valid Email";
+            }else if(preg_match('@[^/w]@', $username)){
+                echo "No Special Characters Allowed In Username";
             }else{
-                error_reporting(0);
+                
                 $adminStatus = 0;
                 echo "admin status assigned<br>";
                 $stmt = $conn->prepare("INSERT INTO users (username, password, email, bio, admin_status) VALUES (?,?,?,?,?);");
@@ -112,3 +122,13 @@
 
 <footer><?php include_once 'footer.php'?>
 </html>
+<?php 
+if(isset($_REQUEST['registrationFailed'])){ 
+    if($_GET['registrationFailed']=="InvalidCharacter"){
+        echo "<script type='text/javascript'>
+        alert('Your Username Contains an illegal character') </script>";
+    }
+
+}
+
+?>
