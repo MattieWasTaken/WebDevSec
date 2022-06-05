@@ -43,6 +43,7 @@ include_once('databaseConnection.php');
             <div class='col-sm-4 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
                 <a class='text-white' ><h5 class='text-left'>Contact</h3></a>
                 <small class='overflow-hidden'>Details</small>
+                <br><br><br>
                 <p class="text-center">Email: owner@matthewcastles.com</p>
                 <p class="text-center">Mobile: +61 41 349 6969</p>
             </div>
@@ -75,6 +76,7 @@ include_once('databaseConnection.php');
             <div class='col-sm-4 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
                 <a class='text-white' ><h5 class='text-left'>Contact</h3></a>
                 <small class='overflow-hidden'>Details</small>
+                <br><br><br>
                 <p class="text-center">Email: Daniel.irwin1@gmail.com</p>
                 <p class="text-center">Mobile: +61 41 349 4949</p>
             </div>
@@ -105,6 +107,7 @@ include_once('databaseConnection.php');
             <div class='col-sm-4 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
                 <a class='text-white' ><h5 class='text-left'>Contact</h3></a>
                 <small class='overflow-hidden'>Details</small>
+                <br><br><br>
                 <p class="text-center">Email: Kritsanakiwx@gmail.com</p>
                 <p class="text-center">Mobile: +61 41 385 7090</p>
             </div>
