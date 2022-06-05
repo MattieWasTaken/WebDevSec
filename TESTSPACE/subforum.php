@@ -18,7 +18,7 @@ include_once('databaseConnection.php');
 
 if(isset($_REQUEST['subtopic'])){
     if(!empty($_GET['subtopic'])){
-        $subtopic = $_GET['subtopic'];
+      $subtopic = ucwords($_GET['subtopic']);
     }else if(empty($_GET['subtopic'])){
         header("Location: 404page.php?error=notopic");
     } 
