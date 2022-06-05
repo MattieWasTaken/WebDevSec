@@ -58,7 +58,6 @@
 
 <div>
 <?php 
- error_reporting(1);
  $forbiddenCharacter = '\'';
 if(isset($_POST['create'])){
             $username = ($_POST['username']);

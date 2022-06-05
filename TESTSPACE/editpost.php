@@ -15,11 +15,31 @@
     ?>
 
     <body>
+    <div class="container-fluid p-4 bg-dark text-white">
+    <div class="container-fluid">
+    <?php 
+    $author = ($_POST['author']);
+    $topicID = $_GET['topic_id'];
+    $content = nl2br($_POST['post']);
+    $printingContent = preg_replace("/<br\W*?\/>/", "", $content);
+    if($_SESSION['username']== $author){
+        echo"
+        <form class='bg-secondary rounded ml-1 mr-1 mt-2' action='updatepost.php' method='POST'>
+        <div class='form-group mr-2'>
+        <label class='text-white ml-2' for='content'>Edit Your Post</label>
+        <textarea class='form-control ml-1' id='content' name='content' rows='20'>$printingContent</textarea>
+        </div>
+        <a type='hidden' name='username' id='username' $username>
+        <button class='rounded ml-1'type='submit' name='submit'>Submit Changes</button>
+        </form>";
+    }else{
+        header("Location: Post.php?topic_id=$topicID");
+    }
+   
+    ?>
+</div>
+    </body>
 
     <?php 
-    $author = $_POST['author'];
-    echo "asgfagadfafga";
-    echo $author;
+    include_once('footer.php')
     ?>
-
-    </body>

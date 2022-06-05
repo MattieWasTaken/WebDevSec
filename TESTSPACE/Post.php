@@ -24,7 +24,7 @@ $resultCheck = mysqli_num_rows($result);
 if($resultCheck>0){
     while($row = mysqli_fetch_assoc($result)){
         echo "<br>";
-        $content = $row['content']. "<br>";
+        $content = $row['content'];
         $content = nl2br($content);
         $title = $row['title'];
         $user_id= $row['user_id'];
@@ -54,8 +54,9 @@ if($resultCheck>0){
     <p class="text-break"><?php echo $content?></p>
     <?php if($_SESSION['username']==$user_id){
       echo "
-      <form method='post' action='editpost.php?topic_id=$topic_id'>
-      <input type='hidden' name='author' $user_id>
+      <form method='POST' action='editpost.php?topic_id=$topic_id'>
+      <input type='hidden' name='author' value='$user_id'>
+      <input type='hidden' name='post' value='$content'>
       <button type='submit' class='btn btn-info'>Edit Your Post</button>
       </form>";
     }
