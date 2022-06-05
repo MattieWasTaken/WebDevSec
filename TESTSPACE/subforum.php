@@ -27,6 +27,11 @@ if(isset($_REQUEST['subtopic'])){
     }   
 
     $limit = 8;
+
+    if(!isset($_GET['page'])){
+    header("Location: subforum.php?subtopic=$subtopic&page=1");
+    }
+    
 if(isset($_GET['page'])){
     if($_GET['page']<1){
         header("Location: subforum.php?subtopic=$subtopic&page=1");
