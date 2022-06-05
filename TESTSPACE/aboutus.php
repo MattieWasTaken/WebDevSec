@@ -19,7 +19,7 @@ include_once('databaseConnection.php');
 <div class="container-fluid p-1 bg-dark">
     <div class="container-fluid">
         <div class="row p-3 mb-2 mt-2 bg-secondary text-white rounded">
-            <h3 class="text-left">About (WEBNAME) Developers</h3>
+            <h3 class="text-left">About IMD's Developers</h3>
         </div>
     </div>
 
@@ -34,10 +34,10 @@ include_once('databaseConnection.php');
             <div class='col-lg p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
                 <a class='text-white' ><h5 class='text-left'>Matthew Castles</h3></a>
                 <small class='overflow-hidden'>Details</small>
-                <p class="text-center">Email: owner@matthewcastles.com</p>
-                <p class="text-center">Mobile: +61 41 349 6969</p>
-                <p class="text-center">Email: owner@matthewcastles.com</p>
-                <p class="text-center">Mobile: +61 41 349 6969</p>
+                <p class="text-center">ADFA Charlie SQN</p>
+                <p class="text-center">DIV</p>
+                <p class="text-center">zID</p>
+                <p class="text-center">Favorite quote: </p>
             </div>
 
             <div class='col-sm-4 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
@@ -67,10 +67,10 @@ include_once('databaseConnection.php');
             <div class='col-lg p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
                 <a class='text-white' ><h5 class='text-left'>Danial Irwin</h3></a>
                 <small class='overflow-hidden'>Details</small>
-                <p class="text-center">Email: owner@matthewcastles.com</p>
-                <p class="text-center">Mobile: +61 41 349 6969</p>
-                <p class="text-center">Email: owner@matthewcastles.com</p>
-                <p class="text-center">Mobile: +61 41 349 6969</p>
+                <p class="text-center">ADFA Charlie SQN</p>
+                <p class="text-center">DIV</p>
+                <p class="text-center">zID</p>
+                <p class="text-center">Favorite quote: </p>
             </div>
 
             <div class='col-sm-4 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
@@ -98,10 +98,10 @@ include_once('databaseConnection.php');
             <div class='col-lg p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
                 <a class='text-white' ><h5 class='text-left'>Kritsanapong Inbua</h3></a>
                 <small class='overflow-hidden'>Details</small>
-                <p class="text-center">Email: owner@matthewcastles.com</p>
-                <p class="text-center">Mobile: +61 41 349 6969</p>
-                <p class="text-center">Email: owner@matthewcastles.com</p>
-                <p class="text-center">Mobile: +61 41 349 6969</p>
+                <p class="text-center">ADFA Foxtrot SQN</p>
+                <p class="text-center">24DIV</p>
+                <p class="text-center">zID5276311</p>
+                <p class="text-center">Favorite quote: Ching Chong Ping Pong</p>
             </div>
 
             <div class='col-sm-4 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>

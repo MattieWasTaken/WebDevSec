@@ -68,8 +68,8 @@ include_once('databaseConnection.php');
         </div>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
           <div class="card-body">
-                            <a class="text-white" href=" ">Check out the home page for the most recent posts by clicking on OnlineTopia.com</a><br>
-                            <a class="text-white" href=" ">Watch Youtube videos to learn how to make a website like this one.</a><br>
+                            <a class="text-white" href="index.php">Check out the home page for the most recent posts</a><br>
+                            <a class="text-white" href="https://www.youtube.com/results?search_query=making+website+php">Watch Youtube videos to learn how to make a website like this one.</a><br>
                             <a class="text-white" href=" ">Wanna be cool like Inbus? He's not cool either, dont worry.</a><br>
           </div>
         </div>

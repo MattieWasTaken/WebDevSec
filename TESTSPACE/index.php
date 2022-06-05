@@ -181,7 +181,12 @@ include_once('databaseConnection.php');
       </div>
     </div>
 
-    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+    
+
+  </div>
+</div>
+
+  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
     </a>
@@ -190,9 +195,7 @@ include_once('databaseConnection.php');
       <span class="sr-only">Next</span>
     </a>
 
-  </div>
-</div>
-
+    
 <div class="row ml-1 mr-1" style="margin-top:20px">
   <div class="col-md-2">
     <a href="subforum.php?subtopic=potato&page=1">
