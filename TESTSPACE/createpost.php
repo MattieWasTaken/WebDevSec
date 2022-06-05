@@ -35,6 +35,7 @@ include_once('databaseConnection.php');
         ?>
     </div>
     </div>
+    
 
     <div class="container-fluid">
     <div class="row p-3 mt-2 bg-secondary text-white rounded-top">
@@ -47,9 +48,27 @@ include_once('databaseConnection.php');
     <div class="form-group">
       <label for="subtopic">Choose a Subtopic</label>
       <select name="subtopic" id="subtopic" class='form-control'>Subtopics
+      <?php 
+        error_reporting(1);
+        $topicQuery = "SELECT * FROM `topic`;";
+        echo $topicQuery;
+        $queryResult = mysqli_query($conn, $topicQuery);
+        echo "Query Submitted";
+        $queryCounter = 0;
+        while($forums[]=mysqli_fetch_array($queryResult)){
+          $title= $forums[$queryCounter]['topic_name'];
+          $topicID = $forums[$queryCounter]['topicID'];
+          echo $title;
+          echo "<option value='$title'>$title</option>";
+          $queryCounter++;
+        }
+        echo "While Loop Completed"
+        ?>
+        <!--
       <option value="Potato">Potato</option>
       <option value="Gaming">Gaming</option>
       <option value="Lifestyle">Lifestyle</option>
+      -->
       </select>
     </div>
     <div class="form-group">
