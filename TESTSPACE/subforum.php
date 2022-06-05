@@ -93,7 +93,7 @@ $topicReturn = $result1->fetch_all(MYSQLI_ASSOC);
 $totalPostCount= $topicReturn[0]['topic_id'];
 $totalPages = ceil($totalPostCount/$limit);
 ?>
-
+<?php if(!$totalPages==0):?>
 <nav aria-label="Page navigation example">
   <ul class="pagination justify-content-start mt-2 ml-2">
    
@@ -117,10 +117,15 @@ $totalPages = ceil($totalPostCount/$limit);
     }
 
     ?>
-   
   </ul>
 </nav>
-
+<?php else:?>
+  <div class="container-fluid">
+  <div class="row p-1 mb-2 mt-1 bg-secondary text-black rounded">
+  <h3>This Subforum Has No Posts</h3>
+</div>
+</div>
+  <?php endif;?>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
