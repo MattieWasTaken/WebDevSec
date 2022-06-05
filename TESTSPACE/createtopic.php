@@ -40,6 +40,19 @@ include_once('databaseConnection.php');
     <form class="bg-secondary" action="submitforum.php" method="POST">
     <div class="form-group">
       <label for='title'>Topic Name:</label>
+      <?php if(isset($_GET['post'])){
+        if($_GET['post']=='failed'){
+          echo "<br> Error! You Must Fill Out All Required Fields";
+        }
+        if($_GET['post']=='failedNoLogin'){
+          echo "<br> Error! You Must Be Logged In To Continue";
+        }
+        if($_GET['post']=='failedtooLong'){
+          echo "<br> Error! Title Must Not Be More Than 100 Characters";
+        }
+
+
+      }?>
       <input type="text" id="topicArea" name="title" class="form-control" placeholder="Title...">
     </div>
     <div class="form-group">
