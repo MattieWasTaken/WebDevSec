@@ -39,14 +39,6 @@ include_once('databaseConnection.php');
         </div>
     </div>
 
-    <div>
-			<form action="/action_page.php">
-        <input type="text" name="q" id="" placeholder="Search keywords...">
-        <button type="submit">Dig the words!</button> 
-      </form>
-      <br>
-    </div>
-		
     <div class="accordion" id="accordionExample">
       <div class="card bg-secondary">
         <div class="card-header" id="headingOne">

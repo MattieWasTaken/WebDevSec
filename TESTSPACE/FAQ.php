@@ -113,15 +113,6 @@ include_once('databaseConnection.php');
 			</div>
 		</div>	
 
-		<div>
-			<br>
-			<form action="/action_page.php">
-				<input type="text" name="q" id="" placeholder="Search keywords...">
-				<button type="submit">Dig the words!</button> 
-			</form>
-			<br>
-		</div>
-		
 	</div>
 </div>
 
