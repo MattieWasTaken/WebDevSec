@@ -26,6 +26,7 @@
         echo"
         <form class='bg-secondary rounded ml-1 mr-1 mt-2' action='updatepost.php' method='POST'>
         <div class='form-group mr-2'>
+        <input type='hidden' name='topicID' value='$topicID'>
         <label class='text-white ml-2' for='content'>Edit Your Post</label>
         <textarea class='form-control ml-1' id='content' name='content' rows='20'>$printingContent</textarea>
         </div>

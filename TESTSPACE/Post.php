@@ -66,10 +66,6 @@ if($resultCheck>0){
     </div>
     </div>    
     </div>
-    <div class='container-fluid'>
-    <div class='row p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
-    <h4 class="text-center">Comments</h4>  
-</div>
     <div class='row p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
     <form method='post' action='submitcomment.php'>
       <input type='hidden' name='username' value='<?php echo $_SESSION['username']?>'>
@@ -91,6 +87,11 @@ if($resultCheck>0){
       </div>
     </form>
     </div>
+    <div class='container-fluid'>
+    <div class='row p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
+    <h4 class="text-center">Comments</h4>  
+</div>
+   
     
     
   
