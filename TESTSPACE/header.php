@@ -1,7 +1,16 @@
 <!DOCTYPE html>
 <?php
 session_start();
+date_default_timezone_set('Australia/Sydney');
+if(isset($_SESSION['lastLogin'])){
+  if((time() - $_SESSION['lastLogin']) > 1800){
+    header("Location: logout.php?logout=TimedOut");
+  }else {
+    $_SESSION['lastLogin'] = time();
+  }
+}
 
+error_reporting(0);
 ?>
 <header>
 <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
@@ -23,7 +32,7 @@ session_start();
       if(isset($_SESSION['username'])){
         $userid = $_SESSION['userid'];
         $username = $_SESSION['username'];
-        echo "<a class='nav-link active' href='user.php?uid=$userid'>User: $username</a>";
+        echo "<a class='nav-link active' href='user.php?user_id=$username&display=posts'>User: $username</a>";
         echo "<a class='nav-link active' href='logout.php'>Logout</a>";
     }else if(!isset($_SESSION['username'])){
       echo "<a class='nav-link active' href='login.php'>Login!</a>";
