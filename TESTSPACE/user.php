@@ -111,8 +111,44 @@ $userID = $_GET['user_id'];
         $postCounter++;
     }
 
+    
     }
-
+    if($_GET['display']=="comments"){
+        error_reporting(1);
+        $query2 = "SELECT * FROM `comment_section` WHERE username='$username';";
+        $result2 = mysqli_query($conn, $query2);
+        $resultCheck2 = mysqli_num_rows($result2);
+        $counter2=0;
+        $postCounter2=1;
+        while($rows2[]=mysqli_fetch_array($result2)){
+            $topicID2 = $rows2[$counter2]['parent_thread'];
+            $userID2 = $rows2[$counter2]['username'];
+            $content2 = $rows2[$counter2]['content'];
+            $date2 = $rows2[$counter2]['date'];
+            echo "   
+            <div class='container-fluid'>
+            <div class='row'>
+            <div class='col-sm-1 p-3 mb-2 bg-secondary text-center text-white rounded ml-2 mr-1'>
+            <span>$postCounter2.</span>
+            </div>
+            <div class='col-lg p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
+            <form method='GET'>
+            <input type='hidden' name='$topicID2' $topicID2> 
+            <a class='text-white' href='Post.php?topic_id=$topicID2'><h5 class='text-left text-break'>$content2</h3></a>
+            </form>
+            </div>
+            <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2'>
+            <form method='GET' name'$userID2' $userID2>
+            <p class='text-left'>Date: $date2</p>
+            <a class='text-white' href='user.php?user_id=$userID2&display=posts'> <small>By: $userID2</small></a>
+            </form>
+            </div>      
+            </div>
+        </div>";
+        $counter2++;
+        $postCounter2++;
+    }
+}
     if($_GET['display']=="bio"){
         $query1 = "SELECT bio FROM `users` WHERE `username`='$username';";
         $result1 = mysqli_query($conn, $query1);
