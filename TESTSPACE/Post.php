@@ -52,8 +52,18 @@ if($resultCheck>0){
     <div class='row'>
     <div class='col-lg p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
     <p class="text-break"><?php echo $content?></p>
+    <?php if($_SESSION['username']==$user_id){
+      echo "
+      <form method='post' action='editpost.php?topic_id=$topic_id'>
+      <input type='hidden' name='author' $user_id>
+      <button type='submit' class='btn btn-info'>Edit Your Post</button>
+      </form>";
+    }
+    
+    ?>
+    
     </div>
-    </div>      
+    </div>    
     </div>
     <div class='container-fluid'>
     <div class='row p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>

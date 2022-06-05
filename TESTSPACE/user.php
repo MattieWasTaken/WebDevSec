@@ -134,7 +134,7 @@ $userID = $_GET['user_id'];
             <div class='col-lg p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
             <form method='GET'>
             <input type='hidden' name='$topicID2' $topicID2> 
-            <a class='text-white' href='Post.php?topic_id=$topicID2'><h5 class='text-left text-break'>$content2</h3></a>
+            <a class='text-white' href='Post.php?topic_id=$topicID2'><p class='text-left text-break'>$content2</p></a>
             </form>
             </div>
             <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2'>
