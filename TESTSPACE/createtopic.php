@@ -44,7 +44,7 @@ include_once('databaseConnection.php');
     </div>
     <div class="form-group">
       <label for="content">Topic Description:</label>
-      <textarea class="form-control" id='topicName' name='content' rows='10'></textarea>
+      <textarea class="form-control" id='content' name='content' rows='10'></textarea>
     </div>
      <button type="submit" name="submit">Create</button>
     </form>
@@ -55,3 +55,4 @@ include_once('databaseConnection.php');
 </body>
 
 <?php include_once("footer.php")?>
+
