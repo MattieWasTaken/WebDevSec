@@ -51,51 +51,61 @@
         <input type="text" name="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" required>
         </div>    
         </div>
-        <input type="submit" name="create" value="Create Account!">
-    
+        <input class="mb-2" type="submit" name="create" value="Create Account!">
    </form> 
 
 
 
 <div>
-<?php if(isset($_POST['create'])){
-            $username = $_POST['username'];
-            $password = $_POST['password'];
-            $email = $_POST['email'];
-            $confirmPassword = $_POST['cpassword'];
-            $hashed= password_hash($password, PASSWORD_DEFAULT);
-            $validUsername = "SELECT * FROM users WHERE username ='$username';";
-            $uCheck = mysqli_query($conn, $validUsername);
-            $validEmail = "SELECT * FROM users WHERE email ='$email';";
-            $eCheck = mysqli_query($conn, $validEmail);
-            $uppercaseCheck = preg_match('@[A-Z]@', $password);
-            $lowercaseCheck = preg_match('@[a-z]@', $password);
-            $numbersCheck = preg_match('@[0-9]@', $password);
-            $specialChars = preg_match('@[^/w]@', $password);
-            if(mysqli_num_rows($uCheck)> 0 || $username=="") {
-                echo "<script type='text/javascript'>
-                alert('Username is Already In Use') </script>";
-            }else if(mysqli_num_rows($eCheck)>0 || $email ==""){
-                echo "<script type='text/javascript'>
-                alert('Email is Already In Use') </script>";
-            }else if(!$uppercaseCheck || !$lowercaseCheck || !$numbersCheck || !$specialChars || strlen($password) < 8){
-                echo 'Password should be at least 8 characters in length and should include at least one upper case letter, one number, and one special character.';
-            }else if($password!=$confirmPassword){
-                echo "<script type='text/javascript'>
-                alert('Passwords do not match') </script>";
-            }else if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-                echo "Please Enter Valid Email";
+<?php 
+ $forbiddenCharacter = '\'';
+if(isset($_POST['create'])){
+            $username = ($_POST['username']);
+            $password = ($_POST['password']);
+            if (!preg_match( "/^[A-Za-z0-9_]{3,20}$/", $username )) {
+                $strError="Your Username May Not Contain a Special Character.  Please Try Again.";
+                echo $strError;
             }else{
-                $adminStatus = 0;
-                $stmt = $conn->prepare("INSERT INTO users (username, password, email, admin) VALUES (?,?,?,?);");
-                $stmt -> bind_param("sssi", $username, $hashed, $email, $adminStatus);
-                $result = $stmt->execute();
-                if($result){
-                    header("Location: index.php?createAccount=success");
-                    
+                $email = $_POST['email'];
+                $bio ="";
+                $confirmPassword = $_POST['cpassword'];
+                $hashed= password_hash($password, PASSWORD_DEFAULT);
+                $validUsername = "SELECT * FROM users WHERE username ='$username';";
+                $uCheck = mysqli_query($conn, $validUsername);
+                $validEmail = "SELECT * FROM users WHERE email ='$email';";
+                $eCheck = mysqli_query($conn, $validEmail);
+                $uppercaseCheck = preg_match('@[A-Z]@', $password);
+                $lowercaseCheck = preg_match('@[a-z]@', $password);
+                $numbersCheck = preg_match('@[0-9]@', $password);
+                $specialChars = preg_match('@[^/w]@', $password);
+                if(mysqli_num_rows($uCheck)> 0 || $username=="") {
+                    echo "username exists";
+                }else if(mysqli_num_rows($eCheck)>0 || $email ==""){
+                    echo "email exists";
+                }else if(!$uppercaseCheck || !$lowercaseCheck || !$numbersCheck || !$specialChars || strlen($password) < 8){
+                    echo 'Password should be at least 8 characters in length and should include at least one upper case letter, one number, and one special character.';
+                }else if($password!=$confirmPassword){
+                    echo "passwords do not match";
+                }else if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+                    echo "Please Enter Valid Email";
+                }else{
+                    $adminStatus = 0;
+                    echo "admin status assigned<br>";
+                    $stmt = $conn->prepare("INSERT INTO users (username, password, email, bio, admin_status) VALUES (?,?,?,?,?);");
+                    echo "statement prepared<br>";
+                    $stmt -> bind_param("ssssi", $username, $hashed, $email,$bio, $adminStatus);
+                    echo "statement binded";
+                    $result = $stmt->execute();
+                    echo "statement executed";
+                    if($result){
+                        header("Location: index.php?createAccount=success");
+                        
+                }
             }
+       
     }
 }
+
 ?>
 </div>
 </div>
@@ -108,3 +118,13 @@
 
 <footer><?php include_once 'footer.php'?>
 </html>
+<?php 
+if(isset($_REQUEST['registrationFailed'])){ 
+    if($_GET['registrationFailed']=="InvalidCharacter"){
+        echo "<script type='text/javascript'>
+        alert('Your Username Contains an illegal character') </script>";
+    }
+
+}
+
+?>

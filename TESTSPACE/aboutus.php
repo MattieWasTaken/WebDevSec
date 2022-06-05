@@ -23,7 +23,6 @@ include_once('databaseConnection.php');
         </div>
     </div>
 
-
     <div class='container-fluid'>
         <div class='row'>
 

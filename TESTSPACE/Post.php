@@ -9,25 +9,22 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
-
   <?php
     include_once 'databaseConnection.php';
     include_once 'header.php';
 
-
-
-if(isset($_REQUEST['topic_id'])){
+    if(isset($_REQUEST['topic_id'])){
     $topic_id = $_REQUEST['topic_id'];
-}
+    }
+    
 
 $query = "SELECT * FROM forum_posts WHERE topic_id= $topic_id;";
 $result = mysqli_query($conn, $query);
 $resultCheck = mysqli_num_rows($result);
-
 if($resultCheck>0){
     while($row = mysqli_fetch_assoc($result)){
         echo "<br>";
-        $content = $row['content']. "<br>";
+        $content = $row['content'];
         $content = nl2br($content);
         $title = $row['title'];
         $user_id= $row['user_id'];
@@ -36,30 +33,100 @@ if($resultCheck>0){
     }
 }
 ?>
-  
+
 <body>
-<div class="container-fluid p-4 bg-dark">
+<div class="container-fluid p-4 bg-dark text-white">
 <div class="container-fluid">
-    <div class="row p-3 mt-2 bg-secondary text-white rounded-top">
-        <h3 class="text-left"><?php echo $title?> Posts </h3>
+    <div class="row p-1 mt-2 bg-secondary text-white rounded-top">
+        <h3 class="text-left"><?php echo $title?></h3>
         </div>
-        <div class="row bg-secondary text-white">
-        <span>By: <?php echo $user_id?></span>
+        <div class="row bg-secondary text-white p-1">
+        <span><a class="text-white" href="user.php?user_id=<?php echo $user_id?>&display=posts">By: <?php echo $user_id?></a></span>
         </div>
-        <div class="row bg-secondary mb-3 rounded-bottom text-white">
+        <div class="row bg-secondary p-1 mb-3 rounded-bottom text-white">
         <span class='text-left'>Posted On: <?php echo $date ?></span>
-</div>
+        </div>
 </div>
     
     <div class='container-fluid'>
     <div class='row'>
     <div class='col-lg p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
-    <p><?php echo $content?></p>
+    <p class="text-break"><?php echo $content?></p>
+    <?php if($_SESSION['username']==$user_id){
+      echo "
+      <form method='POST' action='editpost.php?topic_id=$topic_id'>
+      <input type='hidden' name='author' value='$user_id'>
+      <input type='hidden' name='post' value='$content'>
+      <button type='submit' class='btn btn-info'>Edit Your Post</button>
+      </form>";
+    }
+    
+    ?>
+    
     </div>
-    </div>      
+    </div>    
+    </div>
+    <div class='row p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
+    <form method='post' action='submitcomment.php'>
+      <input type='hidden' name='username' value='<?php echo $_SESSION['username']?>'>
+      <input type='hidden' name='date' value='<?php echo date('d-m-Y H:i:s')?>'>
+      <input type='hidden' name='threadID' value='<?php echo $_GET['topic_id']?>'>
+      <span>Leave a Comment</span>
+      <div class='row'>
+      <textarea name='comment'></textarea>
+      </div>
+      <div class='row'>
+      <button name='submit' type='submit'>Comment</button>
+      </div>
+      <div class='row'>
+     <?php if(isset($_REQUEST['comment'])){
+     if($_REQUEST['comment']=="failed"){
+       echo "Your comment failed, please try again";
+     }
+  }?>
+      </div>
+    </form>
+    </div>
+    <div class='container-fluid'>
+    <div class='row p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
+    <h4 class="text-center">Comments</h4>  
+</div>
+   
+    
+    
+  
+    </div>
+
+    <?php 
+    
+    $query1 = "SELECT * FROM comment_section WHERE parent_thread= $topic_id;";
+    $result1 = mysqli_query($conn, $query1);
+    $resultCheck1 = mysqli_num_rows($result1);
+    if($resultCheck1>0){
+    while($row1 = mysqli_fetch_assoc($result1)){
+        echo "<br>";
+        $content1 = $row1['content']. "<br>";
+        $content1 = nl2br($content1);
+        $user_id1 = $row1['username'];
+        $date1 = $row1['date'];
+
+        echo "<div class='row p-3 bg-secondary text-white rounded-top ml-1 mr-1'>
+        <span class='align-top'>By: $user_id1</span>
+        </div>
+        <div class='row bg-secondary rounded-bottom text-white ml-1 mr-1'>
+          <p class='ml-3 text-break'>$content1</p>
+        </div>
+      ";
+    
+    
+      }
+}
+    
+    ?>
+         
     </div>
 </div>
-</div>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -23,7 +23,6 @@ include_once('databaseConnection.php');
     </div>
 </div>
 <?php 
-
 $query = "SELECT * FROM forum_posts ORDER BY `topic_id` DESC LIMIT 10;";
 $result = mysqli_query($conn, $query);
 $resultCheck = mysqli_num_rows($result);
@@ -56,7 +55,7 @@ while($rows[]=mysqli_fetch_array($result)){
     <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2'>
     <form method='GET' name'$userID' $userID>
     <p class='text-left text-wrap'>Date: $date </p>
-    <a class='text-white' href='userprofile.php?user_id=$userID'> <small>By: $userID</small></a>
+    <a class='text-white' href='user.php?user_id=$userID&display=posts'> <small>By: $userID</small></a>
     </form>
     </div>      
     </div>
@@ -65,6 +64,9 @@ $counter++;
 $postCounter++;
 }
 ?>
+
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -73,4 +75,26 @@ $postCounter++;
   </body>
 
   <?php include_once('footer.php')?>
+
+
 </html>
+<?php
+if(isset($_REQUEST['createAccount'])){
+  if($_GET['createAccount']== "success"){
+    echo "<script type='text/javascript'>
+    alert('Account Created, Please Sign In To Continue') </script>";
+  }
+}
+  if(isset($_REQUEST['Login'])){
+    if($_GET['Login']== "success"){
+      echo "<script type='text/javascript'>
+      alert('Login Successful') </script>";
+    }
+}
+if(isset($_REQUEST['logout'])){
+  if($_GET['logout']== "SessionTimedOut"){
+    echo "<script type='text/javascript'>
+    alert('Your Session Expired After 30 Minutes of Inactivity') </script>";
+  }
+}
+?>

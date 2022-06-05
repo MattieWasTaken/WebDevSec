@@ -21,16 +21,6 @@ include_once('databaseConnection.php');
         <div class="row p-3 mb-2 mt-2 bg-secondary text-white rounded">
             <h3 class="text-left">Content Policy</h3>
         </div>
-
-    </div>
-
-    <div class='container-fluid'>
-        <div class='row'>
-                <div class='col-lg p- mb-2 bg-secondary text-white rounded ml-2 mr-1'>
-                    <h4>Please have a read, here are what you should be concerned about</h4>
-                </div>
-        </div>
-
         <div class='row'>
                 <div class='col-1 p- mb-2 bg-secondary text-white rounded ml-2 mr-1'>                    
                     <h5>Rule 1</h5>

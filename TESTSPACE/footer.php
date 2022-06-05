@@ -1,4 +1,4 @@
-<footer class="text-center text-lg-start bg-dark text-muted pt-5">
+<footer class="text-center text-lg-start bg-dark text-muted pt-2">
   <!-- Section: Social media -->
   <!-- Section: Social media -->
   <!-- Section: Links  -->
@@ -48,8 +48,6 @@
             <i class="fas fa-envelope me-3"></i>
             MDG@webdev.com
           </p>
-          <p><i class="fas fa-phone me-3"></i> + 61 41 385 7090</p>
-          <p><i class="fas fa-print me-3"></i> + 61 41 349 6969</p>
         </div>
         <!-- Grid column -->
       </div>
