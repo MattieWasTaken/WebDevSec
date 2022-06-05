@@ -23,16 +23,16 @@
             Useful links
           </h6>
           <p>
-            <a href="#!" class="text-reset">Pricing</a>
+            <a href="aboutus.php" class="text-reset">About US</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Settings</a>
+            <a href="contentpolicy.php" class="text-reset">Our Policy</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Orders</a>
+            <a href="FAQ.php" class="text-reset">FAQ</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Help</a>
+            <a href="support.php" class="text-reset">Support</a>
           </p>
         </div>
         <!-- Grid column -->
@@ -43,12 +43,11 @@
           <h6 class="text-uppercase fw-bold mb-4">
             Contact
           </h6>
-          <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+          <p><i class="fas fa-home me-3"></i> ADFA, ACT 2612, AU</p>
           <p>
             <i class="fas fa-envelope me-3"></i>
-            info@example.com
+            MDG@webdev.com
           </p>
-          <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
         </div>
         <!-- Grid column -->
       </div>
