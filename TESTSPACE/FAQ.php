@@ -40,11 +40,11 @@ include_once('databaseConnection.php');
 				<div class="card-body">
 					<div>
 						<form action="submitquestion.php" method="POST">
-						<span>Username:</span>
+						<span class="text-nowrap bg-light border" style="width: 9rem;">Username:</span>
 						<input type="text" name="user_id" placeholder="Enter your Display Name">
 					</div>
 					<div class="FAQ-Text">
-						<textarea type="text" name="faq-content" id="faq-box" placeholder="Tell us what happened. . ."></textarea>
+						<textarea type="text" name="faq-content" id="faq-box" style="width: 20rem; height: 10rem;" placeholder="Tell us what happened. . ."></textarea>
 						<br>
 						<button type="submit" name="submit">Submit</button>
 					</div>
@@ -52,6 +52,8 @@ include_once('databaseConnection.php');
 				</div>
 			</div>
 		</div>
+
+		
 
 		<div class="card bg-secondary">
 			<div class="card-header" id="headingTwo">
@@ -63,27 +65,37 @@ include_once('databaseConnection.php');
 			</div>
 				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
 					<div>
+					<br>
 						<h3>Q:How to create an account?</h3>
 					</div>
 					<div>
 						<p>A:This feature is not yet available. Stay tuned for further updates!</p>
+						<p>A:This feature is not yet available. Stay tuned for further updates!</p>
+						<p>A:This feature is not yet available. Stay tuned for further updates!</p>
+						<p>A:This feature is not yet available. Stay tuned for further updates!</p>
 					</div>
 					
 					<div>
+					<br>
 						<h3>Q:Cannot find a certain page? Here is how to!</h3>
 					</div>
 					<div>
 						<p>A:The search feature has not yet been completed.</p>
+						<p>A:This feature is not yet available. Stay tuned for further updates!</p>
+						<p>A:This feature is not yet available. Stay tuned for further updates!</p>
+						<p>A:This feature is not yet available. Stay tuned for further updates!</p>
 					</div>
 					
 					<div>
+					<br>
 						<h3>Q:Found something not right? Here is how to Report an unappropriate post!</h3>
 					</div>					
 					<div >
-						<p>A:Please submit a report in the above text box provided!</p>
+						<p>A:Please submit a report in the below text box provided!</p>
 					</div>
 					
 					<div>
+					<br>
 						<h3>Q:What can we do?</h3>
 					</div>
 					<div>
@@ -91,6 +103,7 @@ include_once('databaseConnection.php');
 					</div>
 				
 					<div>
+					<br>
 						<h3>Q:Want to learn how to learn to do these stuffs?</h3>
 					</div>
 					<div>
@@ -99,6 +112,16 @@ include_once('databaseConnection.php');
 				</div>
 			</div>
 		</div>	
+
+		<div>
+			<br>
+			<form action="/action_page.php">
+				<input type="text" name="q" id="" placeholder="Search keywords...">
+				<button type="submit">Dig the words!</button> 
+			</form>
+			<br>
+		</div>
+		
 	</div>
 </div>
 

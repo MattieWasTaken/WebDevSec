@@ -44,54 +44,9 @@ include_once('databaseConnection.php');
         <input type="text" name="q" id="" placeholder="Search keywords...">
         <button type="submit">Dig the words!</button> 
       </form>
+      <br>
     </div>
 		
-      <!--<div class="container-fluid">
-            <div class="row">    
-                <div class='col-sm-5 p- mb-2 bg-secondary rounded ml-2 mr-1 '>
-                    <h2><a class="text-white" href=" ">Gaming?</a></h2>
-                </div>
-            </div>
-
-            <p>
-                <button class="btn btn-primary text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapse" aria-expanded="false" aria-controls="collapse">
-                    Some Gaming Suggestions For People Looking To Try New Games.
-                </button>
-            </p>
-          
-            <div class="collapse" id="collapse">
-                <div class="card card-body col-sm-5 p- mb-2 bg-secondary rounded ml-2 mr-1">
-                        <a href=" ">MMORPG: Runescape</a>
-                        <a href=" ">RPG: Elden Ring</a>
-                        <a href=" ">Turn-based: Age Of Mythology</a>
-                        <a href=" ">Indie: Life is Strange</a>
-                </div>        
-            </div>    
-        </div>  
-
-        <div class="container-fluid">
-            <div class="row">  
-                <div class='col-sm-5 p- mb-2 bg-secondary rounded ml-2 mr-1 '>
-                        <h2><a class="text-white" href=" ">Have too much time too use?</a></h2>    
-                </div>
-            </div>
-
-            <p>
-                <button class="btn btn-primary text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapse" aria-expanded="false" aria-controls="collapse">        
-                        Read these then!?
-                </button>
-            </p>
-
-            <div class="collapse" id="collapse">
-                <div class="card card-body col-sm-5 p- mb-2 bg-secondary rounded ml-2 mr-1 ">
-                        <a href=" ">Check out the home page for the most recent posts by clicking on OnlineTopia.com</a>
-                        <a href=" ">Watch Youtube videos to learn how to make a website like this one.</a>
-                        <a href=" ">Wanna be cool like Inbus? He's not cool either, dont worry.</a>   
-                </div>        
-            </div> 
-        </div>
--->
-
     <div class="accordion" id="accordionExample">
       <div class="card bg-secondary">
         <div class="card-header" id="headingOne">
