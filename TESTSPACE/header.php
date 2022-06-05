@@ -40,6 +40,9 @@ error_reporting(0);
     }
       
       ?>
+      <li class="nav-item active">
+        <a class="nav-link" href="subforumselection.php">Available Subforums</a>
+      </li>
     </ul>
     <form class="form-inline my-2 my-lg-0" action="search.php">
       <input class="form-control mr-sm-2" type="text" name="search" id="" placeholder="Search..." aria-label="Search">
