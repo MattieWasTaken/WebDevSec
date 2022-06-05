@@ -15,6 +15,14 @@
 
     if(isset($_REQUEST['topic_id'])){
     $topic_id = $_REQUEST['topic_id'];
+    for($i = 0; $i < strlen($topic_id); $i++){
+      if(ctype_digit($topic_id[$i])){
+        $allNumbers = true;
+      }else $allNumbers=false;
+    }
+    if(!$allNumbers){
+      header("Location: index.php?error=noTopicSupplied");
+    }
     }
     
 
