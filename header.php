@@ -26,7 +26,7 @@ error_reporting(0);
         <a class="nav-link" href="index.php">Home </a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="createpost.php">Create A Post</a>
+        <a class="nav-link" href="createpost.php">Add A Post</a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="subforumselection.php">Subforums</a>
