@@ -69,7 +69,7 @@ include_once('databaseConnection.php');
                     </form>
                   </div>
                   <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2'>
-                    <form method='GET' name'$userID' value='$userID'>
+                    <form method='GET' name='$userID' value='$userID'>
                       <p class='text-left text-wrap'>Date: $date </p>
                       <a class='text-white' href='user.php?user_id=$userID'> <small>By: $userID</small></a>
                     </form>
@@ -192,45 +192,45 @@ include_once('databaseConnection.php');
         </div>
 
         <?php 
-          $query2 = "SELECT * FROM forum_posts WHERE subtopic = 'Lifestyle' ORDER BY `topic_id` DESC LIMIT 4;";
-          $result2 = mysqli_query($conn, $query2);
-          $resultCheck2 = mysqli_num_rows($result2);
-          $counter2=0;
-          $postCounter2=1;
-          while($rows2[]=mysqli_fetch_array($result2)){
-            $title2= $rows2[$counter2]['title'];
-            $topicID2 = $rows2[$counter2]['topic_id'];
-            $userID2 = $rows2[$counter2]['user_id'];
-            $content2 = nl2br($rows2[$counter2]['content']);
-            $subtopic2 = $rows2[$counter2]['subtopic'];
-            $date2 = $rows2[$counter2]['date_submitted'];
+          $query3 = "SELECT * FROM forum_posts WHERE subtopic = 'Meme' ORDER BY `topic_id` DESC LIMIT 4;";
+          $result3 = mysqli_query($conn, $query3);
+          $resultCheck2 = mysqli_num_rows($result3);
+          $counter3=0;
+          $postCounter3=1;
+          while($rows3[]=mysqli_fetch_array($result3)){
+            $title3= $rows3[$counter3]['title'];
+            $topicID3 = $rows3[$counter3]['topic_id'];
+            $userID3 = $rows3[$counter3]['user_id'];
+            $content3 = nl2br($rows2[$counter3]['content']);
+            $subtopic3 = $rows3[$counter3]['subtopic'];
+            $date3 = $rows3[$counter3]['date_submitted'];
             echo "   
               <div class='container-fluid'>
                 <div class='row'>
                   <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-2 mr-1'>
                     <form method='GET'>
-                      <input type='hidden' name='$subtopic2' $subtopic2>
-                      <span>$postCounter2.</span><br>
-                      <span>Topic:  <a class='text-light' href='subforum.php?subtopic=$subtopic2&page=1'>$subtopic2</a></span>
+                      <input type='hidden' name='$subtopic3' $subtopic3>
+                      <span>$postCounter3.</span><br>
+                      <span>Topic:  <a class='text-light' href='subforum.php?subtopic=$subtopic3&page=1'>$subtopic3</a></span>
                     </form>
                   </div>
                   <div class='col-lg p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
                     <form method='GET'>
-                      <input type='hidden' name='$topicID2' $topicID2> 
-                      <a class='text-white' href='Post.php?topic_id=$topicID2'><h5 class='text-left'>$title2</h3></a>
+                      <input type='hidden' name='$topicID3' $topicID3> 
+                      <a class='text-white' href='Post.php?topic_id=$topicID3'><h5 class='text-left'>$title3</h3></a>
                       <small class='overflow-hidden'>CONTENT PREVIEW</small>
                     </form>
                   </div>
                   <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2'>
-                    <form method='GET' name'$userID2' $userID2>
-                      <p class='text-left text-wrap'>Date: $date2 </p>
-                      <a class='text-white' href='userprofile.php?user_id=$userID2'> <small>By: $userID2</small></a>
+                    <form method='GET' name'$userID3' $userID3>
+                      <p class='text-left text-wrap'>Date: $date3 </p>
+                      <a class='text-white' href='userprofile.php?user_id=$userID3'> <small>By: $userID3</small></a>
                     </form>
                   </div>      
                 </div>
               </div>";
-            $counter2++;
-            $postCounter2++;
+            $counter3++;
+            $postCounter3++;
           }
         ?>
       </div>
@@ -243,45 +243,45 @@ include_once('databaseConnection.php');
         </div>
 
         <?php 
-          $query2 = "SELECT * FROM forum_posts WHERE subtopic = 'Lifestyle' ORDER BY `topic_id` DESC LIMIT 4;";
-          $result2 = mysqli_query($conn, $query2);
-          $resultCheck2 = mysqli_num_rows($result2);
-          $counter2=0;
-          $postCounter2=1;
-          while($rows2[]=mysqli_fetch_array($result2)){
-            $title2= $rows2[$counter2]['title'];
-            $topicID2 = $rows2[$counter2]['topic_id'];
-            $userID2 = $rows2[$counter2]['user_id'];
-            $content2 = nl2br($rows2[$counter2]['content']);
-            $subtopic2 = $rows2[$counter2]['subtopic'];
-            $date2 = $rows2[$counter2]['date_submitted'];
+          $query4 = "SELECT * FROM forum_posts WHERE subtopic = 'Sports' ORDER BY `topic_id` DESC LIMIT 4;";
+          $result4 = mysqli_query($conn, $query4);
+          $resultCheck4 = mysqli_num_rows($result4);
+          $counter4=0;
+          $postCounter4=1;
+          while($rows4[]=mysqli_fetch_array($result4)){
+            $title4= $rows4[$counter4]['title'];
+            $topicID4 = $rows4[$counter4]['topic_id'];
+            $userID4 = $rows4[$counter4]['user_id'];
+            $content4 = nl2br($rows4[$counter4]['content']);
+            $subtopic4 = $rows4[$counter4]['subtopic'];
+            $date4 = $rows4[$counter4]['date_submitted'];
             echo "   
               <div class='container-fluid'>
                 <div class='row'>
                   <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-2 mr-1'>
                     <form method='GET'>
-                      <input type='hidden' name='$subtopic2' $subtopic2>
-                      <span>$postCounter2.</span><br>
-                      <span>Topic:  <a class='text-light' href='subforum.php?subtopic=$subtopic2&page=1'>$subtopic2</a></span>
+                      <input type='hidden' name='$subtopic4' $subtopic4>
+                      <span>$postCounter4.</span><br>
+                      <span>Topic:  <a class='text-light' href='subforum.php?subtopic=$subtopic4&page=1'>$subtopic4</a></span>
                     </form>
                   </div>
                   <div class='col-lg p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
                     <form method='GET'>
-                      <input type='hidden' name='$topicID2' $topicID2> 
-                      <a class='text-white' href='Post.php?topic_id=$topicID2'><h5 class='text-left'>$title2</h3></a>
+                      <input type='hidden' name='$topicID4' $topicID4> 
+                      <a class='text-white' href='Post.php?topic_id=$topicID4'><h5 class='text-left'>$title4</h3></a>
                       <small class='overflow-hidden'>CONTENT PREVIEW</small>
                     </form>
                   </div>
                   <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2'>
-                    <form method='GET' name'$userID2' $userID2>
-                      <p class='text-left text-wrap'>Date: $date2 </p>
-                      <a class='text-white' href='userprofile.php?user_id=$userID2'> <small>By: $userID2</small></a>
+                    <form method='GET' name'$userID4' $userID4>
+                      <p class='text-left text-wrap'>Date: $date4 </p>
+                      <a class='text-white' href='userprofile.php?user_id=$userID4'> <small>By: $userID4</small></a>
                     </form>
                   </div>      
                 </div>
               </div>";
-            $counter2++;
-            $postCounter2++;
+            $counter4++;
+            $postCounter4++;
           }
         ?>
       </div>
@@ -361,6 +361,7 @@ if(isset($_REQUEST['createAccount'])){
     if($_GET['Login']== "success"){
       echo "<script type='text/javascript'>
       alert('Login Successful') </script>";
+      
     }
 }
 if(isset($_REQUEST['logout'])){

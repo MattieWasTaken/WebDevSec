@@ -35,9 +35,9 @@ include_once('databaseConnection.php');
                 <a class='text-white' ><h5 class='text-left'>Matthew Castles</h3></a>
                 <small class='overflow-hidden'>Details</small>
                 <p class="text-center">ADFA Charlie SQN</p>
-                <p class="text-center">DIV</p>
-                <p class="text-center">zID</p>
-                <p class="text-center">Favorite quote: </p>
+                <p class="text-center">10 DIV</p>
+                <p class="text-center">zID 5307263</p>
+                <p class="text-center">Favorite quote: Life is like a box of chocolates </p>
             </div>
 
             <div class='col-sm-4 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
