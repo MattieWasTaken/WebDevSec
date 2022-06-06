@@ -54,8 +54,8 @@
           </h6>
           <p><i class="fas fa-home me-3"></i> ADFA, ACT 2612, AU</p>
           <p>
-            <i class="fas fa-envelope me-3"></i>
-            MDG@webdev.com
+            <i class="fas fa-envelope me-3"></i><a class="text-reset" href='mailto:MDG@webdev.com'>MDG@webdev.com</a>
+            
           </p>
         </div>
         <!-- Grid column -->
