@@ -96,13 +96,10 @@ if($resultCheck>0){
       </div>
     </form>
     </div>
-    <div class='container-fluid'>
+    <div class='container-fluid' style="margin-left:-15px;margin-bottom:-25px">
     <div class='row p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
     <h4 class="text-center">Comments</h4>  
 </div>
-   
-    
-    
   
     </div>
 
@@ -119,7 +116,7 @@ if($resultCheck>0){
         $user_id1 = $row1['username'];
         $date1 = $row1['date'];
 
-        echo "<div class='row p-3 bg-secondary text-white rounded-top ml-1 mr-1'>
+        echo "<div class='row p-3 bg-secondary text-white rounded-top ml-1 mr-1' style='margin-left:15px'>
         <span class='align-top'>By: $user_id1</span>
         </div>
         <div class='row bg-secondary rounded-bottom text-white ml-1 mr-1'>
