@@ -55,16 +55,17 @@ if($resultCheck>0){
         <span class='text-left'>Posted On: <?php echo $date ?></span>
         </div>
 </div>
-    
+    <?php $postContent = addslashes($content);?>
     <div class='container-fluid'>
     <div class='row'>
     <div class='col-lg p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
     <p class="text-break"><?php echo $content?></p>
-    <?php if($_SESSION['username']==$user_id){
+    <?php if($_SESSION['username']==$user_id)
+    {
       echo "
       <form method='POST' action='editpost.php?topic_id=$topic_id'>
       <input type='hidden' name='author' value='$user_id'>
-      <input type='hidden' name='post' value='$content'>
+      <input type='hidden' name='post' value='$postContent'>
       <button type='submit' class='btn btn-info'>Edit Your Post</button>
       </form>";
     }
