@@ -195,6 +195,14 @@ include_once('databaseConnection.php');
       <span class="sr-only">Next</span>
     </a>
 
+
+    <div class="row ml-1 mr-1" >
+    <div class="col-md-2">
+    <a href="subforum.php?subtopic=potato&page=1">
+    <h4 class="carousel-caption" d-flex flex-column justify-content-center h-100 style="top: 0">View Potato Posts</h4>
+          <a>
+    </div>
+    </div>
     
 <div class="row ml-1 mr-1" style="margin-top:20px">
   <div class="col-md-2">

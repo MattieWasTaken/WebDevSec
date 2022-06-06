@@ -12,3 +12,8 @@
   position: absolute;
   bottom: -500px;
 }
+.carousel-caption{
+  position: absolute;
+  width: 215px;
+  height: 70px;
+}
