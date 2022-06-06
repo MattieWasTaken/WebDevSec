@@ -77,7 +77,7 @@ include_once('databaseConnection.php');
                 <small class='overflow-hidden'>Details</small>
                 <br><br><br>
                 <p class="text-center"><a class='text-white' href='mailto:daniel.irwin1@gmail.com'>Email: Daniel.irwin1@gmail.com</a></p>
-                <p class="text-center"><a class='text-white' ref="tel:0412 313 713">Mobile: +61 41 349 4949</a></p>
+                <p class="text-center"><a class='text-white' href="tel:0412 313 713">Mobile: +61 41 349 4949</a></p>
             </div>
 
             <div class='col-sm-2 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2'>
