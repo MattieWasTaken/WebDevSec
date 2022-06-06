@@ -30,7 +30,7 @@ include_once('databaseConnection.php');
             </div>
 			
             <div class='col-lg-2 p- mb-2 bg-secondary rounded ml-2 mr-1'>                    
-                <p class="text-center"><a class="text-white"href="ContactUs.php">Send Us A Message</a></p>
+                <p class="text-center"><a class="text-white"href="aboutus.php">Send Us A Message</a></p>
             </div>
             
             <div class='col-lg-2 p- mb-2 bg-secondary rounded ml-2 mr-1'>
