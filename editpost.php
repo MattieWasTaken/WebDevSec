@@ -18,17 +18,25 @@
     <body>
     <div class="container-fluid">
     <?php 
+    error_reporting(1);
     $author = ($_POST['author']);
     $topicID = $_GET['topic_id'];
-    $content = nl2br($_POST['post']);
-    $printingContent = preg_replace("/<br\W*?\/>/", "", $content);
+    $sql = "SELECT * FROM forum_posts WHERE topic_id= ?;";
+    $stmt = mysqli_stmt_init($conn);
+    mysqli_stmt_prepare($stmt, $sql);
+    mysqli_stmt_bind_param($stmt, "i", $topicID);
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
+    $row = mysqli_fetch_assoc($result);
+    $content= $row['content'];
+
     if($_SESSION['username']== $author){
         echo"
         <form class='bg-secondary rounded ml-1 mr-1 mt-2' action='updatepost.php' method='POST'>
         <div class='form-group mr-2'>
         <input type='hidden' name='topicID' value='$topicID'>
         <label class='text-white ml-2' for='content'>Edit Your Post</label>
-        <textarea class='form-control ml-1' id='content' name='content' rows='20'>$printingContent</textarea>
+        <textarea class='form-control ml-1' id='content' name='content' rows='20'>$content</textarea>
         </div>
         <a type='hidden' name='username' id='username' $username>
         <button class='rounded ml-1'type='submit' name='submit'>Submit Changes</button>
@@ -44,3 +52,4 @@
     <?php 
     include_once('footer.php')
     ?>
+    

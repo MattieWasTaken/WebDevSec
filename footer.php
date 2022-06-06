@@ -13,7 +13,16 @@
             <i class="fas fa-gem me-3"></i>IMD Fourm
           </h6>
           <p>
-            ADD INFORMATION HERE
+            Our IMD is a free-speech site
+          </p>
+          <p>
+            We want to make this area for everyone 
+          </p>
+          <p>
+          to talk to each other
+          </p>
+          <p>
+            Please be respectful and enjoy! :>
           </p>
         </div>
         <!-- Grid column -->

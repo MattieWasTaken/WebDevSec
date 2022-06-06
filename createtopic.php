@@ -43,11 +43,24 @@ include_once('databaseConnection.php');
     <form class="bg-secondary" action="submitforum.php" method="POST">
     <div class="form-group">
       <label for='title'>Topic Name:</label>
+      <?php if(isset($_GET['post'])){
+        if($_GET['post']=='failed'){
+          echo "<br> Error! You Must Fill Out All Required Fields";
+        }
+        if($_GET['post']=='failedNoLogin'){
+          echo "<br> Error! You Must Be Logged In To Continue";
+        }
+        if($_GET['post']=='failedtooLong'){
+          echo "<br> Error! Title Must Not Be More Than 100 Characters";
+        }
+
+
+      }?>
       <input type="text" id="topicArea" name="title" class="form-control" placeholder="Title...">
     </div>
     <div class="form-group">
       <label for="content">Topic Description:</label>
-      <textarea class="form-control" id='topicName' name='content' rows='10'></textarea>
+      <textarea class="form-control" id='content' name='content' rows='10'></textarea>
     </div>
      <button type="submit" name="submit">Create</button>
     </form>
@@ -58,3 +71,4 @@ include_once('databaseConnection.php');
 </body>
 
 <?php include_once("footer.php")?>
+

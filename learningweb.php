@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-  <div class="bg-image" style="background-image: url('https://ae01.alicdn.com/kf/HTB1CKe5QNTpK1RjSZFKq6y2wXXaC/LIFE-MAGIC-BOX-Black-Brick-Wall-for-Photo-Background-for-Photo-Sessions-for-Photography-Birthday-Backdrops.jpg_Q90.jpg_.webp'); height: 100vh;">
   <head>
     <title>IMD Forum</title>
     <!-- Required meta tags -->
@@ -17,10 +16,9 @@
     if(isset($_REQUEST['topic_id'])){
     $topic_id = $_REQUEST['topic_id'];
     for($i = 0; $i < strlen($topic_id); $i++){
-      if(!ctype_digit($topic_id[$i])){
-        $allNumbers = false;
-        break;
-      }else $allNumbers=true;
+      if(ctype_digit($topic_id[$i])){
+        $allNumbers = true;
+      }else $allNumbers=false;
     }
     if(!$allNumbers){
       header("Location: index.php?error=noTopicSupplied");
@@ -33,6 +31,7 @@ $result = mysqli_query($conn, $query);
 $resultCheck = mysqli_num_rows($result);
 if($resultCheck>0){
     while($row = mysqli_fetch_assoc($result)){
+        echo "<br>";
         $content = $row['content'];
         $content = nl2br($content);
         $title = $row['title'];
@@ -44,6 +43,7 @@ if($resultCheck>0){
 ?>
 
 <body>
+<div class="container-fluid p-4 bg-dark text-white">
 <div class="container-fluid">
     <div class="row p-1 mt-2 bg-secondary text-white rounded-top">
         <h3 class="text-left"><?php echo $title?></h3>
@@ -55,17 +55,16 @@ if($resultCheck>0){
         <span class='text-left'>Posted On: <?php echo $date ?></span>
         </div>
 </div>
-    <?php $postContent = addslashes($content);?>
+    
     <div class='container-fluid'>
     <div class='row'>
     <div class='col-lg p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
     <p class="text-break"><?php echo $content?></p>
-    <?php if($_SESSION['username']==$user_id)
-    {
+    <?php if($_SESSION['username']==$user_id){
       echo "
       <form method='POST' action='editpost.php?topic_id=$topic_id'>
       <input type='hidden' name='author' value='$user_id'>
-
+      <input type='hidden' name='post' value='$content'>
       <button type='submit' class='btn btn-info'>Edit Your Post</button>
       </form>";
     }

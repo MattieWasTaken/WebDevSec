@@ -17,6 +17,7 @@ include_once('databaseConnection.php');
 ?>
   
 <body>
+<div class="container-fluid p-1 bg-dark">
 	<div class="container-fluid">
 		<div class="row p-3 mb-2 mt-2 bg-secondary text-white rounded">
 			<h3 class="text-left">We are here to help</h3>
@@ -66,18 +67,26 @@ include_once('databaseConnection.php');
 				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
 					<div>
 					<br>
-						<h3>Q:How to create an account?</h3>
+						<h3>Q: How to create an account?</h3>
 					</div>
 					<div>
-						<p>A:This feature is not yet available. Stay tuned for further updates!</p>
-						<p>A:This feature is not yet available. Stay tuned for further updates!</p>
-						<p>A:This feature is not yet available. Stay tuned for further updates!</p>
-						<p>A:This feature is not yet available. Stay tuned for further updates!</p>
+						<p>A:Click on Register button at the top of the page or <a href="registration.php" class="text-reset">HERE!</a></p>
+						<p>A:Follow the instruction at the Registartion page</p>
+						<p>A:You will need to set Your Username, password and email</p>
 					</div>
 					
 					<div>
 					<br>
-						<h3>Q:Cannot find a certain page? Here is how to!</h3>
+						<h3>Q: Cannot find a certain page? Here is how to!</h3>
+					</div>
+					<div>
+						<p>A:You can use the search feature at the search bar at the very top of every page.</p>
+						<p>A:It will provide you with a list of pages that contain your keyword</p>
+					</div>
+					
+					<div>
+					<br>
+						<h3>Q: How to reset password?</h3>
 					</div>
 					<div>
 						<p>A:The search feature has not yet been completed.</p>
@@ -86,42 +95,35 @@ include_once('databaseConnection.php');
 						<p>A:This feature is not yet available. Stay tuned for further updates!</p>
 					</div>
 					
+
 					<div>
 					<br>
-						<h3>Q:Found something not right? Here is how to Report an unappropriate post!</h3>
+						<h3>Q: Found something not right? Here is how to Report an unappropriate post!</h3>
 					</div>					
 					<div >
-						<p>A:Please submit a report in the below text box provided!</p>
+						<p>A: Please submit a report in the box within the above section</p>
 					</div>
 					
 					<div>
 					<br>
-						<h3>Q:What can we do?</h3>
+						<h3>Q: What can we do?</h3>
 					</div>
 					<div>
-						<p>A:We can do whatever you would like us to!</p>
+						<p>A: We can do whatever you would like us to!</p>
 					</div>
 				
 					<div>
 					<br>
-						<h3>Q:Want to learn how to learn to do these stuffs?</h3>
+						<h3>Q: Want to learn how to learn to do these stuffs?</h3>
 					</div>
 					<div>
-						<p>A:Youtube tutorials help a lot...</p>
+					<a href="learningweb.php" class="text-reset">A: Click me, I will show you what you need to look at to do website designing</a>
+					
 					</div>
 				</div>
 			</div>
 		</div>	
 
-		<div>
-			<br>
-			<form action="/action_page.php">
-				<input type="text" name="q" id="" placeholder="Search keywords...">
-				<button type="submit">Dig the words!</button> 
-			</form>
-			<br>
-		</div>
-		
 	</div>
 </div>
 

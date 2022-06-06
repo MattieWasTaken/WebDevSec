@@ -17,6 +17,7 @@ include_once('databaseConnection.php');
 ?>
   
 <body>
+<div class="container-fluid p-1 bg-dark">
     <div class="container-fluid">
         <div class="row p-3 mb-2 mt-2 bg-secondary text-white rounded">
             <h3 class="text-left">Support from us</h3>
@@ -39,14 +40,6 @@ include_once('databaseConnection.php');
         </div>
     </div>
 
-    <div>
-			<form action="/action_page.php">
-        <input type="text" name="q" id="" placeholder="Search keywords...">
-        <button type="submit">Dig the words!</button> 
-      </form>
-      <br>
-    </div>
-		
     <div class="accordion" id="accordionExample">
       <div class="card bg-secondary">
         <div class="card-header" id="headingOne">
@@ -76,8 +69,8 @@ include_once('databaseConnection.php');
         </div>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
           <div class="card-body">
-                            <a class="text-white" href=" ">Check out the home page for the most recent posts by clicking on OnlineTopia.com</a><br>
-                            <a class="text-white" href=" ">Watch Youtube videos to learn how to make a website like this one.</a><br>
+                            <a class="text-white" href="index.php">Check out the home page for the most recent posts</a><br>
+                            <a class="text-white" href="https://www.youtube.com/results?search_query=making+website+php">Watch Youtube videos to learn how to make a website like this one.</a><br>
                             <a class="text-white" href=" ">Wanna be cool like Inbus? He's not cool either, dont worry.</a><br>
           </div>
         </div>

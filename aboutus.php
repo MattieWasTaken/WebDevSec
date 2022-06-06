@@ -17,9 +17,10 @@ include_once('databaseConnection.php');
 ?>
   
 <body>
+<div class="container-fluid p-1 bg-dark">
     <div class="container-fluid">
         <div class="row p-3 mb-2 mt-2 bg-secondary text-white rounded">
-            <h3 class="text-left">About (WEBNAME) Developers</h3>
+            <h3 class="text-left">About IMD's Developers</h3>
         </div>
     </div>
 
@@ -34,15 +35,16 @@ include_once('databaseConnection.php');
             <div class='col-lg p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
                 <a class='text-white' ><h5 class='text-left'>Matthew Castles</h3></a>
                 <small class='overflow-hidden'>Details</small>
-                <p class="text-center">Email: owner@matthewcastles.com</p>
-                <p class="text-center">Mobile: +61 41 349 6969</p>
-                <p class="text-center">Email: owner@matthewcastles.com</p>
-                <p class="text-center">Mobile: +61 41 349 6969</p>
+                <p class="text-center">ADFA Charlie SQN</p>
+                <p class="text-center">DIV</p>
+                <p class="text-center">zID</p>
+                <p class="text-center">Favorite quote: </p>
             </div>
 
             <div class='col-sm-4 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
                 <a class='text-white' ><h5 class='text-left'>Contact</h3></a>
                 <small class='overflow-hidden'>Details</small>
+                <br><br><br>
                 <p class="text-center">Email: owner@matthewcastles.com</p>
                 <p class="text-center">Mobile: +61 41 349 6969</p>
             </div>
@@ -66,15 +68,16 @@ include_once('databaseConnection.php');
             <div class='col-lg p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
                 <a class='text-white' ><h5 class='text-left'>Danial Irwin</h3></a>
                 <small class='overflow-hidden'>Details</small>
-                <p class="text-center">Email: owner@matthewcastles.com</p>
-                <p class="text-center">Mobile: +61 41 349 6969</p>
-                <p class="text-center">Email: owner@matthewcastles.com</p>
-                <p class="text-center">Mobile: +61 41 349 6969</p>
+                <p class="text-center">ADFA Charlie SQN</p>
+                <p class="text-center">DIV</p>
+                <p class="text-center">zID</p>
+                <p class="text-center">Favorite quote: </p>
             </div>
 
             <div class='col-sm-4 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
                 <a class='text-white' ><h5 class='text-left'>Contact</h3></a>
                 <small class='overflow-hidden'>Details</small>
+                <br><br><br>
                 <p class="text-center">Email: Daniel.irwin1@gmail.com</p>
                 <p class="text-center">Mobile: +61 41 349 4949</p>
             </div>
@@ -96,15 +99,16 @@ include_once('databaseConnection.php');
             <div class='col-lg p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
                 <a class='text-white' ><h5 class='text-left'>Kritsanapong Inbua</h3></a>
                 <small class='overflow-hidden'>Details</small>
-                <p class="text-center">Email: owner@matthewcastles.com</p>
-                <p class="text-center">Mobile: +61 41 349 6969</p>
-                <p class="text-center">Email: owner@matthewcastles.com</p>
-                <p class="text-center">Mobile: +61 41 349 6969</p>
+                <p class="text-center">ADFA Foxtrot SQN</p>
+                <p class="text-center">24DIV</p>
+                <p class="text-center">zID5276311</p>
+                <p class="text-center">Favorite quote: Ching Chong Ping Pong</p>
             </div>
 
             <div class='col-sm-4 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
                 <a class='text-white' ><h5 class='text-left'>Contact</h3></a>
                 <small class='overflow-hidden'>Details</small>
+                <br><br><br>
                 <p class="text-center">Email: Kritsanakiwx@gmail.com</p>
                 <p class="text-center">Mobile: +61 41 385 7090</p>
             </div>
@@ -115,11 +119,6 @@ include_once('databaseConnection.php');
             </div>       
     </div>
 </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 
   <?php include_once('footer.php')?>
