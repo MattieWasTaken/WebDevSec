@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-  
+<div class="bg-image" style="background-image: url('https://ae01.alicdn.com/kf/HTB1CKe5QNTpK1RjSZFKq6y2wXXaC/LIFE-MAGIC-BOX-Black-Brick-Wall-for-Photo-Background-for-Photo-Sessions-for-Photography-Birthday-Backdrops.jpg_Q90.jpg_.webp'); height: 100vh;">
   <head>
     <title>IMD Forum</title>
     <!-- Required meta tags -->
@@ -14,8 +14,6 @@
 <?php 
 include_once('header.php');
 include_once('databaseConnection.php');
-
-
 
 if(isset($_REQUEST['subtopic'])){
     if(!empty($_GET['subtopic'])){
@@ -41,17 +39,15 @@ if(isset($_GET['page'])){
     }  }
 $start = ($page-1) * $limit;
 ?>
-
+  
 <body>
-
-<div class="container-fluid bg-dark text-white pt-3">
 <div class="container-fluid">
-      <div class='row bg-secondary rounded mb-2 ml-0 mr-0 text-center'>
-        <h3 class="text-center ml-3 p-3"><a class='text-white'href="subforum.php?subtopic=<?php echo $subtopic?>&page=1"><?php echo $subtopic?> Posts</a></h3>
-   
-  </div>  </div>
-<?php 
+    <div class="row p-3 mb-2 mt-2 bg-secondary text-white rounded">
+        <h3 class="text-left"><a class='text-white'href="subforum.php?page=1">Available Subforums</a></h3>
+    </div>
+</div>
 
+<?php 
 $query = "SELECT * FROM forum_posts WHERE subtopic='$subtopic' ORDER BY `topic_id` DESC LIMIT $start,8;";
 $result = mysqli_query($conn, $query);
 $resultCheck = mysqli_num_rows($result);
@@ -95,6 +91,7 @@ $topicReturn = $result1->fetch_all(MYSQLI_ASSOC);
 $totalPostCount= $topicReturn[0]['topic_id'];
 $totalPages = ceil($totalPostCount/$limit);
 ?>
+
 <?php if(!$totalPages==0):?>
 <nav aria-label="Page navigation example">
   <ul class="pagination justify-content-start mt-2 ml-2">
@@ -121,6 +118,7 @@ $totalPages = ceil($totalPostCount/$limit);
     ?>
   </ul>
 </nav>
+       
 <?php else:?>
   <div class="container-fluid">
   <div class="row p-1 mb-2 mt-1 bg-secondary text-black rounded">
