@@ -99,7 +99,7 @@ if($resultCheck>0){
     </div>
     <?php endif;?>
     <div class='container-fluid' style="margin-bottom:-25px">
-    <div class='row p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
+    <div class='row p-3 mb-2 bg-secondary text-white rounded ml-0 mr-1'>
     <h4 class="text-center">Comments</h4>  
     </div>
     </div>
