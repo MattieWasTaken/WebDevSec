@@ -69,7 +69,7 @@ include_once('databaseConnection.php');
                     </form>
                   </div>
                   <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2'>
-                    <form method='GET' name'$userID' value='$userID'>
+                    <form method='GET' name='$userID' value='$userID'>
                       <p class='text-left text-wrap'>Date: $date </p>
                       <a class='text-white' href='user.php?user_id=$userID'> <small>By: $userID</small></a>
                     </form>
@@ -192,7 +192,7 @@ include_once('databaseConnection.php');
         </div>
 
         <?php 
-          $query2 = "SELECT * FROM forum_posts WHERE subtopic = 'Lifestyle' ORDER BY `topic_id` DESC LIMIT 4;";
+          $query2 = "SELECT * FROM forum_posts WHERE subtopic = 'Meme' ORDER BY `topic_id` DESC LIMIT 4;";
           $result2 = mysqli_query($conn, $query2);
           $resultCheck2 = mysqli_num_rows($result2);
           $counter2=0;
@@ -243,7 +243,7 @@ include_once('databaseConnection.php');
         </div>
 
         <?php 
-          $query2 = "SELECT * FROM forum_posts WHERE subtopic = 'Lifestyle' ORDER BY `topic_id` DESC LIMIT 4;";
+          $query2 = "SELECT * FROM forum_posts WHERE subtopic = 'Sports' ORDER BY `topic_id` DESC LIMIT 4;";
           $result2 = mysqli_query($conn, $query2);
           $resultCheck2 = mysqli_num_rows($result2);
           $counter2=0;
