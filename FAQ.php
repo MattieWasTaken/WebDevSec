@@ -82,16 +82,7 @@ include_once('databaseConnection.php');
 					</div>
 					
 					<div>
-					<br>
-						<h3>Q: How to reset password?</h3>
-					</div>
-					<div>
-						<p>A:The search feature has not yet been completed.</p>
-						<p>A:This feature is not yet available. Stay tuned for further updates!</p>
-						<p>A:This feature is not yet available. Stay tuned for further updates!</p>
-						<p>A:This feature is not yet available. Stay tuned for further updates!</p>
-					</div>
-					
+				
 
 					<div>
 					<br>
