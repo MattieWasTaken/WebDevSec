@@ -1,4 +1,4 @@
-<?php include_once 'databaseConnection.php';
+<?php include 'databaseConnection.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,7 +14,8 @@
   </head>
 
 <header>
-<?php include_once 'header.php'; ?>
+<?php include_once 'header.php'; 
+ ob_start();?>
 </header>
 
 
@@ -58,7 +59,11 @@
 
 <div>
 <?php 
+include('databaseConnection.php');
  $forbiddenCharacter = '\'';
+ error_reporting(1);
+
+ $accountCreated = false;
 if(isset($_POST['create'])){
             $username = ($_POST['username']);
             $password = ($_POST['password']);
@@ -79,37 +84,39 @@ if(isset($_POST['create'])){
                 $numbersCheck = preg_match('@[0-9]@', $password);
                 $specialChars = preg_match('@[^/w]@', $password);
                 if(mysqli_num_rows($uCheck)> 0 || $username=="") {
-                    echo "username exists";
+                    echo "Username Already Exists";
                 }else if(mysqli_num_rows($eCheck)>0 || $email ==""){
-                    echo "email exists";
+                    echo "Email Exists";
                 }else if(!$uppercaseCheck || !$lowercaseCheck || !$numbersCheck || !$specialChars || strlen($password) < 8){
                     echo 'Password should be at least 8 characters in length and should include at least one upper case letter, one number, and one special character.';
                 }else if($password!=$confirmPassword){
-                    echo "passwords do not match";
+                    echo "Passwords Do Not Match";
                 }else if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
                     echo "Please Enter Valid Email";
                 }else{
                     $adminStatus = 0;
-                    echo "admin status assigned<br>";
                     $stmt = $conn->prepare("INSERT INTO users (username, password, email, bio, admin_status) VALUES (?,?,?,?,?);");
-                    echo "statement prepared<br>";
                     $stmt -> bind_param("ssssi", $username, $hashed, $email,$bio, $adminStatus);
-                    echo "statement binded";
-                    $result = $stmt->execute();
-                    echo "statement executed";
-                    if($result){
-                        header("Location: index.php?createAccount=success");
-                        
-                }
+                    $stmt->execute();
+                   $accountCreated = true;
+                   if($accountCreated){
+                    header("Location: index.php?createAccount=success");
+                    exit();
+                   }
+                   
             }
        
     }
 }
 
 ?>
+
 </div>
 </div>
-</div>
+<?php if($accountCreated){
+    
+    echo $accountCreated;
+}?>
 </body>
 
 

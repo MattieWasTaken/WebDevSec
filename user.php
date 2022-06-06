@@ -21,7 +21,6 @@ $userID = $_GET['user_id'];
 </header>
 
 <body>
-<div class="bg-image" style="background-image: url('https://ae01.alicdn.com/kf/HTB1CKe5QNTpK1RjSZFKq6y2wXXaC/LIFE-MAGIC-BOX-Black-Brick-Wall-for-Photo-Background-for-Photo-Sessions-for-Photography-Birthday-Backdrops.jpg_Q90.jpg_.webp'); height: 100vh;">
 <div class="container-fluid bg-dark text-white pt-3">
 <div class="container-fluid">
     <?php 

@@ -44,17 +44,17 @@ include_once('databaseConnection.php');
         <div class="card-header" id="headingOne">
           <h2 class="mb-0">
             <button class="btn btn-link text-white" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              Gaming?
+              Gaming? Try out these game
             </button>
           </h2>
         </div>
 
         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
           <div class="card-body">
-                            <a class="text-white" href=" ">MMORPG: Runescape</a><br>
-                            <a class="text-white" href=" ">RPG: Elden Ring</a><br>
-                            <a class="text-white" href=" ">Turn-based: Age Of Mythology</a><br>
-                            <a class="text-white" href=" ">Indie: Life is Strange</a>
+                            <a class="text-white" href="https://play.runescape.com/">MMORPG: Runescape</a><br>
+                            <a class="text-white" href="https://store.steampowered.com/app/1245620/ELDEN_RING/">RPG: Elden Ring</a><br>
+                            <a class="text-white" href="https://store.steampowered.com/app/266840/Age_of_Mythology_Extended_Edition/">Turn-based: Age Of Mythology</a><br>
+                            <a class="text-white" href="http://www.armadillorun.com/">Indie: Armadillo Run</a>
           </div>
         </div>
       </div>
@@ -70,7 +70,8 @@ include_once('databaseConnection.php');
           <div class="card-body">
                             <a class="text-white" href="index.php">Check out the home page for the most recent posts</a><br>
                             <a class="text-white" href="https://www.youtube.com/results?search_query=making+website+php">Watch Youtube videos to learn how to make a website like this one.</a><br>
-                            <a class="text-white" href=" ">Wanna be cool like Inbus? He's not cool either, dont worry.</a><br>
+                            <a class="text-white" href="https://www.youtube.com/watch?v=M0dwYm_BQ5c&ab_channel=HD49">Watch this interesting Video then CLICK ME!</a><br>
+                            <a class="text-white" href="https://www.youtube.com/watch?v=Abw77DhBn2o&ab_channel=TheHumanSpider">I got Spider Man for you!</a><br>
           </div>
         </div>
       </div>
