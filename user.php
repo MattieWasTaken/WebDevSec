@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+<<div class="bg-image" style="background-image: url('https://ae01.alicdn.com/kf/HTB1CKe5QNTpK1RjSZFKq6y2wXXaC/LIFE-MAGIC-BOX-Black-Brick-Wall-for-Photo-Background-for-Photo-Sessions-for-Photography-Birthday-Backdrops.jpg_Q90.jpg_.webp'); height: 59.5vh;">-->
   <head>
     <title>IMD Forum</title>
     <!-- Required meta tags -->
@@ -21,7 +22,6 @@ $userID = $_GET['user_id'];
 </header>
 
 <body>
-<div class="container-fluid bg-dark text-white pt-3">
 <div class="container-fluid">
     <?php 
      if($_GET['display']=='posts'){
@@ -68,7 +68,7 @@ $userID = $_GET['user_id'];
             </div>
         </nav>";
         }else{
-            header("Location: user.php?uid=$userID&display=posts");
+            header("Location: user.php?user_id=$userID&display=posts");
         }
     ?>
 
@@ -207,7 +207,6 @@ $userID = $_GET['user_id'];
  
         </div>
 </div>
-    </div>
 
 
 </body>
