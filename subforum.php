@@ -71,7 +71,6 @@ while($rows[]=mysqli_fetch_array($result)){
     <input type='hidden' name='$topicID' $topicID> 
     <a class='text-white' href='Post.php?topic_id=$topicID&subtopic=$subtopic'><h5 class='text-left'>$title</h3></a>
     </form>
-   <small class='overflow-hidden'>CONTENT PREVIEW</small>
     </div>
     <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2'>
     <form method='GET' name'$userID' $userID>

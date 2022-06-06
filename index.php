@@ -65,7 +65,6 @@ include_once('databaseConnection.php');
                     <form method='GET'>
                       <input type='hidden' name='$topicID' $topicID> 
                       <a class='text-white' href='Post.php?topic_id=$topicID'><h5 class='text-left'>$title</h3></a>
-                      <small class='overflow-hidden'>CONTENT PREVIEW</small>
                     </form>
                   </div>
                   <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2' style = 'height: 135px;'>

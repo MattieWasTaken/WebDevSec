@@ -49,7 +49,7 @@ while($rows[]=mysqli_fetch_array($result)){
     <div class='col-lg p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
     <form method='GET'>
     <input type='hidden' name='$qID' $qID> 
-    <a class='text-white' href='Post.php?topic_id=$topicID&subtopic=$subtopic'><h5 class='text-left'>$question</h3></a>
+    <h5 class='text-left'>$question</h3>
     </form>
     </div>
     <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2'>
