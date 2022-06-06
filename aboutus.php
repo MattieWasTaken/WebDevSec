@@ -44,7 +44,7 @@ include_once('databaseConnection.php');
                 <a class='text-white' ><h5 class='text-left'>Contact</h3></a>
                 <small class='overflow-hidden'>Details</small>
                 <br><br><br>
-                <p class="text-center">Email: owner@matthewcastles.com</p>
+                <p class="text-center"><a class='text-white'href='mailto:matthewcastles@hotmail.com'>Email: owner@matthewcastles.com</a></p>
                 <p class="text-center">Mobile: +61 41 349 6969</p>
             </div>
 
@@ -76,7 +76,7 @@ include_once('databaseConnection.php');
                 <a class='text-white' ><h5 class='text-left'>Contact</h3></a>
                 <small class='overflow-hidden'>Details</small>
                 <br><br><br>
-                <p class="text-center">Email: Daniel.irwin1@gmail.com</p>
+                <p class="text-center"><a class='text-white'href='mailto:daniel.irwin1@gmail.com'>Email: Daniel.irwin1@gmail.com</a></p>
                 <p class="text-center">Mobile: +61 41 349 4949</p>
             </div>
 
@@ -107,7 +107,7 @@ include_once('databaseConnection.php');
                 <a class='text-white' ><h5 class='text-left'>Contact</h3></a>
                 <small class='overflow-hidden'>Details</small>
                 <br><br><br>
-                <p class="text-center">Email: Kritsanakiwx@gmail.com</p>
+                <p class="text-center"><a class='text-white'href='mailto:kritsankiwx@gmail.com'>Email: Kritsanakiwx@gmail.com</a></p>
                 <p class="text-center">Mobile: +61 41 385 7090</p>
             </div>
 
