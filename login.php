@@ -30,11 +30,11 @@ if (isset($_SESSION["loginLocked"])){
 <div class="container-fluid bg-dark text-white pt-3">
 <form action="login.php" method=POST>
    
-        <div class="row bg-secondary rounded">
-        <h1>Login</h1>
+        <div class="row bg-secondary rounded-top">
+        <h1 class='ml-2'>Login</h1>
         </div>
-        <div class="row bg-secondary rounded">
-        <p>Please Enter Your Details</p>
+        <div class="row bg-secondary">
+        <p class='ml-2'>Please Enter Your Details</p>
         </div>
        <?php if(isset($_REQUEST['Loginfailed'])){
     if($_GET['Loginfailed']=="invalidPass"){
@@ -45,26 +45,26 @@ if (isset($_SESSION["loginLocked"])){
         $_SESSION["loginFailed"] +=1;
     }
 }       ?>
-        <div class="row bg-secondary rounded">
-        <div class="input-group mb-3 shadow-sm">
+        <div class="row bg-secondary">
+        <div class="input-group mb-3 shadow-sm ml-2">
         <span class="input-group-text" id="basic-addon1">Username:</span>
         <input type="text" name="username" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" required>
         </div>  
         </div>
-        <div class="row bg-secondary rounded">
-        <div class="input-group mb-3 shadow-sm">
+        <div class="row bg-secondary">
+        <div class="input-group mb-3 shadow-sm ml-2">
         <span class="input-group-text" id="basic-addon1">Set Password:</span>
         <input type="password" name="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" required>
         </div>  
         </div>
-        <div class="row bg-secondary pb-3 rounded">
+        <div class="row bg-secondary pb-3 rounded-bottom">
             <?php 
                 if($_SESSION['loginFailed']>5){
                     $_SESSION['loginLocked']= time();
                     echo "Exceeded Max Login Attempts. Please Wait 1 Minute Before Retrying";
 
                 } else{
-                    echo "<input type='submit' name='login' value='Login!'>";
+                    echo "<input type='submit' class='ml-2' name='login' value='Login!'>";
                 }
             ?>
         
@@ -125,9 +125,22 @@ function userExists($conn, $username, $password){
 
 ?>
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>
+</div>
 
-</div>
-</div>
+
 </body>
 
 
