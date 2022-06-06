@@ -75,6 +75,7 @@ if($resultCheck>0){
     </div>
     </div>    
     </div>
+    <?php if($_SESSION['username']!=""):?>
     <div class='row p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
     <form method='post' action='submitcomment.php'>
       <input type='hidden' name='username' value='<?php echo $_SESSION['username']?>'>
@@ -82,10 +83,10 @@ if($resultCheck>0){
       <input type='hidden' name='threadID' value='<?php echo $_GET['topic_id']?>'>
       <span>Leave a Comment</span>
       <div class='row'>
-      <textarea name='comment'></textarea>
+      <textarea name='comment' rows='5'></textarea>
       </div>
       <div class='row'>
-      <button name='submit' type='submit'>Comment</button>
+      <button name='submit' type='submit' class='ml-3'>Comment</button>
       </div>
       <div class='row'>
      <?php if(isset($_REQUEST['comment'])){
@@ -96,13 +97,12 @@ if($resultCheck>0){
       </div>
     </form>
     </div>
-    <div class='container-fluid' style="margin-left:-15px;margin-bottom:-25px">
+    <?php endif;?>
+    <div class='container-fluid' style="margin-bottom:-25px">
     <div class='row p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
     <h4 class="text-center">Comments</h4>  
-</div>
-  
     </div>
-
+    </div>
     <?php 
     
     $query1 = "SELECT * FROM comment_section WHERE parent_thread= $topic_id;";
@@ -116,10 +116,10 @@ if($resultCheck>0){
         $user_id1 = $row1['username'];
         $date1 = $row1['date'];
 
-        echo "<div class='row p-3 bg-secondary text-white rounded-top ml-1 mr-1' style='margin-left:15px'>
+        echo "<div class='row p-3 bg-secondary text-white rounded-top ml-1 mr-1'>
         <span class='align-top'>By: $user_id1</span>
         </div>
-        <div class='row bg-secondary rounded-bottom text-white ml-1 mr-1'>
+        <div class='row bg-secondary rounded-bottom text-white ml-1 mr-1 style='margin-bottom: -25px;''>
           <p class='ml-3 text-break'>$content1</p>
         </div>
       ";
