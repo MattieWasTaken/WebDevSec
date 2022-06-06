@@ -1,8 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
-  <div class="bg-image" style="background-image: url('https://ae01.alicdn.com/kf/HTB1CKe5QNTpK1RjSZFKq6y2wXXaC/LIFE-MAGIC-BOX-Black-Brick-Wall-for-Photo-Background-for-Photo-Sessions-for-Photography-Birthday-Backdrops.jpg_Q90.jpg_.webp'); height: 95%;">
-  <head>
+<head>
     <title>IMD Forum</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -28,6 +26,7 @@ if (isset($_SESSION["loginLocked"])){
 
 
 <body>
+
 <div class="container-fluid bg-dark text-white pt-3">
 <form action="login.php" method=POST>
    
@@ -133,16 +132,6 @@ function userExists($conn, $username, $password){
 
 
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
 
 <footer><?php include_once 'footer.php'?>
