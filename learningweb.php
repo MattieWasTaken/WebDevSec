@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="en">
+    <div class="bg-image" style="background-image: url('https://ae01.alicdn.com/kf/HTB1CKe5QNTpK1RjSZFKq6y2wXXaC/LIFE-MAGIC-BOX-Black-Brick-Wall-for-Photo-Background-for-Photo-Sessions-for-Photography-Birthday-Backdrops.jpg_Q90.jpg_.webp'); height: 110vh;">
   <head>
-    <title>IMD Forum</title>
+    <title>Learning Web Designing</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,139 +10,82 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
-  <?php
-    include_once 'databaseConnection.php';
-    include_once 'header.php';
 
-    if(isset($_REQUEST['topic_id'])){
-    $topic_id = $_REQUEST['topic_id'];
-    for($i = 0; $i < strlen($topic_id); $i++){
-      if(ctype_digit($topic_id[$i])){
-        $allNumbers = true;
-      }else $allNumbers=false;
-    }
-    if(!$allNumbers){
-      header("Location: index.php?error=noTopicSupplied");
-    }
-    }
-    
-
-$query = "SELECT * FROM forum_posts WHERE topic_id= $topic_id;";
-$result = mysqli_query($conn, $query);
-$resultCheck = mysqli_num_rows($result);
-if($resultCheck>0){
-    while($row = mysqli_fetch_assoc($result)){
-        echo "<br>";
-        $content = $row['content'];
-        $content = nl2br($content);
-        $title = $row['title'];
-        $user_id= $row['user_id'];
-        $subtopic = $row['subtopic'];
-        $date = $row['date_submitted'];
-    }
-}
+<?php 
+include_once('header.php');
+include_once('databaseConnection.php');
 ?>
-
-<body>
-<div class="container-fluid p-4 bg-dark text-white">
-<div class="container-fluid">
-    <div class="row p-1 mt-2 bg-secondary text-white rounded-top">
-        <h3 class="text-left"><?php echo $title?></h3>
-        </div>
-        <div class="row bg-secondary text-white p-1">
-        <span><a class="text-white" href="user.php?user_id=<?php echo $user_id?>&display=posts">By: <?php echo $user_id?></a></span>
-        </div>
-        <div class="row bg-secondary p-1 mb-3 rounded-bottom text-white">
-        <span class='text-left'>Posted On: <?php echo $date ?></span>
-        </div>
-</div>
-    
-    <div class='container-fluid'>
-    <div class='row'>
-    <div class='col-lg p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
-    <p class="text-break"><?php echo $content?></p>
-    <?php if($_SESSION['username']==$user_id){
-      echo "
-      <form method='POST' action='editpost.php?topic_id=$topic_id'>
-      <input type='hidden' name='author' value='$user_id'>
-      <input type='hidden' name='post' value='$content'>
-      <button type='submit' class='btn btn-info'>Edit Your Post</button>
-      </form>";
-    }
-    
-    ?>
-    
-    </div>
-    </div>    
-    </div>
-    <div class='row p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
-    <form method='post' action='submitcomment.php'>
-      <input type='hidden' name='username' value='<?php echo $_SESSION['username']?>'>
-      <input type='hidden' name='date' value='<?php echo date('d-m-Y H:i:s')?>'>
-      <input type='hidden' name='threadID' value='<?php echo $_GET['topic_id']?>'>
-      <span>Leave a Comment</span>
-      <div class='row'>
-      <textarea name='comment'></textarea>
-      </div>
-      <div class='row'>
-      <button name='submit' type='submit'>Comment</button>
-      </div>
-      <div class='row'>
-     <?php if(isset($_REQUEST['comment'])){
-     if($_REQUEST['comment']=="failed"){
-       echo "Your comment failed, please try again";
-     }
-  }?>
-      </div>
-    </form>
-    </div>
-    <div class='container-fluid'>
-    <div class='row p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
-    <h4 class="text-center">Comments</h4>  
-</div>
-   
-    
-    
   
+<body>
+  <div class="container-fluid">
+    <div class="row p-3 mb-2 mt-2 bg-secondary text-white rounded">
+        <h3 class="text-left">Here we are to recommend you how to make a website.</h3>
+    </div>
+  </div>
+
+  <div class="accordion" id="accordionExample">
+    <div class="card bg-secondary">
+      <div class="card-header" id="headingOne">
+        <h2 class="mb-0">
+          <button class="btn btn-link text-white" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Starting
+          </button>
+        </h2>
+      </div>
+
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div class="card-body">
+          <h5>We would like you to begin with. . .</h5>                  
+          <p>-Learning at basics by <a class="text-white" href="https://www.w3schools.com/html/">HTML by W3school</a></p>
+          <p>-Learning about how to use external resource with your web designing by <a class="text-white" href="https://getbootstrap.com/">Bootstrap</a></p>
+          <p>-Learning how to use java script with HTML to make your HTML look fancier <a class="text-white" href="https://www.w3schools.com/js/default.asp">JavaScript</a></p>
+          <p> <a class="text-white" href=""></a></p>
+        </div>
+      </div>
     </div>
 
-    <?php 
-    
-    $query1 = "SELECT * FROM comment_section WHERE parent_thread= $topic_id;";
-    $result1 = mysqli_query($conn, $query1);
-    $resultCheck1 = mysqli_num_rows($result1);
-    if($resultCheck1>0){
-    while($row1 = mysqli_fetch_assoc($result1)){
-        echo "<br>";
-        $content1 = $row1['content']. "<br>";
-        $content1 = nl2br($content1);
-        $user_id1 = $row1['username'];
-        $date1 = $row1['date'];
-
-        echo "<div class='row p-3 bg-secondary text-white rounded-top ml-1 mr-1'>
-        <span class='align-top'>By: $user_id1</span>
+    <div class="card bg-secondary">
+      <div class="card-header" id="headingTwo">
+        <h2 class="mb-0">
+          <button class="btn btn-link collapsed text-white" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Learn more on designing
+          </button>
+        </h2>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+        <div class="card-body">
+          <h5>Here is some video about HTML designing. . .</h5>                  
+          <p>-Short Video about HTML </p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/u0OeZfIfBRI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <p>-Short video on how to make HTML</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/MDLn5-zSQQI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <p>-Learning how to make an animation by using HTML</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/fxJdmBM0SYs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <p>-quick video on how bootstrap works</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/yalxT0PEx8c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <div class='row bg-secondary rounded-bottom text-white ml-1 mr-1'>
-          <p class='ml-3 text-break'>$content1</p>
-        </div>
-      ";
-    
-    
-      }
-}
-    
-    ?>
-         
+      </div>
     </div>
-</div>
 
+    <div class="card bg-secondary">
+      <div class="card-header" id="headingThree">
+        <h2 class="mb-0">
+            <button class="btn btn-link collapsed text-white" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Here is the resource that we recommend
+            </button>
+        </h2>
+      </div>
+      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+        <div class="card-body">
+                            <a class="text-white" href="https://www.w3schools.com/php/default.asp">PHP is better than HTML file, have a look into this link! (click me!)</a><br>
+                            <a class="text-white" href="https://www.youtube.com/results?search_query=making+website+php">Watch Youtube videos to learn how to make a website like this one.</a><br>
+                            <a class="text-white" href="https://www.wampserver.com/en/">Wanna make a database link to your website? Use this database program!</a><br>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+</body>
 
   <?php include_once('footer.php')?>
 </html>
