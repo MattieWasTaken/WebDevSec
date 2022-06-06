@@ -65,7 +65,6 @@ include_once('databaseConnection.php');
                     <form method='GET'>
                       <input type='hidden' name='$topicID' $topicID> 
                       <a class='text-white' href='Post.php?topic_id=$topicID'><h5 class='text-left'>$title</h3></a>
-                      <small class='overflow-hidden'>CONTENT PREVIEW</small>
                     </form>
                   </div>
                   <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2' style = 'height: 135px;'>
@@ -286,9 +285,6 @@ include_once('databaseConnection.php');
         ?>
       </div>
     </div>
-
-    
-
   </div>
 </div>
 
@@ -304,38 +300,38 @@ include_once('databaseConnection.php');
 <div class="row ml-1 mr-1" style="margin-top:-15px">
   <div class="col-md-2">
     <a href="subforum.php?subtopic=potato&page=1">
-      <h4 class="carousel-caption" d-flex flex-column justify-content-center h-100 style="top: 0">View Potato Posts</h4>
+      <h6 class="carousel-caption" d-flex flex-column justify-content-center h-100 style="top: 0">View Potato Posts</h6>
       <img src="https://images.theconversation.com/files/401955/original/file-20210520-23-83r6ds.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=900.0&fit=crop" class="img-thumbnail" alt="Potato" style="height:300px;width:300px;object-fit: cover;margin-top:60px">
     </a>
   </div>
   <div class="col-md-2">
     <a href="subforum.php?subtopic=gaming&page=1">
       <img src="https://media.istockphoto.com/photos/gamer-work-space-concept-top-view-a-gaming-gear-mouse-keyboard-in-picture-id1170073824?k=20&m=1170073824&s=612x612&w=0&h=lQYUGw9IIqI9bsTrIrS8xCyId2PmmNYPSwB7UNEzssI=" class="img-thumbnail" alt="Gaming" style="height:300px;width:300px;object-fit: cover;margin-top:60px">
-      <h4 class="carousel-caption" d-flex flex-column justify-content-center h-100 style="top: 0">View Gaming Posts</h4>
+      <h6 class="carousel-caption" d-flex flex-column justify-content-center h-100 style="top: 0">View Gaming Posts</h6>
     </a>
   </div>
   <div class="col-md-2">
     <a href="subforum.php?subtopic=lifestyle&page=1">
       <img src="https://headerpop.com/wp-content/uploads/2019/08/lifestyle-scaled.jpg" class="img-thumbnail" alt="Lifestyle" style="height:300px;width:300px;object-fit: cover;margin-top:60px">
-      <h4 class="carousel-caption" d-flex flex-column justify-content-center h-100 style="top: 0">View Lifestyle Posts</h4>
+      <h6 class="carousel-caption" d-flex flex-column justify-content-center h-100 style="top: 0">View Lifestyle Posts</h6>
     </a>
   </div>
   <div class="col-md-2">
     <a href="subforum.php?subtopic=memes&page=1">
-    <img src="https://i.imgflip.com/6ifnib.jpg" class="img-thumbnail" alt="Memes" style="height:300px;width:300px;margin-top:60px">
-    <h4 class="carousel-caption" d-flex flex-column justify-content-center h-100 style="top: 0">View Meme Posts</h4>
-        </a>
+      <img src="https://i.imgflip.com/6ifnib.jpg" class="img-thumbnail" alt="Memes" style="height:300px;width:300px;margin-top:60px">
+      <h6 class="carousel-caption" d-flex flex-column justify-content-center h-100 style="top: 0">View Meme Posts</h6>
+    </a>
   </div>
   <div class="col-md-2">
-  <a href="subforum.php?subtopic=sports&page=1">
-    <img src="https://media.wired.com/photos/5a3af5179b5b7950644810b9/master/w_2560%2Cc_limit/football-TA.jpg" class="img-thumbnail" alt="Gaming" style="height:300px;width:300px;object-fit: cover;margin-top:60px">
-    <h4 class="carousel-caption" d-flex flex-column justify-content-center h-100 style="top: 0;">View Sports Posts</h4>
-        </a>
+    <a href="subforum.php?subtopic=sports&page=1">
+      <img src="https://media.wired.com/photos/5a3af5179b5b7950644810b9/master/w_2560%2Cc_limit/football-TA.jpg" class="img-thumbnail" alt="Gaming" style="height:300px;width:300px;object-fit: cover;margin-top:60px">
+      <h6 class="carousel-caption" d-flex flex-column justify-content-center h-100 style="top: 0;">View Sports Posts</h6>
+    </a>
   </div>
   <div class="col-md-2" style="margin-bottom:50px">
     <a href="createtopic.php">
       <img src="https://cdn.pixabay.com/photo/2016/03/21/05/05/plus-1270001_960_720.png" alt="Add New Topic" style="height:275px;width:275px;object-fit: cover;margin-top:60px">
-      <h4 class="carousel-caption" d-flex flex-column justify-content-center h-100 style="top: 0">Add a New Topic!</h4>
+      <h6 class="carousel-caption" d-flex flex-column justify-content-center h-100 style="top: 0">Add a New Topic!</h6>
     </a>
   </div>
 </div>
