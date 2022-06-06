@@ -17,7 +17,6 @@ include_once('databaseConnection.php');
 ?>
   
 <body>
-<div class="container-fluid p-1 bg-dark">
     <div class="container-fluid">
         <div class="row p-3 mb-2 mt-2 bg-secondary text-white rounded">
             <h3 class="text-left">Support from us</h3>
