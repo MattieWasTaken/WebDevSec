@@ -66,7 +66,7 @@ include_once('databaseConnection.php');
                     </form>
                   </div>
                   <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2'>
-                    <form method='GET' name'$userID' $userID>
+                    <form method='GET' name'$userID' value='$userID'>
                       <p class='text-left text-wrap'>Date: $date </p>
                       <a class='text-white' href='user.php?user_id=$userID'> <small>By: $userID</small></a>
                     </form>
@@ -116,7 +116,7 @@ include_once('databaseConnection.php');
                     </form>
                   </div>
                   <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2'>
-                    <form method='GET' name'$userID1' $userID1>
+                    <form method='GET' name'$userID1' value='$userID1'>
                       <p class='text-left text-wrap'>Date: $date1 </p>
                       <a class='text-white' href='user.php?user_id=$userID1'> <small>By: $userID1</small></a>
                     </form>
@@ -166,7 +166,7 @@ include_once('databaseConnection.php');
                     </form>
                   </div>
                   <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2'>
-                    <form method='GET' name'$userID2' $userID2>
+                    <form method='GET' name'$userID2' value=$userID2>
                       <p class='text-left text-wrap'>Date: $date2 </p>
                       <a class='text-white' href='user.php?user_id=$userID2'> <small>By: $userID2</small></a>
                     </form>
