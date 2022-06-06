@@ -10,7 +10,7 @@ if(isset($_SESSION['lastLogin'])){
   }
 }
 
-
+error_reporting(0);
 ?>
 <header>
 <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
