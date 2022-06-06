@@ -241,30 +241,6 @@ include_once('databaseConnection.php');
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         -->
   </body>
-
-  <?php
-if(isset($_REQUEST['createAccount'])){
-  if($_GET['createAccount']== "success"){
-    echo "<script type='text/javascript'>
-    alert('Account Created, Please Sign In To Continue') </script>";
-  }
-}
-  if(isset($_REQUEST['Login'])){
-    if($_GET['Login']== "success"){
-      echo "<script type='text/javascript'>
-      alert('Login Successful') </script>";
-    }
-}
-if(isset($_REQUEST['logout'])){
-  if($_GET['logout']== "SessionTimedOut"){
-    echo "<script type='text/javascript'>
-    alert('Your Session Expired After 30 Minutes of Inactivity') </script>";
-  }
-}
-?>
-
-
-
   <?php include_once('footer.php')?>
 
 

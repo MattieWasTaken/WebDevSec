@@ -18,9 +18,11 @@
     <div class="container-fluid p-4 bg-dark text-white">
     <div class="container-fluid">
     <?php 
+    error_reporting(1);
     $author = ($_POST['author']);
     $topicID = $_GET['topic_id'];
-    $content = nl2br($_POST['post']);
+    $stmt = $conn->prepare("SELECT * FROM forum_posts WHERE topic_id= ?;");
+    $stmt -> bind_param('i', $topicID);
     $printingContent = preg_replace("/<br\W*?\/>/", "", $content);
     if($_SESSION['username']== $author){
         echo"

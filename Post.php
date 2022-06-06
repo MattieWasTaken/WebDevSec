@@ -16,9 +16,10 @@
     if(isset($_REQUEST['topic_id'])){
     $topic_id = $_REQUEST['topic_id'];
     for($i = 0; $i < strlen($topic_id); $i++){
-      if(ctype_digit($topic_id[$i])){
-        $allNumbers = true;
-      }else $allNumbers=false;
+      if(!ctype_digit($topic_id[$i])){
+        $allNumbers = false;
+        break;
+      }else $allNumbers=true;
     }
     if(!$allNumbers){
       header("Location: index.php?error=noTopicSupplied");
@@ -31,7 +32,6 @@ $result = mysqli_query($conn, $query);
 $resultCheck = mysqli_num_rows($result);
 if($resultCheck>0){
     while($row = mysqli_fetch_assoc($result)){
-        echo "<br>";
         $content = $row['content'];
         $content = nl2br($content);
         $title = $row['title'];
@@ -65,7 +65,7 @@ if($resultCheck>0){
       echo "
       <form method='POST' action='editpost.php?topic_id=$topic_id'>
       <input type='hidden' name='author' value='$user_id'>
-      <input type='hidden' name='post' value='$postContent'>
+
       <button type='submit' class='btn btn-info'>Edit Your Post</button>
       </form>";
     }
