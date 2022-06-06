@@ -361,6 +361,7 @@ if(isset($_REQUEST['createAccount'])){
     if($_GET['Login']== "success"){
       echo "<script type='text/javascript'>
       alert('Login Successful') </script>";
+      
     }
 }
 if(isset($_REQUEST['logout'])){
