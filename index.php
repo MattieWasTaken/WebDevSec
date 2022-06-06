@@ -39,7 +39,7 @@ include_once('databaseConnection.php');
         </div>
 
       <?php 
-          $query = "SELECT * FROM forum_posts WHERE subtopic = 'Potato' ORDER BY `topic_id` DESC LIMIT 4;";
+          $query = "SELECT * FROM forum_posts WHERE subtopic = 'Potato' ORDER BY `topic_id` DESC LIMIT 3;";
           $result = mysqli_query($conn, $query);
           $resultCheck = mysqli_num_rows($result);
           $counter=0;
@@ -90,7 +90,7 @@ include_once('databaseConnection.php');
         </div>
 
         <?php 
-          $query1 = "SELECT * FROM forum_posts WHERE subtopic = 'Gaming' ORDER BY `topic_id` DESC LIMIT 4;";
+          $query1 = "SELECT * FROM forum_posts WHERE subtopic = 'Gaming' ORDER BY `topic_id` DESC LIMIT 3;";
           $result1 = mysqli_query($conn, $query1);
           $resultCheck1 = mysqli_num_rows($result1);
           $counter1=0;
@@ -141,7 +141,7 @@ include_once('databaseConnection.php');
         </div>
 
         <?php 
-          $query2 = "SELECT * FROM forum_posts WHERE subtopic = 'Lifestyle' ORDER BY `topic_id` DESC LIMIT 4;";
+          $query2 = "SELECT * FROM forum_posts WHERE subtopic = 'Lifestyle' ORDER BY `topic_id` DESC LIMIT 3;";
           $result2 = mysqli_query($conn, $query2);
           $resultCheck2 = mysqli_num_rows($result2);
           $counter2=0;
@@ -192,7 +192,7 @@ include_once('databaseConnection.php');
         </div>
 
         <?php 
-          $query3 = "SELECT * FROM forum_posts WHERE subtopic = 'Meme' ORDER BY `topic_id` DESC LIMIT 4;";
+          $query3 = "SELECT * FROM forum_posts WHERE subtopic = 'Meme' ORDER BY `topic_id` DESC LIMIT 3;";
           $result3 = mysqli_query($conn, $query3);
           $resultCheck2 = mysqli_num_rows($result3);
           $counter3=0;
@@ -243,7 +243,7 @@ include_once('databaseConnection.php');
         </div>
 
         <?php 
-          $query4 = "SELECT * FROM forum_posts WHERE subtopic = 'Sports' ORDER BY `topic_id` DESC LIMIT 4;";
+          $query4 = "SELECT * FROM forum_posts WHERE subtopic = 'Sports' ORDER BY `topic_id` DESC LIMIT 3;";
           $result4 = mysqli_query($conn, $query4);
           $resultCheck4 = mysqli_num_rows($result4);
           $counter4=0;
