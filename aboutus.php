@@ -55,7 +55,6 @@ include_once('databaseConnection.php');
         </div>
     </div>
 
-
     <div class='container-fluid'>
         <div class='row'>
 
@@ -65,12 +64,12 @@ include_once('databaseConnection.php');
             </div>
 
             <div class='col-lg p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
-                <a class='text-white' ><h5 class='text-left'>Danial Irwin</h3></a>
+                <a class='text-white' ><h5 class='text-left'>Daniel Irwin</h3></a>
                 <small class='overflow-hidden'>Details</small>
                 <p class="text-center">ADFA Charlie SQN</p>
-                <p class="text-center">DIV</p>
-                <p class="text-center">zID</p>
-                <p class="text-center">Favorite quote: </p>
+                <p class="text-center">9 DIV</p>
+                <p class="text-center">zID 5307936</p>
+                <p class="text-center">Favorite quote: "All warfare is based" ~ Sun Tzu</p>
             </div>
 
             <div class='col-sm-4 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
