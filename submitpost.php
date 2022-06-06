@@ -1,12 +1,13 @@
 
 <?php
 session_start();
+date_default_timezone_set('Australia/Sydney');
 include_once 'databaseConnection.php';
 $user_id = $_SESSION['username'];
 $title = $_POST['title'];
 $content = $_POST['content'];
 $subtopic = $_POST['subtopic'];
-$date = date("d-m-y");
+$date = date('d-m-Y H:i:s');
 
 
 echo "$date <br> $subtopic <br> $content <br> $title <br> $user_id";
