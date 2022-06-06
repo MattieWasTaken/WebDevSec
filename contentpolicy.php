@@ -20,11 +20,12 @@ include_once('databaseConnection.php');
     <div class="container-fluid">
         <div class="row p-3 mb-2 mt-2 bg-secondary text-white rounded">
             <h3 class="text-left">Content Policy</h3>
-        </div>
+    </div>
+       
 
         <div class='col-12'>
-            <div class='col-1 p- mb-2 bg-secondary text-white rounded ml-2 mr-1'>                    
-                <h5>Rules</h5>
+            <div class='row mb-2 bg-secondary text-white rounded mt-2'>                   
+                <h2 class='ml-2'>Rules</h2>
             </div>
 
             <div class='row p-3 mt-2 bg-secondary text-white rounded border-bottom'>
@@ -54,7 +55,7 @@ include_once('databaseConnection.php');
                     </div>
             </div>		
             
-            <div class='row p-3 mb-2 bg-secondary text-white rounded-bottom  border-bottom '>	
+            <div class='row p-3 mb-2 bg-secondary text-white rounded-bottom'>	
                     <div class='col-1 p- mb-2 bg-secondary text-white rounded ml-2 mr-1'>                   
                         <h5>Rule 4</h5>
                     </div>    
@@ -65,9 +66,10 @@ include_once('databaseConnection.php');
         </div>
 
         <div class='col-12'>
-            <div class='col-2 p- mb-2 bg-secondary text-white rounded ml-2 mr-1'>                    
-                <h5>Enforcement</h5>
+            <div class='row mb-2 bg-secondary text-white rounded mt-2'>                   
+                <h2 class='ml-2'>Enforcement</h2>
             </div>
+
             
             <div class='row p-3 mt-2 bg-secondary text-white rounded-top border-bottom'>
                     <div class='col-2 p- mb-2 bg-secondary text-white rounded ml-2 mr-1'>                    
@@ -101,7 +103,7 @@ include_once('databaseConnection.php');
                     </div>
             </div>		
             
-            <div class='row p-3 bg-secondary text-white rounded border-bottom'>	
+            <div class='row p-3 bg-secondary text-white rounded'>	
                     <div class='col-2 p- mb-2 bg-secondary text-white rounded ml-2 mr-1'>                   
                         <h5>Enforcement 4</h5>
                     </div>    
