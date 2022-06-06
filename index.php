@@ -68,7 +68,7 @@ include_once('databaseConnection.php');
                       <small class='overflow-hidden'>CONTENT PREVIEW</small>
                     </form>
                   </div>
-                  <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2'>
+                  <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2' style = 'height: 135px;'>
                     <form method='GET' name='$userID' value='$userID'>
                       <p class='text-left text-wrap'>Date: $date </p>
                       <a class='text-white' href='user.php?user_id=$userID'> <small>By: $userID</small></a>
@@ -119,7 +119,7 @@ include_once('databaseConnection.php');
                       <small class='overflow-hidden'>CONTENT PREVIEW</small>
                     </form>
                   </div>
-                  <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2'>
+                  <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2' style = 'height: 135px;'>
                     <form method='GET' name'$userID1' value='$userID1'>
                       <p class='text-left text-wrap'>Date: $date1 </p>
                       <a class='text-white' href='user.php?user_id=$userID1'> <small>By: $userID1</small></a>
@@ -170,7 +170,7 @@ include_once('databaseConnection.php');
                       <small class='overflow-hidden'>CONTENT PREVIEW</small>
                     </form>
                   </div>
-                  <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2'>
+                  <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2' style = 'height: 135px;'>
                     <form method='GET' name'$userID2' value=$userID2>
                       <p class='text-left text-wrap'>Date: $date2 </p>
                       <a class='text-white' href='user.php?user_id=$userID2'> <small>By: $userID2</small></a>
@@ -221,7 +221,7 @@ include_once('databaseConnection.php');
                       <small class='overflow-hidden'>CONTENT PREVIEW</small>
                     </form>
                   </div>
-                  <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2'>
+                  <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2' style = 'height: 135px;'>
                     <form method='GET' name'$userID3' $userID3>
                       <p class='text-left text-wrap'>Date: $date3 </p>
                       <a class='text-white' href='userprofile.php?user_id=$userID3'> <small>By: $userID3</small></a>
@@ -272,7 +272,7 @@ include_once('databaseConnection.php');
                       <small class='overflow-hidden'>CONTENT PREVIEW</small>
                     </form>
                   </div>
-                  <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2'>
+                  <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2' style = 'height: 135px;'>
                     <form method='GET' name'$userID4' $userID4>
                       <p class='text-left text-wrap'>Date: $date4 </p>
                       <a class='text-white' href='userprofile.php?user_id=$userID4'> <small>By: $userID4</small></a>
