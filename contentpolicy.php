@@ -27,16 +27,17 @@ include_once('databaseConnection.php');
                 <h5>Rules</h5>
             </div>
 
-            <div class='row'>
+            <div class='row p-3 mb-2 mt-2 bg-secondary text-white rounded'>
                     <div class='col-1 p- mb-2 bg-secondary text-white rounded ml-2 mr-1'>                    
                         <h5>Rule 1</h5>
                     </div>
                     <div class='col-lg p- mb-2 bg-secondary text-white rounded ml-2 mr-1'> 
-                        <p>OnlineTopia is a place where we are free to create any content that entertains people and help them learn something new. However, unapropriate content will not be tolerated such racist, sexual harass, attacted message etc.</p>
+                        <p>OnlineTopia is a place where we are free to create any content that entertains people and help them learn something new.</p> 
+                        <p>However, unapropriate content will not be tolerated such racist, sexual harass, attacted message etc.</p>
                     </div>
             </div>
                         
-            <div class='row'>	
+            <div class='row p-3 mb-2 mt-2 bg-secondary text-white rounded'>	
                     <div class='col-1 p- mb-2 bg-secondary text-white rounded ml-2 mr-1'>                    
                         <h5>Rule 2</h5>
                     </div>
@@ -45,7 +46,7 @@ include_once('databaseConnection.php');
                     </div>
             </div>
                         
-            <div class='row'>	
+            <div class='row p-3 mb-2 mt-2 bg-secondary text-white rounded'>	
                     <div class='col-1 p- mb-2 bg-secondary text-white rounded ml-2 mr-1'>                   
                         <h5>Rule 3</h5>
                     </div>
@@ -54,7 +55,7 @@ include_once('databaseConnection.php');
                     </div>
             </div>		
             
-            <div class='row'>	
+            <div class='row p-3 mb-2 mt-2 bg-secondary text-white rounded'>	
                     <div class='col-1 p- mb-2 bg-secondary text-white rounded ml-2 mr-1'>                   
                         <h5>Rule 4</h5>
                     </div>    
@@ -69,7 +70,7 @@ include_once('databaseConnection.php');
                 <h5>Enforcement</h5>
             </div>
             
-            <div class='row'>
+            <div class='row p-3 mb-2 mt-2 bg-secondary text-white rounded'>
                     <div class='col-2 p- mb-2 bg-secondary text-white rounded ml-2 mr-1'>                    
                         <h5>Enforcement 1</h5>
                     </div>
@@ -79,7 +80,7 @@ include_once('databaseConnection.php');
                     </div>
             </div>
                         
-            <div class='row'>	
+            <div class='row p-3 mb-2 mt-2 bg-secondary text-white rounded'>	
                     <div class='col-2 p- mb-2 bg-secondary text-white rounded ml-2 mr-1'>                    
                         <h5>Enforcement 2</h5>
                     </div>
@@ -89,7 +90,7 @@ include_once('databaseConnection.php');
                     </div>
             </div>
                         
-            <div class='row'>	
+            <div class='row p-3 mb-2 mt-2 bg-secondary text-white rounded'>	
                     <div class='col-2 p- mb-2 bg-secondary text-white rounded ml-2 mr-1'>                   
                         <h5>Enforcement 3</h5>
                     </div>
@@ -101,7 +102,7 @@ include_once('databaseConnection.php');
                     </div>
             </div>		
             
-            <div class='row'>	
+            <div class='row p-3 mb-2 mt-2 bg-secondary text-white rounded'>	
                     <div class='col-2 p- mb-2 bg-secondary text-white rounded ml-2 mr-1'>                   
                         <h5>Enforcement 4</h5>
                     </div>    
