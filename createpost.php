@@ -37,7 +37,7 @@ include_once('databaseConnection.php');
     </div>
     
 
-    <div class="container-fluid">
+    <div class="container-fluid ml-2">
     <div class="row p-3 mt-2 bg-secondary text-white rounded-top">
     <div class="col">
     <form class="bg-secondary" action="submitpost.php" method="POST">
