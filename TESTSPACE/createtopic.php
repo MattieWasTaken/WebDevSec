@@ -23,14 +23,17 @@ include_once('databaseConnection.php');
     </div>
     <div class="row p-3 mb-2 bg-secondary text-white rounded-bottom">
     <?php 
-        if(isset($_REQUEST['topic'])){
+      if(isset($_REQUEST['topic'])){
         if($_GET['topic']=='failedtooLong'){
             echo "<h3>Error! Title Must Not Exceed 100 Characters</h3>";
         }else if($_GET['topic']=='failed'){
             echo "<h3>Error! You must complete all the fields</h3>";
+        }else if($_GET['topic']=='failedNoLogin'){
+          echo "<h3>Error! You must be logged in to create a topic</h3>";
         }
-    } 
-        ?>
+      } 
+        
+    ?>
     </div>
     </div>
 
