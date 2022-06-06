@@ -43,7 +43,7 @@ $start = ($page-1) * $limit;
 <body>
 <div class="container-fluid">
     <div class="row p-3 mb-2 mt-2 bg-secondary text-white rounded">
-        <h3 class="text-left"><a class='text-white'href="subforum.php?page=1">Available Subforums</a></h3>
+        <h3 class="text-left"><a class='text-white'href="subforum.php?page=1"><?php echo $subtopic ?> Subforum</a></h3>
     </div>
 </div>
 
