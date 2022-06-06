@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+  <div class="bg-image" style="background-image: url('https://ae01.alicdn.com/kf/HTB1CKe5QNTpK1RjSZFKq6y2wXXaC/LIFE-MAGIC-BOX-Black-Brick-Wall-for-Photo-Background-for-Photo-Sessions-for-Photography-Birthday-Backdrops.jpg_Q90.jpg_.webp'); height: 100vh;">
   <head>
     <title>IMD Forum</title>
     <!-- Required meta tags -->
@@ -16,21 +17,23 @@ include_once('databaseConnection.php');
 ?>
   
 <body>
-<div class="container-fluid p-1 bg-dark">
 <div class="container-fluid">
     <div class="row p-3 mt-2 bg-secondary text-white rounded-top">
         <h3 class="text-left">Add Your Topic!</h3>
     </div>
     <div class="row p-3 mb-2 bg-secondary text-white rounded-bottom">
     <?php 
-        if(isset($_REQUEST['topic'])){
+      if(isset($_REQUEST['topic'])){
         if($_GET['topic']=='failedtooLong'){
             echo "<h3>Error! Title Must Not Exceed 100 Characters</h3>";
         }else if($_GET['topic']=='failed'){
             echo "<h3>Error! You must complete all the fields</h3>";
+        }else if($_GET['topic']=='failedNoLogin'){
+          echo "<h3>Error! You must be logged in to create a topic</h3>";
         }
-    } 
-        ?>
+      } 
+        
+    ?>
     </div>
     </div>
 

@@ -3,13 +3,13 @@
   <div class="bg-image" style="background-image: url('https://ae01.alicdn.com/kf/HTB1CKe5QNTpK1RjSZFKq6y2wXXaC/LIFE-MAGIC-BOX-Black-Brick-Wall-for-Photo-Background-for-Photo-Sessions-for-Photography-Birthday-Backdrops.jpg_Q90.jpg_.webp'); height: 100vh;">
   <head>
     <title>IMD Forum</title>
+    
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  
     <link rel="stylesheet" href="style.css">
   </head>
 
@@ -26,15 +26,18 @@ include_once('databaseConnection.php');
       <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
       <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
       <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
     </ol>
-    <div class="carousel-inner">
 
+    <div class="carousel-inner">
       <div class="carousel-item active">
         <div class="container-fluid">
           <div class="row p-3 mb-2 mt-2 bg-secondary text-white rounded">
             <h3 class="text-left">Recent Potato Posts:</h3>
           </div>
         </div>
+
       <?php 
           $query = "SELECT * FROM forum_posts WHERE subtopic = 'Potato' ORDER BY `topic_id` DESC LIMIT 4;";
           $result = mysqli_query($conn, $query);
@@ -77,14 +80,15 @@ include_once('databaseConnection.php');
             $postCounter++;
           }
         ?>
-
       </div>
+
       <div class="carousel-item">
         <div class="container-fluid">
-          <div class="row p-3 mb-2 mt-2 ml-1 mr-1 bg-secondary text-white rounded">
+          <div class="row p-3 mb-2 mt-2 bg-secondary text-white rounded">
             <h3 class="text-left">Recent Gaming Posts:</h3>
           </div>
         </div>
+
         <?php 
           $query1 = "SELECT * FROM forum_posts WHERE subtopic = 'Gaming' ORDER BY `topic_id` DESC LIMIT 4;";
           $result1 = mysqli_query($conn, $query1);
@@ -127,14 +131,15 @@ include_once('databaseConnection.php');
             $postCounter1++;
           }
         ?>
-
       </div>
+
       <div class="carousel-item">
         <div class="container-fluid">
           <div class="row p-3 mb-2 mt-2 bg-secondary text-white rounded">
             <h3 class="text-left">Recent Lifestyle Posts:</h3>
           </div>
         </div>
+
         <?php 
           $query2 = "SELECT * FROM forum_posts WHERE subtopic = 'Lifestyle' ORDER BY `topic_id` DESC LIMIT 4;";
           $result2 = mysqli_query($conn, $query2);
@@ -177,7 +182,108 @@ include_once('databaseConnection.php');
             $postCounter2++;
           }
         ?>
+      </div>
 
+      <div class="carousel-item">
+        <div class="container-fluid">
+          <div class="row p-3 mb-2 mt-2 bg-secondary text-white rounded">
+            <h3 class="text-left">Recent Meme Posts:</h3>
+          </div>
+        </div>
+
+        <?php 
+          $query2 = "SELECT * FROM forum_posts WHERE subtopic = 'Lifestyle' ORDER BY `topic_id` DESC LIMIT 4;";
+          $result2 = mysqli_query($conn, $query2);
+          $resultCheck2 = mysqli_num_rows($result2);
+          $counter2=0;
+          $postCounter2=1;
+          while($rows2[]=mysqli_fetch_array($result2)){
+            $title2= $rows2[$counter2]['title'];
+            $topicID2 = $rows2[$counter2]['topic_id'];
+            $userID2 = $rows2[$counter2]['user_id'];
+            $content2 = nl2br($rows2[$counter2]['content']);
+            $subtopic2 = $rows2[$counter2]['subtopic'];
+            $date2 = $rows2[$counter2]['date_submitted'];
+            echo "   
+              <div class='container-fluid'>
+                <div class='row'>
+                  <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-2 mr-1'>
+                    <form method='GET'>
+                      <input type='hidden' name='$subtopic2' $subtopic2>
+                      <span>$postCounter2.</span><br>
+                      <span>Topic:  <a class='text-light' href='subforum.php?subtopic=$subtopic2&page=1'>$subtopic2</a></span>
+                    </form>
+                  </div>
+                  <div class='col-lg p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
+                    <form method='GET'>
+                      <input type='hidden' name='$topicID2' $topicID2> 
+                      <a class='text-white' href='Post.php?topic_id=$topicID2'><h5 class='text-left'>$title2</h3></a>
+                      <small class='overflow-hidden'>CONTENT PREVIEW</small>
+                    </form>
+                  </div>
+                  <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2'>
+                    <form method='GET' name'$userID2' $userID2>
+                      <p class='text-left text-wrap'>Date: $date2 </p>
+                      <a class='text-white' href='userprofile.php?user_id=$userID2'> <small>By: $userID2</small></a>
+                    </form>
+                  </div>      
+                </div>
+              </div>";
+            $counter2++;
+            $postCounter2++;
+          }
+        ?>
+      </div>
+
+      <div class="carousel-item">
+        <div class="container-fluid">
+          <div class="row p-3 mb-2 mt-2 bg-secondary text-white rounded">
+            <h3 class="text-left">Recent Sports Posts:</h3>
+          </div>
+        </div>
+
+        <?php 
+          $query2 = "SELECT * FROM forum_posts WHERE subtopic = 'Lifestyle' ORDER BY `topic_id` DESC LIMIT 4;";
+          $result2 = mysqli_query($conn, $query2);
+          $resultCheck2 = mysqli_num_rows($result2);
+          $counter2=0;
+          $postCounter2=1;
+          while($rows2[]=mysqli_fetch_array($result2)){
+            $title2= $rows2[$counter2]['title'];
+            $topicID2 = $rows2[$counter2]['topic_id'];
+            $userID2 = $rows2[$counter2]['user_id'];
+            $content2 = nl2br($rows2[$counter2]['content']);
+            $subtopic2 = $rows2[$counter2]['subtopic'];
+            $date2 = $rows2[$counter2]['date_submitted'];
+            echo "   
+              <div class='container-fluid'>
+                <div class='row'>
+                  <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-2 mr-1'>
+                    <form method='GET'>
+                      <input type='hidden' name='$subtopic2' $subtopic2>
+                      <span>$postCounter2.</span><br>
+                      <span>Topic:  <a class='text-light' href='subforum.php?subtopic=$subtopic2&page=1'>$subtopic2</a></span>
+                    </form>
+                  </div>
+                  <div class='col-lg p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
+                    <form method='GET'>
+                      <input type='hidden' name='$topicID2' $topicID2> 
+                      <a class='text-white' href='Post.php?topic_id=$topicID2'><h5 class='text-left'>$title2</h3></a>
+                      <small class='overflow-hidden'>CONTENT PREVIEW</small>
+                    </form>
+                  </div>
+                  <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2'>
+                    <form method='GET' name'$userID2' $userID2>
+                      <p class='text-left text-wrap'>Date: $date2 </p>
+                      <a class='text-white' href='userprofile.php?user_id=$userID2'> <small>By: $userID2</small></a>
+                    </form>
+                  </div>      
+                </div>
+              </div>";
+            $counter2++;
+            $postCounter2++;
+          }
+        ?>
       </div>
     </div>
 
@@ -194,50 +300,41 @@ include_once('databaseConnection.php');
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
-
-
-    <div class="row ml-1 mr-1" >
-    <div class="col-md-2">
-    <a href="subforum.php?subtopic=potato&page=1">
-    <h4 class="carousel-caption" d-flex flex-column justify-content-center h-100 style="top: 0">View Potato Posts</h4>
-          <a>
-    </div>
-    </div>
     
 <div class="row ml-1 mr-1" style="margin-top:20px">
   <div class="col-md-2">
     <a href="subforum.php?subtopic=potato&page=1">
-      <img src="https://images.theconversation.com/files/401955/original/file-20210520-23-83r6ds.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=900.0&fit=crop" class="img-thumbnail" alt="Potato" style="height:300px;width:300px;object-fit: cover">
       <h4 class="carousel-caption" d-flex flex-column justify-content-center h-100 style="top: 0">View Potato Posts</h4>
+      <img src="https://images.theconversation.com/files/401955/original/file-20210520-23-83r6ds.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=900.0&fit=crop" class="img-thumbnail" alt="Potato" style="height:300px;width:300px;object-fit: cover;margin-top:60px">
     </a>
   </div>
   <div class="col-md-2">
     <a href="subforum.php?subtopic=gaming&page=1">
-      <img src="https://media.istockphoto.com/photos/gamer-work-space-concept-top-view-a-gaming-gear-mouse-keyboard-in-picture-id1170073824?k=20&m=1170073824&s=612x612&w=0&h=lQYUGw9IIqI9bsTrIrS8xCyId2PmmNYPSwB7UNEzssI=" class="img-thumbnail" alt="Gaming" style="height:300px;width:300px;object-fit: cover">
+      <img src="https://media.istockphoto.com/photos/gamer-work-space-concept-top-view-a-gaming-gear-mouse-keyboard-in-picture-id1170073824?k=20&m=1170073824&s=612x612&w=0&h=lQYUGw9IIqI9bsTrIrS8xCyId2PmmNYPSwB7UNEzssI=" class="img-thumbnail" alt="Gaming" style="height:300px;width:300px;object-fit: cover;margin-top:60px">
       <h4 class="carousel-caption" d-flex flex-column justify-content-center h-100 style="top: 0">View Gaming Posts</h4>
     </a>
   </div>
   <div class="col-md-2">
     <a href="subforum.php?subtopic=lifestyle&page=1">
-      <img src="https://headerpop.com/wp-content/uploads/2019/08/lifestyle-scaled.jpg" class="img-thumbnail" alt="Lifestyle" style="height:300px;width:300px;object-fit: cover">
+      <img src="https://headerpop.com/wp-content/uploads/2019/08/lifestyle-scaled.jpg" class="img-thumbnail" alt="Lifestyle" style="height:300px;width:300px;object-fit: cover;margin-top:60px">
       <h4 class="carousel-caption" d-flex flex-column justify-content-center h-100 style="top: 0">View Lifestyle Posts</h4>
     </a>
   </div>
   <div class="col-md-2">
     <a href="subforum.php?subtopic=meme&page=1">
-    <img src="https://i.imgflip.com/6ifnib.jpg" class="img-thumbnail" alt="Memes" style="height:300px;width:300px">
+    <img src="https://i.imgflip.com/6ifnib.jpg" class="img-thumbnail" alt="Memes" style="height:300px;width:300px;margin-top:60px">
     <h4 class="carousel-caption" d-flex flex-column justify-content-center h-100 style="top: 0">View Meme Posts</h4>
         </a>
   </div>
   <div class="col-md-2">
   <a href="subforum.php?subtopic=sports&page=1">
-    <img src="https://media.wired.com/photos/5a3af5179b5b7950644810b9/master/w_2560%2Cc_limit/football-TA.jpg" class="img-thumbnail" alt="Gaming" style="height:300px;width:300px;object-fit: cover">
+    <img src="https://media.wired.com/photos/5a3af5179b5b7950644810b9/master/w_2560%2Cc_limit/football-TA.jpg" class="img-thumbnail" alt="Gaming" style="height:300px;width:300px;object-fit: cover;margin-top:60px">
     <h4 class="carousel-caption" d-flex flex-column justify-content-center h-100 style="top: 0;">View Sports Posts</h4>
         </a>
   </div>
   <div class="col-md-2" style="margin-bottom:50px">
     <a href="createtopic.php">
-      <img src="https://cdn.pixabay.com/photo/2016/03/21/05/05/plus-1270001_960_720.png" alt="Add New Topic" style="height:275px;width:275px;object-fit: cover">
+      <img src="https://cdn.pixabay.com/photo/2016/03/21/05/05/plus-1270001_960_720.png" alt="Add New Topic" style="height:275px;width:275px;object-fit: cover;margin-top:60px">
       <h4 class="carousel-caption" d-flex flex-column justify-content-center h-100 style="top: 0">Add a New Topic!</h4>
     </a>
   </div>

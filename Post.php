@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+  <div class="bg-image" style="background-image: url('https://ae01.alicdn.com/kf/HTB1CKe5QNTpK1RjSZFKq6y2wXXaC/LIFE-MAGIC-BOX-Black-Brick-Wall-for-Photo-Background-for-Photo-Sessions-for-Photography-Birthday-Backdrops.jpg_Q90.jpg_.webp'); height: 100vh;">
   <head>
     <title>IMD Forum</title>
     <!-- Required meta tags -->
@@ -43,7 +44,6 @@ if($resultCheck>0){
 ?>
 
 <body>
-<div class="container-fluid p-4 bg-dark text-white">
 <div class="container-fluid">
     <div class="row p-1 mt-2 bg-secondary text-white rounded-top">
         <h3 class="text-left"><?php echo $title?></h3>
