@@ -29,7 +29,7 @@ error_reporting(0);
         <a class="nav-link" href="createpost.php">Add A Post</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="subforumselection.php">Subforums</a>
+        <a class="nav-link" href="subforumselection.php">View all Topics</a>
       </li>
       <?php 
       if(isset($_SESSION['username'])){
