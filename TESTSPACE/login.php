@@ -1,4 +1,3 @@
-<?php include_once 'databaseConnection.php'?>
 
 <!DOCTYPE html>
 <head>
@@ -14,6 +13,15 @@
 <?php 
 include_once('header.php');
 include_once('databaseConnection.php');
+
+if (isset($_SESSION["loginLocked"])){
+    $difference = time() - $_SESSION['loginLocked'];
+    if($difference > 60){
+        unset($_SESSION['loginFailed']);
+        unset($_SESSION['loginLocked']);
+    }
+}
+
 ?>
 
 
@@ -31,8 +39,10 @@ include_once('databaseConnection.php');
        <?php if(isset($_REQUEST['Loginfailed'])){
     if($_GET['Loginfailed']=="invalidPass"){
         echo "<div class='row bg-secondary rounded'> Error: Invalid Username/Password Combination</div>";
+        $_SESSION["loginFailed"] +=1;
     }else if($_GET['Loginfailed']=="wrongUID"){
         echo "<div class='row bg-secondary rounded'> Error: Invalid Username/Password Combination</div>";
+        $_SESSION["loginFailed"] +=1;
     }
 }       ?>
         <div class="row bg-secondary rounded">
@@ -48,7 +58,16 @@ include_once('databaseConnection.php');
         </div>  
         </div>
         <div class="row bg-secondary pb-3 rounded">
-        <input type="submit" name="login" value="Login!">
+            <?php 
+                if($_SESSION['loginFailed']>5){
+                    $_SESSION['loginLocked']= time();
+                    echo "Exceeded Max Login Attempts. Please Wait 1 Minute Before Retrying";
+
+                } else{
+                    echo "<input type='submit' name='login' value='Login!'>";
+                }
+            ?>
+        
 </div>
    </form> 
 
@@ -60,7 +79,9 @@ include_once('databaseConnection.php');
  if(isset($_POST['login'])){
             $username = $_POST['username'];
             $password = $_POST['password'];
-
+            $_SESSION['lastLogin']= time();
+            unset($_SESSION['loginFailed']);
+            unset($_SESSION['loginLocked']);
             if($username=="" || $password == ""){
                 echo "<br> You must type a username and password";
             }else{

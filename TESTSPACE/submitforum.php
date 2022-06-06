@@ -8,16 +8,18 @@ $topicName = $_POST['content'];
 
 echo "$topicArea <br> $topicName";
 
-$stmt = $conn->prepare("INSERT INTO topics VALUES (?,?)");
-$stmt ->bind_param("ss", $topicArea, $topicName);
-
+$stmt = $conn->prepare("INSERT INTO topic VALUES (?,?,?)");
+$stmt ->bind_param("sss",$topicID, $topicArea, $topicName);
+/*
 if($topicArea=="" || $topicName==""){
-    header("Location: createtopic.php?topic=failed");
+    header("Location: createtopic.php?post=failed");
 }else if(strlen($topicArea)>100){
-    header("Location: createtopic.php?topic=failedtooLong");
+    header("Location: createtopic.php?post=failedtooLong");
+}else if($user_id==""){
+    header("Location: createtopic.php?post=failedNoLogin");
 }else{
     $stmt->execute();
     header("Location: index.php?post=success");
 }
-
+*/
 ?>
