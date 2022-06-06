@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-<div class="bg-image" style="background-image: url('https://ae01.alicdn.com/kf/HTB1CKe5QNTpK1RjSZFKq6y2wXXaC/LIFE-MAGIC-BOX-Black-Brick-Wall-for-Photo-Background-for-Photo-Sessions-for-Photography-Birthday-Backdrops.jpg_Q90.jpg_.webp'); height: 110vh;">
+<div class="bg-image" style="background-image: url('https://ae01.alicdn.com/kf/HTB1CKe5QNTpK1RjSZFKq6y2wXXaC/LIFE-MAGIC-BOX-Black-Brick-Wall-for-Photo-Background-for-Photo-Sessions-for-Photography-Birthday-Backdrops.jpg_Q90.jpg_.webp'); height: 100%;">
   <head>
     <title>IMD Forum</title>
     <!-- Required meta tags -->
@@ -33,7 +33,7 @@ $start = ($page-1) * $limit;
 <body>
 <div class="container-fluid">
     <div class="row p-3 mb-2 mt-2 bg-secondary text-white rounded">
-        <h3 class="text-left"><a class='text-white'href="subforumselection.php?page=1">Available Subforums</a></h3>
+        <h3 class="text-left"><a class='text-white'>Available Subforums</a></h3>
     </div>
 </div>
 <?php 

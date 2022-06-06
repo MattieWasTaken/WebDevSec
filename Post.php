@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-  <div class="bg-image" style="background-image: url('https://ae01.alicdn.com/kf/HTB1CKe5QNTpK1RjSZFKq6y2wXXaC/LIFE-MAGIC-BOX-Black-Brick-Wall-for-Photo-Background-for-Photo-Sessions-for-Photography-Birthday-Backdrops.jpg_Q90.jpg_.webp'); height: 100vh;">
+  <div class="bg-image" style="background-image: url('https://ae01.alicdn.com/kf/HTB1CKe5QNTpK1RjSZFKq6y2wXXaC/LIFE-MAGIC-BOX-Black-Brick-Wall-for-Photo-Background-for-Photo-Sessions-for-Photography-Birthday-Backdrops.jpg_Q90.jpg_.webp'); height: 110%;">
   <head>
     <title>IMD Forum</title>
     <!-- Required meta tags -->
@@ -51,14 +51,14 @@ if($resultCheck>0){
         <div class="row bg-secondary text-white p-1">
         <span><a class="text-white" href="user.php?user_id=<?php echo $user_id?>&display=posts">By: <?php echo $user_id?></a></span>
         </div>
-        <div class="row bg-secondary p-1 mb-3 rounded-bottom text-white">
+        <div class="row bg-secondary p-1 mb-2 rounded-bottom text-white">
         <span class='text-left'>Posted On: <?php echo $date ?></span>
         </div>
 </div>
     <?php $postContent = addslashes($content);?>
     <div class='container-fluid'>
     <div class='row'>
-    <div class='col-lg p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
+    <div class='col-lg p-3 mb-2 bg-secondary text-white rounded ml-2 mr-1'>
     <p class="text-break"><?php echo $content?></p>
     <?php if($_SESSION['username']==$user_id)
     {
@@ -76,7 +76,7 @@ if($resultCheck>0){
     </div>    
     </div>
     <?php if($_SESSION['username']!=""):?>
-    <div class='row p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
+    <div class='row p-3 mb-2 bg-secondary text-white rounded ml-2 mr-1'>
     <form method='post' action='submitcomment.php'>
       <input type='hidden' name='username' value='<?php echo $_SESSION['username']?>'>
       <input type='hidden' name='date' value='<?php echo date('d-m-Y H:i:s')?>'>
@@ -98,7 +98,7 @@ if($resultCheck>0){
     </form>
     </div>
     <?php endif;?>
-    <div class='row p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
+    <div class='row p-3 bg-secondary text-white rounded ml-2 mr-1'>
     <h4 class="text-center">Comments</h4>  
     </div>
     <?php 
