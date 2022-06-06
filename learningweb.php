@@ -35,11 +35,10 @@ include_once('databaseConnection.php');
 
       <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
         <div class="card-body">
-          <h5>We would like you to begin with. . .</h5>                  
-          <p>-Learning at basics by <a class="text-white" href="https://www.w3schools.com/html/">HTML by W3school</a></p>
-          <p>-Learning about how to use external resource with your web designing by <a class="text-white" href="https://getbootstrap.com/">Bootstrap</a></p>
-          <p>-Learning how to use java script with HTML to make your HTML look fancier <a class="text-white" href="https://www.w3schools.com/js/default.asp">JavaScript</a></p>
-          <p> <a class="text-white" href=""></a></p>
+          <h5 class="text-white">We would like you to begin with. . .</h5>                  
+          <p class="text-white">-Learning at basics by <a class="text-body" href="https://www.w3schools.com/html/">HTML by W3school</a></p>
+          <p class="text-white">-Learning about how to use external resource with your web designing by <a class="text-body" href="https://getbootstrap.com/">Bootstrap</a></p>
+          <p class="text-white">-Learning how to use java script with HTML to make your HTML look fancier <a class="text-body" href="https://www.w3schools.com/js/default.asp">JavaScript</a></p>
         </div>
       </div>
     </div>
@@ -54,14 +53,14 @@ include_once('databaseConnection.php');
       </div>
       <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
         <div class="card-body">
-          <h5>Here is some video about HTML designing. . .</h5>                  
-          <p>-Short Video about HTML </p>
+          <h5 class="text-white">Here is some video about HTML designing. . .</h5>                  
+          <p class="text-white">- Short Video about HTML </p>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/u0OeZfIfBRI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <p>-Short video on how to make HTML</p>
+          <p class="text-white">- Short video on how to make HTML</p>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/MDLn5-zSQQI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <p>-Learning how to make an animation by using HTML</p>
+          <p class="text-white">- Learning how to make an animation by using HTML</p>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/fxJdmBM0SYs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <p>-quick video on how bootstrap works</p>
+          <p class="text-white">- quick video on how bootstrap works</p>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/yalxT0PEx8c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
