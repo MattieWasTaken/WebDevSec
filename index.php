@@ -115,7 +115,6 @@ include_once('databaseConnection.php');
                     <form method='GET'>
                       <input type='hidden' name='$topicID1' $topicID1> 
                       <a class='text-white' href='Post.php?topic_id=$topicID1'><h5 class='text-left'>$title1</h3></a>
-                      <small class='overflow-hidden'>CONTENT PREVIEW</small>
                     </form>
                   </div>
                   <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2' style = 'height: 135px;'>
@@ -166,7 +165,6 @@ include_once('databaseConnection.php');
                     <form method='GET'>
                       <input type='hidden' name='$topicID2' $topicID2> 
                       <a class='text-white' href='Post.php?topic_id=$topicID2'><h5 class='text-left'>$title2</h3></a>
-                      <small class='overflow-hidden'>CONTENT PREVIEW</small>
                     </form>
                   </div>
                   <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2' style = 'height: 135px;'>
@@ -217,7 +215,6 @@ include_once('databaseConnection.php');
                     <form method='GET'>
                       <input type='hidden' name='$topicID3' $topicID3> 
                       <a class='text-white' href='Post.php?topic_id=$topicID3'><h5 class='text-left'>$title3</h3></a>
-                      <small class='overflow-hidden'>CONTENT PREVIEW</small>
                     </form>
                   </div>
                   <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2' style = 'height: 135px;'>
@@ -268,7 +265,6 @@ include_once('databaseConnection.php');
                     <form method='GET'>
                       <input type='hidden' name='$topicID4' $topicID4> 
                       <a class='text-white' href='Post.php?topic_id=$topicID4'><h5 class='text-left'>$title4</h3></a>
-                      <small class='overflow-hidden'>CONTENT PREVIEW</small>
                     </form>
                   </div>
                   <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2' style = 'height: 135px;'>
