@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-<div class="bg-image" style="background-image: url('https://ae01.alicdn.com/kf/HTB1CKe5QNTpK1RjSZFKq6y2wXXaC/LIFE-MAGIC-BOX-Black-Brick-Wall-for-Photo-Background-for-Photo-Sessions-for-Photography-Birthday-Backdrops.jpg_Q90.jpg_.webp'); height: 100vh;">
   <head>
     <title>IMD Forum</title>
     <!-- Required meta tags -->
@@ -23,6 +22,7 @@ $userID = $_GET['user_id'];
 
 <body>
 <div class="bg-image" style="background-image: url('https://ae01.alicdn.com/kf/HTB1CKe5QNTpK1RjSZFKq6y2wXXaC/LIFE-MAGIC-BOX-Black-Brick-Wall-for-Photo-Background-for-Photo-Sessions-for-Photography-Birthday-Backdrops.jpg_Q90.jpg_.webp'); height: 100vh;">
+<div class="container-fluid bg-dark text-white pt-3">
 <div class="container-fluid">
     <?php 
      if($_GET['display']=='posts'){
@@ -40,8 +40,8 @@ $userID = $_GET['user_id'];
        </div>";
        }
     ?>
-
-    <div class="row p-3 mb-2 mt-2 bg-secondary text-white rounded-top">
+    <div class="container-fluid">
+    <div class="row p-3 mb-2 mt-2 bg-secondary text-white rounded">
         
     <?php 
         if($_GET['display']=='posts'){
@@ -73,6 +73,7 @@ $userID = $_GET['user_id'];
         }
     ?>
 
+    </div>
     </div>
     <?php 
 
@@ -181,7 +182,6 @@ $userID = $_GET['user_id'];
                 <div class='container-fluid'>
                 <div class='row'>
                 <div class='col-lg p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
-                <input type='hidden' name='$topicID' $topicID> 
                <p class='text-left'>$bioInfo</p>
                 </div>
                 </div>
@@ -206,7 +206,7 @@ $userID = $_GET['user_id'];
 
     ?>
  
-
+        </div>
 </div>
     </div>
 
