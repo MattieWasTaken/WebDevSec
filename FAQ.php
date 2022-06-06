@@ -40,7 +40,6 @@ include_once('databaseConnection.php');
 				<div class="card-body">
 					<div>
 						<form action="submitquestion.php" method="POST">
-						<input type="hidden" name="<?php echo $_SESSION['username']?>" id="<?php echo $_SESSION['username']?>">
 					</div>
 					<div class="FAQ-Text">
 						<textarea type="text" name="faq-content" id="faq-box" style="width: 20rem; height: 10rem;" placeholder="Tell us what happened. . ."></textarea>

@@ -95,6 +95,7 @@ if (isset($_SESSION["loginLocked"])){
                    session_start();
                    $_SESSION["userid"] = $userExists['user_id'];
                    $_SESSION['username'] = $userExists['username'];
+                   $_SESSION['adminStatus']= $userExists['admin_status'];
                    header("Location: index.php?Login=success");
                    exit();
                }else{
