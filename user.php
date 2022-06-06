@@ -115,7 +115,6 @@ $userID = $_GET['user_id'];
     
     }
     if($_GET['display']=="comments"){
-        error_reporting(1);
         $query2 = "SELECT * FROM `comment_section` WHERE username='$username';";
         $result2 = mysqli_query($conn, $query2);
         $resultCheck2 = mysqli_num_rows($result2);
