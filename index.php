@@ -321,7 +321,7 @@ include_once('databaseConnection.php');
     </a>
   </div>
   <div class="col-md-2">
-    <a href="subforum.php?subtopic=meme&page=1">
+    <a href="subforum.php?subtopic=memes&page=1">
     <img src="https://i.imgflip.com/6ifnib.jpg" class="img-thumbnail" alt="Memes" style="height:300px;width:300px;margin-top:60px">
     <h4 class="carousel-caption" d-flex flex-column justify-content-center h-100 style="top: 0">View Meme Posts</h4>
         </a>

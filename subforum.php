@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+  
   <head>
     <title>IMD Forum</title>
     <!-- Required meta tags -->
@@ -40,9 +41,11 @@ if(isset($_GET['page'])){
     }  }
 $start = ($page-1) * $limit;
 ?>
-  
+
 <body>
+<div class="bg-image" style="background-image: url('https://ae01.alicdn.com/kf/HTB1CKe5QNTpK1RjSZFKq6y2wXXaC/LIFE-MAGIC-BOX-Black-Brick-Wall-for-Photo-Background-for-Photo-Sessions-for-Photography-Birthday-Backdrops.jpg_Q90.jpg_.webp'); height: 100vh;">  
 <div class="container-fluid">
+  
         <h3 class="text-left"><a class='text-white'href="subforum.php?subtopic=<?php echo $subtopic?>&page=1"><?php echo $subtopic?> Posts</a></h3>
     </div>
 </div>
