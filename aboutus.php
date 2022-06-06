@@ -44,8 +44,8 @@ include_once('databaseConnection.php');
                 <a class='text-white' ><h5 class='text-left'>Contact</h3></a>
                 <small class='overflow-hidden'>Details</small>
                 <br><br><br>
-                <p class="text-center"><a class='text-white'href='mailto:matthewcastles@hotmail.com'>Email: owner@matthewcastles.com</a></p>
-                <p class="text-center">Mobile: +61 41 349 6969</p>
+                <p class="text-center"><a class='text-white' href='mailto:matthewcastles@hotmail.com'>Email: owner@matthewcastles.com</a></p>
+                <p class="text-center"><a class='text-white' href="tel:+61 41 349 6969">Mobile: +61 41 349 6969</a></p>
             </div>
 
             <div class='col-sm-2 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2'>
@@ -76,8 +76,8 @@ include_once('databaseConnection.php');
                 <a class='text-white' ><h5 class='text-left'>Contact</h3></a>
                 <small class='overflow-hidden'>Details</small>
                 <br><br><br>
-                <p class="text-center"><a class='text-white'href='mailto:daniel.irwin1@gmail.com'>Email: Daniel.irwin1@gmail.com</a></p>
-                <p class="text-center">Mobile: +61 41 349 4949</p>
+                <p class="text-center"><a class='text-white' href='mailto:daniel.irwin1@gmail.com'>Email: Daniel.irwin1@gmail.com</a></p>
+                <p class="text-center"><a class='text-white' href="tel:0412 313 713">Mobile: +61 41 349 4949</a></p>
             </div>
 
             <div class='col-sm-2 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2'>
@@ -98,7 +98,7 @@ include_once('databaseConnection.php');
                 <a class='text-white' ><h5 class='text-left'>Kritsanapong Inbua</h3></a>
                 <small class='overflow-hidden'>Details</small>
                 <p class="text-center">ADFA Foxtrot SQN</p>
-                <p class="text-center">24DIV</p>
+                <p class="text-center">24 DIV</p>
                 <p class="text-center">zID5276311</p>
                 <p class="text-center">Favorite quote: Ching Chong Ping Pong</p>
             </div>
@@ -107,8 +107,8 @@ include_once('databaseConnection.php');
                 <a class='text-white' ><h5 class='text-left'>Contact</h3></a>
                 <small class='overflow-hidden'>Details</small>
                 <br><br><br>
-                <p class="text-center"><a class='text-white'href='mailto:kritsankiwx@gmail.com'>Email: Kritsanakiwx@gmail.com</a></p>
-                <p class="text-center">Mobile: +61 41 385 7090</p>
+                <p class="text-center"><a class='text-white' href='mailto:kritsankiwx@gmail.com'>Email: Kritsanakiwx@gmail.com</a></p>
+                <p class="text-center"><a class='text-white' href="tel:+61 41 385 7090">Mobile: +61 41 385 7090</a></p>
             </div>
 
             <div class='col-sm-2 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2'>
