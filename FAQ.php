@@ -121,10 +121,8 @@ include_once('databaseConnection.php');
 				</div>
 			</div>
 		</div>	
-
+		<?php include_once('footer.php')?>
 	</div>
-</div>
-
  
 
     <!-- Optional JavaScript -->
