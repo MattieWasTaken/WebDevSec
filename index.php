@@ -326,7 +326,7 @@ include_once('databaseConnection.php');
   </div>
   <div class="col-md-2" style="margin-bottom:50px">
     <a href="createtopic.php">
-      <img src="https://cdn.pixabay.com/photo/2016/03/21/05/05/plus-1270001_960_720.png" alt="Add New Topic" style="height:275px;width:275px;object-fit: cover;margin-top:60px">
+      <img src="https://cdn.pixabay.com/photo/2016/03/21/05/05/plus-1270001_960_720.png" alt="Add New Topic" style="height:275px;width:270px;object-fit: cover;margin-top:60px">
       <h6 class="carousel-caption" d-flex flex-column justify-content-center h-100 style="top: 0">Add a New Topic!</h6>
     </a>
   </div>
