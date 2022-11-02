@@ -20,19 +20,29 @@ error_reporting(0);
     <span class="navbar-toggler-icon"></span>
   </button>
   <?php $ID = $_SESSION['ID'];
-        ?>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href='user.php?user_id=<?php echo $ID?>&display=students'>Home</a>
-      </li>
-      <li class="nav-item active">
-       
-        <a class="nav-link" href='user.php?user_id=<?php echo $ID?>&display=attendance'>Mark Attendance</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href='user.php?user_id=<?php echo $ID?>&display=courses'>Manage Courses</a>
-      </li>
+  $type =$_SESSION['type'];
+        if($type=="teacher"){
+          echo "<div class='collapse navbar-collapse' id='navbarSupportedContent'>
+          <ul class='navbar-nav mr-auto'>
+            <li class='nav-item active'>
+              <a class='nav-link' href='user.php?user_id=$ID&display=students'>Home</a>
+            </li>
+            <li class='nav-item active'>
+             
+              <a class='nav-link' href='user.php?user_id=$ID&display=attendance'>Mark Attendance</a>
+            </li>
+            <li class='nav-item active'>
+              <a class='nav-link' href='user.php?user_id=$ID&display=courses'>Manage Courses</a>
+            </li>";
+        }
+        if($type=="student"){
+          echo "<div class='collapse navbar-collapse' id='navbarSupportedContent'>
+          <ul class='navbar-nav mr-auto'>
+          <li class='nav-item active'>
+              <a class='nav-link' href='user.php?user_id=$ID&display=courses'>Manage Courses</a>
+            </li>";
+        }
+      ?>
       <?php 
       if(isset($_SESSION['email'])){
         $userid = $_SESSION['ID'];
