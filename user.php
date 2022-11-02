@@ -19,7 +19,7 @@ $type = $_SESSION['type'];
 $email = $_SESSION['email'];
 $fName = $_SESSION['fname'];
 $userID = $_GET['user_id'];
-
+$courseID = $_SESSION['classID'];
 ?>
 </header>
 
@@ -80,7 +80,7 @@ $userID = $_GET['user_id'];
     <?php 
 
     if($_GET['display']=="courses"){
-        $query = "SELECT * FROM `courses` WHERE teacherID = $userID;";
+        $query = "SELECT * FROM `courses` WHERE courseID = $courseID;";
         $result = mysqli_query($conn, $query);
         $resultCheck = mysqli_num_rows($result);
         $counter=0;
@@ -114,16 +114,15 @@ $userID = $_GET['user_id'];
     
     }
     if($_GET['display']=="students"){
-        $query2 = "SELECT * FROM `courses` WHERE teacherID='$userID';";
+        $query2 = "SELECT * FROM `personid` WHERE classID ='$courseID';";
         $result2 = mysqli_query($conn, $query2);
         $resultCheck2 = mysqli_num_rows($result2);
         $counter2=0;
         $postCounter2=1;
         while($rows2[]=mysqli_fetch_array($result2)){
-            $topicID2 = $rows2[$counter2]['parent_thread'];
-            $userID2 = $rows2[$counter2]['username'];
-            $content2 = $rows2[$counter2]['content'];
-            $date2 = $rows2[$counter2]['date'];
+            $topicID2 = $rows2[$counter2]['ID'];
+            $content2 = $rows2[$counter2]['firstName'];
+            $content22 = $rows2[$counter2]['lastName'];
             echo "   
             <div class='container-fluid'>
             <div class='row'>
@@ -133,15 +132,9 @@ $userID = $_GET['user_id'];
             <div class='col-lg p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
             <form method='GET'>
             <input type='hidden' name='$topicID2' $topicID2> 
-            <a class='text-white' href='Post.php?topic_id=$topicID2'><p class='text-left text-break'>$content2</p></a>
+            <a class='text-white' href='Post.php?topic_id=$topicID2'><p class='text-left text-break'>$content2 $content22</p></a>
             </form>
             </div>
-            <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2'>
-            <form method='GET' name'$userID2' $userID2>
-            <p class='text-left'>Date: $date2</p>
-            <a class='text-white' href='user.php?user_id=$userID2&display=posts'> <small>By: $userID2</small></a>
-            </form>
-            </div>      
             </div>
         </div>";
         $counter2++;

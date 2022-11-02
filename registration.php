@@ -21,9 +21,7 @@
 <body>
 <div class="container-fluid mt-2 bg-secondary text-white rounded">
 <?php 
-echo "fuck you";
 include 'databaseConnection.php';
-echo "Database Connected";
 ?>
 <form action="registration.php" method=POST>
         <div class="row">
@@ -97,7 +95,7 @@ if(isset($_POST['create'])){
             $DOB = ($_POST['DOB']);
             $age = ($_POST['age']);
             $email = ($_POST['email']);
-            echo "fuck you to the moon";
+            $courseID = "";
                 $email = $_POST['email'];
                 $type ="teacher";
                 $confirmPassword = $_POST['cpassword'];
@@ -107,8 +105,8 @@ if(isset($_POST['create'])){
                     echo "Please Enter Valid Email";
                 }else{
                     $adminStatus = 0;
-                    $stmt = $conn->prepare("INSERT INTO personid (type, password, firstName, lastName, gender, age, DOB, email) VALUES (?,?,?,?,?,?,?,?);");
-                    $stmt -> bind_param("sssssiss", $type, $password, $fname, $lname, $gender,$age, $DOB, $email);
+                    $stmt = $conn->prepare("INSERT INTO personid (type, password, firstName, lastName, gender, age, DOB, email) VALUES (?,?,?,?,?,?,?,?,?);");
+                    $stmt -> bind_param("sssssissi", $type, $password, $fname, $lname, $gender,$age, $DOB, $email, $courseID);
                     $stmt->execute();
                    $accountCreated = true;
                    if($accountCreated){
