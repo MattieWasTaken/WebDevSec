@@ -63,7 +63,6 @@ error_reporting(0);
       <input class="form-control mr-sm-2" type="text" name="search" id="" placeholder="Search..." aria-label="Search">
       <a href='search.php?search='id><button class="btn btn-light my-2 my-sm-0" type="submit">Search</button></a>
     </form>
-  </div>
 </nav>
 <?php $url = $_SERVER['PHP_SELF'];
 if($url!='/user.php'){
