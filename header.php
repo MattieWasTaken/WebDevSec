@@ -50,8 +50,8 @@ error_reporting(0);
         echo "<a class='nav-link active' href='user.php?user_id=$userid&display=courses'>User: $username</a>";
         echo "<a class='nav-link active' href='logout.php'>Logout</a>";
     }else if(!isset($_SESSION['username'])){
-      echo "<a class='nav-link active' href='login.php'>Login!</a>";
-        echo "<a class='nav-link active' href='registration.php'>Register</a>";
+      echo "<a class='nav-link text-white' href='login.php'>Login!</a>";
+        echo "<a class='nav-link text-white' href='registration.php'>Register</a>";
     }
     if($_SESSION['adminStatus']==1){
       echo "<a class='nav-link active' href='viewFAQ.php'>Respond to FAQ</a>";
