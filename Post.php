@@ -73,7 +73,7 @@ if($resultCheck>0){
       $testID = $rows[$counter]['testID'];  
         echo "<br>";
         echo "<div class='row p-3 bg-secondary text-white rounded-top ml-1 mr-1'>
-        <a class='text-white' href='user.php'><span class='align-top'>$testTitle</span><a>
+        <a class='text-white' href='test.php?testID=$testID'><span class='align-top'>$testTitle</span><a>
         </div>";
     
     
