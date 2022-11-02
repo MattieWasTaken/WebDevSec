@@ -30,6 +30,7 @@ $q3 = $testOutput[0]['Question3'];
 $q4 = $testOutput[0]['Question4'];
 $q5 = $testOutput[0]['Question5'];
 $studentID = $_SESSION["ID"];
+$courseID = $testOutput[0]['courseID'];
 ?>
 
 <div class="container-fluid">
@@ -44,14 +45,17 @@ $studentID = $_SESSION["ID"];
     <div class="container-fluid">
     <div class="row p-3 mt-2 bg-secondary text-white rounded-top">
     <div class="col">
-    <form class="bg-secondary" action="test.php" method="POST">
+    <form class="bg-secondary" action="submittest.php" method="POST">
+        <input type='hidden' name='userID' value="<?php echo $studentID;?>">
+    <input type='hidden' name='courseID' value="<?php echo $courseID;?>">
+    <input type='hidden' name='quizID' value="<?php echo $testID;?>">
     <div class="form-group">
       <label for='title'>Question 1:</label>
       <p><?php echo $q1?>
     </div>
     <div class="form-group">
       <label for="content">Answer</label>
-      <textarea class="form-control overflow-auto" id='q1' name='q1' rows='10'></textarea>
+      <textarea class="form-control overflow-auto" id='a1' name='a1' rows='10'></textarea>
     </div>
     <div class="form-group">
       <label for='title'>Question 2:</label>
@@ -59,7 +63,7 @@ $studentID = $_SESSION["ID"];
     </div>
     <div class="form-group">
       <label for="content">Answer</label>
-      <textarea class="form-control overflow-auto" id='q2' name='q2' rows='10'></textarea>
+      <textarea class="form-control overflow-auto" id='a2' name='a2' rows='10'></textarea>
     </div>
     <div class="form-group">
       <label for='title'>Question 3:</label>
@@ -67,7 +71,7 @@ $studentID = $_SESSION["ID"];
     </div>
     <div class="form-group">
       <label for="content">Answer</label>
-      <textarea class="form-control overflow-auto" id='q3' name='q3' rows='10'></textarea>
+      <textarea class="form-control overflow-auto" id='a3' name='a3' rows='10'></textarea>
     </div>
     <div class="form-group">
       <label for='title'>Question 4:</label>
@@ -75,7 +79,7 @@ $studentID = $_SESSION["ID"];
     </div>
     <div class="form-group">
       <label for="content">Answer</label>
-      <textarea class="form-control overflow-auto" id='q4' name='q4' rows='10'></textarea>
+      <textarea class="form-control overflow-auto" id='a4' name='a4' rows='10'></textarea>
     </div>
     <div class="form-group">
       <label for='title'>Question 5:</label>
@@ -83,28 +87,16 @@ $studentID = $_SESSION["ID"];
     </div>
     <div class="form-group">
       <label for="content">Answer</label>
-      <textarea class="form-control overflow-auto" id='q5' name='q5' rows='10'></textarea>
+      <textarea class="form-control overflow-auto" id='a5' name='a5' rows='10'></textarea>
     </div>
-     <button type="submit" name="test.php">Submit Answers</button>
+     <button type="submit" name="submit">Submit Answers</button>
     </form>
     </div>
     </div>
     </div>
+    
 </div>
 </body>
 
-<?php 
-if(isset($_POST['create'])){
-    $answer1 = $_POST['q1'];
-    $answer2 = $_POST['q2'];
-    $answer3 = $_POST['q3'];
-    $answer4 = $_post['q4'];
-    $answer5 = $_POST['q5'];
 
-    $stmt = $conn -> prepare("INSERT INTO quizresponses (studentID, quizID, Answer1, Answer2, Answer3, Answer4, Answer5 VALUES ?,?,?,?,?,?,?;");
-    $stmt -> bind_param("iisssss",$studentID, $testID, $answer1, $answer2, $answer3, $answer4, $answer5);
-    $stmt -> execute();
-}
-
-?>
 

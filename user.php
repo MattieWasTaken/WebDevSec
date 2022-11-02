@@ -184,6 +184,45 @@ if($_GET['display']=="attendance"){
 }
 }
 }
+if($type =='student'){
+    if($_GET['display']=='courses'){
+        echo "<div class='row p-3 mb-2 mt-2 bg-secondary text-white rounded'>
+        <h3 class='text-left'>$fName's Courses</h3>
+       </div>";
+    }
+    if($_GET['display']=="courses"){
+        $query = "SELECT * FROM `courses` WHERE courseID = $courseID;";
+        $result = mysqli_query($conn, $query);
+        $resultCheck = mysqli_num_rows($result);
+        $counter=0;
+        $postCounter=1;
+        while($rows[]=mysqli_fetch_array($result)){
+            $courseName= $rows[$counter]['courseName'];
+            $courseID = $rows[$counter]['courseID'];
+            echo "   
+            <div class='container-fluid'>
+            <div class='row'>
+            <div class='col-sm-1 p-3 mb-2 bg-secondary text-center text-white rounded ml-2 mr-1'>
+            <span>$postCounter.</span>
+            </div>
+            <div class='col-lg p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
+            <form method='GET'>
+            <input type='hidden' name='$courseID' $courseID> 
+            <a class='text-white' href='Post.php?topic_id=$courseID'><h5 class='text-left'>$courseName</h3></a>
+            </form>
+            </div>
+            <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2'>
+            <form method='GET' name'$courseID' $courseID>
+            </form>
+            </div>      
+            </div>
+            </div>
+            ";
+        $counter++;
+        $postCounter++;
+    }
+}
+}
       
 if(isset($_POST['markAbsent'])){
     $markAbsentQuery = $conn->prepare("UPDATE `personid` SET `daysMissed` = ? WHERE `personid`.`ID` =?");
