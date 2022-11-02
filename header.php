@@ -19,17 +19,19 @@ error_reporting(0);
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
+  <?php $ID = $_SESSION['ID'];
+        ?>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="index.php">Home</a>
+        <a class="nav-link" href='user.php?user_id=<?php echo $ID?>&display=students'>Home</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="createpost.php">Mark Attendance</a>
+       
+        <a class="nav-link" href='user.php?user_id=<?php echo $ID?>&display=attendance'>Mark Attendance</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="subforumselection.php">Manage Courses</a>
+        <a class="nav-link" href='user.php?user_id=<?php echo $ID?>&display=courses'>Manage Courses</a>
       </li>
       <?php 
       if(isset($_SESSION['email'])){

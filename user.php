@@ -121,9 +121,9 @@ $courseID = $_SESSION['classID'];
         $counter2=0;
         $postCounter2=1;
         while($rows2[]=mysqli_fetch_array($result2)){
-            $topicID2 = $rows2[$counter2]['ID'];
-            $content2 = $rows2[$counter2]['firstName'];
-            $content22 = $rows2[$counter2]['lastName'];
+            $userID2 = $rows2[$counter2]['ID'];
+            $firstName2 = $rows2[$counter2]['firstName'];
+            $lastName2 = $rows2[$counter2]['lastName'];
             $daysAbsent = $rows2[$counter2]['daysMissed'];
             echo "   
             <div class='container-fluid'>
@@ -133,13 +133,13 @@ $courseID = $_SESSION['classID'];
             </div>
             <div class='col-lg p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
             <form method='GET'>
-            <input type='hidden' name='$topicID2' $topicID2> 
-            <a class='text-white' href='user.php?user_id=$topicID2'><p class='text-left text-break'>$content2 $content22</p></a>
+            <input type='hidden' name='$userID2' $userID2> 
+            <a class='text-white' href='user.php?user_id=$userID2'><p class='text-left text-break'>$firstName2 $lastName2</p></a>
             </form>
             </div>
             <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2'>
-            <form method='GET' name'$$topicID2' $topicID2>
-            <a class='text-white' href='user.php?user_id=$topicID2&display=posts'> <small>Days Absent: $daysAbsent</small></a>
+            <form method='GET' name'$$userID2' $userID2>
+            <a class='text-white' href='user.php?user_id=$$userID2&display=posts'> <small>Days Absent: $daysAbsent</small></a>
             </form>
             </div>      
             </div>
@@ -169,20 +169,11 @@ if($_GET['display']=="attendance"){
         <form method='post'>
         <input type='hidden' name='$topicID2' $topicID2> 
         <a class='text-white' href='user.php?user_id=$topicID2'><p class='text-left text-break'>$content2 $content22</p></a>
-        <button type='submit' class='btn btn-light' name='markAbsent'>Absent</button>";
-        if(isset($_POST['markAbsent'])){
-            $markAbsentQuery = $conn->prepare("UPDATE `personid` SET `daysMissed` = ? WHERE `personid`.`ID` =?");
-            $daysAbsent = $daysAbsent+1;
-            $markAbsentQuery -> bind_param('ii', $daysAbsent, $topicID2);
-            $markAbsentQuery ->execute();
-            echo "<br>";
-            echo "Marked as Absent";
-        }   
-        "</form>
-       
+        <button type='submit' class='btn btn-light' name='markAbsent'>Absent</button>
+        </form>
         </div>
         <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2'>
-        <form method='GET' name'$$topicID2' $topicID2>
+        <form method='GET' name'=$topicID2' $topicID2>
         <a class='text-white' href='user.php?user_id=$topicID2&display=posts'> <small>Days Absent: $daysAbsent</small></a>
         </form>
         </div>      
@@ -194,7 +185,14 @@ if($_GET['display']=="attendance"){
 }
 }
       
-    
+if(isset($_POST['markAbsent'])){
+    $markAbsentQuery = $conn->prepare("UPDATE `personid` SET `daysMissed` = ? WHERE `personid`.`ID` =?");
+    $daysAbsent = $daysAbsent+1;
+    $markAbsentQuery -> bind_param('ii', $daysAbsent, $topicID2);
+    $markAbsentQuery ->execute();
+    echo "<br>";
+    echo "Marked as Absent";
+}  
 
     
 
