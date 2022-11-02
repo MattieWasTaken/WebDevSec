@@ -96,6 +96,7 @@ if (isset($_SESSION["loginLocked"])){
                    $_SESSION["ID"] = $userExists['ID'];
                    $_SESSION['email'] = $userExists['email'];
                    $_SESSION['fname'] = $userExists['firstName'];
+                   $_SESSION['type'] = $userExists['type'];
                    header("Location: index.php?Login=success");
                    exit();
                }else{

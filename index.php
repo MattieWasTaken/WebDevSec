@@ -21,7 +21,7 @@ include_once('databaseConnection.php');
 <body>
 
 
-  </body>
+</body>
   <?php include_once('footer.php')?>
 
 

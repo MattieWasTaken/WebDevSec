@@ -35,7 +35,7 @@ error_reporting(0);
       if(isset($_SESSION['email'])){
         $userid = $_SESSION['ID'];
         $username = $_SESSION['fname'];
-        echo "<a class='nav-link active' href='user.php?user_id=$username&display=posts'>User: $username</a>";
+        echo "<a class='nav-link active' href='user.php?user_id=$userid&display=courses'>User: $username</a>";
         echo "<a class='nav-link active' href='logout.php'>Logout</a>";
     }else if(!isset($_SESSION['username'])){
       echo "<a class='nav-link active' href='login.php'>Login!</a>";

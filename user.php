@@ -14,7 +14,10 @@
 <?php 
 include_once('header.php');
 include_once('databaseConnection.php');
-$username = $_GET['user_id'];
+$ID = $_SESSION['ID'];
+$type = $_SESSION['type'];
+$email = $_SESSION['email'];
+$fName = $_SESSION['fname'];
 $userID = $_GET['user_id'];
 
 ?>
@@ -24,18 +27,18 @@ $userID = $_GET['user_id'];
 <div class="container-fluid bg-dark text-white pt-3">
 <div class="container-fluid">
     <?php 
-     if($_GET['display']=='posts'){
+     if($_GET['display']=='courses'){
      echo "<div class='row p-3 mb-2 mt-2 bg-secondary text-white rounded'>
-     <h3 class='text-left'>$username's Posts</h3>
+     <h3 class='text-left'>$fName's Courses</h3>
     </div>";
-    }else if($_GET['display']=='comments'){
+    }else if($_GET['display']=='students'){
         echo "<div class='row p-3 mb-2 mt-2 bg-secondary text-white rounded'>
-        <h3 class='text-left'>$username's Comments</h3>
+        <h3 class='text-left'>$fName's Students</h3>
        </div>";
        }
-       else if($_GET['display']=='bio'){
+       else if($_GET['display']=='attendance'){
         echo "<div class='row p-3 mb-2 mt-2 bg-secondary text-white rounded'>
-        <h3 class='text-left'>$username's Bio</h3>
+        <h3 class='text-left'>$fName's Attendance Records</h3>
        </div>";
        }
     ?>
@@ -43,32 +46,32 @@ $userID = $_GET['user_id'];
     <div class="row p-3 mb-2 mt-2 bg-secondary text-white rounded">
         
     <?php 
-        if($_GET['display']=='posts'){
+        if($_GET['display']=='courses'){
             echo "<nav>
             <div class='nav nav-tabs ml-2' id='nav-tab' role='tablist'>
-            <a class='nav-item nav-link active text-black' id='nav-home-tab' data-toggle='tab' href='user.php?user_id=$userID&display=posts' role='tab' aria-controls='nav-home' aria-selected='true'>Posts</a>
-            <a class='nav-item nav-link text-white' id='nav-profile-tab' data-toggle='tab' href='user.php?user_id=$userID&display=comments' role='tab' aria-controls='nav-profile' aria-selected='false'>Comments</a>
-            <a class='nav-item nav-link text-white' id='nav-contact-tab' data-toggle='tab' href='user.php?user_id=$userID&display=bio' role='tab' aria-controls='nav-contact' aria-selected='false'>Bio</a>
+            <a class='nav-item nav-link active text-black' id='nav-home-tab' data-toggle='tab' href='user.php?user_id=$ID&display=courses' role='tab' aria-controls='nav-home' aria-selected='true'>Courses</a>
+            <a class='nav-item nav-link text-white' id='nav-profile-tab' data-toggle='tab' href='user.php?user_id=$ID&display=students' role='tab' aria-controls='nav-profile' aria-selected='false'>Students</a>
+            <a class='nav-item nav-link text-white' id='nav-contact-tab' data-toggle='tab' href='user.php?user_id=$ID&display=attendance' role='tab' aria-controls='nav-contact' aria-selected='false'>Attendance</a>
             </div>
         </nav>";
-        }else if($_GET['display']=='comments'){
+        }else if($_GET['display']=='students'){
             echo "<nav>
             <div class='nav nav-tabs ml-2' id='nav-tab' role='tablist'>
-            <a class='nav-item nav-link text-white' id='nav-home-tab' data-toggle='tab' href='user.php?user_id=$userID&display=posts' role='tab' aria-controls='nav-home' aria-selected='true'>Posts</a>
-            <a class='nav-item nav-link active text-black' id='nav-profile-tab' data-toggle='tab' href='user.php?user_id=$userID&display=comments' role='tab' aria-controls='nav-profile' aria-selected='false'>Comments</a>
-            <a class='nav-item nav-link text-white' id='nav-contact-tab' data-toggle='tab' href='user.php?user_id=$userID&display=bio' role='tab' aria-controls='nav-contact' aria-selected='false'>Bio</a>
+            <a class='nav-item nav-link text-white' id='nav-home-tab' data-toggle='tab' href='user.php?user_id=$ID&display=courses' role='tab' aria-controls='nav-home' aria-selected='true'>Courses</a>
+            <a class='nav-item nav-link active text-black' id='nav-profile-tab' data-toggle='tab' href='user.php?user_id=$ID&display=students' role='tab' aria-controls='nav-profile' aria-selected='false'>Students</a>
+            <a class='nav-item nav-link text-white' id='nav-contact-tab' data-toggle='tab' href='user.php?user_id=$ID&display=attendance' role='attendance' aria-controls='nav-contact' aria-selected='false'>Attendance</a>
             </div>
         </nav>";
-        }else if($_GET['display']=='bio'){
+        }else if($_GET['display']=='attendance'){
             echo "<nav>
             <div class='nav nav-tabs ml-2' id='nav-tab' role='tablist'>
-            <a class='nav-item nav-link text-white' id='nav-home-tab' data-toggle='tab' href='user.php?user_id=$userID&display=posts' role='tab' aria-controls='nav-home' aria-selected='true'>Posts</a>
-            <a class='nav-item nav-link text-white' id='nav-profile-tab' data-toggle='tab' href='user.php?user_id=$userID&display=comments' role='tab' aria-controls='nav-profile' aria-selected='false'>Comments</a>
-            <a class='nav-item nav-link active text-black' id='nav-contact-tab' data-toggle='tab' href='user.php?user_id=$userID&display=bio' role='tab' aria-controls='nav-contact' aria-selected='false'>Bio</a>
+            <a class='nav-item nav-link text-white' id='nav-home-tab' data-toggle='tab' href='user.php?user_id=$ID&display=courses' role='tab' aria-controls='nav-home' aria-selected='true'>Courses</a>
+            <a class='nav-item nav-link text-white' id='nav-profile-tab' data-toggle='tab' href='user.php?user_id=$ID&display=students' role='tab' aria-controls='nav-profile' aria-selected='false'>Students</a>
+            <a class='nav-item nav-link active text-black' id='nav-contact-tab' data-toggle='tab' href='user.php?user_id=$ID&display=attendance' role='tab' aria-controls='nav-contact' aria-selected='false'>Attendance</a>
             </div>
         </nav>";
         }else{
-            header("Location: user.php?user_id=$userID&display=posts");
+            header("Location: user.php?user_id=$fName&display=courses");
         }
     ?>
 
@@ -76,18 +79,15 @@ $userID = $_GET['user_id'];
     </div>
     <?php 
 
-    if($_GET['display']=="posts"){
-        $query = "SELECT * FROM `forum_posts` WHERE user_id='$username';";
+    if($_GET['display']=="courses"){
+        $query = "SELECT * FROM `courses` WHERE teacherID = $userID;";
         $result = mysqli_query($conn, $query);
         $resultCheck = mysqli_num_rows($result);
         $counter=0;
         $postCounter=1;
         while($rows[]=mysqli_fetch_array($result)){
-            $title= $rows[$counter]['title'];
-            $topicID = $rows[$counter]['topic_id'];
-            $userID = $rows[$counter]['user_id'];
-            $subtopic = $rows[$counter]['subtopic'];
-            $date = $rows[$counter]['date_submitted'];
+            $courseName= $rows[$counter]['courseName'];
+            $courseID = $rows[$counter]['courseID'];
             echo "   
             <div class='container-fluid'>
             <div class='row'>
@@ -96,14 +96,12 @@ $userID = $_GET['user_id'];
             </div>
             <div class='col-lg p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
             <form method='GET'>
-            <input type='hidden' name='$topicID' $topicID> 
-            <a class='text-white' href='Post.php?topic_id=$topicID&subtopic=$subtopic'><h5 class='text-left'>$title</h3></a>
+            <input type='hidden' name='$courseID' $courseID> 
+            <a class='text-white' href='Post.php?topic_id=$courseID'><h5 class='text-left'>$courseName</h3></a>
             </form>
             </div>
             <div class='col-sm-1 p-3 mb-2 bg-secondary text-white rounded ml-1 mr-2'>
-            <form method='GET' name'$userID' $userID>
-            <p class='text-left'>Date: $date</p>
-            <a class='text-white' href='user.php?user_id=$userID&display=posts'> <small>By: $userID</small></a>
+            <form method='GET' name'$courseID' $courseID>
             </form>
             </div>      
             </div>
@@ -115,8 +113,8 @@ $userID = $_GET['user_id'];
     
     
     }
-    if($_GET['display']=="comments"){
-        $query2 = "SELECT * FROM `comment_section` WHERE username='$username';";
+    if($_GET['display']=="students"){
+        $query2 = "SELECT * FROM `courses` WHERE teacherID='$userID';";
         $result2 = mysqli_query($conn, $query2);
         $resultCheck2 = mysqli_num_rows($result2);
         $counter2=0;
