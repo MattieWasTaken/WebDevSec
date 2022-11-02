@@ -84,7 +84,7 @@ $q5 = $testOutput[0]['Question5'];
       <label for="content">Answer</label>
       <textarea class="form-control overflow-auto" id='q5' name='q5' rows='10'></textarea>
     </div>
-     <button type="submit" name="submit">Post</button>
+     <button type="submit" name="submitTest">Submit Answers</button>
     </form>
     </div>
     </div>
