@@ -98,6 +98,7 @@ if (isset($_SESSION["loginLocked"])){
                    $_SESSION['fname'] = $userExists['firstName'];
                    $_SESSION['type'] = $userExists['type'];
                    $_SESSION['classID'] = $userExists['classID'];
+                   $_SESSION['classesMissed'] = $userExists['daysMissed'];
                    header("Location: index.php?Login=success");
                    exit();
                }else{
