@@ -30,6 +30,29 @@ include 'databaseConnection.php';
         <div class="row ml-1">
         <p> Please Enter Your Details</p>
         </div>
+        <div class ='row pl-2 mb-3'>
+        <select class="form-control" select name='type' id='selection'>
+        <option>Select Student Or Teacher</option>
+        <option value='student'>Student</option>
+        <option value='teacher'>Teacher</option>
+        </select>
+        </div>
+        <div class ='row pl-2 mb-3'>
+        <select class="form-control" select name='classSelection' id='selection'>
+        <option>Please Select your Class</option>
+       <?php 
+       $classQuery = "SELECT * FROM `courses`;";
+       $classQueryResult = mysqli_query($conn, $classQuery);
+       $queryCounter = 0;
+       while($classes[]=mysqli_fetch_array($classQueryResult)){
+        $classID = $classes[$queryCounter]['courseID'];
+        $className= $classes[$queryCounter]['courseName'];
+        echo "<option value='$classID'>$className</option>";
+        $queryCounter++;
+       }
+       ?>
+        </select>
+        </div>
         <div class="row pl-2">
         <div class="input-group mb-3 shadow-sm">
         <span class="input-group-text" id="basic-addon1">First Name:</span>
@@ -95,18 +118,19 @@ if(isset($_POST['create'])){
             $DOB = ($_POST['DOB']);
             $age = ($_POST['age']);
             $email = ($_POST['email']);
-            $courseID = "";
-                $email = $_POST['email'];
-                $type ="teacher";
-                $confirmPassword = $_POST['cpassword'];
+            $courseID = ($_POST['classSelection']);
+            $email = $_POST['email'];
+            $confirmPassword = $_POST['cpassword'];
+            $type = $_POST['type'];
+            $daysMissed = 0;
                 if($password!=$confirmPassword){
                     echo "Passwords Do Not Match";
                 }else if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
                     echo "Please Enter Valid Email";
                 }else{
                     $adminStatus = 0;
-                    $stmt = $conn->prepare("INSERT INTO personid (type, password, firstName, lastName, gender, age, DOB, email) VALUES (?,?,?,?,?,?,?,?,?);");
-                    $stmt -> bind_param("sssssissi", $type, $password, $fname, $lname, $gender,$age, $DOB, $email, $courseID);
+                    $stmt = $conn->prepare("INSERT INTO personid (type, password, firstName, lastName, gender, age, DOB, email, classID, daysMissed) VALUES (?,?,?,?,?,?,?,?,?,?);");
+                    $stmt -> bind_param("sssssissii", $type, $password, $fname, $lname, $gender,$age, $DOB, $email, $courseID, $daysMissed);
                     $stmt->execute();
                    $accountCreated = true;
                    if($accountCreated){
