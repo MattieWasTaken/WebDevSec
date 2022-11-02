@@ -17,7 +17,6 @@
  ob_start();?>
 </header>
 
-
 <body>
 <div class="container-fluid mt-2 bg-secondary text-white rounded">
 <?php 
@@ -145,6 +144,7 @@ if(isset($_POST['create'])){
 
 ?>
 
+</div>
 </div>
 </div>
 <?php if($accountCreated){
