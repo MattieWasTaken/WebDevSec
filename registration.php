@@ -148,7 +148,6 @@ if(isset($_POST['create'])){
 </div>
 </div>
 <?php if($accountCreated){
-    
     echo $accountCreated;
 }?>
 </body>
