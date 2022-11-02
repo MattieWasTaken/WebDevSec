@@ -55,9 +55,33 @@ if($resultCheck>0){
     </div>
     </div>    
     </div>
+    <div class='container-fluid'>
+    <div class='row p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
+    <h4 class="text-center">Available Tests</h4>  
+</div>
     </div>
-    </form>
-    </div>
+
+    <?php 
+    
+    $query1 = "SELECT * FROM classtests WHERE courseID = $courseID;";
+    $result1 = mysqli_query($conn, $query1);
+    $resultCheck1 = mysqli_num_rows($result1);
+    $counter=0;
+    $testCounter =1;
+    while($rows[] = mysqli_fetch_array($result1)){
+      $testTitle = $rows[$counter]['testTitle'];
+      $testID = $rows[$counter]['testID'];  
+        echo "<br>";
+        echo "<div class='row p-3 bg-secondary text-white rounded-top ml-1 mr-1'>
+        <a class='text-white' href='user.php'><span class='align-top'>$testTitle</span><a>
+        </div>";
+    
+    
+      }
+
+    
+    ?>
+         
     </div>
 </div>
 
