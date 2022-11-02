@@ -29,6 +29,7 @@ $q2 = $testOutput[0]['Question2'];
 $q3 = $testOutput[0]['Question3'];
 $q4 = $testOutput[0]['Question4'];
 $q5 = $testOutput[0]['Question5'];
+$studentID = $_SESSION["ID"];
 ?>
 
 <div class="container-fluid">
@@ -43,7 +44,7 @@ $q5 = $testOutput[0]['Question5'];
     <div class="container-fluid">
     <div class="row p-3 mt-2 bg-secondary text-white rounded-top">
     <div class="col">
-    <form class="bg-secondary" action="submittest.php" method="POST">
+    <form class="bg-secondary" action="test.php" method="POST">
     <div class="form-group">
       <label for='title'>Question 1:</label>
       <p><?php echo $q1?>
@@ -84,11 +85,26 @@ $q5 = $testOutput[0]['Question5'];
       <label for="content">Answer</label>
       <textarea class="form-control overflow-auto" id='q5' name='q5' rows='10'></textarea>
     </div>
-     <button type="submit" name="submitTest">Submit Answers</button>
+     <button type="submit" name="test.php">Submit Answers</button>
     </form>
     </div>
     </div>
     </div>
 </div>
 </body>
+
+<?php 
+if(isset($_POST['create'])){
+    $answer1 = $_POST['q1'];
+    $answer2 = $_POST['q2'];
+    $answer3 = $_POST['q3'];
+    $answer4 = $_post['q4'];
+    $answer5 = $_POST['q5'];
+
+    $stmt = $conn -> prepare("INSERT INTO quizresponses (studentID, quizID, Answer1, Answer2, Answer3, Answer4, Answer5 VALUES ?,?,?,?,?,?,?;");
+    $stmt -> bind_param("iisssss",$studentID, $testID, $answer1, $answer2, $answer3, $answer4, $answer5);
+    $stmt -> execute();
+}
+
+?>
 
