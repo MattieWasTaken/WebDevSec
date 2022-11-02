@@ -1,5 +1,4 @@
-<?php include 'databaseConnection.php';
-?>
+
 <!DOCTYPE html>
 <html>
 <div class="bg-image" style="background-image: url('https://ae01.alicdn.com/kf/HTB1CKe5QNTpK1RjSZFKq6y2wXXaC/LIFE-MAGIC-BOX-Black-Brick-Wall-for-Photo-Background-for-Photo-Sessions-for-Photography-Birthday-Backdrops.jpg_Q90.jpg_.webp'); height: 100vh;">
@@ -21,6 +20,11 @@
 
 <body>
 <div class="container-fluid mt-2 bg-secondary text-white rounded">
+<?php 
+echo "fuck you";
+include 'databaseConnection.php';
+echo "Database Connected";
+?>
 <form action="registration.php" method=POST>
         <div class="row">
         <h1 class="ml-2"> Register Now!</h1>
@@ -83,11 +87,8 @@
 
 <div>
 <?php 
+error_reporting(true);
 include('databaseConnection.php');
- $forbiddenCharacter = '\'';
- error_reporting(1);
-
- $accountCreated = false;
 if(isset($_POST['create'])){
             $fname = ($_POST['fname']);
             $lname = ($_POST['lname']);
@@ -95,7 +96,8 @@ if(isset($_POST['create'])){
             $gender = ($_POST['gender']);
             $DOB = ($_POST['DOB']);
             $age = ($_POST['age']);
-            }else{
+            $email = ($_POST['email']);
+            echo "fuck you to the moon";
                 $email = $_POST['email'];
                 $type ="teacher";
                 $confirmPassword = $_POST['cpassword'];
@@ -105,8 +107,8 @@ if(isset($_POST['create'])){
                     echo "Please Enter Valid Email";
                 }else{
                     $adminStatus = 0;
-                    $stmt = $conn->prepare("INSERT INTO personID (type, password, firstName, lastName, gender, age, DOB) VALUES (?,?,?,?,?,?,?);");
-                    $stmt -> bind_param("sssssis", $type, $password, $fname, $lname, $gender,$age, $DOB);
+                    $stmt = $conn->prepare("INSERT INTO personid (type, password, firstName, lastName, gender, age, DOB, email) VALUES (?,?,?,?,?,?,?,?);");
+                    $stmt -> bind_param("sssssiss", $type, $password, $fname, $lname, $gender,$age, $DOB, $email);
                     $stmt->execute();
                    $accountCreated = true;
                    if($accountCreated){

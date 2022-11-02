@@ -47,8 +47,8 @@ if (isset($_SESSION["loginLocked"])){
 }       ?>
         <div class="row bg-secondary">
         <div class="input-group mb-3 shadow-sm ml-2">
-        <span class="input-group-text" id="basic-addon1">Username:</span>
-        <input type="text" name="username" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" required>
+        <span class="input-group-text" id="basic-addon1">Email:</span>
+        <input type="text" name="email" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" required>
         </div>  
         </div>
         <div class="row bg-secondary">
@@ -77,25 +77,25 @@ if (isset($_SESSION["loginLocked"])){
 <?php
 
  if(isset($_POST['login'])){
-            $username = $_POST['username'];
+            $email = $_POST['email'];
             $password = $_POST['password'];
             $_SESSION['lastLogin']= time();
             unset($_SESSION['loginFailed']);
             unset($_SESSION['loginLocked']);
-            if($username=="" || $password == ""){
+            if($email=="" || $password == ""){
                 echo "<br> You must type a username and password";
             }else{
-               $userExists = userExists($conn, $username, $password);
+               $userExists = userExists($conn, $email, $password);
                if($userExists==false){
                    echo "Username does not exist <br>";
                    header("Location: login.php?LoginFailed=wrongUID");
                } 
-               $hashedPassword = $userExists['password'];
-               if(password_verify($password, $hashedPassword)){
+               $existingPassword = $userExists['password'];
+               if($password==$existingPassword){
                    session_start();
-                   $_SESSION["userid"] = $userExists['user_id'];
-                   $_SESSION['username'] = $userExists['username'];
-                   $_SESSION['adminStatus']= $userExists['admin_status'];
+                   $_SESSION["ID"] = $userExists['ID'];
+                   $_SESSION['email'] = $userExists['email'];
+                   $_SESSION['fname'] = $userExists['firstName'];
                    header("Location: index.php?Login=success");
                    exit();
                }else{
@@ -108,11 +108,11 @@ if (isset($_SESSION["loginLocked"])){
             
 
             
-function userExists($conn, $username, $password){
-    $sql ="SELECT * FROM users WHERE username = ?;";
+function userExists($conn, $email, $password){
+    $sql ="SELECT * FROM personid WHERE email = ?;";
     $stmt = mysqli_stmt_init($conn);
     mysqli_stmt_prepare($stmt, $sql);
-    mysqli_stmt_bind_param($stmt, "s", $username);
+    mysqli_stmt_bind_param($stmt, "s", $email);
     mysqli_stmt_execute($stmt);
     $resultData = mysqli_stmt_get_result($stmt);
     if($row = mysqli_fetch_assoc($resultData)){
