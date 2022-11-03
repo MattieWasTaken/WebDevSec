@@ -14,8 +14,9 @@ error_reporting(0);
 ?>
 <header>
 <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+<link rel="stylesheet" href="style.css">
 <img src="https://i.ibb.co/894Xm19/278471543-727015038329277-2731362503377802712-n.png" alt="Site-Logo" style="height:50px;width:50px;margin-left:0px;margin-right:10px">
-  <a class="navbar-brand" href="index.php">IMD Forums</a>
+  <a class="navbar-brand" href="user.php">STSP</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>

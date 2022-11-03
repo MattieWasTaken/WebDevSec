@@ -11,37 +11,12 @@
             <i class="fas fa-gem me-3"></i>IMD Forum
           </h6>
           <p>
-            Our IMD is a free-speech site
-          </p>
-          <p>
-            We want to make this area for everyone 
-          </p>
-          <p>
-          to talk to each other
-          </p>
-          <p>
-            Please be respectful and enjoy! :>
+            This project enables teachers to mark attendance and check their student's quiz results.
           </p>
         </div>
         <!-- Grid column -->
         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
           <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            Useful links
-          </h6>
-          <p>
-            <a href="aboutus.php" class="text-reset">About US</a>
-          </p>
-          <p>
-            <a href="contentpolicy.php" class="text-reset">Our Policy</a>
-          </p>
-          <p>
-            <a href="FAQ.php" class="text-reset">FAQ</a>
-          </p>
-          <p>
-            <a href="support.php" class="text-reset">Support</a>
-          </p>
-        </div>
         <!-- Grid column -->
 
         <!-- Grid column -->
@@ -52,7 +27,7 @@
           </h6>
           <p><i class="fas fa-home me-3"></i> ADFA, ACT 2612, AU</p>
           <p>
-            <i class="fas fa-envelope me-3"></i><a class="text-reset" href='mailto:MDG@webdev.com'>MDG@webdev.com</a>
+            <i class="fas fa-envelope me-3"></i><a class="text-reset" href='mailto:MDG@webdev.com'>SADGROUP@unsw.com</a>
             
           </p>
         </div>
@@ -66,7 +41,7 @@
   <!-- Copyright -->
   <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
     © 2022 Copyright:
-    <a class="text-reset fw-bold" href="index.php">IMDForum.com</a>
+    <a class="text-reset fw-bold" href="index.php">MCESHA</a>
   </div>
   <!-- Copyright -->
 </footer>
