@@ -14,8 +14,11 @@
   </head>
 
 <?php 
+$ID=$_SESSION['ID'];
 include_once('header.php');
 include_once('databaseConnection.php');
+
+header("Location: user.php?user_id=$ID");
 ?>
   
 <body>

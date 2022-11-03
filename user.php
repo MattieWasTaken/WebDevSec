@@ -72,7 +72,7 @@ $courseID = $_SESSION['classID'];
             </div>
         </nav>";
         }else{
-            header("Location: user.php?user_id=$fName&display=courses");
+            header("Location: user.php?user_id=$ID&display=courses");
         }
     ?>
 
@@ -189,6 +189,8 @@ if($type =='student'){
         echo "<div class='row p-3 mb-2 mt-2 bg-secondary text-white rounded'>
         <h3 class='text-left'>$fName's Courses</h3>
        </div>";
+    } else{
+        header("Location: user.php?user_id=$ID&display=courses");
     }
     if($_GET['display']=="courses"){
         $query = "SELECT * FROM `courses` WHERE courseID = $courseID;";
