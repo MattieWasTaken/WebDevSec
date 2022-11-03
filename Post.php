@@ -41,19 +41,20 @@ if($resultCheck>0){
 ?>
 
 <body>
-<div class="container-fluid">
-    <div class="row p-1 mt-2 bg-secondary text-white rounded-top">
+  <div class="container-fluid text-white pt-3">
+<div class="container-fluid-1">
+    <div class="row p-1 mt-2 ml-0 mr-0 bg-secondary text-white rounded-top">
         <h3 class="text-left"><?php echo $courseName?></h3>
         </div>
 </div>
     <?php $postContent = addslashes($content);?>
-    <div class='container-fluid mt-2'>
-    <div class='row'>
+    <div class='container-fluid-2 mt-2'>
+    <div class='row ml-0 mr-0'>
     <div class='col-lg p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
     <p class="text-break"><?php echo $courseDescription?></p>
     <?php if($type=="teacher"){
 
-      echo "    <div class='container-fluid'>
+      echo "    <div class='container-fluid-3'>
       <div class='row p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
       <a class='text-white' href='viewquizresults.php?topic_id=$courseID'><h4 class='text-center'>View Test Responses</h4></a>
       </div>
@@ -61,7 +62,7 @@ if($resultCheck>0){
       </div>
       </div>    
       </div>
-      <div class='container-fluid'>
+      <div class='container-fluid-4'>
       <div class='row p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
       <h4 class='text-center'>Available Tests</h4>  
   </div>";
@@ -71,7 +72,7 @@ if($resultCheck>0){
     echo "    
     </div>
     </div>
-    <div class='container-fluid'>
+    <div class='container-fluid-5'>
     <div class='row p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
     <h4 class='text-center'>Available Tests</h4>  ";
   }?>
@@ -89,8 +90,7 @@ if($resultCheck>0){
       while($rows[] = mysqli_fetch_array($result1)){
         $testTitle = $rows[$counter]['testTitle'];
         $testID = $rows[$counter]['testID'];  
-          echo "<br>";
-          echo "<div class='row p-3 bg-secondary text-white rounded-top ml-1 mr-1'>
+          echo "<div class='row p-3 bg-secondary text-white rounded-top ml-1 mr-1 mb-3'>
           <a class='text-white' href='test.php?testID=$testID'><span class='align-top'>$testTitle</span><a>
           </div>";
       

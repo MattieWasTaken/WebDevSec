@@ -43,7 +43,7 @@ $courseID = $_SESSION['classID'];
        </div>";
        }
     ?>
-    <div class="container-fluid">
+    <div class="container-fluid-2">
     <div class="row p-3 mb-2 mt-2 bg-secondary text-white rounded">
         
     <?php 
@@ -90,7 +90,7 @@ $courseID = $_SESSION['classID'];
             $courseName= $rows[$counter]['courseName'];
             $courseID = $rows[$counter]['courseID'];
             echo "   
-            <div class='container-fluid'>
+            <div class='container-fluid-3'>
             <div class='row'>
             <div class='col-sm-1 p-3 mb-2 bg-secondary text-center text-white rounded ml-2 mr-1'>
             <span>$postCounter.</span>
@@ -126,7 +126,7 @@ $courseID = $_SESSION['classID'];
             $lastName2 = $rows2[$counter2]['lastName'];
             $daysAbsent = $rows2[$counter2]['daysMissed'];
             echo "   
-            <div class='container-fluid'>
+            <div class='container-fluid-4'>
             <div class='row'>
             <div class='col-sm-1 p-3 mb-2 bg-secondary text-center text-white rounded ml-2 mr-1'>
             <span>$postCounter2.</span>
@@ -160,7 +160,7 @@ if($_GET['display']=="attendance"){
         $content22 = $rows2[$counter2]['lastName'];
         $daysAbsent = $rows2[$counter2]['daysMissed'];
         echo "   
-        <div class='container-fluid'>
+        <div class='container-fluid-5'>
         <div class='row'>
         <div class='col-sm-1 p-3 mb-2 bg-secondary text-center text-white rounded ml-2 mr-1'>
         <span>$postCounter2.</span>
@@ -200,7 +200,7 @@ if($type =='student'){
             $courseName= $rows[$counter]['courseName'];
             $courseID = $rows[$counter]['courseID'];
             echo "   
-            <div class='container-fluid'>
+            <div class='container-fluid-7'>
             <div class='row'>
             <div class='col-sm-1 p-3 mb-2 bg-secondary text-center text-white rounded ml-2 mr-1'>
             <span>$postCounter.</span>
