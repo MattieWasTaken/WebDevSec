@@ -51,7 +51,24 @@ if($resultCheck>0){
     <div class='row'>
     <div class='col-lg p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
     <p class="text-break"><?php echo $courseDescription?></p>
-    
+    <?php if($type=="teacher"){
+
+      echo "    <div class='container-fluid'>
+      <div class='row p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
+      <a class='text-white' href='viewquizresults.php?topic_id=$courseID'><h4 class='text-center'>View Test Responses</h4></a>
+      </div>
+      </div>
+      </div>
+      </div>    
+      </div>
+      <div class='container-fluid'>
+      <div class='row p-3 mb-2 bg-secondary text-white rounded ml-1 mr-1'>
+      <h4 class='text-center'>Available Tests</h4>  
+  </div>
+      </div>";
+    }
+    ?>
+  
     </div>
     </div>    
     </div>
