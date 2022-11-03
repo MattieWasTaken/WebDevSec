@@ -21,7 +21,6 @@ include_once 'header.php';
  if(isset($_REQUEST['topic_id'])){
     $topic_id = $_REQUEST['topic_id'];
 }
-  #$query = "SELECT * FROM quizresponses where quizID = $topic_id;";
   $query = "SELECT personid.*, quizresponses.* FROM personID, quizresponses WHERE personid.ID = quizresponses.studentID AND quizresponses.quizID = $topic_id;";
   $result = mysqli_query($conn, $query);
   $counter = 0;
